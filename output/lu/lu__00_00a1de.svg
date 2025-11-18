@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-lu" viewBox="0 0 640 480"><defs><clipPath id="clip-lu-00" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-lu-00)">
+  <path fill="none" d="M0 0h640v160H0z" stroke="none"/>
+  <path fill="none" d="M0 160h640v160H0z" stroke="none"/>
+  <path fill="#00a1de" d="M0 320h640v160H0z" stroke="none"/>
+</g></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-sd" viewBox="0 0 640 480"><defs>
+    <clipPath id="sd-a" fill="none" stroke="none">
+      <path fill-opacity=".7" d="M0 0h682.7v512H0z" fill="none" stroke="none"/>
+    </clipPath>
+  <clipPath id="clip-sd-04" clipPathUnits="userSpaceOnUse"><rect x="426.66666666666663" y="0" width="213.33333333333337" height="480"/></clipPath></defs><g clip-path="url(#clip-sd-04)">
+  
+  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#sd-a)" transform="scale(.9375)" fill="none" stroke="none">
+    <path fill="#000001" d="M0 341.3h1024V512H0z" stroke="none"/>
+    <path fill="none" d="M0 170.6h1024v170.7H0z" stroke="none"/>
+    <path fill="none" d="M0 0h1024.8v170.7H0z" stroke="none"/>
+    <path fill="none" d="M0 0v512l341.3-256z" stroke="none"/>
+  </g>
+</g></svg>

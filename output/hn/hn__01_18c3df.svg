@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-hn" viewBox="0 0 640 480"><defs><clipPath id="clip-hn-01" clipPathUnits="userSpaceOnUse"><rect x="426.66666666666663" y="0" width="213.33333333333337" height="480"/></clipPath></defs><g clip-path="url(#clip-hn-01)">
+  <path fill="#18c3df" d="M0 0h640v480H0z" stroke="none"/>
+  <path fill="none" d="M0 160h640v160H0z" stroke="none"/>
+  <g id="hn-c" fill="none" transform="translate(320 240)scale(26.66665)" stroke="none">
+    <g id="hn-b" fill="none" stroke="none">
+      <path id="hn-a" d="m-.3 0 .5.1L0-1z" fill="none" stroke="none"/>
+      <use xlink:href="#hn-a" width="100%" height="100%" transform="scale(-1 1)" fill="none" stroke="none"/>
+    </g>
+    <use xlink:href="#hn-b" width="100%" height="100%" transform="rotate(72)" fill="none" stroke="none"/>
+    <use xlink:href="#hn-b" width="100%" height="100%" transform="rotate(-72)" fill="none" stroke="none"/>
+    <use xlink:href="#hn-b" width="100%" height="100%" transform="rotate(144)" fill="none" stroke="none"/>
+    <use xlink:href="#hn-b" width="100%" height="100%" transform="rotate(-144)" fill="none" stroke="none"/>
+  </g>
+  <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(133.3 -42.7)" fill="none" stroke="none"/>
+  <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(133.3 37.3)" fill="none" stroke="none"/>
+  <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(-133.3 -42.7)" fill="none" stroke="none"/>
+  <use xlink:href="#hn-c" width="100%" height="100%" transform="translate(-133.3 37.3)" fill="none" stroke="none"/>
+</g></svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ye" viewBox="0 0 640 480"><defs><clipPath id="clip-ye-04" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="160" width="213.33333333333331" height="160"/></clipPath></defs><g clip-path="url(#clip-ye-04)">
+  <g fill-rule="evenodd" stroke-width="1pt" fill="none" stroke="none">
+    <path fill="none" d="M0 0h640v472.8H0z" stroke="none"/>
+    <path fill="none" d="M0 0h640v157.4H0z" stroke="none"/>
+    <path fill="#000001" d="M0 322.6h640V480H0z" stroke="none"/>
+  </g>
+</g></svg>

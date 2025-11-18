@@ -1,0 +1,8372 @@
+{
+  "ad": {
+    "colors": [
+      "#c7b37f",
+      "#d52b1e",
+      "#d0103a",
+      "#0065bd",
+      "#703d29",
+      "#0018a8"
+    ],
+    "files": [
+      "ad__00_c7b37f.svg",
+      "ad__01_d52b1e.svg",
+      "ad__02_d0103a.svg",
+      "ad__03_0065bd.svg",
+      "ad__04_703d29.svg",
+      "ad__05_0018a8.svg"
+    ],
+    "z": [
+      40,
+      1110,
+      10,
+      1340,
+      1060,
+      30
+    ],
+    "full": "ad__full.svg",
+    "location": {
+      "lat": 42.5,
+      "lon": 1.5
+    }
+  },
+  "ae": {
+    "colors": [
+      "#ff0000",
+      "#00732f",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ae__00_ff0000.svg",
+      "ae__01_00732f.svg",
+      "ae__02_000001.svg",
+      "ae__03_000001.svg",
+      "ae__04_000001.svg",
+      "ae__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      10,
+      30,
+      31,
+      32,
+      20
+    ],
+    "full": "ae__full.svg",
+    "location": {
+      "lat": 24,
+      "lon": 54
+    }
+  },
+  "af": {
+    "colors": [
+      "#009900",
+      "#bd6b00",
+      "#bd6b00",
+      "#bf0000",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "af__00_009900.svg",
+      "af__01_bd6b00.svg",
+      "af__02_bd6b00.svg",
+      "af__03_bf0000.svg",
+      "af__04_000001.svg",
+      "af__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      51,
+      220,
+      40,
+      20,
+      50
+    ],
+    "full": "af__full.svg",
+    "location": {
+      "lat": 33,
+      "lon": 65
+    }
+  },
+  "ag": {
+    "colors": [
+      "#fcd116",
+      "#0072c6",
+      "#ce1126",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ag__00_fcd116.svg",
+      "ag__01_0072c6.svg",
+      "ag__02_ce1126.svg",
+      "ag__03_000001.svg",
+      "ag__04_000001.svg",
+      "ag__05_ffffff.svg"
+    ],
+    "z": [
+      90,
+      70,
+      80,
+      60,
+      61,
+      50
+    ],
+    "full": "ag__full.svg",
+    "location": {
+      "lat": 17.05,
+      "lon": -61.8
+    }
+  },
+  "ai": {
+    "colors": [
+      "#fdc301",
+      "#99ccff",
+      "#ff9900",
+      "#c8102e",
+      "#012169",
+      "#ffffff"
+    ],
+    "files": [
+      "ai__00_fdc301.svg",
+      "ai__01_99ccff.svg",
+      "ai__02_ff9900.svg",
+      "ai__03_c8102e.svg",
+      "ai__04_012169.svg",
+      "ai__05_ffffff.svg"
+    ],
+    "z": [
+      220,
+      210,
+      20,
+      71,
+      50,
+      61
+    ],
+    "full": "ai__full.svg",
+    "location": {
+      "lat": 18.25,
+      "lon": -63.16666666
+    }
+  },
+  "al": {
+    "colors": [
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "al__00_ff0000.svg",
+      "al__01_000001.svg",
+      "al__02_000001.svg",
+      "al__03_000001.svg",
+      "al__04_000001.svg",
+      "al__05_000001.svg"
+    ],
+    "z": [
+      10,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "full": "al__full.svg",
+    "location": {
+      "lat": 41,
+      "lon": 20
+    }
+  },
+  "am": {
+    "colors": [
+      "#f2a800",
+      "#d90012",
+      "#0033a0",
+      "#0033a0",
+      "#0033a0",
+      "#0033a0"
+    ],
+    "files": [
+      "am__00_f2a800.svg",
+      "am__01_d90012.svg",
+      "am__02_0033a0.svg",
+      "am__03_0033a0.svg",
+      "am__04_0033a0.svg",
+      "am__05_0033a0.svg"
+    ],
+    "z": [
+      30,
+      10,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "am__full.svg",
+    "location": {
+      "lat": 40,
+      "lon": 45
+    }
+  },
+  "ao": {
+    "colors": [
+      "#ffee00",
+      "#ffec00",
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "ao__00_ffee00.svg",
+      "ao__01_ffec00.svg",
+      "ao__02_ff0000.svg",
+      "ao__03_000001.svg",
+      "ao__04_000001.svg",
+      "ao__05_000000.svg"
+    ],
+    "z": [
+      60,
+      50,
+      20,
+      30,
+      70,
+      101
+    ],
+    "full": "ao__full.svg",
+    "location": {
+      "lat": -12.5,
+      "lon": 18.5
+    }
+  },
+  "aq": {
+    "colors": [
+      "#3a7dce",
+      "#3a7dce",
+      "#3a7dce",
+      "#3a7dce",
+      "#3a7dce",
+      "#ffffff"
+    ],
+    "files": [
+      "aq__00_3a7dce.svg",
+      "aq__01_3a7dce.svg",
+      "aq__02_3a7dce.svg",
+      "aq__03_3a7dce.svg",
+      "aq__04_3a7dce.svg",
+      "aq__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      30
+    ],
+    "full": "aq__full.svg",
+    "location": {
+      "lat": -90,
+      "lon": 0
+    }
+  },
+  "ar": {
+    "colors": [
+      "#f6b40e",
+      "#74acdf",
+      "#843511",
+      "#85340a",
+      "#85340a",
+      "#ffffff"
+    ],
+    "files": [
+      "ar__00_f6b40e.svg",
+      "ar__01_74acdf.svg",
+      "ar__02_843511.svg",
+      "ar__03_85340a.svg",
+      "ar__04_85340a.svg",
+      "ar__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      10,
+      160,
+      260,
+      290,
+      20
+    ],
+    "full": "ar__full.svg",
+    "location": {
+      "lat": -34,
+      "lon": -64
+    }
+  },
+  "arab": {
+    "colors": [
+      "#f7c608",
+      "#f7c608",
+      "#006233",
+      "#006233",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "arab__00_f7c608.svg",
+      "arab__01_f7c608.svg",
+      "arab__02_006233.svg",
+      "arab__03_006233.svg",
+      "arab__04_000000.svg",
+      "arab__05_ffffff.svg"
+    ],
+    "z": [
+      610,
+      630,
+      10,
+      590,
+      161,
+      160
+    ],
+    "full": "arab__full.svg",
+    "location": {
+      "lat": 25,
+      "lon": 45
+    }
+  },
+  "as": {
+    "colors": [
+      "#999999",
+      "#aa5323",
+      "#bd1021",
+      "#7b3c20",
+      "#5a3719",
+      "#000066"
+    ],
+    "files": [
+      "as__00_999999.svg",
+      "as__01_aa5323.svg",
+      "as__02_bd1021.svg",
+      "as__03_7b3c20.svg",
+      "as__04_5a3719.svg",
+      "as__05_000066.svg"
+    ],
+    "z": [
+      610,
+      530,
+      20,
+      370,
+      390,
+      10
+    ],
+    "full": "as__full.svg",
+    "location": {
+      "lat": -14.33333333,
+      "lon": -170
+    }
+  },
+  "asean": {
+    "colors": [
+      "#f9e300",
+      "#ed2939",
+      "#0039a6",
+      "#0039a6",
+      "#0039a6",
+      "#ffffff"
+    ],
+    "files": [
+      "asean__00_f9e300.svg",
+      "asean__01_ed2939.svg",
+      "asean__02_0039a6.svg",
+      "asean__03_0039a6.svg",
+      "asean__04_0039a6.svg",
+      "asean__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      30,
+      10,
+      11,
+      12,
+      20
+    ],
+    "full": "asean__full.svg",
+    "location": {
+      "lat": 12.5,
+      "lon": 103
+    }
+  },
+  "at": {
+    "colors": [
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#ffffff"
+    ],
+    "files": [
+      "at__00_c8102e.svg",
+      "at__01_c8102e.svg",
+      "at__02_c8102e.svg",
+      "at__03_c8102e.svg",
+      "at__04_c8102e.svg",
+      "at__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      10
+    ],
+    "full": "at__full.svg",
+    "location": {
+      "lat": 47.33333333,
+      "lon": 13.33333333
+    }
+  },
+  "au": {
+    "colors": [
+      "#ff0000",
+      "#ff0000",
+      "#00008b",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "au__00_ff0000.svg",
+      "au__01_ff0000.svg",
+      "au__02_00008b.svg",
+      "au__03_ffffff.svg",
+      "au__04_ffffff.svg",
+      "au__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      50,
+      10,
+      20,
+      40,
+      60
+    ],
+    "full": "au__full.svg",
+    "location": {
+      "lat": -27,
+      "lon": 133
+    }
+  },
+  "aw": {
+    "colors": [
+      "#99ccff",
+      "#99cccc",
+      "#66cccc",
+      "#6699cc",
+      "#3399cc",
+      "#cc0000"
+    ],
+    "files": [
+      "aw__00_99ccff.svg",
+      "aw__01_99cccc.svg",
+      "aw__02_66cccc.svg",
+      "aw__03_6699cc.svg",
+      "aw__04_3399cc.svg",
+      "aw__05_cc0000.svg"
+    ],
+    "z": [
+      170,
+      70,
+      90,
+      190,
+      50,
+      150
+    ],
+    "full": "aw__full.svg",
+    "location": {
+      "lat": 12.5,
+      "lon": -69.96666666
+    }
+  },
+  "ax": {
+    "colors": [
+      "#ffce00",
+      "#d21034",
+      "#0053a5",
+      "#0053a5",
+      "#0053a5",
+      "#0053a5"
+    ],
+    "files": [
+      "ax__00_ffce00.svg",
+      "ax__01_d21034.svg",
+      "ax__02_0053a5.svg",
+      "ax__03_0053a5.svg",
+      "ax__04_0053a5.svg",
+      "ax__05_0053a5.svg"
+    ],
+    "z": [
+      60,
+      90,
+      50,
+      51,
+      52,
+      53
+    ],
+    "full": "ax__full.svg",
+    "location": {
+      "lat": 60.116667,
+      "lon": 19.9
+    }
+  },
+  "az": {
+    "colors": [
+      "#00b9e4",
+      "#3f9c35",
+      "#ed2939",
+      "#ed2939",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "az__00_00b9e4.svg",
+      "az__01_3f9c35.svg",
+      "az__02_ed2939.svg",
+      "az__03_ed2939.svg",
+      "az__04_ffffff.svg",
+      "az__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      10,
+      20,
+      50,
+      40,
+      60
+    ],
+    "full": "az__full.svg",
+    "location": {
+      "lat": 40.5,
+      "lon": 47.5
+    }
+  },
+  "ba": {
+    "colors": [
+      "#ffcc00",
+      "#000099",
+      "#000099",
+      "#000099",
+      "#000099",
+      "#ffffff"
+    ],
+    "files": [
+      "ba__00_ffcc00.svg",
+      "ba__01_000099.svg",
+      "ba__02_000099.svg",
+      "ba__03_000099.svg",
+      "ba__04_000099.svg",
+      "ba__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      50,
+      51,
+      52,
+      53,
+      70
+    ],
+    "full": "ba__full.svg",
+    "location": {
+      "lat": 44,
+      "lon": 18
+    }
+  },
+  "bb": {
+    "colors": [
+      "#ffc726",
+      "#00267f",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "bb__00_ffc726.svg",
+      "bb__01_00267f.svg",
+      "bb__02_000001.svg",
+      "bb__03_000001.svg",
+      "bb__04_000001.svg",
+      "bb__05_000001.svg"
+    ],
+    "z": [
+      20,
+      10,
+      30,
+      31,
+      32,
+      33
+    ],
+    "full": "bb__full.svg",
+    "location": {
+      "lat": 13.16666666,
+      "lon": -59.53333333
+    }
+  },
+  "bd": {
+    "colors": [
+      "#f42a41",
+      "#006a4e",
+      "#006a4e",
+      "#006a4e",
+      "#006a4e",
+      "#006a4e"
+    ],
+    "files": [
+      "bd__00_f42a41.svg",
+      "bd__01_006a4e.svg",
+      "bd__02_006a4e.svg",
+      "bd__03_006a4e.svg",
+      "bd__04_006a4e.svg",
+      "bd__05_006a4e.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "full": "bd__full.svg",
+    "location": {
+      "lat": 24,
+      "lon": 90
+    }
+  },
+  "be": {
+    "colors": [
+      "#ffd90c",
+      "#f31830",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "be__00_ffd90c.svg",
+      "be__01_f31830.svg",
+      "be__02_000001.svg",
+      "be__03_000001.svg",
+      "be__04_000001.svg",
+      "be__05_000001.svg"
+    ],
+    "z": [
+      30,
+      40,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "be__full.svg",
+    "location": {
+      "lat": 50.83333333,
+      "lon": 4
+    }
+  },
+  "bf": {
+    "colors": [
+      "#fff300",
+      "#35a100",
+      "#35a100",
+      "#35a100",
+      "#35a100",
+      "#de0000"
+    ],
+    "files": [
+      "bf__00_fff300.svg",
+      "bf__01_35a100.svg",
+      "bf__02_35a100.svg",
+      "bf__03_35a100.svg",
+      "bf__04_35a100.svg",
+      "bf__05_de0000.svg"
+    ],
+    "z": [
+      40,
+      30,
+      31,
+      32,
+      33,
+      20
+    ],
+    "full": "bf__full.svg",
+    "location": {
+      "lat": 13,
+      "lon": -2
+    }
+  },
+  "bg": {
+    "colors": [
+      "#00966e",
+      "#00966e",
+      "#00966e",
+      "#00966e",
+      "#d62612",
+      "#ffffff"
+    ],
+    "files": [
+      "bg__00_00966e.svg",
+      "bg__01_00966e.svg",
+      "bg__02_00966e.svg",
+      "bg__03_00966e.svg",
+      "bg__04_d62612.svg",
+      "bg__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      30,
+      10
+    ],
+    "full": "bg__full.svg",
+    "location": {
+      "lat": 43,
+      "lon": 25
+    }
+  },
+  "bh": {
+    "colors": [
+      "#ce1126",
+      "#ce1126",
+      "#ce1126",
+      "#ce1126",
+      "#ce1126",
+      "#ffffff"
+    ],
+    "files": [
+      "bh__00_ce1126.svg",
+      "bh__01_ce1126.svg",
+      "bh__02_ce1126.svg",
+      "bh__03_ce1126.svg",
+      "bh__04_ce1126.svg",
+      "bh__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      10
+    ],
+    "full": "bh__full.svg",
+    "location": {
+      "lat": 26,
+      "lon": 50.55
+    }
+  },
+  "bi": {
+    "colors": [
+      "#18b637",
+      "#18b637",
+      "#18b637",
+      "#cf0921",
+      "#cf0921",
+      "#ffffff"
+    ],
+    "files": [
+      "bi__00_18b637.svg",
+      "bi__01_18b637.svg",
+      "bi__02_18b637.svg",
+      "bi__03_cf0921.svg",
+      "bi__04_cf0921.svg",
+      "bi__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      51,
+      101,
+      60,
+      100,
+      90
+    ],
+    "full": "bi__full.svg",
+    "location": {
+      "lat": -3.5,
+      "lon": 30
+    }
+  },
+  "bj": {
+    "colors": [
+      "#ffd600",
+      "#319400",
+      "#319400",
+      "#319400",
+      "#808080",
+      "#de2110"
+    ],
+    "files": [
+      "bj__00_ffd600.svg",
+      "bj__01_319400.svg",
+      "bj__02_319400.svg",
+      "bj__03_319400.svg",
+      "bj__04_808080.svg",
+      "bj__05_de2110.svg"
+    ],
+    "z": [
+      70,
+      60,
+      61,
+      62,
+      30,
+      80
+    ],
+    "full": "bj__full.svg",
+    "location": {
+      "lat": 9.5,
+      "lon": 2.25
+    }
+  },
+  "bl": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "bl__00_e1000f.svg",
+      "bl__01_000091.svg",
+      "bl__02_000091.svg",
+      "bl__03_000091.svg",
+      "bl__04_000091.svg",
+      "bl__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "bl__full.svg",
+    "location": {
+      "lat": 18.5,
+      "lon": -63.41666666
+    }
+  },
+  "bm": {
+    "colors": [
+      "#64b4d1",
+      "#2f8f22",
+      "#c8102e",
+      "#784421",
+      "#00247d",
+      "#000066"
+    ],
+    "files": [
+      "bm__00_64b4d1.svg",
+      "bm__01_2f8f22.svg",
+      "bm__02_c8102e.svg",
+      "bm__03_784421.svg",
+      "bm__04_00247d.svg",
+      "bm__05_000066.svg"
+    ],
+    "z": [
+      60,
+      30,
+      930,
+      110,
+      531,
+      910
+    ],
+    "full": "bm__full.svg",
+    "location": {
+      "lat": 32.33333333,
+      "lon": -64.75
+    }
+  },
+  "bn": {
+    "colors": [
+      "#f7e017",
+      "#f7e017",
+      "#cf1126",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "bn__00_f7e017.svg",
+      "bn__01_f7e017.svg",
+      "bn__02_cf1126.svg",
+      "bn__03_000001.svg",
+      "bn__04_000001.svg",
+      "bn__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      250,
+      40,
+      30,
+      31,
+      20
+    ],
+    "full": "bn__full.svg",
+    "location": {
+      "lat": 4.5,
+      "lon": 114.66666666
+    }
+  },
+  "bo": {
+    "colors": [
+      "#00e519",
+      "#00a6de",
+      "#339900",
+      "#007a3d",
+      "#007934",
+      "#005000"
+    ],
+    "files": [
+      "bo__00_00e519.svg",
+      "bo__01_00a6de.svg",
+      "bo__02_339900.svg",
+      "bo__03_007a3d.svg",
+      "bo__04_007934.svg",
+      "bo__05_005000.svg"
+    ],
+    "z": [
+      160,
+      3540,
+      3331,
+      910,
+      2320,
+      1060
+    ],
+    "full": "bo__full.svg",
+    "location": {
+      "lat": -17,
+      "lon": -65
+    }
+  },
+  "bq": {
+    "colors": [
+      "#ae1c28",
+      "#21468b",
+      "#21468b",
+      "#21468b",
+      "#21468b",
+      "#ffffff"
+    ],
+    "files": [
+      "bq__00_ae1c28.svg",
+      "bq__01_21468b.svg",
+      "bq__02_21468b.svg",
+      "bq__03_21468b.svg",
+      "bq__04_21468b.svg",
+      "bq__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      10,
+      11,
+      12,
+      13,
+      20
+    ],
+    "full": "bq__full.svg",
+    "location": {
+      "lat": 12.18,
+      "lon": -68.25
+    }
+  },
+  "br": {
+    "colors": [
+      "#ffffef",
+      "#f7ffff",
+      "#f8e509",
+      "#309e3a",
+      "#229e45",
+      "#2b49a3"
+    ],
+    "files": [
+      "br__00_ffffef.svg",
+      "br__01_f7ffff.svg",
+      "br__02_f8e509.svg",
+      "br__03_309e3a.svg",
+      "br__04_229e45.svg",
+      "br__05_2b49a3.svg"
+    ],
+    "z": [
+      70,
+      120,
+      30,
+      90,
+      20,
+      40
+    ],
+    "full": "br__full.svg",
+    "location": {
+      "lat": -10,
+      "lon": -55
+    }
+  },
+  "bs": {
+    "colors": [
+      "#ffe900",
+      "#08ced6",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "bs__00_ffe900.svg",
+      "bs__01_08ced6.svg",
+      "bs__02_000001.svg",
+      "bs__03_000001.svg",
+      "bs__04_000001.svg",
+      "bs__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      70,
+      80,
+      81,
+      82,
+      50
+    ],
+    "full": "bs__full.svg",
+    "location": {
+      "lat": 24.25,
+      "lon": -76
+    }
+  },
+  "bt": {
+    "colors": [
+      "#ffd520",
+      "#ff4e12",
+      "#000000",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "bt__00_ffd520.svg",
+      "bt__01_ff4e12.svg",
+      "bt__02_000000.svg",
+      "bt__03_ffffff.svg",
+      "bt__04_ffffff.svg",
+      "bt__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      20,
+      31,
+      40,
+      580,
+      820
+    ],
+    "full": "bt__full.svg",
+    "location": {
+      "lat": 27.5,
+      "lon": 90.5
+    }
+  },
+  "bv": {
+    "colors": [
+      "#d72828",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#ffffff"
+    ],
+    "files": [
+      "bv__00_d72828.svg",
+      "bv__01_003897.svg",
+      "bv__02_003897.svg",
+      "bv__03_003897.svg",
+      "bv__04_003897.svg",
+      "bv__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      80,
+      81,
+      82,
+      83,
+      50
+    ],
+    "full": "bv__full.svg",
+    "location": {
+      "lat": -54.43333333,
+      "lon": 3.4
+    }
+  },
+  "bw": {
+    "colors": [
+      "#00cbff",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "bw__00_00cbff.svg",
+      "bw__01_000001.svg",
+      "bw__02_000001.svg",
+      "bw__03_000001.svg",
+      "bw__04_000001.svg",
+      "bw__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      40,
+      41,
+      42,
+      43,
+      30
+    ],
+    "full": "bw__full.svg",
+    "location": {
+      "lat": -22,
+      "lon": 24
+    }
+  },
+  "by": {
+    "colors": [
+      "#007c30",
+      "#007c30",
+      "#007c30",
+      "#007c30",
+      "#ce1720",
+      "#ffffff"
+    ],
+    "files": [
+      "by__00_007c30.svg",
+      "by__01_007c30.svg",
+      "by__02_007c30.svg",
+      "by__03_007c30.svg",
+      "by__04_ce1720.svg",
+      "by__05_ffffff.svg"
+    ],
+    "z": [
+      120,
+      121,
+      122,
+      123,
+      40,
+      50
+    ],
+    "full": "by__full.svg",
+    "location": {
+      "lat": 53,
+      "lon": 28
+    }
+  },
+  "bz": {
+    "colors": [
+      "#006600",
+      "#005800",
+      "#003f87",
+      "#004b00",
+      "#003300",
+      "#000001"
+    ],
+    "files": [
+      "bz__00_006600.svg",
+      "bz__01_005800.svg",
+      "bz__02_003f87.svg",
+      "bz__03_004b00.svg",
+      "bz__04_003300.svg",
+      "bz__05_000001.svg"
+    ],
+    "z": [
+      591,
+      170,
+      130,
+      251,
+      211,
+      700
+    ],
+    "full": "bz__full.svg",
+    "location": {
+      "lat": 17.25,
+      "lon": -88.75
+    }
+  },
+  "ca": {
+    "colors": [
+      "#d52b1e",
+      "#d52b1e",
+      "#d52b1e",
+      "#d52b1e",
+      "#d52b1e",
+      "#ffffff"
+    ],
+    "files": [
+      "ca__00_d52b1e.svg",
+      "ca__01_d52b1e.svg",
+      "ca__02_d52b1e.svg",
+      "ca__03_d52b1e.svg",
+      "ca__04_d52b1e.svg",
+      "ca__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      10
+    ],
+    "full": "ca__full.svg",
+    "location": {
+      "lat": 60,
+      "lon": -95
+    }
+  },
+  "cc": {
+    "colors": [
+      "#ffe000",
+      "#ffe000",
+      "#008000",
+      "#008000",
+      "#7b3100",
+      "#802000"
+    ],
+    "files": [
+      "cc__00_ffe000.svg",
+      "cc__01_ffe000.svg",
+      "cc__02_008000.svg",
+      "cc__03_008000.svg",
+      "cc__04_7b3100.svg",
+      "cc__05_802000.svg"
+    ],
+    "z": [
+      50,
+      70,
+      40,
+      60,
+      81,
+      80
+    ],
+    "full": "cc__full.svg",
+    "location": {
+      "lat": -12.5,
+      "lon": 96.83333333
+    }
+  },
+  "cd": {
+    "colors": [
+      "#f7d618",
+      "#007fff",
+      "#007fff",
+      "#007fff",
+      "#007fff",
+      "#ce1021"
+    ],
+    "files": [
+      "cd__00_f7d618.svg",
+      "cd__01_007fff.svg",
+      "cd__02_007fff.svg",
+      "cd__03_007fff.svg",
+      "cd__04_007fff.svg",
+      "cd__05_ce1021.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      30
+    ],
+    "full": "cd__full.svg",
+    "location": {
+      "lat": 0,
+      "lon": 25
+    }
+  },
+  "cefta": {
+    "colors": [
+      "#ffcc00",
+      "#ffcc00",
+      "#003399",
+      "#003399",
+      "#003399",
+      "#003399"
+    ],
+    "files": [
+      "cefta__00_ffcc00.svg",
+      "cefta__01_ffcc00.svg",
+      "cefta__02_003399.svg",
+      "cefta__03_003399.svg",
+      "cefta__04_003399.svg",
+      "cefta__05_003399.svg"
+    ],
+    "z": [
+      31,
+      110,
+      10,
+      11,
+      12,
+      40
+    ],
+    "full": "cefta__full.svg",
+    "location": {
+      "lat": 45.5,
+      "lon": 17
+    }
+  },
+  "cf": {
+    "colors": [
+      "#ffff00",
+      "#ffff00",
+      "#009a00",
+      "#ff0000",
+      "#0000ff",
+      "#ffffff"
+    ],
+    "files": [
+      "cf__00_ffff00.svg",
+      "cf__01_ffff00.svg",
+      "cf__02_009a00.svg",
+      "cf__03_ff0000.svg",
+      "cf__04_0000ff.svg",
+      "cf__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      100,
+      70,
+      90,
+      50,
+      80
+    ],
+    "full": "cf__full.svg",
+    "location": {
+      "lat": 7,
+      "lon": 21
+    }
+  },
+  "cg": {
+    "colors": [
+      "#ffff00",
+      "#00ca00",
+      "#00ca00",
+      "#00ca00",
+      "#00ca00",
+      "#ff0000"
+    ],
+    "files": [
+      "cg__00_ffff00.svg",
+      "cg__01_00ca00.svg",
+      "cg__02_00ca00.svg",
+      "cg__03_00ca00.svg",
+      "cg__04_00ca00.svg",
+      "cg__05_ff0000.svg"
+    ],
+    "z": [
+      50,
+      60,
+      61,
+      62,
+      63,
+      70
+    ],
+    "full": "cg__full.svg",
+    "location": {
+      "lat": -1,
+      "lon": 15
+    }
+  },
+  "ch": {
+    "colors": [
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ffffff"
+    ],
+    "files": [
+      "ch__00_ff0000.svg",
+      "ch__01_ff0000.svg",
+      "ch__02_ff0000.svg",
+      "ch__03_ff0000.svg",
+      "ch__04_ff0000.svg",
+      "ch__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      30
+    ],
+    "full": "ch__full.svg",
+    "location": {
+      "lat": 47,
+      "lon": 8
+    }
+  },
+  "ci": {
+    "colors": [
+      "#ff9a00",
+      "#00cd00",
+      "#00cd00",
+      "#00cd00",
+      "#00cd00",
+      "#ffffff"
+    ],
+    "files": [
+      "ci__00_ff9a00.svg",
+      "ci__01_00cd00.svg",
+      "ci__02_00cd00.svg",
+      "ci__03_00cd00.svg",
+      "ci__04_00cd00.svg",
+      "ci__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      40
+    ],
+    "full": "ci__full.svg",
+    "location": {
+      "lat": 8,
+      "lon": -5
+    }
+  },
+  "ck": {
+    "colors": [
+      "#c8102e",
+      "#c8102e",
+      "#000066",
+      "#000066",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "ck__00_c8102e.svg",
+      "ck__01_c8102e.svg",
+      "ck__02_000066.svg",
+      "ck__03_000066.svg",
+      "ck__04_ffffff.svg",
+      "ck__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      70,
+      10,
+      30,
+      20,
+      40
+    ],
+    "full": "ck__full.svg",
+    "location": {
+      "lat": -21.23333333,
+      "lon": -159.76666666
+    }
+  },
+  "cl": {
+    "colors": [
+      "#d52b1e",
+      "#0039a6",
+      "#0039a6",
+      "#0039a6",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "cl__00_d52b1e.svg",
+      "cl__01_0039a6.svg",
+      "cl__02_0039a6.svg",
+      "cl__03_0039a6.svg",
+      "cl__04_ffffff.svg",
+      "cl__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      60,
+      61,
+      62,
+      50,
+      70
+    ],
+    "full": "cl__full.svg",
+    "location": {
+      "lat": -30,
+      "lon": -71
+    }
+  },
+  "cm": {
+    "colors": [
+      "#fcd116",
+      "#007a5e",
+      "#007a5e",
+      "#007a5e",
+      "#007a5e",
+      "#ce1126"
+    ],
+    "files": [
+      "cm__00_fcd116.svg",
+      "cm__01_007a5e.svg",
+      "cm__02_007a5e.svg",
+      "cm__03_007a5e.svg",
+      "cm__04_007a5e.svg",
+      "cm__05_ce1126.svg"
+    ],
+    "z": [
+      40,
+      10,
+      11,
+      12,
+      13,
+      20
+    ],
+    "full": "cm__full.svg",
+    "location": {
+      "lat": 6,
+      "lon": 12
+    }
+  },
+  "cn": {
+    "colors": [
+      "#ffff00",
+      "#ee1c25",
+      "#ee1c25",
+      "#ee1c25",
+      "#ee1c25",
+      "#ee1c25"
+    ],
+    "files": [
+      "cn__00_ffff00.svg",
+      "cn__01_ee1c25.svg",
+      "cn__02_ee1c25.svg",
+      "cn__03_ee1c25.svg",
+      "cn__04_ee1c25.svg",
+      "cn__05_ee1c25.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "full": "cn__full.svg",
+    "location": {
+      "lat": 35,
+      "lon": 105
+    }
+  },
+  "co": {
+    "colors": [
+      "#ffe800",
+      "#da0010",
+      "#00148e",
+      "#00148e",
+      "#00148e",
+      "#00148e"
+    ],
+    "files": [
+      "co__00_ffe800.svg",
+      "co__01_da0010.svg",
+      "co__02_00148e.svg",
+      "co__03_00148e.svg",
+      "co__04_00148e.svg",
+      "co__05_00148e.svg"
+    ],
+    "z": [
+      20,
+      40,
+      30,
+      31,
+      32,
+      33
+    ],
+    "full": "co__full.svg",
+    "location": {
+      "lat": 4,
+      "lon": -72
+    }
+  },
+  "cr": {
+    "colors": [
+      "#d90000",
+      "#0000b4",
+      "#0000b4",
+      "#0000b4",
+      "#0000b4",
+      "#ffffff"
+    ],
+    "files": [
+      "cr__00_d90000.svg",
+      "cr__01_0000b4.svg",
+      "cr__02_0000b4.svg",
+      "cr__03_0000b4.svg",
+      "cr__04_0000b4.svg",
+      "cr__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      21,
+      22,
+      23,
+      30
+    ],
+    "full": "cr__full.svg",
+    "location": {
+      "lat": 10,
+      "lon": -84
+    }
+  },
+  "cu": {
+    "colors": [
+      "#cb1515",
+      "#002a8f",
+      "#002a8f",
+      "#002a8f",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "cu__00_cb1515.svg",
+      "cu__01_002a8f.svg",
+      "cu__02_002a8f.svg",
+      "cu__03_002a8f.svg",
+      "cu__04_ffffff.svg",
+      "cu__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      50,
+      51,
+      52,
+      60,
+      80
+    ],
+    "full": "cu__full.svg",
+    "location": {
+      "lat": 21.5,
+      "lon": -80
+    }
+  },
+  "cv": {
+    "colors": [
+      "#ffce08",
+      "#de3929",
+      "#081873",
+      "#081873",
+      "#081873",
+      "#ffffff"
+    ],
+    "files": [
+      "cv__00_ffce08.svg",
+      "cv__01_de3929.svg",
+      "cv__02_081873.svg",
+      "cv__03_081873.svg",
+      "cv__04_081873.svg",
+      "cv__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      70,
+      60,
+      61,
+      62,
+      50
+    ],
+    "full": "cv__full.svg",
+    "location": {
+      "lat": 16,
+      "lon": -24
+    }
+  },
+  "cw": {
+    "colors": [
+      "#f9e814",
+      "#002b7f",
+      "#002b7f",
+      "#002b7f",
+      "#002b7f",
+      "#ffffff"
+    ],
+    "files": [
+      "cw__00_f9e814.svg",
+      "cw__01_002b7f.svg",
+      "cw__02_002b7f.svg",
+      "cw__03_002b7f.svg",
+      "cw__04_002b7f.svg",
+      "cw__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      60,
+      61,
+      62,
+      63,
+      90
+    ],
+    "full": "cw__full.svg",
+    "location": {
+      "lat": 12.116667,
+      "lon": -68.933333
+    }
+  },
+  "cx": {
+    "colors": [
+      "#ffc639",
+      "#ffc639",
+      "#1c8a42",
+      "#1c8a42",
+      "#0021ad",
+      "#ffffff"
+    ],
+    "files": [
+      "cx__00_ffc639.svg",
+      "cx__01_ffc639.svg",
+      "cx__02_1c8a42.svg",
+      "cx__03_1c8a42.svg",
+      "cx__04_0021ad.svg",
+      "cx__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      50,
+      20,
+      40,
+      10,
+      70
+    ],
+    "full": "cx__full.svg",
+    "location": {
+      "lat": -10.5,
+      "lon": 105.66666666
+    }
+  },
+  "cy": {
+    "colors": [
+      "#d47600",
+      "#435125",
+      "#435125",
+      "#435125",
+      "#435125",
+      "#ffffff"
+    ],
+    "files": [
+      "cy__00_d47600.svg",
+      "cy__01_435125.svg",
+      "cy__02_435125.svg",
+      "cy__03_435125.svg",
+      "cy__04_435125.svg",
+      "cy__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "cy__full.svg",
+    "location": {
+      "lat": 35,
+      "lon": 33
+    }
+  },
+  "cz": {
+    "colors": [
+      "#d7141a",
+      "#11457e",
+      "#11457e",
+      "#11457e",
+      "#11457e",
+      "#ffffff"
+    ],
+    "files": [
+      "cz__00_d7141a.svg",
+      "cz__01_11457e.svg",
+      "cz__02_11457e.svg",
+      "cz__03_11457e.svg",
+      "cz__04_11457e.svg",
+      "cz__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      10
+    ],
+    "full": "cz__full.svg",
+    "location": {
+      "lat": 49.75,
+      "lon": 15.5
+    }
+  },
+  "de": {
+    "colors": [
+      "#ffcc00",
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "de__00_ffcc00.svg",
+      "de__01_ff0000.svg",
+      "de__02_000001.svg",
+      "de__03_000001.svg",
+      "de__04_000001.svg",
+      "de__05_000001.svg"
+    ],
+    "z": [
+      10,
+      30,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "de__full.svg",
+    "location": {
+      "lat": 51,
+      "lon": 9
+    }
+  },
+  "dg": {
+    "colors": [
+      "#808080",
+      "#a24300",
+      "#006d00",
+      "#006300",
+      "#012169",
+      "#000063"
+    ],
+    "files": [
+      "dg__00_808080.svg",
+      "dg__01_a24300.svg",
+      "dg__02_006d00.svg",
+      "dg__03_006300.svg",
+      "dg__04_012169.svg",
+      "dg__05_000063.svg"
+    ],
+    "z": [
+      1050,
+      30,
+      40,
+      1080,
+      1220,
+      20
+    ],
+    "full": "dg__full.svg",
+    "location": {
+      "lat": -7.3,
+      "lon": 72.4
+    }
+  },
+  "dj": {
+    "colors": [
+      "#fffefe",
+      "#00cc00",
+      "#00cc00",
+      "#00cc00",
+      "#6699ff",
+      "#ff0000"
+    ],
+    "files": [
+      "dj__00_fffefe.svg",
+      "dj__01_00cc00.svg",
+      "dj__02_00cc00.svg",
+      "dj__03_00cc00.svg",
+      "dj__04_6699ff.svg",
+      "dj__05_ff0000.svg"
+    ],
+    "z": [
+      70,
+      50,
+      51,
+      52,
+      60,
+      80
+    ],
+    "full": "dj__full.svg",
+    "location": {
+      "lat": 11.5,
+      "lon": 43
+    }
+  },
+  "dk": {
+    "colors": [
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#ffffff"
+    ],
+    "files": [
+      "dk__00_c8102e.svg",
+      "dk__01_c8102e.svg",
+      "dk__02_c8102e.svg",
+      "dk__03_c8102e.svg",
+      "dk__04_c8102e.svg",
+      "dk__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      30
+    ],
+    "full": "dk__full.svg",
+    "location": {
+      "lat": 56,
+      "lon": 10
+    }
+  },
+  "dm": {
+    "colors": [
+      "#009200",
+      "#108c00",
+      "#804bff",
+      "#a95600",
+      "#c90000",
+      "#000001"
+    ],
+    "files": [
+      "dm__00_009200.svg",
+      "dm__01_108c00.svg",
+      "dm__02_804bff.svg",
+      "dm__03_a95600.svg",
+      "dm__04_c90000.svg",
+      "dm__05_000001.svg"
+    ],
+    "z": [
+      540,
+      50,
+      740,
+      590,
+      840,
+      90
+    ],
+    "full": "dm__full.svg",
+    "location": {
+      "lat": 15.41666666,
+      "lon": -61.33333333
+    }
+  },
+  "do": {
+    "colors": [
+      "#008f4c",
+      "#00873f",
+      "#00863d",
+      "#006300",
+      "#002d62",
+      "#000001"
+    ],
+    "files": [
+      "do__00_008f4c.svg",
+      "do__01_00873f.svg",
+      "do__02_00863d.svg",
+      "do__03_006300.svg",
+      "do__04_002d62.svg",
+      "do__05_000001.svg"
+    ],
+    "z": [
+      140,
+      250,
+      480,
+      110,
+      960,
+      1010
+    ],
+    "full": "do__full.svg",
+    "location": {
+      "lat": 19,
+      "lon": -70.66666666
+    }
+  },
+  "dz": {
+    "colors": [
+      "#d21034",
+      "#006233",
+      "#006233",
+      "#006233",
+      "#006233",
+      "#ffffff"
+    ],
+    "files": [
+      "dz__00_d21034.svg",
+      "dz__01_006233.svg",
+      "dz__02_006233.svg",
+      "dz__03_006233.svg",
+      "dz__04_006233.svg",
+      "dz__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "dz__full.svg",
+    "location": {
+      "lat": 28,
+      "lon": 3
+    }
+  },
+  "eac": {
+    "colors": [
+      "#ffff00",
+      "#fbf014",
+      "#0087ff",
+      "#ff0000",
+      "#008300",
+      "#000001"
+    ],
+    "files": [
+      "eac__00_ffff00.svg",
+      "eac__01_fbf014.svg",
+      "eac__02_0087ff.svg",
+      "eac__03_ff0000.svg",
+      "eac__04_008300.svg",
+      "eac__05_000001.svg"
+    ],
+    "z": [
+      70,
+      350,
+      30,
+      50,
+      80,
+      60
+    ],
+    "full": "eac__full.svg",
+    "location": {
+      "lat": 1,
+      "lon": 37
+    }
+  },
+  "ec": {
+    "colors": [
+      "#38a9f9",
+      "#005b00",
+      "#782600",
+      "#772600",
+      "#0000c4",
+      "#00148e"
+    ],
+    "files": [
+      "ec__00_38a9f9.svg",
+      "ec__01_005b00.svg",
+      "ec__02_782600.svg",
+      "ec__03_772600.svg",
+      "ec__04_0000c4.svg",
+      "ec__05_00148e.svg"
+    ],
+    "z": [
+      1150,
+      290,
+      1261,
+      1251,
+      830,
+      30
+    ],
+    "full": "ec__full.svg",
+    "location": {
+      "lat": -2,
+      "lon": -77.5
+    }
+  },
+  "ee": {
+    "colors": [
+      "#1791ff",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ee__00_1791ff.svg",
+      "ee__01_000001.svg",
+      "ee__02_000001.svg",
+      "ee__03_000001.svg",
+      "ee__04_000001.svg",
+      "ee__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      20,
+      21,
+      22,
+      23,
+      30
+    ],
+    "full": "ee__full.svg",
+    "location": {
+      "lat": 59,
+      "lon": 26
+    }
+  },
+  "eg": {
+    "colors": [
+      "#c09300",
+      "#c09300",
+      "#ce1126",
+      "#000001",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "eg__00_c09300.svg",
+      "eg__01_c09300.svg",
+      "eg__02_ce1126.svg",
+      "eg__03_000001.svg",
+      "eg__04_ffffff.svg",
+      "eg__05_ffffff.svg"
+    ],
+    "z": [
+      41,
+      300,
+      30,
+      10,
+      20,
+      40
+    ],
+    "full": "eg__full.svg",
+    "location": {
+      "lat": 27,
+      "lon": 30
+    }
+  },
+  "eh": {
+    "colors": [
+      "#007a3d",
+      "#c4111b",
+      "#c4111b",
+      "#000001",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "eh__00_007a3d.svg",
+      "eh__01_c4111b.svg",
+      "eh__02_c4111b.svg",
+      "eh__03_000001.svg",
+      "eh__04_ffffff.svg",
+      "eh__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      90,
+      110,
+      50,
+      70,
+      100
+    ],
+    "full": "eh__full.svg",
+    "location": {
+      "lat": 24.5,
+      "lon": -13
+    }
+  },
+  "er": {
+    "colors": [
+      "#f3e295",
+      "#b4d7f4",
+      "#239e46",
+      "#239e46",
+      "#239e46",
+      "#be0027"
+    ],
+    "files": [
+      "er__00_f3e295.svg",
+      "er__01_b4d7f4.svg",
+      "er__02_239e46.svg",
+      "er__03_239e46.svg",
+      "er__04_239e46.svg",
+      "er__05_be0027.svg"
+    ],
+    "z": [
+      50,
+      30,
+      40,
+      41,
+      42,
+      20
+    ],
+    "full": "er__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": 39
+    }
+  },
+  "es-ct": {
+    "colors": [
+      "#fcdd09",
+      "#da121a",
+      "#da121a",
+      "#da121a",
+      "#da121a",
+      "#da121a"
+    ],
+    "files": [
+      "es-ct__00_fcdd09.svg",
+      "es-ct__01_da121a.svg",
+      "es-ct__02_da121a.svg",
+      "es-ct__03_da121a.svg",
+      "es-ct__04_da121a.svg",
+      "es-ct__05_da121a.svg"
+    ],
+    "z": [
+      10,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "full": "es-ct__full.svg",
+    "location": {
+      "lat": 41.9,
+      "lon": 2.2
+    }
+  },
+  "es-ga": {
+    "colors": [
+      "#cccccc",
+      "#c8b100",
+      "#bcac0b",
+      "#0099cc",
+      "#058e6e",
+      "#005bbf"
+    ],
+    "files": [
+      "es-ga__00_cccccc.svg",
+      "es-ga__01_c8b100.svg",
+      "es-ga__02_bcac0b.svg",
+      "es-ga__03_0099cc.svg",
+      "es-ga__04_058e6e.svg",
+      "es-ga__05_005bbf.svg"
+    ],
+    "z": [
+      130,
+      100,
+      90,
+      30,
+      1290,
+      50
+    ],
+    "full": "es-ga__full.svg",
+    "location": {
+      "lat": 42.6,
+      "lon": -8
+    }
+  },
+  "es-pv": {
+    "colors": [
+      "#009b48",
+      "#009b48",
+      "#009b48",
+      "#009b48",
+      "#d52b1e",
+      "#ffffff"
+    ],
+    "files": [
+      "es-pv__00_009b48.svg",
+      "es-pv__01_009b48.svg",
+      "es-pv__02_009b48.svg",
+      "es-pv__03_009b48.svg",
+      "es-pv__04_d52b1e.svg",
+      "es-pv__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      10,
+      30
+    ],
+    "full": "es-pv__full.svg",
+    "location": {
+      "lat": 43,
+      "lon": -2.5
+    }
+  },
+  "es": {
+    "colors": [
+      "#c7b500",
+      "#058e6e",
+      "#005bbf",
+      "#ad1519",
+      "#0039f0",
+      "#aa151b"
+    ],
+    "files": [
+      "es__00_c7b500.svg",
+      "es__01_058e6e.svg",
+      "es__02_005bbf.svg",
+      "es__03_ad1519.svg",
+      "es__04_0039f0.svg",
+      "es__05_aa151b.svg"
+    ],
+    "z": [
+      3190,
+      320,
+      960,
+      30,
+      4670,
+      10
+    ],
+    "full": "es__full.svg",
+    "location": {
+      "lat": 40,
+      "lon": -4
+    }
+  },
+  "et": {
+    "colors": [
+      "#ffc621",
+      "#ffc621",
+      "#ef2118",
+      "#298c08",
+      "#006bc6",
+      "#006bc6"
+    ],
+    "files": [
+      "et__00_ffc621.svg",
+      "et__01_ffc621.svg",
+      "et__02_ef2118.svg",
+      "et__03_298c08.svg",
+      "et__04_006bc6.svg",
+      "et__05_006bc6.svg"
+    ],
+    "z": [
+      50,
+      90,
+      60,
+      70,
+      80,
+      81
+    ],
+    "full": "et__full.svg",
+    "location": {
+      "lat": 8,
+      "lon": 38
+    }
+  },
+  "eu": {
+    "colors": [
+      "#ffcc00",
+      "#003399",
+      "#003399",
+      "#003399",
+      "#003399",
+      "#003399"
+    ],
+    "files": [
+      "eu__00_ffcc00.svg",
+      "eu__01_003399.svg",
+      "eu__02_003399.svg",
+      "eu__03_003399.svg",
+      "eu__04_003399.svg",
+      "eu__05_003399.svg"
+    ],
+    "z": [
+      110,
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "full": "eu__full.svg",
+    "location": {
+      "lat": 50,
+      "lon": 10
+    }
+  },
+  "fi": {
+    "colors": [
+      "#002f6c",
+      "#002f6c",
+      "#002f6c",
+      "#002f6c",
+      "#002f6c",
+      "#ffffff"
+    ],
+    "files": [
+      "fi__00_002f6c.svg",
+      "fi__01_002f6c.svg",
+      "fi__02_002f6c.svg",
+      "fi__03_002f6c.svg",
+      "fi__04_002f6c.svg",
+      "fi__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      10
+    ],
+    "full": "fi__full.svg",
+    "location": {
+      "lat": 64,
+      "lon": 26
+    }
+  },
+  "fj": {
+    "colors": [
+      "#68bfe5",
+      "#00a651",
+      "#c8102e",
+      "#964b36",
+      "#012169",
+      "#000001"
+    ],
+    "files": [
+      "fj__00_68bfe5.svg",
+      "fj__01_00a651.svg",
+      "fj__02_c8102e.svg",
+      "fj__03_964b36.svg",
+      "fj__04_012169.svg",
+      "fj__05_000001.svg"
+    ],
+    "z": [
+      10,
+      970,
+      1060,
+      440,
+      1040,
+      610
+    ],
+    "full": "fj__full.svg",
+    "location": {
+      "lat": -18,
+      "lon": 175
+    }
+  },
+  "fk": {
+    "colors": [
+      "#b6b6b4",
+      "#0072c4",
+      "#005120",
+      "#512007",
+      "#012169",
+      "#002b0d"
+    ],
+    "files": [
+      "fk__00_b6b6b4.svg",
+      "fk__01_0072c4.svg",
+      "fk__02_005120.svg",
+      "fk__03_512007.svg",
+      "fk__04_012169.svg",
+      "fk__05_002b0d.svg"
+    ],
+    "z": [
+      580,
+      280,
+      360,
+      631,
+      160,
+      361
+    ],
+    "full": "fk__full.svg",
+    "location": {
+      "lat": -51.75,
+      "lon": -59
+    }
+  },
+  "fm": {
+    "colors": [
+      "#6797d6",
+      "#6797d6",
+      "#6797d6",
+      "#6797d6",
+      "#6797d6",
+      "#ffffff"
+    ],
+    "files": [
+      "fm__00_6797d6.svg",
+      "fm__01_6797d6.svg",
+      "fm__02_6797d6.svg",
+      "fm__03_6797d6.svg",
+      "fm__04_6797d6.svg",
+      "fm__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      60
+    ],
+    "full": "fm__full.svg",
+    "location": {
+      "lat": 6.91666666,
+      "lon": 158.25
+    }
+  },
+  "fo": {
+    "colors": [
+      "#d72828",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#ffffff"
+    ],
+    "files": [
+      "fo__00_d72828.svg",
+      "fo__01_003897.svg",
+      "fo__02_003897.svg",
+      "fo__03_003897.svg",
+      "fo__04_003897.svg",
+      "fo__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      60,
+      61,
+      62,
+      63,
+      50
+    ],
+    "full": "fo__full.svg",
+    "location": {
+      "lat": 62,
+      "lon": -7
+    }
+  },
+  "fr": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "fr__00_e1000f.svg",
+      "fr__01_000091.svg",
+      "fr__02_000091.svg",
+      "fr__03_000091.svg",
+      "fr__04_000091.svg",
+      "fr__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "fr__full.svg",
+    "location": {
+      "lat": 46,
+      "lon": 2
+    }
+  },
+  "ga": {
+    "colors": [
+      "#ffe700",
+      "#36a100",
+      "#006dbc",
+      "#006dbc",
+      "#006dbc",
+      "#006dbc"
+    ],
+    "files": [
+      "ga__00_ffe700.svg",
+      "ga__01_36a100.svg",
+      "ga__02_006dbc.svg",
+      "ga__03_006dbc.svg",
+      "ga__04_006dbc.svg",
+      "ga__05_006dbc.svg"
+    ],
+    "z": [
+      20,
+      30,
+      40,
+      41,
+      42,
+      43
+    ],
+    "full": "ga__full.svg",
+    "location": {
+      "lat": -1,
+      "lon": 11.75
+    }
+  },
+  "gb-eng": {
+    "colors": [
+      "#ce1124",
+      "#ce1124",
+      "#ce1124",
+      "#ce1124",
+      "#ce1124",
+      "#ffffff"
+    ],
+    "files": [
+      "gb-eng__00_ce1124.svg",
+      "gb-eng__01_ce1124.svg",
+      "gb-eng__02_ce1124.svg",
+      "gb-eng__03_ce1124.svg",
+      "gb-eng__04_ce1124.svg",
+      "gb-eng__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      10
+    ],
+    "full": "gb-eng__full.svg",
+    "location": {
+      "lat": 52,
+      "lon": -1.5
+    }
+  },
+  "gb-nir": {
+    "colors": [
+      "#0f6545",
+      "#4d3126",
+      "#1f2d86",
+      "#1e1e1e",
+      "#161111",
+      "#121116"
+    ],
+    "files": [
+      "gb-nir__00_0f6545.svg",
+      "gb-nir__01_4d3126.svg",
+      "gb-nir__02_1f2d86.svg",
+      "gb-nir__03_1e1e1e.svg",
+      "gb-nir__04_161111.svg",
+      "gb-nir__05_121116.svg"
+    ],
+    "z": [
+      1000,
+      751,
+      1040,
+      141,
+      61,
+      851
+    ],
+    "full": "gb-nir__full.svg",
+    "location": {
+      "lat": 54.5,
+      "lon": -6
+    }
+  },
+  "gb-sct": {
+    "colors": [
+      "#0065bd",
+      "#0065bd",
+      "#0065bd",
+      "#0065bd",
+      "#0065bd",
+      "#ffffff"
+    ],
+    "files": [
+      "gb-sct__00_0065bd.svg",
+      "gb-sct__01_0065bd.svg",
+      "gb-sct__02_0065bd.svg",
+      "gb-sct__03_0065bd.svg",
+      "gb-sct__04_0065bd.svg",
+      "gb-sct__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      21
+    ],
+    "full": "gb-sct__full.svg",
+    "location": {
+      "lat": 56.5,
+      "lon": -4
+    }
+  },
+  "gb-wls": {
+    "colors": [
+      "#00ab39",
+      "#00ab39",
+      "#00ab39",
+      "#d21034",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "gb-wls__00_00ab39.svg",
+      "gb-wls__01_00ab39.svg",
+      "gb-wls__02_00ab39.svg",
+      "gb-wls__03_d21034.svg",
+      "gb-wls__04_000000.svg",
+      "gb-wls__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      40,
+      31,
+      20
+    ],
+    "full": "gb-wls__full.svg",
+    "location": {
+      "lat": 52.1,
+      "lon": -3.5
+    }
+  },
+  "gb": {
+    "colors": [
+      "#c8102e",
+      "#c8102e",
+      "#012169",
+      "#012169",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "gb__00_c8102e.svg",
+      "gb__01_c8102e.svg",
+      "gb__02_012169.svg",
+      "gb__03_012169.svg",
+      "gb__04_ffffff.svg",
+      "gb__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      50,
+      10,
+      11,
+      20,
+      40
+    ],
+    "full": "gb__full.svg",
+    "location": {
+      "lat": 54,
+      "lon": -2
+    }
+  },
+  "gd": {
+    "colors": [
+      "#fcd116",
+      "#fcd116",
+      "#007a5e",
+      "#ce1126",
+      "#ce1126",
+      "#ce1126"
+    ],
+    "files": [
+      "gd__00_fcd116.svg",
+      "gd__01_fcd116.svg",
+      "gd__02_007a5e.svg",
+      "gd__03_ce1126.svg",
+      "gd__04_ce1126.svg",
+      "gd__05_ce1126.svg"
+    ],
+    "z": [
+      120,
+      40,
+      110,
+      100,
+      130,
+      180
+    ],
+    "full": "gd__full.svg",
+    "location": {
+      "lat": 12.11666666,
+      "lon": -61.66666666
+    }
+  },
+  "ge": {
+    "colors": [
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ffffff"
+    ],
+    "files": [
+      "ge__00_ff0000.svg",
+      "ge__01_ff0000.svg",
+      "ge__02_ff0000.svg",
+      "ge__03_ff0000.svg",
+      "ge__04_ff0000.svg",
+      "ge__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      10
+    ],
+    "full": "ge__full.svg",
+    "location": {
+      "lat": 42,
+      "lon": 43.5
+    }
+  },
+  "gf": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "gf__00_e1000f.svg",
+      "gf__01_000091.svg",
+      "gf__02_000091.svg",
+      "gf__03_000091.svg",
+      "gf__04_000091.svg",
+      "gf__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "gf__full.svg",
+    "location": {
+      "lat": 4,
+      "lon": -53
+    }
+  },
+  "gg": {
+    "colors": [
+      "#f9dd16",
+      "#e8112d",
+      "#e8112d",
+      "#e8112d",
+      "#e8112d",
+      "#ffffff"
+    ],
+    "files": [
+      "gg__00_f9dd16.svg",
+      "gg__01_e8112d.svg",
+      "gg__02_e8112d.svg",
+      "gg__03_e8112d.svg",
+      "gg__04_e8112d.svg",
+      "gg__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      30,
+      31,
+      32,
+      33,
+      10
+    ],
+    "full": "gg__full.svg",
+    "location": {
+      "lat": 49.46666666,
+      "lon": -2.58333333
+    }
+  },
+  "gh": {
+    "colors": [
+      "#fcd116",
+      "#ce1126",
+      "#006b3f",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "gh__00_fcd116.svg",
+      "gh__01_ce1126.svg",
+      "gh__02_006b3f.svg",
+      "gh__03_000001.svg",
+      "gh__04_000001.svg",
+      "gh__05_000001.svg"
+    ],
+    "z": [
+      20,
+      30,
+      10,
+      40,
+      41,
+      42
+    ],
+    "full": "gh__full.svg",
+    "location": {
+      "lat": 8,
+      "lon": -2
+    }
+  },
+  "gi": {
+    "colors": [
+      "#f8d80e",
+      "#da000c",
+      "#000001",
+      "#000001",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "gi__00_f8d80e.svg",
+      "gi__01_da000c.svg",
+      "gi__02_000001.svg",
+      "gi__03_000001.svg",
+      "gi__04_000000.svg",
+      "gi__05_ffffff.svg"
+    ],
+    "z": [
+      110,
+      10,
+      50,
+      70,
+      31,
+      20
+    ],
+    "full": "gi__full.svg",
+    "location": {
+      "lat": 36.13333333,
+      "lon": -5.35
+    }
+  },
+  "gl": {
+    "colors": [
+      "#d00c33",
+      "#d00c33",
+      "#d00c33",
+      "#d00c33",
+      "#d00c33",
+      "#ffffff"
+    ],
+    "files": [
+      "gl__00_d00c33.svg",
+      "gl__01_d00c33.svg",
+      "gl__02_d00c33.svg",
+      "gl__03_d00c33.svg",
+      "gl__04_d00c33.svg",
+      "gl__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      10
+    ],
+    "full": "gl__full.svg",
+    "location": {
+      "lat": 72,
+      "lon": -40
+    }
+  },
+  "gm": {
+    "colors": [
+      "#009900",
+      "#ff0000",
+      "#000099",
+      "#000099",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "gm__00_009900.svg",
+      "gm__01_ff0000.svg",
+      "gm__02_000099.svg",
+      "gm__03_000099.svg",
+      "gm__04_ffffff.svg",
+      "gm__05_ffffff.svg"
+    ],
+    "z": [
+      90,
+      50,
+      70,
+      71,
+      60,
+      80
+    ],
+    "full": "gm__full.svg",
+    "location": {
+      "lat": 13.46666666,
+      "lon": -16.56666666
+    }
+  },
+  "gn": {
+    "colors": [
+      "#ffff00",
+      "#009900",
+      "#009900",
+      "#009900",
+      "#009900",
+      "#ff0000"
+    ],
+    "files": [
+      "gn__00_ffff00.svg",
+      "gn__01_009900.svg",
+      "gn__02_009900.svg",
+      "gn__03_009900.svg",
+      "gn__04_009900.svg",
+      "gn__05_ff0000.svg"
+    ],
+    "z": [
+      30,
+      40,
+      41,
+      42,
+      43,
+      20
+    ],
+    "full": "gn__full.svg",
+    "location": {
+      "lat": 11,
+      "lon": -10
+    }
+  },
+  "gp": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "gp__00_e1000f.svg",
+      "gp__01_000091.svg",
+      "gp__02_000091.svg",
+      "gp__03_000091.svg",
+      "gp__04_000091.svg",
+      "gp__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "gp__full.svg",
+    "location": {
+      "lat": 16.25,
+      "lon": -61.583333
+    }
+  },
+  "gq": {
+    "colors": [
+      "#3e9a00",
+      "#009a3b",
+      "#e32118",
+      "#a36629",
+      "#0073ce",
+      "#73452b"
+    ],
+    "files": [
+      "gq__00_3e9a00.svg",
+      "gq__01_009a3b.svg",
+      "gq__02_e32118.svg",
+      "gq__03_a36629.svg",
+      "gq__04_0073ce.svg",
+      "gq__05_73452b.svg"
+    ],
+    "z": [
+      30,
+      110,
+      10,
+      90,
+      40,
+      80
+    ],
+    "full": "gq__full.svg",
+    "location": {
+      "lat": 2,
+      "lon": 10
+    }
+  },
+  "gr": {
+    "colors": [
+      "#0d5eaf",
+      "#0d5eaf",
+      "#0d5eaf",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "gr__00_0d5eaf.svg",
+      "gr__01_0d5eaf.svg",
+      "gr__02_0d5eaf.svg",
+      "gr__03_ffffff.svg",
+      "gr__04_ffffff.svg",
+      "gr__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      30,
+      60,
+      20,
+      40,
+      100
+    ],
+    "full": "gr__full.svg",
+    "location": {
+      "lat": 39,
+      "lon": 22
+    }
+  },
+  "gs": {
+    "colors": [
+      "#00713d",
+      "#006b00",
+      "#1e5aa6",
+      "#0000ff",
+      "#012169",
+      "#000066"
+    ],
+    "files": [
+      "gs__00_00713d.svg",
+      "gs__01_006b00.svg",
+      "gs__02_1e5aa6.svg",
+      "gs__03_0000ff.svg",
+      "gs__04_012169.svg",
+      "gs__05_000066.svg"
+    ],
+    "z": [
+      230,
+      370,
+      490,
+      680,
+      1230,
+      160
+    ],
+    "full": "gs__full.svg",
+    "location": {
+      "lat": -54.5,
+      "lon": -37
+    }
+  },
+  "gt": {
+    "colors": [
+      "#448127",
+      "#406325",
+      "#485654",
+      "#34541f",
+      "#24420e",
+      "#351710"
+    ],
+    "files": [
+      "gt__00_448127.svg",
+      "gt__01_406325.svg",
+      "gt__02_485654.svg",
+      "gt__03_34541f.svg",
+      "gt__04_24420e.svg",
+      "gt__05_351710.svg"
+    ],
+    "z": [
+      1430,
+      700,
+      981,
+      1431,
+      311,
+      1021
+    ],
+    "full": "gt__full.svg",
+    "location": {
+      "lat": 15.5,
+      "lon": -90.25
+    }
+  },
+  "gu": {
+    "colors": [
+      "#add2d9",
+      "#a79270",
+      "#a68861",
+      "#239e46",
+      "#179a3b",
+      "#3b5aa3"
+    ],
+    "files": [
+      "gu__00_add2d9.svg",
+      "gu__01_a79270.svg",
+      "gu__02_a68861.svg",
+      "gu__03_239e46.svg",
+      "gu__04_179a3b.svg",
+      "gu__05_3b5aa3.svg"
+    ],
+    "z": [
+      40,
+      80,
+      120,
+      90,
+      60,
+      20
+    ],
+    "full": "gu__full.svg",
+    "location": {
+      "lat": 13.46666666,
+      "lon": 144.78333333
+    }
+  },
+  "gw": {
+    "colors": [
+      "#fcd116",
+      "#009e49",
+      "#ce1126",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "gw__00_fcd116.svg",
+      "gw__01_009e49.svg",
+      "gw__02_ce1126.svg",
+      "gw__03_000001.svg",
+      "gw__04_000001.svg",
+      "gw__05_000001.svg"
+    ],
+    "z": [
+      20,
+      30,
+      10,
+      50,
+      51,
+      52
+    ],
+    "full": "gw__full.svg",
+    "location": {
+      "lat": 12,
+      "lon": -15
+    }
+  },
+  "gy": {
+    "colors": [
+      "#ffde08",
+      "#399408",
+      "#de2110",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "gy__00_ffde08.svg",
+      "gy__01_399408.svg",
+      "gy__02_de2110.svg",
+      "gy__03_000001.svg",
+      "gy__04_000001.svg",
+      "gy__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      60,
+      50,
+      51,
+      30
+    ],
+    "full": "gy__full.svg",
+    "location": {
+      "lat": 5,
+      "lon": -59
+    }
+  },
+  "hk": {
+    "colors": [
+      "#ec1b2e",
+      "#ec1b2e",
+      "#ec1b2e",
+      "#ec1b2e",
+      "#ec1b2e",
+      "#ffffff"
+    ],
+    "files": [
+      "hk__00_ec1b2e.svg",
+      "hk__01_ec1b2e.svg",
+      "hk__02_ec1b2e.svg",
+      "hk__03_ec1b2e.svg",
+      "hk__04_ec1b2e.svg",
+      "hk__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "full": "hk__full.svg",
+    "location": {
+      "lat": 22.267,
+      "lon": 114.188
+    }
+  },
+  "hm": {
+    "colors": [
+      "#ff0000",
+      "#ff0000",
+      "#00008b",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "hm__00_ff0000.svg",
+      "hm__01_ff0000.svg",
+      "hm__02_00008b.svg",
+      "hm__03_ffffff.svg",
+      "hm__04_ffffff.svg",
+      "hm__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      50,
+      10,
+      20,
+      40,
+      60
+    ],
+    "full": "hm__full.svg",
+    "location": {
+      "lat": -53.1,
+      "lon": 72.51666666
+    }
+  },
+  "hn": {
+    "colors": [
+      "#18c3df",
+      "#18c3df",
+      "#18c3df",
+      "#18c3df",
+      "#18c3df",
+      "#ffffff"
+    ],
+    "files": [
+      "hn__00_18c3df.svg",
+      "hn__01_18c3df.svg",
+      "hn__02_18c3df.svg",
+      "hn__03_18c3df.svg",
+      "hn__04_18c3df.svg",
+      "hn__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      30,
+      20
+    ],
+    "full": "hn__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": -86.5
+    }
+  },
+  "hr": {
+    "colors": [
+      "#f7db17",
+      "#0093dd",
+      "#ff0000",
+      "#171796",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "hr__00_f7db17.svg",
+      "hr__01_0093dd.svg",
+      "hr__02_ff0000.svg",
+      "hr__03_171796.svg",
+      "hr__04_000000.svg",
+      "hr__05_ffffff.svg"
+    ],
+    "z": [
+      120,
+      90,
+      30,
+      10,
+      101,
+      20
+    ],
+    "full": "hr__full.svg",
+    "location": {
+      "lat": 45.16666666,
+      "lon": 15.5
+    }
+  },
+  "ht": {
+    "colors": [
+      "#d20014",
+      "#016a16",
+      "#0a328c",
+      "#503200",
+      "#00209f",
+      "#000001"
+    ],
+    "files": [
+      "ht__00_d20014.svg",
+      "ht__01_016a16.svg",
+      "ht__02_0a328c.svg",
+      "ht__03_503200.svg",
+      "ht__04_00209f.svg",
+      "ht__05_000001.svg"
+    ],
+    "z": [
+      150,
+      352,
+      140,
+      590,
+      20,
+      1060
+    ],
+    "full": "ht__full.svg",
+    "location": {
+      "lat": 19,
+      "lon": -72.41666666
+    }
+  },
+  "hu": {
+    "colors": [
+      "#388d00",
+      "#388d00",
+      "#388d00",
+      "#388d00",
+      "#d43516",
+      "#ffffff"
+    ],
+    "files": [
+      "hu__00_388d00.svg",
+      "hu__01_388d00.svg",
+      "hu__02_388d00.svg",
+      "hu__03_388d00.svg",
+      "hu__04_d43516.svg",
+      "hu__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      40,
+      20
+    ],
+    "full": "hu__full.svg",
+    "location": {
+      "lat": 47,
+      "lon": 20
+    }
+  },
+  "ic": {
+    "colors": [
+      "#ffcc00",
+      "#0768a9",
+      "#0768a9",
+      "#0768a9",
+      "#0768a9",
+      "#ffffff"
+    ],
+    "files": [
+      "ic__00_ffcc00.svg",
+      "ic__01_0768a9.svg",
+      "ic__02_0768a9.svg",
+      "ic__03_0768a9.svg",
+      "ic__04_0768a9.svg",
+      "ic__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      21,
+      22,
+      23,
+      30
+    ],
+    "full": "ic__full.svg",
+    "location": {
+      "lat": 28.1,
+      "lon": -15.4
+    }
+  },
+  "id": {
+    "colors": [
+      "#e70011",
+      "#e70011",
+      "#e70011",
+      "#e70011",
+      "#e70011",
+      "#ffffff"
+    ],
+    "files": [
+      "id__00_e70011.svg",
+      "id__01_e70011.svg",
+      "id__02_e70011.svg",
+      "id__03_e70011.svg",
+      "id__04_e70011.svg",
+      "id__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "full": "id__full.svg",
+    "location": {
+      "lat": -5,
+      "lon": 120
+    }
+  },
+  "ie": {
+    "colors": [
+      "#ff7900",
+      "#009a49",
+      "#009a49",
+      "#009a49",
+      "#009a49",
+      "#ffffff"
+    ],
+    "files": [
+      "ie__00_ff7900.svg",
+      "ie__01_009a49.svg",
+      "ie__02_009a49.svg",
+      "ie__03_009a49.svg",
+      "ie__04_009a49.svg",
+      "ie__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      30,
+      31,
+      32,
+      33,
+      20
+    ],
+    "full": "ie__full.svg",
+    "location": {
+      "lat": 53,
+      "lon": -8
+    }
+  },
+  "il": {
+    "colors": [
+      "#0038b8",
+      "#0038b8",
+      "#0038b8",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "il__00_0038b8.svg",
+      "il__01_0038b8.svg",
+      "il__02_0038b8.svg",
+      "il__03_ffffff.svg",
+      "il__04_ffffff.svg",
+      "il__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      61,
+      80,
+      50,
+      70,
+      90
+    ],
+    "full": "il__full.svg",
+    "location": {
+      "lat": 31.47,
+      "lon": 35.13
+    }
+  },
+  "im": {
+    "colors": [
+      "#ffef00",
+      "#ffec00",
+      "#ffe606",
+      "#ba0000",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "im__00_ffef00.svg",
+      "im__01_ffec00.svg",
+      "im__02_ffe606.svg",
+      "im__03_ba0000.svg",
+      "im__04_000000.svg",
+      "im__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      80,
+      130,
+      50,
+      151,
+      70
+    ],
+    "full": "im__full.svg",
+    "location": {
+      "lat": 54.25,
+      "lon": -4.5
+    }
+  },
+  "in": {
+    "colors": [
+      "#ff9933",
+      "#128807",
+      "#000088",
+      "#000088",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "in__00_ff9933.svg",
+      "in__01_128807.svg",
+      "in__02_000088.svg",
+      "in__03_000088.svg",
+      "in__04_ffffff.svg",
+      "in__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      30,
+      50,
+      70,
+      20,
+      60
+    ],
+    "full": "in__full.svg",
+    "location": {
+      "lat": 20,
+      "lon": 77
+    }
+  },
+  "io": {
+    "colors": [
+      "#808080",
+      "#a24300",
+      "#006d00",
+      "#006300",
+      "#012169",
+      "#000063"
+    ],
+    "files": [
+      "io__00_808080.svg",
+      "io__01_a24300.svg",
+      "io__02_006d00.svg",
+      "io__03_006300.svg",
+      "io__04_012169.svg",
+      "io__05_000063.svg"
+    ],
+    "z": [
+      1050,
+      30,
+      40,
+      1080,
+      1220,
+      20
+    ],
+    "full": "io__full.svg",
+    "location": {
+      "lat": -6,
+      "lon": 71.5
+    }
+  },
+  "iq": {
+    "colors": [
+      "#007a3d",
+      "#ce1126",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "iq__00_007a3d.svg",
+      "iq__01_ce1126.svg",
+      "iq__02_000001.svg",
+      "iq__03_000001.svg",
+      "iq__04_000001.svg",
+      "iq__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      30,
+      31,
+      32,
+      10
+    ],
+    "full": "iq__full.svg",
+    "location": {
+      "lat": 33,
+      "lon": 44
+    }
+  },
+  "ir": {
+    "colors": [
+      "#239f40",
+      "#239e3f",
+      "#da0000",
+      "#da0000",
+      "#d90000",
+      "#ffffff"
+    ],
+    "files": [
+      "ir__00_239f40.svg",
+      "ir__01_239e3f.svg",
+      "ir__02_da0000.svg",
+      "ir__03_da0000.svg",
+      "ir__04_d90000.svg",
+      "ir__05_ffffff.svg"
+    ],
+    "z": [
+      550,
+      1850,
+      60,
+      1860,
+      1840,
+      50
+    ],
+    "full": "ir__full.svg",
+    "location": {
+      "lat": 32,
+      "lon": 53
+    }
+  },
+  "is": {
+    "colors": [
+      "#d72828",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#003897",
+      "#ffffff"
+    ],
+    "files": [
+      "is__00_d72828.svg",
+      "is__01_003897.svg",
+      "is__02_003897.svg",
+      "is__03_003897.svg",
+      "is__04_003897.svg",
+      "is__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      50,
+      51,
+      52,
+      53,
+      60
+    ],
+    "full": "is__full.svg",
+    "location": {
+      "lat": 65,
+      "lon": -18
+    }
+  },
+  "it": {
+    "colors": [
+      "#009246",
+      "#009246",
+      "#009246",
+      "#009246",
+      "#ce2b37",
+      "#ffffff"
+    ],
+    "files": [
+      "it__00_009246.svg",
+      "it__01_009246.svg",
+      "it__02_009246.svg",
+      "it__03_009246.svg",
+      "it__04_ce2b37.svg",
+      "it__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      40,
+      20
+    ],
+    "full": "it__full.svg",
+    "location": {
+      "lat": 42.83333333,
+      "lon": 12.83333333
+    }
+  },
+  "je": {
+    "colors": [
+      "#377bc8",
+      "#806600",
+      "#2c5aa0",
+      "#504416",
+      "#800000",
+      "#2b2200"
+    ],
+    "files": [
+      "je__00_377bc8.svg",
+      "je__01_806600.svg",
+      "je__02_2c5aa0.svg",
+      "je__03_504416.svg",
+      "je__04_800000.svg",
+      "je__05_2b2200.svg"
+    ],
+    "z": [
+      60,
+      81,
+      61,
+      120,
+      41,
+      210
+    ],
+    "full": "je__full.svg",
+    "location": {
+      "lat": 49.25,
+      "lon": -2.16666666
+    }
+  },
+  "jm": {
+    "colors": [
+      "#ffcc00",
+      "#009900",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "jm__00_ffcc00.svg",
+      "jm__01_009900.svg",
+      "jm__02_000001.svg",
+      "jm__03_000001.svg",
+      "jm__04_000001.svg",
+      "jm__05_000001.svg"
+    ],
+    "z": [
+      50,
+      30,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "jm__full.svg",
+    "location": {
+      "lat": 18.25,
+      "lon": -77.5
+    }
+  },
+  "jo": {
+    "colors": [
+      "#009900",
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "jo__00_009900.svg",
+      "jo__01_ff0000.svg",
+      "jo__02_000001.svg",
+      "jo__03_000001.svg",
+      "jo__04_ffffff.svg",
+      "jo__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      90,
+      60,
+      61,
+      70,
+      100
+    ],
+    "full": "jo__full.svg",
+    "location": {
+      "lat": 31,
+      "lon": 36
+    }
+  },
+  "jp": {
+    "colors": [
+      "#bc002d",
+      "#bc002d",
+      "#bc002d",
+      "#bc002d",
+      "#bc002d",
+      "#ffffff"
+    ],
+    "files": [
+      "jp__00_bc002d.svg",
+      "jp__01_bc002d.svg",
+      "jp__02_bc002d.svg",
+      "jp__03_bc002d.svg",
+      "jp__04_bc002d.svg",
+      "jp__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      50
+    ],
+    "full": "jp__full.svg",
+    "location": {
+      "lat": 36,
+      "lon": 138
+    }
+  },
+  "ke": {
+    "colors": [
+      "#bb0000",
+      "#006600",
+      "#000001",
+      "#000000",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "ke__00_bb0000.svg",
+      "ke__01_006600.svg",
+      "ke__02_000001.svg",
+      "ke__03_000000.svg",
+      "ke__04_ffffff.svg",
+      "ke__05_ffffff.svg"
+    ],
+    "z": [
+      100,
+      50,
+      40,
+      71,
+      30,
+      80
+    ],
+    "full": "ke__full.svg",
+    "location": {
+      "lat": 1,
+      "lon": 38
+    }
+  },
+  "kg": {
+    "colors": [
+      "#ffff00",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000"
+    ],
+    "files": [
+      "kg__00_ffff00.svg",
+      "kg__01_ff0000.svg",
+      "kg__02_ff0000.svg",
+      "kg__03_ff0000.svg",
+      "kg__04_ff0000.svg",
+      "kg__05_ff0000.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "full": "kg__full.svg",
+    "location": {
+      "lat": 41,
+      "lon": 75
+    }
+  },
+  "kh": {
+    "colors": [
+      "#e00025",
+      "#032ea1",
+      "#032ea1",
+      "#032ea1",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "kh__00_e00025.svg",
+      "kh__01_032ea1.svg",
+      "kh__02_032ea1.svg",
+      "kh__03_032ea1.svg",
+      "kh__04_000000.svg",
+      "kh__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      31,
+      30
+    ],
+    "full": "kh__full.svg",
+    "location": {
+      "lat": 13,
+      "lon": 105
+    }
+  },
+  "ki": {
+    "colors": [
+      "#ffc84b",
+      "#fec74a",
+      "#d8aa3f",
+      "#d9a43e",
+      "#e73e2d",
+      "#005989"
+    ],
+    "files": [
+      "ki__00_ffc84b.svg",
+      "ki__01_fec74a.svg",
+      "ki__02_d8aa3f.svg",
+      "ki__03_d9a43e.svg",
+      "ki__04_e73e2d.svg",
+      "ki__05_005989.svg"
+    ],
+    "z": [
+      300,
+      230,
+      231,
+      311,
+      50,
+      240
+    ],
+    "full": "ki__full.svg",
+    "location": {
+      "lat": 1.41666666,
+      "lon": 173
+    }
+  },
+  "km": {
+    "colors": [
+      "#ffff00",
+      "#239e46",
+      "#be0027",
+      "#3b5aa3",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "km__00_ffff00.svg",
+      "km__01_239e46.svg",
+      "km__02_be0027.svg",
+      "km__03_3b5aa3.svg",
+      "km__04_ffffff.svg",
+      "km__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      90,
+      70,
+      80,
+      60,
+      110
+    ],
+    "full": "km__full.svg",
+    "location": {
+      "lat": -12.16666666,
+      "lon": 44.25
+    }
+  },
+  "kn": {
+    "colors": [
+      "#ffe900",
+      "#35a100",
+      "#c70000",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "kn__00_ffe900.svg",
+      "kn__01_35a100.svg",
+      "kn__02_c70000.svg",
+      "kn__03_000001.svg",
+      "kn__04_000001.svg",
+      "kn__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      60,
+      70,
+      80,
+      81,
+      90
+    ],
+    "full": "kn__full.svg",
+    "location": {
+      "lat": 17.33333333,
+      "lon": -62.75
+    }
+  },
+  "kp": {
+    "colors": [
+      "#c60000",
+      "#c40000",
+      "#3e5698",
+      "#3e5698",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "kp__00_c60000.svg",
+      "kp__01_c40000.svg",
+      "kp__02_3e5698.svg",
+      "kp__03_3e5698.svg",
+      "kp__04_000000.svg",
+      "kp__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      100,
+      60,
+      80,
+      51,
+      50
+    ],
+    "full": "kp__full.svg",
+    "location": {
+      "lat": 40,
+      "lon": 127
+    }
+  },
+  "kr": {
+    "colors": [
+      "#cd2e3a",
+      "#cd2e3a",
+      "#0047a0",
+      "#000001",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "kr__00_cd2e3a.svg",
+      "kr__01_cd2e3a.svg",
+      "kr__02_0047a0.svg",
+      "kr__03_000001.svg",
+      "kr__04_ffffff.svg",
+      "kr__05_ffffff.svg"
+    ],
+    "z": [
+      110,
+      130,
+      120,
+      80,
+      50,
+      101
+    ],
+    "full": "kr__full.svg",
+    "location": {
+      "lat": 37,
+      "lon": 127.5
+    }
+  },
+  "kw": {
+    "colors": [
+      "#00d941",
+      "#f31830",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "kw__00_00d941.svg",
+      "kw__01_f31830.svg",
+      "kw__02_000001.svg",
+      "kw__03_000001.svg",
+      "kw__04_000001.svg",
+      "kw__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      60,
+      80,
+      81,
+      82,
+      50
+    ],
+    "full": "kw__full.svg",
+    "location": {
+      "lat": 29.5,
+      "lon": 45.75
+    }
+  },
+  "ky": {
+    "colors": [
+      "#059334",
+      "#00493d",
+      "#024919",
+      "#012169",
+      "#000066",
+      "#000001"
+    ],
+    "files": [
+      "ky__00_059334.svg",
+      "ky__01_00493d.svg",
+      "ky__02_024919.svg",
+      "ky__03_012169.svg",
+      "ky__04_000066.svg",
+      "ky__05_000001.svg"
+    ],
+    "z": [
+      520,
+      200,
+      820,
+      20,
+      10,
+      540
+    ],
+    "full": "ky__full.svg",
+    "location": {
+      "lat": 19.5,
+      "lon": -80.5
+    }
+  },
+  "kz": {
+    "colors": [
+      "#ffec2d",
+      "#ffec2d",
+      "#00abc2",
+      "#00abc2",
+      "#00abc2",
+      "#00abc2"
+    ],
+    "files": [
+      "kz__00_ffec2d.svg",
+      "kz__01_ffec2d.svg",
+      "kz__02_00abc2.svg",
+      "kz__03_00abc2.svg",
+      "kz__04_00abc2.svg",
+      "kz__05_00abc2.svg"
+    ],
+    "z": [
+      20,
+      181,
+      10,
+      11,
+      12,
+      13
+    ],
+    "full": "kz__full.svg",
+    "location": {
+      "lat": 48,
+      "lon": 68
+    }
+  },
+  "la": {
+    "colors": [
+      "#ce1126",
+      "#002868",
+      "#002868",
+      "#002868",
+      "#002868",
+      "#ffffff"
+    ],
+    "files": [
+      "la__00_ce1126.svg",
+      "la__01_002868.svg",
+      "la__02_002868.svg",
+      "la__03_002868.svg",
+      "la__04_002868.svg",
+      "la__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      60,
+      61,
+      62,
+      63,
+      70
+    ],
+    "full": "la__full.svg",
+    "location": {
+      "lat": 18,
+      "lon": 105
+    }
+  },
+  "lb": {
+    "colors": [
+      "#00a850",
+      "#00a850",
+      "#00a850",
+      "#ee161f",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "lb__00_00a850.svg",
+      "lb__01_00a850.svg",
+      "lb__02_00a850.svg",
+      "lb__03_ee161f.svg",
+      "lb__04_ffffff.svg",
+      "lb__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      81,
+      82,
+      60,
+      70,
+      92
+    ],
+    "full": "lb__full.svg",
+    "location": {
+      "lat": 33.83333333,
+      "lon": 35.83333333
+    }
+  },
+  "lc": {
+    "colors": [
+      "#ffce00",
+      "#65cfff",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "lc__00_ffce00.svg",
+      "lc__01_65cfff.svg",
+      "lc__02_000001.svg",
+      "lc__03_000001.svg",
+      "lc__04_000001.svg",
+      "lc__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      20,
+      40,
+      41,
+      42,
+      30
+    ],
+    "full": "lc__full.svg",
+    "location": {
+      "lat": 13.88333333,
+      "lon": -60.96666666
+    }
+  },
+  "li": {
+    "colors": [
+      "#ffd83d",
+      "#ce1126",
+      "#002b7f",
+      "#000001",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "li__00_ffd83d.svg",
+      "li__01_ce1126.svg",
+      "li__02_002b7f.svg",
+      "li__03_000001.svg",
+      "li__04_000001.svg",
+      "li__05_000000.svg"
+    ],
+    "z": [
+      30,
+      20,
+      10,
+      80,
+      300,
+      31
+    ],
+    "full": "li__full.svg",
+    "location": {
+      "lat": 47.26666666,
+      "lon": 9.53333333
+    }
+  },
+  "lk": {
+    "colors": [
+      "#ffb700",
+      "#ff5b00",
+      "#005641",
+      "#8d2029",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "lk__00_ffb700.svg",
+      "lk__01_ff5b00.svg",
+      "lk__02_005641.svg",
+      "lk__03_8d2029.svg",
+      "lk__04_000001.svg",
+      "lk__05_000000.svg"
+    ],
+    "z": [
+      10,
+      20,
+      30,
+      40,
+      180,
+      51
+    ],
+    "full": "lk__full.svg",
+    "location": {
+      "lat": 7,
+      "lon": 81
+    }
+  },
+  "lr": {
+    "colors": [
+      "#cc0000",
+      "#000066",
+      "#000066",
+      "#000066",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "lr__00_cc0000.svg",
+      "lr__01_000066.svg",
+      "lr__02_000066.svg",
+      "lr__03_000066.svg",
+      "lr__04_ffffff.svg",
+      "lr__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      60,
+      61,
+      62,
+      50,
+      90
+    ],
+    "full": "lr__full.svg",
+    "location": {
+      "lat": 6.5,
+      "lon": -9.5
+    }
+  },
+  "ls": {
+    "colors": [
+      "#009543",
+      "#00209f",
+      "#00209f",
+      "#000000",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "ls__00_009543.svg",
+      "ls__01_00209f.svg",
+      "ls__02_00209f.svg",
+      "ls__03_000000.svg",
+      "ls__04_ffffff.svg",
+      "ls__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      51,
+      10,
+      60
+    ],
+    "full": "ls__full.svg",
+    "location": {
+      "lat": -29.5,
+      "lon": 28.5
+    }
+  },
+  "lt": {
+    "colors": [
+      "#fdb913",
+      "#c1272d",
+      "#006a44",
+      "#006a44",
+      "#006a44",
+      "#006a44"
+    ],
+    "files": [
+      "lt__00_fdb913.svg",
+      "lt__01_c1272d.svg",
+      "lt__02_006a44.svg",
+      "lt__03_006a44.svg",
+      "lt__04_006a44.svg",
+      "lt__05_006a44.svg"
+    ],
+    "z": [
+      40,
+      30,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "lt__full.svg",
+    "location": {
+      "lat": 56,
+      "lon": 24
+    }
+  },
+  "lu": {
+    "colors": [
+      "#00a1de",
+      "#00a1de",
+      "#00a1de",
+      "#00a1de",
+      "#ed2939",
+      "#ffffff"
+    ],
+    "files": [
+      "lu__00_00a1de.svg",
+      "lu__01_00a1de.svg",
+      "lu__02_00a1de.svg",
+      "lu__03_00a1de.svg",
+      "lu__04_ed2939.svg",
+      "lu__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      10,
+      20
+    ],
+    "full": "lu__full.svg",
+    "location": {
+      "lat": 49.75,
+      "lon": 6.16666666
+    }
+  },
+  "lv": {
+    "colors": [
+      "#981e32",
+      "#981e32",
+      "#981e32",
+      "#981e32",
+      "#981e32",
+      "#ffffff"
+    ],
+    "files": [
+      "lv__00_981e32.svg",
+      "lv__01_981e32.svg",
+      "lv__02_981e32.svg",
+      "lv__03_981e32.svg",
+      "lv__04_981e32.svg",
+      "lv__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      20
+    ],
+    "full": "lv__full.svg",
+    "location": {
+      "lat": 57,
+      "lon": 25
+    }
+  },
+  "ly": {
+    "colors": [
+      "#239e46",
+      "#e70013",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ly__00_239e46.svg",
+      "ly__01_e70013.svg",
+      "ly__02_000001.svg",
+      "ly__03_000001.svg",
+      "ly__04_000001.svg",
+      "ly__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      70,
+      60,
+      61,
+      62,
+      80
+    ],
+    "full": "ly__full.svg",
+    "location": {
+      "lat": 25,
+      "lon": 17
+    }
+  },
+  "ma": {
+    "colors": [
+      "#c1272d",
+      "#006233",
+      "#006233",
+      "#006233",
+      "#006233",
+      "#006233"
+    ],
+    "files": [
+      "ma__00_c1272d.svg",
+      "ma__01_006233.svg",
+      "ma__02_006233.svg",
+      "ma__03_006233.svg",
+      "ma__04_006233.svg",
+      "ma__05_006233.svg"
+    ],
+    "z": [
+      10,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "full": "ma__full.svg",
+    "location": {
+      "lat": 32,
+      "lon": -5
+    }
+  },
+  "mc": {
+    "colors": [
+      "#f31830",
+      "#f31830",
+      "#f31830",
+      "#f31830",
+      "#f31830",
+      "#ffffff"
+    ],
+    "files": [
+      "mc__00_f31830.svg",
+      "mc__01_f31830.svg",
+      "mc__02_f31830.svg",
+      "mc__03_f31830.svg",
+      "mc__04_f31830.svg",
+      "mc__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      30
+    ],
+    "full": "mc__full.svg",
+    "location": {
+      "lat": 43.73333333,
+      "lon": 7.4
+    }
+  },
+  "md": {
+    "colors": [
+      "#cac9c7",
+      "#a77b3b",
+      "#008f00",
+      "#008500",
+      "#564dff",
+      "#00319c"
+    ],
+    "files": [
+      "md__00_cac9c7.svg",
+      "md__01_a77b3b.svg",
+      "md__02_008f00.svg",
+      "md__03_008500.svg",
+      "md__04_564dff.svg",
+      "md__05_00319c.svg"
+    ],
+    "z": [
+      500,
+      60,
+      560,
+      540,
+      300,
+      20
+    ],
+    "full": "md__full.svg",
+    "location": {
+      "lat": 47,
+      "lon": 29
+    }
+  },
+  "me": {
+    "colors": [
+      "#d3ae3b",
+      "#6d8c3e",
+      "#b96b29",
+      "#c52126",
+      "#c40308",
+      "#1d5e91"
+    ],
+    "files": [
+      "me__00_d3ae3b.svg",
+      "me__01_6d8c3e.svg",
+      "me__02_b96b29.svg",
+      "me__03_c52126.svg",
+      "me__04_c40308.svg",
+      "me__05_1d5e91.svg"
+    ],
+    "z": [
+      10,
+      70,
+      760,
+      390,
+      20,
+      60
+    ],
+    "full": "me__full.svg",
+    "location": {
+      "lat": 42.5,
+      "lon": 19.3
+    }
+  },
+  "mf": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "mf__00_e1000f.svg",
+      "mf__01_000091.svg",
+      "mf__02_000091.svg",
+      "mf__03_000091.svg",
+      "mf__04_000091.svg",
+      "mf__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "mf__full.svg",
+    "location": {
+      "lat": 18.08333333,
+      "lon": -63.95
+    }
+  },
+  "mg": {
+    "colors": [
+      "#fc3d32",
+      "#007e3a",
+      "#007e3a",
+      "#007e3a",
+      "#007e3a",
+      "#ffffff"
+    ],
+    "files": [
+      "mg__00_fc3d32.svg",
+      "mg__01_007e3a.svg",
+      "mg__02_007e3a.svg",
+      "mg__03_007e3a.svg",
+      "mg__04_007e3a.svg",
+      "mg__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      40
+    ],
+    "full": "mg__full.svg",
+    "location": {
+      "lat": -20,
+      "lon": 47
+    }
+  },
+  "mh": {
+    "colors": [
+      "#e2ae57",
+      "#3b5aa3",
+      "#3b5aa3",
+      "#3b5aa3",
+      "#3b5aa3",
+      "#ffffff"
+    ],
+    "files": [
+      "mh__00_e2ae57.svg",
+      "mh__01_3b5aa3.svg",
+      "mh__02_3b5aa3.svg",
+      "mh__03_3b5aa3.svg",
+      "mh__04_3b5aa3.svg",
+      "mh__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      40
+    ],
+    "full": "mh__full.svg",
+    "location": {
+      "lat": 9,
+      "lon": 168
+    }
+  },
+  "mk": {
+    "colors": [
+      "#ffe600",
+      "#d20000",
+      "#d20000",
+      "#d20000",
+      "#d20000",
+      "#d20000"
+    ],
+    "files": [
+      "mk__00_ffe600.svg",
+      "mk__01_d20000.svg",
+      "mk__02_d20000.svg",
+      "mk__03_d20000.svg",
+      "mk__04_d20000.svg",
+      "mk__05_d20000.svg"
+    ],
+    "z": [
+      30,
+      10,
+      11,
+      12,
+      13,
+      31
+    ],
+    "full": "mk__full.svg",
+    "location": {
+      "lat": 41.83333333,
+      "lon": 22
+    }
+  },
+  "ml": {
+    "colors": [
+      "#ffff00",
+      "#009a00",
+      "#009a00",
+      "#009a00",
+      "#009a00",
+      "#ff0000"
+    ],
+    "files": [
+      "ml__00_ffff00.svg",
+      "ml__01_009a00.svg",
+      "ml__02_009a00.svg",
+      "ml__03_009a00.svg",
+      "ml__04_009a00.svg",
+      "ml__05_ff0000.svg"
+    ],
+    "z": [
+      40,
+      30,
+      31,
+      32,
+      33,
+      20
+    ],
+    "full": "ml__full.svg",
+    "location": {
+      "lat": 17,
+      "lon": -4
+    }
+  },
+  "mm": {
+    "colors": [
+      "#fecb00",
+      "#34b233",
+      "#34b233",
+      "#34b233",
+      "#ea2839",
+      "#ffffff"
+    ],
+    "files": [
+      "mm__00_fecb00.svg",
+      "mm__01_34b233.svg",
+      "mm__02_34b233.svg",
+      "mm__03_34b233.svg",
+      "mm__04_ea2839.svg",
+      "mm__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      20,
+      21,
+      22,
+      30,
+      50
+    ],
+    "full": "mm__full.svg",
+    "location": {
+      "lat": 22,
+      "lon": 98
+    }
+  },
+  "mn": {
+    "colors": [
+      "#da2032",
+      "#da2032",
+      "#da2032",
+      "#0066b3",
+      "#0066b3",
+      "#0066b3"
+    ],
+    "files": [
+      "mn__00_da2032.svg",
+      "mn__01_da2032.svg",
+      "mn__02_da2032.svg",
+      "mn__03_0066b3.svg",
+      "mn__04_0066b3.svg",
+      "mn__05_0066b3.svg"
+    ],
+    "z": [
+      10,
+      40,
+      80,
+      20,
+      21,
+      22
+    ],
+    "full": "mn__full.svg",
+    "location": {
+      "lat": 46,
+      "lon": 105
+    }
+  },
+  "mo": {
+    "colors": [
+      "#fbd116",
+      "#fbd116",
+      "#00785e",
+      "#00785e",
+      "#00785e",
+      "#ffffff"
+    ],
+    "files": [
+      "mo__00_fbd116.svg",
+      "mo__01_fbd116.svg",
+      "mo__02_00785e.svg",
+      "mo__03_00785e.svg",
+      "mo__04_00785e.svg",
+      "mo__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      50,
+      10,
+      11,
+      12,
+      40
+    ],
+    "full": "mo__full.svg",
+    "location": {
+      "lat": 22.16666666,
+      "lon": 113.55
+    }
+  },
+  "mp": {
+    "colors": [
+      "#8c8a8c",
+      "#de2010",
+      "#0071bc",
+      "#217900",
+      "#6b18b5",
+      "#8c1800"
+    ],
+    "files": [
+      "mp__00_8c8a8c.svg",
+      "mp__01_de2010.svg",
+      "mp__02_0071bc.svg",
+      "mp__03_217900.svg",
+      "mp__04_6b18b5.svg",
+      "mp__05_8c1800.svg"
+    ],
+    "z": [
+      120,
+      200,
+      50,
+      780,
+      540,
+      662
+    ],
+    "full": "mp__full.svg",
+    "location": {
+      "lat": 15.2,
+      "lon": 145.75
+    }
+  },
+  "mq": {
+    "colors": [
+      "#00a650",
+      "#00a650",
+      "#00a650",
+      "#00a650",
+      "#ef1923",
+      "#231f1e"
+    ],
+    "files": [
+      "mq__00_00a650.svg",
+      "mq__01_00a650.svg",
+      "mq__02_00a650.svg",
+      "mq__03_00a650.svg",
+      "mq__04_ef1923.svg",
+      "mq__05_231f1e.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      30,
+      10
+    ],
+    "full": "mq__full.svg",
+    "location": {
+      "lat": 14.666667,
+      "lon": -61
+    }
+  },
+  "mr": {
+    "colors": [
+      "#ffc400",
+      "#cd2a3e",
+      "#006233",
+      "#006233",
+      "#006233",
+      "#006233"
+    ],
+    "files": [
+      "mr__00_ffc400.svg",
+      "mr__01_cd2a3e.svg",
+      "mr__02_006233.svg",
+      "mr__03_006233.svg",
+      "mr__04_006233.svg",
+      "mr__05_006233.svg"
+    ],
+    "z": [
+      40,
+      10,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "mr__full.svg",
+    "location": {
+      "lat": 20,
+      "lon": -12
+    }
+  },
+  "ms": {
+    "colors": [
+      "#00a2bd",
+      "#008021",
+      "#c8102e",
+      "#a53d08",
+      "#870f00",
+      "#012169"
+    ],
+    "files": [
+      "ms__00_00a2bd.svg",
+      "ms__01_008021.svg",
+      "ms__02_c8102e.svg",
+      "ms__03_a53d08.svg",
+      "ms__04_870f00.svg",
+      "ms__05_012169.svg"
+    ],
+    "z": [
+      30,
+      110,
+      230,
+      40,
+      130,
+      10
+    ],
+    "full": "ms__full.svg",
+    "location": {
+      "lat": 16.75,
+      "lon": -62.2
+    }
+  },
+  "mt": {
+    "colors": [
+      "#cf142b",
+      "#cf142b",
+      "#000000",
+      "#000000",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "mt__00_cf142b.svg",
+      "mt__01_cf142b.svg",
+      "mt__02_000000.svg",
+      "mt__03_000000.svg",
+      "mt__04_ffffff.svg",
+      "mt__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      41,
+      31,
+      241,
+      10,
+      280
+    ],
+    "full": "mt__full.svg",
+    "location": {
+      "lat": 35.83333333,
+      "lon": 14.58333333
+    }
+  },
+  "mu": {
+    "colors": [
+      "#ffcd00",
+      "#00a04d",
+      "#00a04d",
+      "#00a04d",
+      "#ee2737",
+      "#151f6d"
+    ],
+    "files": [
+      "mu__00_ffcd00.svg",
+      "mu__01_00a04d.svg",
+      "mu__02_00a04d.svg",
+      "mu__03_00a04d.svg",
+      "mu__04_ee2737.svg",
+      "mu__05_151f6d.svg"
+    ],
+    "z": [
+      50,
+      20,
+      21,
+      22,
+      40,
+      30
+    ],
+    "full": "mu__full.svg",
+    "location": {
+      "lat": -20.28333333,
+      "lon": 57.55
+    }
+  },
+  "mv": {
+    "colors": [
+      "#007e3a",
+      "#007e3a",
+      "#007e3a",
+      "#007e3a",
+      "#d21034",
+      "#ffffff"
+    ],
+    "files": [
+      "mv__00_007e3a.svg",
+      "mv__01_007e3a.svg",
+      "mv__02_007e3a.svg",
+      "mv__03_007e3a.svg",
+      "mv__04_d21034.svg",
+      "mv__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      40,
+      10,
+      30
+    ],
+    "full": "mv__full.svg",
+    "location": {
+      "lat": 3.25,
+      "lon": 73
+    }
+  },
+  "mw": {
+    "colors": [
+      "#f41408",
+      "#f31509",
+      "#21873b",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "mw__00_f41408.svg",
+      "mw__01_f31509.svg",
+      "mw__02_21873b.svg",
+      "mw__03_000001.svg",
+      "mw__04_000001.svg",
+      "mw__05_000001.svg"
+    ],
+    "z": [
+      20,
+      60,
+      30,
+      40,
+      41,
+      42
+    ],
+    "full": "mw__full.svg",
+    "location": {
+      "lat": -13.5,
+      "lon": 34
+    }
+  },
+  "mx": {
+    "colors": [
+      "#0c8489",
+      "#0872a7",
+      "#016848",
+      "#006847",
+      "#04534e",
+      "#171717"
+    ],
+    "files": [
+      "mx__00_0c8489.svg",
+      "mx__01_0872a7.svg",
+      "mx__02_016848.svg",
+      "mx__03_006847.svg",
+      "mx__04_04534e.svg",
+      "mx__05_171717.svg"
+    ],
+    "z": [
+      710,
+      561,
+      500,
+      100,
+      810,
+      2970
+    ],
+    "full": "mx__full.svg",
+    "location": {
+      "lat": 23,
+      "lon": -102
+    }
+  },
+  "my": {
+    "colors": [
+      "#ffcc00",
+      "#cc0000",
+      "#cc0000",
+      "#000066",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "my__00_ffcc00.svg",
+      "my__01_cc0000.svg",
+      "my__02_cc0000.svg",
+      "my__03_000066.svg",
+      "my__04_ffffff.svg",
+      "my__05_ffffff.svg"
+    ],
+    "z": [
+      180,
+      30,
+      50,
+      170,
+      40,
+      60
+    ],
+    "full": "my__full.svg",
+    "location": {
+      "lat": 2.5,
+      "lon": 112.5
+    }
+  },
+  "mz": {
+    "colors": [
+      "#ffca00",
+      "#009a00",
+      "#ff0000",
+      "#000001",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "mz__00_ffca00.svg",
+      "mz__01_009a00.svg",
+      "mz__02_ff0000.svg",
+      "mz__03_000001.svg",
+      "mz__04_000000.svg",
+      "mz__05_ffffff.svg"
+    ],
+    "z": [
+      90,
+      50,
+      100,
+      70,
+      161,
+      60
+    ],
+    "full": "mz__full.svg",
+    "location": {
+      "lat": -18.25,
+      "lon": 35
+    }
+  },
+  "na": {
+    "colors": [
+      "#ffe700",
+      "#38a100",
+      "#c70000",
+      "#3662a2",
+      "#3662a2",
+      "#ffffff"
+    ],
+    "files": [
+      "na__00_ffe700.svg",
+      "na__01_38a100.svg",
+      "na__02_c70000.svg",
+      "na__03_3662a2.svg",
+      "na__04_3662a2.svg",
+      "na__05_ffffff.svg"
+    ],
+    "z": [
+      90,
+      70,
+      80,
+      60,
+      100,
+      50
+    ],
+    "full": "na__full.svg",
+    "location": {
+      "lat": -22,
+      "lon": 17
+    }
+  },
+  "nc": {
+    "colors": [
+      "#fae600",
+      "#ed4135",
+      "#009543",
+      "#0035ad",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "nc__00_fae600.svg",
+      "nc__01_ed4135.svg",
+      "nc__02_009543.svg",
+      "nc__03_0035ad.svg",
+      "nc__04_000001.svg",
+      "nc__05_000000.svg"
+    ],
+    "z": [
+      40,
+      20,
+      10,
+      30,
+      100,
+      51
+    ],
+    "full": "nc__full.svg",
+    "location": {
+      "lat": -21.5,
+      "lon": 165.5
+    }
+  },
+  "ne": {
+    "colors": [
+      "#0db02b",
+      "#0db02b",
+      "#0db02b",
+      "#0db02b",
+      "#e05206",
+      "#ffffff"
+    ],
+    "files": [
+      "ne__00_0db02b.svg",
+      "ne__01_0db02b.svg",
+      "ne__02_0db02b.svg",
+      "ne__03_0db02b.svg",
+      "ne__04_e05206.svg",
+      "ne__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      40,
+      20
+    ],
+    "full": "ne__full.svg",
+    "location": {
+      "lat": 16,
+      "lon": 8
+    }
+  },
+  "nf": {
+    "colors": [
+      "#198200",
+      "#198200",
+      "#198200",
+      "#000000",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "nf__00_198200.svg",
+      "nf__01_198200.svg",
+      "nf__02_198200.svg",
+      "nf__03_000000.svg",
+      "nf__04_ffffff.svg",
+      "nf__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      41,
+      42,
+      61,
+      20,
+      60
+    ],
+    "full": "nf__full.svg",
+    "location": {
+      "lat": -29.03333333,
+      "lon": 167.95
+    }
+  },
+  "ng": {
+    "colors": [
+      "#008753",
+      "#008753",
+      "#008753",
+      "#008753",
+      "#008753",
+      "#ffffff"
+    ],
+    "files": [
+      "ng__00_008753.svg",
+      "ng__01_008753.svg",
+      "ng__02_008753.svg",
+      "ng__03_008753.svg",
+      "ng__04_008753.svg",
+      "ng__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      20
+    ],
+    "full": "ng__full.svg",
+    "location": {
+      "lat": 10,
+      "lon": 8
+    }
+  },
+  "ni": {
+    "colors": [
+      "#00ff00",
+      "#00ccff",
+      "#17c0eb",
+      "#0067c6",
+      "#0000ff",
+      "#510000"
+    ],
+    "files": [
+      "ni__00_00ff00.svg",
+      "ni__01_00ccff.svg",
+      "ni__02_17c0eb.svg",
+      "ni__03_0067c6.svg",
+      "ni__04_0000ff.svg",
+      "ni__05_510000.svg"
+    ],
+    "z": [
+      560,
+      570,
+      392,
+      320,
+      580,
+      600
+    ],
+    "full": "ni__full.svg",
+    "location": {
+      "lat": 13,
+      "lon": -85
+    }
+  },
+  "nl": {
+    "colors": [
+      "#ae1c28",
+      "#21468b",
+      "#21468b",
+      "#21468b",
+      "#21468b",
+      "#ffffff"
+    ],
+    "files": [
+      "nl__00_ae1c28.svg",
+      "nl__01_21468b.svg",
+      "nl__02_21468b.svg",
+      "nl__03_21468b.svg",
+      "nl__04_21468b.svg",
+      "nl__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      30,
+      31,
+      32,
+      33,
+      20
+    ],
+    "full": "nl__full.svg",
+    "location": {
+      "lat": 52.5,
+      "lon": 5.75
+    }
+  },
+  "no": {
+    "colors": [
+      "#ed2939",
+      "#002664",
+      "#002664",
+      "#002664",
+      "#002664",
+      "#ffffff"
+    ],
+    "files": [
+      "no__00_ed2939.svg",
+      "no__01_002664.svg",
+      "no__02_002664.svg",
+      "no__03_002664.svg",
+      "no__04_002664.svg",
+      "no__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      50,
+      51,
+      52,
+      53,
+      30
+    ],
+    "full": "no__full.svg",
+    "location": {
+      "lat": 62,
+      "lon": 10
+    }
+  },
+  "np": {
+    "colors": [
+      "#ce0000",
+      "#000063",
+      "#000063",
+      "#000063",
+      "#000063",
+      "#ffffff"
+    ],
+    "files": [
+      "np__00_ce0000.svg",
+      "np__01_000063.svg",
+      "np__02_000063.svg",
+      "np__03_000063.svg",
+      "np__04_000063.svg",
+      "np__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      61,
+      62,
+      63,
+      64,
+      70
+    ],
+    "full": "np__full.svg",
+    "location": {
+      "lat": 28,
+      "lon": 84
+    }
+  },
+  "nr": {
+    "colors": [
+      "#ffb20d",
+      "#002170",
+      "#002170",
+      "#002170",
+      "#002170",
+      "#ffffff"
+    ],
+    "files": [
+      "nr__00_ffb20d.svg",
+      "nr__01_002170.svg",
+      "nr__02_002170.svg",
+      "nr__03_002170.svg",
+      "nr__04_002170.svg",
+      "nr__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      50,
+      51,
+      52,
+      53,
+      70
+    ],
+    "full": "nr__full.svg",
+    "location": {
+      "lat": -0.53333333,
+      "lon": 166.91666666
+    }
+  },
+  "nu": {
+    "colors": [
+      "#fedd00",
+      "#c8102e",
+      "#c8102e",
+      "#012169",
+      "#012169",
+      "#ffffff"
+    ],
+    "files": [
+      "nu__00_fedd00.svg",
+      "nu__01_c8102e.svg",
+      "nu__02_c8102e.svg",
+      "nu__03_012169.svg",
+      "nu__04_012169.svg",
+      "nu__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      40,
+      60,
+      20,
+      70,
+      30
+    ],
+    "full": "nu__full.svg",
+    "location": {
+      "lat": -19.03333333,
+      "lon": -169.86666666
+    }
+  },
+  "nz": {
+    "colors": [
+      "#cc142b",
+      "#c8102e",
+      "#c8102e",
+      "#00247d",
+      "#012169",
+      "#ffffff"
+    ],
+    "files": [
+      "nz__00_cc142b.svg",
+      "nz__01_c8102e.svg",
+      "nz__02_c8102e.svg",
+      "nz__03_00247d.svg",
+      "nz__04_012169.svg",
+      "nz__05_ffffff.svg"
+    ],
+    "z": [
+      130,
+      250,
+      270,
+      100,
+      230,
+      120
+    ],
+    "full": "nz__full.svg",
+    "location": {
+      "lat": -41,
+      "lon": 174
+    }
+  },
+  "om": {
+    "colors": [
+      "#ef2d29",
+      "#ef2d28",
+      "#009025",
+      "#ef0000",
+      "#ef0000",
+      "#ffffff"
+    ],
+    "files": [
+      "om__00_ef2d29.svg",
+      "om__01_ef2d28.svg",
+      "om__02_009025.svg",
+      "om__03_ef0000.svg",
+      "om__04_ef0000.svg",
+      "om__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      81,
+      60,
+      370,
+      540,
+      360
+    ],
+    "full": "om__full.svg",
+    "location": {
+      "lat": 21,
+      "lon": 57
+    }
+  },
+  "pa": {
+    "colors": [
+      "#db0000",
+      "#d80000",
+      "#0000ab",
+      "#0000ab",
+      "#0000ab",
+      "#ffffff"
+    ],
+    "files": [
+      "pa__00_db0000.svg",
+      "pa__01_d80000.svg",
+      "pa__02_0000ab.svg",
+      "pa__03_0000ab.svg",
+      "pa__04_0000ab.svg",
+      "pa__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      90,
+      80,
+      81,
+      82,
+      60
+    ],
+    "full": "pa__full.svg",
+    "location": {
+      "lat": 9,
+      "lon": -80
+    }
+  },
+  "pc": {
+    "colors": [
+      "#00aec7",
+      "#00aec7",
+      "#003da5",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "pc__00_00aec7.svg",
+      "pc__01_00aec7.svg",
+      "pc__02_003da5.svg",
+      "pc__03_ffffff.svg",
+      "pc__04_ffffff.svg",
+      "pc__05_ffffff.svg"
+    ],
+    "z": [
+      281,
+      300,
+      10,
+      30,
+      290,
+      310
+    ],
+    "full": "pc__full.svg",
+    "location": {
+      "lat": -25,
+      "lon": -130.1
+    }
+  },
+  "pe": {
+    "colors": [
+      "#d91023",
+      "#d91023",
+      "#d91023",
+      "#d91023",
+      "#d91023",
+      "#ffffff"
+    ],
+    "files": [
+      "pe__00_d91023.svg",
+      "pe__01_d91023.svg",
+      "pe__02_d91023.svg",
+      "pe__03_d91023.svg",
+      "pe__04_d91023.svg",
+      "pe__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "full": "pe__full.svg",
+    "location": {
+      "lat": -10,
+      "lon": -76
+    }
+  },
+  "pf": {
+    "colors": [
+      "#ef7d08",
+      "#ff0000",
+      "#de2010",
+      "#083d9c",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "pf__00_ef7d08.svg",
+      "pf__01_ff0000.svg",
+      "pf__02_de2010.svg",
+      "pf__03_083d9c.svg",
+      "pf__04_000000.svg",
+      "pf__05_ffffff.svg"
+    ],
+    "z": [
+      110,
+      80,
+      140,
+      72,
+      81,
+      60
+    ],
+    "full": "pf__full.svg",
+    "location": {
+      "lat": -15,
+      "lon": -140
+    }
+  },
+  "pg": {
+    "colors": [
+      "#ffcc00",
+      "#ff0000",
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "pg__00_ffcc00.svg",
+      "pg__01_ff0000.svg",
+      "pg__02_ff0000.svg",
+      "pg__03_000001.svg",
+      "pg__04_000001.svg",
+      "pg__05_ffffff.svg"
+    ],
+    "z": [
+      42,
+      30,
+      52,
+      20,
+      21,
+      60
+    ],
+    "full": "pg__full.svg",
+    "location": {
+      "lat": -6,
+      "lon": 147
+    }
+  },
+  "ph": {
+    "colors": [
+      "#fcd116",
+      "#ce1126",
+      "#0038a8",
+      "#0038a8",
+      "#0038a8",
+      "#ffffff"
+    ],
+    "files": [
+      "ph__00_fcd116.svg",
+      "ph__01_ce1126.svg",
+      "ph__02_0038a8.svg",
+      "ph__03_0038a8.svg",
+      "ph__04_0038a8.svg",
+      "ph__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      10,
+      11,
+      12,
+      30
+    ],
+    "full": "ph__full.svg",
+    "location": {
+      "lat": 13,
+      "lon": 122
+    }
+  },
+  "pk": {
+    "colors": [
+      "#0c590b",
+      "#0c590b",
+      "#0c590b",
+      "#0c590b",
+      "#0c590b",
+      "#ffffff"
+    ],
+    "files": [
+      "pk__00_0c590b.svg",
+      "pk__01_0c590b.svg",
+      "pk__02_0c590b.svg",
+      "pk__03_0c590b.svg",
+      "pk__04_0c590b.svg",
+      "pk__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      70
+    ],
+    "full": "pk__full.svg",
+    "location": {
+      "lat": 30,
+      "lon": 70
+    }
+  },
+  "pl": {
+    "colors": [
+      "#dc143c",
+      "#dc143c",
+      "#dc143c",
+      "#dc143c",
+      "#dc143c",
+      "#ffffff"
+    ],
+    "files": [
+      "pl__00_dc143c.svg",
+      "pl__01_dc143c.svg",
+      "pl__02_dc143c.svg",
+      "pl__03_dc143c.svg",
+      "pl__04_dc143c.svg",
+      "pl__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      20
+    ],
+    "full": "pl__full.svg",
+    "location": {
+      "lat": 52,
+      "lon": 20
+    }
+  },
+  "pm": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "pm__00_e1000f.svg",
+      "pm__01_000091.svg",
+      "pm__02_000091.svg",
+      "pm__03_000091.svg",
+      "pm__04_000091.svg",
+      "pm__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "pm__full.svg",
+    "location": {
+      "lat": 46.83333333,
+      "lon": -56.33333333
+    }
+  },
+  "pn": {
+    "colors": [
+      "#96877d",
+      "#006ec7",
+      "#337321",
+      "#316d3a",
+      "#00247d",
+      "#012169"
+    ],
+    "files": [
+      "pn__00_96877d.svg",
+      "pn__01_006ec7.svg",
+      "pn__02_337321.svg",
+      "pn__03_316d3a.svg",
+      "pn__04_00247d.svg",
+      "pn__05_012169.svg"
+    ],
+    "z": [
+      460,
+      180,
+      80,
+      110,
+      10,
+      20
+    ],
+    "full": "pn__full.svg",
+    "location": {
+      "lat": -25.06666666,
+      "lon": -130.1
+    }
+  },
+  "pr": {
+    "colors": [
+      "#ed0000",
+      "#0050f0",
+      "#0050f0",
+      "#0050f0",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "pr__00_ed0000.svg",
+      "pr__01_0050f0.svg",
+      "pr__02_0050f0.svg",
+      "pr__03_0050f0.svg",
+      "pr__04_ffffff.svg",
+      "pr__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      70,
+      71,
+      72,
+      60,
+      80
+    ],
+    "full": "pr__full.svg",
+    "location": {
+      "lat": 18.25,
+      "lon": -66.5
+    }
+  },
+  "ps": {
+    "colors": [
+      "#009639",
+      "#009639",
+      "#009639",
+      "#009639",
+      "#ed2e38",
+      "#ffffff"
+    ],
+    "files": [
+      "ps__00_009639.svg",
+      "ps__01_009639.svg",
+      "ps__02_009639.svg",
+      "ps__03_009639.svg",
+      "ps__04_ed2e38.svg",
+      "ps__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      40,
+      20
+    ],
+    "full": "ps__full.svg",
+    "location": {
+      "lat": 31.9,
+      "lon": 35.2
+    }
+  },
+  "pt": {
+    "colors": [
+      "#ffff00",
+      "#ff0000",
+      "#006600",
+      "#003399",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "pt__00_ffff00.svg",
+      "pt__01_ff0000.svg",
+      "pt__02_006600.svg",
+      "pt__03_003399.svg",
+      "pt__04_000001.svg",
+      "pt__05_000000.svg"
+    ],
+    "z": [
+      30,
+      10,
+      20,
+      410,
+      340,
+      231
+    ],
+    "full": "pt__full.svg",
+    "location": {
+      "lat": 39.5,
+      "lon": -8
+    }
+  },
+  "pw": {
+    "colors": [
+      "#ffde00",
+      "#4aadd6",
+      "#4aadd6",
+      "#4aadd6",
+      "#4aadd6",
+      "#4aadd6"
+    ],
+    "files": [
+      "pw__00_ffde00.svg",
+      "pw__01_4aadd6.svg",
+      "pw__02_4aadd6.svg",
+      "pw__03_4aadd6.svg",
+      "pw__04_4aadd6.svg",
+      "pw__05_4aadd6.svg"
+    ],
+    "z": [
+      60,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "full": "pw__full.svg",
+    "location": {
+      "lat": 7.5,
+      "lon": 134.5
+    }
+  },
+  "py": {
+    "colors": [
+      "#fedf00",
+      "#009b3a",
+      "#d52b1e",
+      "#0038a8",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "py__00_fedf00.svg",
+      "py__01_009b3a.svg",
+      "py__02_d52b1e.svg",
+      "py__03_0038a8.svg",
+      "py__04_000000.svg",
+      "py__05_ffffff.svg"
+    ],
+    "z": [
+      1530,
+      90,
+      30,
+      10,
+      41,
+      20
+    ],
+    "full": "py__full.svg",
+    "location": {
+      "lat": -23,
+      "lon": -58
+    }
+  },
+  "qa": {
+    "colors": [
+      "#8d1b3d",
+      "#8d1b3d",
+      "#8d1b3d",
+      "#8d1b3d",
+      "#8d1b3d",
+      "#ffffff"
+    ],
+    "files": [
+      "qa__00_8d1b3d.svg",
+      "qa__01_8d1b3d.svg",
+      "qa__02_8d1b3d.svg",
+      "qa__03_8d1b3d.svg",
+      "qa__04_8d1b3d.svg",
+      "qa__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "full": "qa__full.svg",
+    "location": {
+      "lat": 25.5,
+      "lon": 51.25
+    }
+  },
+  "re": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "re__00_e1000f.svg",
+      "re__01_000091.svg",
+      "re__02_000091.svg",
+      "re__03_000091.svg",
+      "re__04_000091.svg",
+      "re__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "re__full.svg",
+    "location": {
+      "lat": -21.15,
+      "lon": 55.5
+    }
+  },
+  "ro": {
+    "colors": [
+      "#ffde00",
+      "#de2110",
+      "#00319c",
+      "#00319c",
+      "#00319c",
+      "#00319c"
+    ],
+    "files": [
+      "ro__00_ffde00.svg",
+      "ro__01_de2110.svg",
+      "ro__02_00319c.svg",
+      "ro__03_00319c.svg",
+      "ro__04_00319c.svg",
+      "ro__05_00319c.svg"
+    ],
+    "z": [
+      30,
+      40,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "ro__full.svg",
+    "location": {
+      "lat": 46,
+      "lon": 25
+    }
+  },
+  "rs": {
+    "colors": [
+      "#edb92e",
+      "#c6363c",
+      "#0c4076",
+      "#0c4076",
+      "#21231e",
+      "#ffffff"
+    ],
+    "files": [
+      "rs__00_edb92e.svg",
+      "rs__01_c6363c.svg",
+      "rs__02_0c4076.svg",
+      "rs__03_0c4076.svg",
+      "rs__04_21231e.svg",
+      "rs__05_ffffff.svg"
+    ],
+    "z": [
+      140,
+      70,
+      60,
+      170,
+      2080,
+      2090
+    ],
+    "full": "rs__full.svg",
+    "location": {
+      "lat": 44,
+      "lon": 21
+    }
+  },
+  "ru": {
+    "colors": [
+      "#d52b1e",
+      "#0039a6",
+      "#0039a6",
+      "#0039a6",
+      "#0039a6",
+      "#ffffff"
+    ],
+    "files": [
+      "ru__00_d52b1e.svg",
+      "ru__01_0039a6.svg",
+      "ru__02_0039a6.svg",
+      "ru__03_0039a6.svg",
+      "ru__04_0039a6.svg",
+      "ru__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "ru__full.svg",
+    "location": {
+      "lat": 60,
+      "lon": 100
+    }
+  },
+  "rw": {
+    "colors": [
+      "#fad201",
+      "#e5be01",
+      "#e5be01",
+      "#00a1de",
+      "#00a1de",
+      "#20603d"
+    ],
+    "files": [
+      "rw__00_fad201.svg",
+      "rw__01_e5be01.svg",
+      "rw__02_e5be01.svg",
+      "rw__03_00a1de.svg",
+      "rw__04_00a1de.svg",
+      "rw__05_20603d.svg"
+    ],
+    "z": [
+      20,
+      60,
+      90,
+      30,
+      91,
+      10
+    ],
+    "full": "rw__full.svg",
+    "location": {
+      "lat": -2,
+      "lon": 30
+    }
+  },
+  "sa": {
+    "colors": [
+      "#165d31",
+      "#165d31",
+      "#165d31",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "sa__00_165d31.svg",
+      "sa__01_165d31.svg",
+      "sa__02_165d31.svg",
+      "sa__03_ffffff.svg",
+      "sa__04_ffffff.svg",
+      "sa__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      130,
+      180,
+      120,
+      170,
+      190
+    ],
+    "full": "sa__full.svg",
+    "location": {
+      "lat": 25,
+      "lon": 45
+    }
+  },
+  "sb": {
+    "colors": [
+      "#ffcc00",
+      "#006000",
+      "#0000d6",
+      "#0000d6",
+      "#0000d6",
+      "#ffffff"
+    ],
+    "files": [
+      "sb__00_ffcc00.svg",
+      "sb__01_006000.svg",
+      "sb__02_0000d6.svg",
+      "sb__03_0000d6.svg",
+      "sb__04_0000d6.svg",
+      "sb__05_ffffff.svg"
+    ],
+    "z": [
+      70,
+      60,
+      50,
+      51,
+      52,
+      80
+    ],
+    "full": "sb__full.svg",
+    "location": {
+      "lat": -8,
+      "lon": 159
+    }
+  },
+  "sc": {
+    "colors": [
+      "#fcd955",
+      "#d92223",
+      "#007a39",
+      "#003d88",
+      "#003d88",
+      "#ffffff"
+    ],
+    "files": [
+      "sc__00_fcd955.svg",
+      "sc__01_d92223.svg",
+      "sc__02_007a39.svg",
+      "sc__03_003d88.svg",
+      "sc__04_003d88.svg",
+      "sc__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      50,
+      40,
+      41,
+      10
+    ],
+    "full": "sc__full.svg",
+    "location": {
+      "lat": -4.58333333,
+      "lon": 55.66666666
+    }
+  },
+  "sd": {
+    "colors": [
+      "#009a00",
+      "#ff0000",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "sd__00_009a00.svg",
+      "sd__01_ff0000.svg",
+      "sd__02_000001.svg",
+      "sd__03_000001.svg",
+      "sd__04_000001.svg",
+      "sd__05_ffffff.svg"
+    ],
+    "z": [
+      80,
+      70,
+      50,
+      51,
+      52,
+      60
+    ],
+    "full": "sd__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": 30
+    }
+  },
+  "se": {
+    "colors": [
+      "#fecb00",
+      "#005293",
+      "#005293",
+      "#005293",
+      "#005293",
+      "#005293"
+    ],
+    "files": [
+      "se__00_fecb00.svg",
+      "se__01_005293.svg",
+      "se__02_005293.svg",
+      "se__03_005293.svg",
+      "se__04_005293.svg",
+      "se__05_005293.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "full": "se__full.svg",
+    "location": {
+      "lat": 62,
+      "lon": 15
+    }
+  },
+  "sg": {
+    "colors": [
+      "#df0000",
+      "#df0000",
+      "#df0000",
+      "#df0000",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "sg__00_df0000.svg",
+      "sg__01_df0000.svg",
+      "sg__02_df0000.svg",
+      "sg__03_df0000.svg",
+      "sg__04_ffffff.svg",
+      "sg__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      61,
+      62,
+      63,
+      50,
+      80
+    ],
+    "full": "sg__full.svg",
+    "location": {
+      "lat": 1.36666666,
+      "lon": 103.8
+    }
+  },
+  "sh-ac": {
+    "colors": [
+      "#00b5d2",
+      "#095378",
+      "#174520",
+      "#012169",
+      "#172716",
+      "#161341"
+    ],
+    "files": [
+      "sh-ac__00_00b5d2.svg",
+      "sh-ac__01_095378.svg",
+      "sh-ac__02_174520.svg",
+      "sh-ac__03_012169.svg",
+      "sh-ac__04_172716.svg",
+      "sh-ac__05_161341.svg"
+    ],
+    "z": [
+      250,
+      1760,
+      3590,
+      10,
+      1600,
+      1800
+    ],
+    "full": "sh-ac__full.svg",
+    "location": {
+      "lat": -7.9,
+      "lon": -14.3
+    }
+  },
+  "sh-hl": {
+    "colors": [
+      "#128bbf",
+      "#66452b",
+      "#333333",
+      "#472b1f",
+      "#012169",
+      "#000066"
+    ],
+    "files": [
+      "sh-hl__00_128bbf.svg",
+      "sh-hl__01_66452b.svg",
+      "sh-hl__02_333333.svg",
+      "sh-hl__03_472b1f.svg",
+      "sh-hl__04_012169.svg",
+      "sh-hl__05_000066.svg"
+    ],
+    "z": [
+      70,
+      1230,
+      410,
+      391,
+      20,
+      10
+    ],
+    "full": "sh-hl__full.svg",
+    "location": {
+      "lat": -15.9,
+      "lon": -5.7
+    }
+  },
+  "sh-ta": {
+    "colors": [
+      "#00d860",
+      "#00b800",
+      "#366cc9",
+      "#5d3100",
+      "#012169",
+      "#000066"
+    ],
+    "files": [
+      "sh-ta__00_00d860.svg",
+      "sh-ta__01_00b800.svg",
+      "sh-ta__02_366cc9.svg",
+      "sh-ta__03_5d3100.svg",
+      "sh-ta__04_012169.svg",
+      "sh-ta__05_000066.svg"
+    ],
+    "z": [
+      280,
+      80,
+      30,
+      40,
+      700,
+      10
+    ],
+    "full": "sh-ta__full.svg",
+    "location": {
+      "lat": -37.1,
+      "lon": -12.3
+    }
+  },
+  "sh": {
+    "colors": [
+      "#c8102e",
+      "#c8102e",
+      "#012169",
+      "#012169",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "sh__00_c8102e.svg",
+      "sh__01_c8102e.svg",
+      "sh__02_012169.svg",
+      "sh__03_012169.svg",
+      "sh__04_ffffff.svg",
+      "sh__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      50,
+      10,
+      11,
+      20,
+      40
+    ],
+    "full": "sh__full.svg",
+    "location": {
+      "lat": -15.95,
+      "lon": -5.72
+    }
+  },
+  "si": {
+    "colors": [
+      "#ffdf00",
+      "#d50000",
+      "#d50000",
+      "#0000bf",
+      "#0000bf",
+      "#ffffff"
+    ],
+    "files": [
+      "si__00_ffdf00.svg",
+      "si__01_d50000.svg",
+      "si__02_d50000.svg",
+      "si__03_0000bf.svg",
+      "si__04_0000bf.svg",
+      "si__05_ffffff.svg"
+    ],
+    "z": [
+      100,
+      60,
+      80,
+      70,
+      90,
+      50
+    ],
+    "full": "si__full.svg",
+    "location": {
+      "lat": 46.11666666,
+      "lon": 14.81666666
+    }
+  },
+  "sj": {
+    "colors": [
+      "#ef2b2d",
+      "#002868",
+      "#002868",
+      "#002868",
+      "#002868",
+      "#ffffff"
+    ],
+    "files": [
+      "sj__00_ef2b2d.svg",
+      "sj__01_002868.svg",
+      "sj__02_002868.svg",
+      "sj__03_002868.svg",
+      "sj__04_002868.svg",
+      "sj__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      50,
+      51,
+      52,
+      53,
+      30
+    ],
+    "full": "sj__full.svg",
+    "location": {
+      "lat": 78,
+      "lon": 20
+    }
+  },
+  "sk": {
+    "colors": [
+      "#ee1c25",
+      "#ee1c25",
+      "#0b4ea2",
+      "#0b4ea2",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "sk__00_ee1c25.svg",
+      "sk__01_ee1c25.svg",
+      "sk__02_0b4ea2.svg",
+      "sk__03_0b4ea2.svg",
+      "sk__04_ffffff.svg",
+      "sk__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      50,
+      20,
+      70,
+      40,
+      60
+    ],
+    "full": "sk__full.svg",
+    "location": {
+      "lat": 48.66666666,
+      "lon": 19.5
+    }
+  },
+  "sl": {
+    "colors": [
+      "#00cd00",
+      "#0000cd",
+      "#0000cd",
+      "#0000cd",
+      "#0000cd",
+      "#ffffff"
+    ],
+    "files": [
+      "sl__00_00cd00.svg",
+      "sl__01_0000cd.svg",
+      "sl__02_0000cd.svg",
+      "sl__03_0000cd.svg",
+      "sl__04_0000cd.svg",
+      "sl__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      20,
+      21,
+      22,
+      23,
+      30
+    ],
+    "full": "sl__full.svg",
+    "location": {
+      "lat": 8.5,
+      "lon": -11.5
+    }
+  },
+  "sm": {
+    "colors": [
+      "#4fd46b",
+      "#19b6ef",
+      "#00a400",
+      "#3a9d4f",
+      "#006800",
+      "#004100"
+    ],
+    "files": [
+      "sm__00_4fd46b.svg",
+      "sm__01_19b6ef.svg",
+      "sm__02_00a400.svg",
+      "sm__03_3a9d4f.svg",
+      "sm__04_006800.svg",
+      "sm__05_004100.svg"
+    ],
+    "z": [
+      90,
+      20,
+      361,
+      51,
+      400,
+      401
+    ],
+    "full": "sm__full.svg",
+    "location": {
+      "lat": 43.76666666,
+      "lon": 12.41666666
+    }
+  },
+  "sn": {
+    "colors": [
+      "#ffff00",
+      "#0b7226",
+      "#0b7226",
+      "#0b7226",
+      "#0b7226",
+      "#bc0000"
+    ],
+    "files": [
+      "sn__00_ffff00.svg",
+      "sn__01_0b7226.svg",
+      "sn__02_0b7226.svg",
+      "sn__03_0b7226.svg",
+      "sn__04_0b7226.svg",
+      "sn__05_bc0000.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      50,
+      40
+    ],
+    "full": "sn__full.svg",
+    "location": {
+      "lat": 14,
+      "lon": -14
+    }
+  },
+  "so": {
+    "colors": [
+      "#40a6ff",
+      "#40a6ff",
+      "#40a6ff",
+      "#40a6ff",
+      "#40a6ff",
+      "#ffffff"
+    ],
+    "files": [
+      "so__00_40a6ff.svg",
+      "so__01_40a6ff.svg",
+      "so__02_40a6ff.svg",
+      "so__03_40a6ff.svg",
+      "so__04_40a6ff.svg",
+      "so__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      60
+    ],
+    "full": "so__full.svg",
+    "location": {
+      "lat": 10,
+      "lon": 49
+    }
+  },
+  "sr": {
+    "colors": [
+      "#ecc81d",
+      "#377e3f",
+      "#377e3f",
+      "#377e3f",
+      "#b40a2d",
+      "#ffffff"
+    ],
+    "files": [
+      "sr__00_ecc81d.svg",
+      "sr__01_377e3f.svg",
+      "sr__02_377e3f.svg",
+      "sr__03_377e3f.svg",
+      "sr__04_b40a2d.svg",
+      "sr__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      10,
+      11,
+      12,
+      30,
+      20
+    ],
+    "full": "sr__full.svg",
+    "location": {
+      "lat": 4,
+      "lon": -56
+    }
+  },
+  "ss": {
+    "colors": [
+      "#fcdd09",
+      "#078930",
+      "#da121a",
+      "#0f47af",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ss__00_fcdd09.svg",
+      "ss__01_078930.svg",
+      "ss__02_da121a.svg",
+      "ss__03_0f47af.svg",
+      "ss__04_000001.svg",
+      "ss__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      10,
+      40,
+      50,
+      30,
+      20
+    ],
+    "full": "ss__full.svg",
+    "location": {
+      "lat": 7,
+      "lon": 30
+    }
+  },
+  "st": {
+    "colors": [
+      "#ffce00",
+      "#12ad2b",
+      "#d21034",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "st__00_ffce00.svg",
+      "st__01_12ad2b.svg",
+      "st__02_d21034.svg",
+      "st__03_000001.svg",
+      "st__04_000001.svg",
+      "st__05_000001.svg"
+    ],
+    "z": [
+      20,
+      10,
+      30,
+      60,
+      61,
+      62
+    ],
+    "full": "st__full.svg",
+    "location": {
+      "lat": 1,
+      "lon": 7
+    }
+  },
+  "sv": {
+    "colors": [
+      "#007e93",
+      "#00633b",
+      "#00209f",
+      "#011e34",
+      "#011d33",
+      "#011322"
+    ],
+    "files": [
+      "sv__00_007e93.svg",
+      "sv__01_00633b.svg",
+      "sv__02_00209f.svg",
+      "sv__03_011e34.svg",
+      "sv__04_011d33.svg",
+      "sv__05_011322.svg"
+    ],
+    "z": [
+      3962,
+      5521,
+      490,
+      1871,
+      540,
+      500
+    ],
+    "full": "sv__full.svg",
+    "location": {
+      "lat": 13.83333333,
+      "lon": -88.91666666
+    }
+  },
+  "sx": {
+    "colors": [
+      "#80cfe1",
+      "#009fc5",
+      "#bc715f",
+      "#7e7e7e",
+      "#008737",
+      "#002395"
+    ],
+    "files": [
+      "sx__00_80cfe1.svg",
+      "sx__01_009fc5.svg",
+      "sx__02_bc715f.svg",
+      "sx__03_7e7e7e.svg",
+      "sx__04_008737.svg",
+      "sx__05_002395.svg"
+    ],
+    "z": [
+      110,
+      440,
+      450,
+      340,
+      460,
+      60
+    ],
+    "full": "sx__full.svg",
+    "location": {
+      "lat": 18.033333,
+      "lon": -63.05
+    }
+  },
+  "sy": {
+    "colors": [
+      "#007a3d",
+      "#007a3d",
+      "#007a3d",
+      "#007a3d",
+      "#ce1126",
+      "#ffffff"
+    ],
+    "files": [
+      "sy__00_007a3d.svg",
+      "sy__01_007a3d.svg",
+      "sy__02_007a3d.svg",
+      "sy__03_007a3d.svg",
+      "sy__04_ce1126.svg",
+      "sy__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      31,
+      32,
+      33,
+      40,
+      20
+    ],
+    "full": "sy__full.svg",
+    "location": {
+      "lat": 35,
+      "lon": 38
+    }
+  },
+  "sz": {
+    "colors": [
+      "#ffd900",
+      "#b3b3b3",
+      "#3e5eb9",
+      "#b10c0c",
+      "#a70000",
+      "#333333"
+    ],
+    "files": [
+      "sz__00_ffd900.svg",
+      "sz__01_b3b3b3.svg",
+      "sz__02_3e5eb9.svg",
+      "sz__03_b10c0c.svg",
+      "sz__04_a70000.svg",
+      "sz__05_333333.svg"
+    ],
+    "z": [
+      20,
+      220,
+      10,
+      30,
+      200,
+      210
+    ],
+    "full": "sz__full.svg",
+    "location": {
+      "lat": -26.5,
+      "lon": 31.5
+    }
+  },
+  "tc": {
+    "colors": [
+      "#009e49",
+      "#9e540a",
+      "#c8102e",
+      "#002868",
+      "#012169",
+      "#000001"
+    ],
+    "files": [
+      "tc__00_009e49.svg",
+      "tc__01_9e540a.svg",
+      "tc__02_c8102e.svg",
+      "tc__03_002868.svg",
+      "tc__04_012169.svg",
+      "tc__05_000001.svg"
+    ],
+    "z": [
+      270,
+      100,
+      380,
+      10,
+      360,
+      340
+    ],
+    "full": "tc__full.svg",
+    "location": {
+      "lat": 21.75,
+      "lon": -71.58333333
+    }
+  },
+  "td": {
+    "colors": [
+      "#fecb00",
+      "#c60c30",
+      "#002664",
+      "#002664",
+      "#002664",
+      "#002664"
+    ],
+    "files": [
+      "td__00_fecb00.svg",
+      "td__01_c60c30.svg",
+      "td__02_002664.svg",
+      "td__03_002664.svg",
+      "td__04_002664.svg",
+      "td__05_002664.svg"
+    ],
+    "z": [
+      40,
+      30,
+      20,
+      21,
+      22,
+      23
+    ],
+    "full": "td__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": 19
+    }
+  },
+  "tf": {
+    "colors": [
+      "#ed2939",
+      "#002395",
+      "#002395",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "tf__00_ed2939.svg",
+      "tf__01_002395.svg",
+      "tf__02_002395.svg",
+      "tf__03_ffffff.svg",
+      "tf__04_ffffff.svg",
+      "tf__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      30,
+      50,
+      40,
+      70,
+      20
+    ],
+    "full": "tf__full.svg",
+    "location": {
+      "lat": -49.25,
+      "lon": 69.167
+    }
+  },
+  "tg": {
+    "colors": [
+      "#ffe300",
+      "#118600",
+      "#118600",
+      "#118600",
+      "#d80000",
+      "#ffffff"
+    ],
+    "files": [
+      "tg__00_ffe300.svg",
+      "tg__01_118600.svg",
+      "tg__02_118600.svg",
+      "tg__03_118600.svg",
+      "tg__04_d80000.svg",
+      "tg__05_ffffff.svg"
+    ],
+    "z": [
+      50,
+      60,
+      61,
+      90,
+      70,
+      80
+    ],
+    "full": "tg__full.svg",
+    "location": {
+      "lat": 8,
+      "lon": 1.16666666
+    }
+  },
+  "th": {
+    "colors": [
+      "#f4f5f8",
+      "#a51931",
+      "#2d2a4a",
+      "#2d2a4a",
+      "#2d2a4a",
+      "#2d2a4a"
+    ],
+    "files": [
+      "th__00_f4f5f8.svg",
+      "th__01_a51931.svg",
+      "th__02_2d2a4a.svg",
+      "th__03_2d2a4a.svg",
+      "th__04_2d2a4a.svg",
+      "th__05_2d2a4a.svg"
+    ],
+    "z": [
+      20,
+      40,
+      30,
+      31,
+      32,
+      33
+    ],
+    "full": "th__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": 100
+    }
+  },
+  "tj": {
+    "colors": [
+      "#f8c300",
+      "#f8c300",
+      "#cc0000",
+      "#006600",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "tj__00_f8c300.svg",
+      "tj__01_f8c300.svg",
+      "tj__02_cc0000.svg",
+      "tj__03_006600.svg",
+      "tj__04_ffffff.svg",
+      "tj__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      120,
+      30,
+      10,
+      20,
+      50
+    ],
+    "full": "tj__full.svg",
+    "location": {
+      "lat": 39,
+      "lon": 71
+    }
+  },
+  "tk": {
+    "colors": [
+      "#fed100",
+      "#00247d",
+      "#00247d",
+      "#00247d",
+      "#00247d",
+      "#ffffff"
+    ],
+    "files": [
+      "tk__00_fed100.svg",
+      "tk__01_00247d.svg",
+      "tk__02_00247d.svg",
+      "tk__03_00247d.svg",
+      "tk__04_00247d.svg",
+      "tk__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      30
+    ],
+    "full": "tk__full.svg",
+    "location": {
+      "lat": -9,
+      "lon": -172
+    }
+  },
+  "tl": {
+    "colors": [
+      "#f8c00c",
+      "#cb000f",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "tl__00_f8c00c.svg",
+      "tl__01_cb000f.svg",
+      "tl__02_000001.svg",
+      "tl__03_000001.svg",
+      "tl__04_000001.svg",
+      "tl__05_ffffff.svg"
+    ],
+    "z": [
+      60,
+      50,
+      70,
+      71,
+      72,
+      80
+    ],
+    "full": "tl__full.svg",
+    "location": {
+      "lat": -8.83333333,
+      "lon": 125.91666666
+    }
+  },
+  "tm": {
+    "colors": [
+      "#ffc72c",
+      "#00843d",
+      "#00843d",
+      "#d22630",
+      "#383739",
+      "#ffffff"
+    ],
+    "files": [
+      "tm__00_ffc72c.svg",
+      "tm__01_00843d.svg",
+      "tm__02_00843d.svg",
+      "tm__03_d22630.svg",
+      "tm__04_383739.svg",
+      "tm__05_ffffff.svg"
+    ],
+    "z": [
+      300,
+      10,
+      320,
+      400,
+      40,
+      20
+    ],
+    "full": "tm__full.svg",
+    "location": {
+      "lat": 40,
+      "lon": 60
+    }
+  },
+  "tn": {
+    "colors": [
+      "#e70013",
+      "#e70013",
+      "#e70013",
+      "#e70013",
+      "#e70013",
+      "#ffffff"
+    ],
+    "files": [
+      "tn__00_e70013.svg",
+      "tn__01_e70013.svg",
+      "tn__02_e70013.svg",
+      "tn__03_e70013.svg",
+      "tn__04_e70013.svg",
+      "tn__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "full": "tn__full.svg",
+    "location": {
+      "lat": 34,
+      "lon": 9
+    }
+  },
+  "to": {
+    "colors": [
+      "#c10000",
+      "#c10000",
+      "#c10000",
+      "#c10000",
+      "#c10000",
+      "#ffffff"
+    ],
+    "files": [
+      "to__00_c10000.svg",
+      "to__01_c10000.svg",
+      "to__02_c10000.svg",
+      "to__03_c10000.svg",
+      "to__04_c10000.svg",
+      "to__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      23,
+      40,
+      30
+    ],
+    "full": "to__full.svg",
+    "location": {
+      "lat": -20,
+      "lon": -175
+    }
+  },
+  "tr": {
+    "colors": [
+      "#e30a17",
+      "#e30a17",
+      "#e30a17",
+      "#e30a17",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "tr__00_e30a17.svg",
+      "tr__01_e30a17.svg",
+      "tr__02_e30a17.svg",
+      "tr__03_e30a17.svg",
+      "tr__04_ffffff.svg",
+      "tr__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      21,
+      22,
+      40,
+      30,
+      50
+    ],
+    "full": "tr__full.svg",
+    "location": {
+      "lat": 39,
+      "lon": 35
+    }
+  },
+  "tt": {
+    "colors": [
+      "#e00000",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "tt__00_e00000.svg",
+      "tt__01_000001.svg",
+      "tt__02_000001.svg",
+      "tt__03_000001.svg",
+      "tt__04_000001.svg",
+      "tt__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      10
+    ],
+    "full": "tt__full.svg",
+    "location": {
+      "lat": 11,
+      "lon": -61
+    }
+  },
+  "tv": {
+    "colors": [
+      "#fff40d",
+      "#009fca",
+      "#c8102e",
+      "#c8102e",
+      "#012169",
+      "#ffffff"
+    ],
+    "files": [
+      "tv__00_fff40d.svg",
+      "tv__01_009fca.svg",
+      "tv__02_c8102e.svg",
+      "tv__03_c8102e.svg",
+      "tv__04_012169.svg",
+      "tv__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      10,
+      50,
+      70,
+      30,
+      40
+    ],
+    "full": "tv__full.svg",
+    "location": {
+      "lat": -8,
+      "lon": 178
+    }
+  },
+  "tw": {
+    "colors": [
+      "#ff0000",
+      "#000095",
+      "#000095",
+      "#000095",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "tw__00_ff0000.svg",
+      "tw__01_000095.svg",
+      "tw__02_000095.svg",
+      "tw__03_000095.svg",
+      "tw__04_ffffff.svg",
+      "tw__05_ffffff.svg"
+    ],
+    "z": [
+      40,
+      50,
+      51,
+      280,
+      60,
+      290
+    ],
+    "full": "tw__full.svg",
+    "location": {
+      "lat": 23.5,
+      "lon": 121
+    }
+  },
+  "tz": {
+    "colors": [
+      "#ffff00",
+      "#0099ff",
+      "#009900",
+      "#000001",
+      "#000001",
+      "#000001"
+    ],
+    "files": [
+      "tz__00_ffff00.svg",
+      "tz__01_0099ff.svg",
+      "tz__02_009900.svg",
+      "tz__03_000001.svg",
+      "tz__04_000001.svg",
+      "tz__05_000001.svg"
+    ],
+    "z": [
+      80,
+      50,
+      60,
+      70,
+      71,
+      72
+    ],
+    "full": "tz__full.svg",
+    "location": {
+      "lat": -6,
+      "lon": 35
+    }
+  },
+  "ua": {
+    "colors": [
+      "#ffd700",
+      "#0057b8",
+      "#0057b8",
+      "#0057b8",
+      "#0057b8",
+      "#0057b8"
+    ],
+    "files": [
+      "ua__00_ffd700.svg",
+      "ua__01_0057b8.svg",
+      "ua__02_0057b8.svg",
+      "ua__03_0057b8.svg",
+      "ua__04_0057b8.svg",
+      "ua__05_0057b8.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "full": "ua__full.svg",
+    "location": {
+      "lat": 49,
+      "lon": 32
+    }
+  },
+  "ug": {
+    "colors": [
+      "#fffdff",
+      "#ffe700",
+      "#9ca69c",
+      "#de3908",
+      "#de3108",
+      "#000001"
+    ],
+    "files": [
+      "ug__00_fffdff.svg",
+      "ug__01_ffe700.svg",
+      "ug__02_9ca69c.svg",
+      "ug__03_de3908.svg",
+      "ug__04_de3108.svg",
+      "ug__05_000001.svg"
+    ],
+    "z": [
+      100,
+      50,
+      162,
+      70,
+      110,
+      60
+    ],
+    "full": "ug__full.svg",
+    "location": {
+      "lat": 1,
+      "lon": 32
+    }
+  },
+  "um": {
+    "colors": [
+      "#bd3d44",
+      "#192f5d",
+      "#192f5d",
+      "#192f5d",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "um__00_bd3d44.svg",
+      "um__01_192f5d.svg",
+      "um__02_192f5d.svg",
+      "um__03_192f5d.svg",
+      "um__04_ffffff.svg",
+      "um__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      30,
+      31,
+      32,
+      21,
+      50
+    ],
+    "full": "um__full.svg",
+    "location": {
+      "lat": 19.3,
+      "lon": 166.633333
+    }
+  },
+  "un": {
+    "colors": [
+      "#4b92db",
+      "#4b92db",
+      "#4b92db",
+      "#4b92db",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "un__00_4b92db.svg",
+      "un__01_4b92db.svg",
+      "un__02_4b92db.svg",
+      "un__03_4b92db.svg",
+      "un__04_ffffff.svg",
+      "un__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      11,
+      12,
+      13,
+      30,
+      130
+    ],
+    "full": "un__full.svg",
+    "location": {
+      "lat": 40.75,
+      "lon": -73.97
+    }
+  },
+  "us": {
+    "colors": [
+      "#bd3d44",
+      "#192f5d",
+      "#192f5d",
+      "#192f5d",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "us__00_bd3d44.svg",
+      "us__01_192f5d.svg",
+      "us__02_192f5d.svg",
+      "us__03_192f5d.svg",
+      "us__04_ffffff.svg",
+      "us__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      30,
+      31,
+      32,
+      21,
+      50
+    ],
+    "full": "us__full.svg",
+    "location": {
+      "lat": 38,
+      "lon": -97
+    }
+  },
+  "uy": {
+    "colors": [
+      "#fcd116",
+      "#0038a8",
+      "#0038a8",
+      "#0038a8",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "uy__00_fcd116.svg",
+      "uy__01_0038a8.svg",
+      "uy__02_0038a8.svg",
+      "uy__03_0038a8.svg",
+      "uy__04_000000.svg",
+      "uy__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      31,
+      10
+    ],
+    "full": "uy__full.svg",
+    "location": {
+      "lat": -33,
+      "lon": -56
+    }
+  },
+  "uz": {
+    "colors": [
+      "#1eb53a",
+      "#0099b5",
+      "#0099b5",
+      "#ce1126",
+      "#ffffff",
+      "#ffffff"
+    ],
+    "files": [
+      "uz__00_1eb53a.svg",
+      "uz__01_0099b5.svg",
+      "uz__02_0099b5.svg",
+      "uz__03_ce1126.svg",
+      "uz__04_ffffff.svg",
+      "uz__05_ffffff.svg"
+    ],
+    "z": [
+      10,
+      20,
+      60,
+      30,
+      50,
+      70
+    ],
+    "full": "uz__full.svg",
+    "location": {
+      "lat": 41,
+      "lon": 64
+    }
+  },
+  "va": {
+    "colors": [
+      "#ffe000",
+      "#cccccc",
+      "#ce9d09",
+      "#fa0204",
+      "#000000",
+      "#ffffff"
+    ],
+    "files": [
+      "va__00_ffe000.svg",
+      "va__01_cccccc.svg",
+      "va__02_ce9d09.svg",
+      "va__03_fa0204.svg",
+      "va__04_000000.svg",
+      "va__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      180,
+      1710,
+      470,
+      31,
+      80
+    ],
+    "full": "va__full.svg",
+    "location": {
+      "lat": 41.9,
+      "lon": 12.45
+    }
+  },
+  "vc": {
+    "colors": [
+      "#f4f100",
+      "#199a00",
+      "#199a00",
+      "#0058aa",
+      "#0058aa",
+      "#0058aa"
+    ],
+    "files": [
+      "vc__00_f4f100.svg",
+      "vc__01_199a00.svg",
+      "vc__02_199a00.svg",
+      "vc__03_0058aa.svg",
+      "vc__04_0058aa.svg",
+      "vc__05_0058aa.svg"
+    ],
+    "z": [
+      20,
+      30,
+      50,
+      40,
+      41,
+      42
+    ],
+    "full": "vc__full.svg",
+    "location": {
+      "lat": 13.25,
+      "lon": -61.2
+    }
+  },
+  "ve": {
+    "colors": [
+      "#ffcc00",
+      "#cf142b",
+      "#00247d",
+      "#00247d",
+      "#00247d",
+      "#ffffff"
+    ],
+    "files": [
+      "ve__00_ffcc00.svg",
+      "ve__01_cf142b.svg",
+      "ve__02_00247d.svg",
+      "ve__03_00247d.svg",
+      "ve__04_00247d.svg",
+      "ve__05_ffffff.svg"
+    ],
+    "z": [
+      120,
+      100,
+      110,
+      111,
+      112,
+      50
+    ],
+    "full": "ve__full.svg",
+    "location": {
+      "lat": 8,
+      "lon": -66
+    }
+  },
+  "vg": {
+    "colors": [
+      "#ffc6b5",
+      "#9c5100",
+      "#c8102e",
+      "#006129",
+      "#012169",
+      "#000066"
+    ],
+    "files": [
+      "vg__00_ffc6b5.svg",
+      "vg__01_9c5100.svg",
+      "vg__02_c8102e.svg",
+      "vg__03_006129.svg",
+      "vg__04_012169.svg",
+      "vg__05_000066.svg"
+    ],
+    "z": [
+      320,
+      390,
+      80,
+      130,
+      60,
+      50
+    ],
+    "full": "vg__full.svg",
+    "location": {
+      "lat": 18.431383,
+      "lon": -64.62305
+    }
+  },
+  "vi": {
+    "colors": [
+      "#f4c53d",
+      "#369443",
+      "#0081c6",
+      "#a60032",
+      "#162667",
+      "#010002"
+    ],
+    "files": [
+      "vi__00_f4c53d.svg",
+      "vi__01_369443.svg",
+      "vi__02_0081c6.svg",
+      "vi__03_a60032.svg",
+      "vi__04_162667.svg",
+      "vi__05_010002.svg"
+    ],
+    "z": [
+      30,
+      20,
+      210,
+      230,
+      240,
+      241
+    ],
+    "full": "vi__full.svg",
+    "location": {
+      "lat": 18.35,
+      "lon": -64.933333
+    }
+  },
+  "vn": {
+    "colors": [
+      "#ffff00",
+      "#da251d",
+      "#da251d",
+      "#da251d",
+      "#da251d",
+      "#da251d"
+    ],
+    "files": [
+      "vn__00_ffff00.svg",
+      "vn__01_da251d.svg",
+      "vn__02_da251d.svg",
+      "vn__03_da251d.svg",
+      "vn__04_da251d.svg",
+      "vn__05_da251d.svg"
+    ],
+    "z": [
+      60,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "full": "vn__full.svg",
+    "location": {
+      "lat": 16.16666666,
+      "lon": 107.83333333
+    }
+  },
+  "vu": {
+    "colors": [
+      "#fdce12",
+      "#fdce12",
+      "#fdce12",
+      "#009543",
+      "#d21034",
+      "#000000"
+    ],
+    "files": [
+      "vu__00_fdce12.svg",
+      "vu__01_fdce12.svg",
+      "vu__02_fdce12.svg",
+      "vu__03_009543.svg",
+      "vu__04_d21034.svg",
+      "vu__05_000000.svg"
+    ],
+    "z": [
+      71,
+      90,
+      121,
+      40,
+      50,
+      81
+    ],
+    "full": "vu__full.svg",
+    "location": {
+      "lat": -16,
+      "lon": 167
+    }
+  },
+  "wf": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "wf__00_e1000f.svg",
+      "wf__01_000091.svg",
+      "wf__02_000091.svg",
+      "wf__03_000091.svg",
+      "wf__04_000091.svg",
+      "wf__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "wf__full.svg",
+    "location": {
+      "lat": -13.3,
+      "lon": -176.2
+    }
+  },
+  "ws": {
+    "colors": [
+      "#ce1126",
+      "#002b7f",
+      "#002b7f",
+      "#002b7f",
+      "#002b7f",
+      "#ffffff"
+    ],
+    "files": [
+      "ws__00_ce1126.svg",
+      "ws__01_002b7f.svg",
+      "ws__02_002b7f.svg",
+      "ws__03_002b7f.svg",
+      "ws__04_002b7f.svg",
+      "ws__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      30,
+      31,
+      32,
+      33,
+      40
+    ],
+    "full": "ws__full.svg",
+    "location": {
+      "lat": -13.58333333,
+      "lon": -172.33333333
+    }
+  },
+  "xk": {
+    "colors": [
+      "#d0a650",
+      "#244aa5",
+      "#244aa5",
+      "#244aa5",
+      "#244aa5",
+      "#ffffff"
+    ],
+    "files": [
+      "xk__00_d0a650.svg",
+      "xk__01_244aa5.svg",
+      "xk__02_244aa5.svg",
+      "xk__03_244aa5.svg",
+      "xk__04_244aa5.svg",
+      "xk__05_ffffff.svg"
+    ],
+    "z": [
+      20,
+      10,
+      11,
+      12,
+      13,
+      30
+    ],
+    "full": "xk__full.svg",
+    "location": {
+      "lat": 42.666667,
+      "lon": 21.166667
+    }
+  },
+  "xx": {
+    "colors": [
+      "#adb5bd",
+      "#adb5bd",
+      "#adb5bd",
+      "#adb5bd",
+      "#adb5bd",
+      "#ffffff"
+    ],
+    "files": [
+      "xx__00_adb5bd.svg",
+      "xx__01_adb5bd.svg",
+      "xx__02_adb5bd.svg",
+      "xx__03_adb5bd.svg",
+      "xx__04_adb5bd.svg",
+      "xx__05_ffffff.svg"
+    ],
+    "z": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      10
+    ],
+    "full": "xx__full.svg",
+    "location": {
+      "lat": 0,
+      "lon": 0
+    }
+  },
+  "ye": {
+    "colors": [
+      "#f10600",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "ye__00_f10600.svg",
+      "ye__01_000001.svg",
+      "ye__02_000001.svg",
+      "ye__03_000001.svg",
+      "ye__04_000001.svg",
+      "ye__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      40,
+      41,
+      42,
+      43,
+      20
+    ],
+    "full": "ye__full.svg",
+    "location": {
+      "lat": 15,
+      "lon": 48
+    }
+  },
+  "yt": {
+    "colors": [
+      "#e1000f",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#000091",
+      "#ffffff"
+    ],
+    "files": [
+      "yt__00_e1000f.svg",
+      "yt__01_000091.svg",
+      "yt__02_000091.svg",
+      "yt__03_000091.svg",
+      "yt__04_000091.svg",
+      "yt__05_ffffff.svg"
+    ],
+    "z": [
+      30,
+      20,
+      21,
+      22,
+      23,
+      10
+    ],
+    "full": "yt__full.svg",
+    "location": {
+      "lat": -12.83333333,
+      "lon": 45.16666666
+    }
+  },
+  "za": {
+    "colors": [
+      "#ffb915",
+      "#e1392d",
+      "#007847",
+      "#000c8a",
+      "#000001",
+      "#ffffff"
+    ],
+    "files": [
+      "za__00_ffb915.svg",
+      "za__01_e1392d.svg",
+      "za__02_007847.svg",
+      "za__03_000c8a.svg",
+      "za__04_000001.svg",
+      "za__05_ffffff.svg"
+    ],
+    "z": [
+      90,
+      80,
+      100,
+      70,
+      60,
+      110
+    ],
+    "full": "za__full.svg",
+    "location": {
+      "lat": -29,
+      "lon": 24
+    }
+  },
+  "zm": {
+    "colors": [
+      "#ef7d00",
+      "#ef7d00",
+      "#198a00",
+      "#de2010",
+      "#000001",
+      "#000000"
+    ],
+    "files": [
+      "zm__00_ef7d00.svg",
+      "zm__01_ef7d00.svg",
+      "zm__02_198a00.svg",
+      "zm__03_de2010.svg",
+      "zm__04_000001.svg",
+      "zm__05_000000.svg"
+    ],
+    "z": [
+      60,
+      90,
+      50,
+      80,
+      70,
+      91
+    ],
+    "full": "zm__full.svg",
+    "location": {
+      "lat": -15,
+      "lon": 30
+    }
+  },
+  "zw": {
+    "colors": [
+      "#ffd200",
+      "#ffcc00",
+      "#d40000",
+      "#006400",
+      "#0000ff",
+      "#000001"
+    ],
+    "files": [
+      "zw__00_ffd200.svg",
+      "zw__01_ffcc00.svg",
+      "zw__02_d40000.svg",
+      "zw__03_006400.svg",
+      "zw__04_0000ff.svg",
+      "zw__05_000001.svg"
+    ],
+    "z": [
+      60,
+      120,
+      70,
+      50,
+      30,
+      80
+    ],
+    "full": "zw__full.svg",
+    "location": {
+      "lat": -20,
+      "lon": 30
+    }
+  }
+}

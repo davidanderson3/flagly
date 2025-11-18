@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-mg" viewBox="0 0 640 480"><defs><clipPath id="clip-mg-03" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="0" width="213.33333333333331" height="160"/></clipPath></defs><g clip-path="url(#clip-mg-03)">
+  <g fill-rule="evenodd" stroke-width="1pt" fill="none" stroke="none">
+    <path fill="none" d="M213.3 0H640v240H213.3z" stroke="none"/>
+    <path fill="#007e3a" d="M213.3 240H640v240H213.3z" stroke="none"/>
+    <path fill="none" d="M0 0h213.3v480H0z" stroke="none"/>
+  </g>
+</g></svg>

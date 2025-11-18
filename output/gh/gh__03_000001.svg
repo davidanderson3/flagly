@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gh" viewBox="0 0 640 480"><defs><clipPath id="clip-gh-03" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-gh-03)">
+  <path fill="none" d="M0 0h640v480H0z" stroke="none"/>
+  <path fill="none" d="M0 0h640v320H0z" stroke="none"/>
+  <path fill="none" d="M0 0h640v160H0z" stroke="none"/>
+  <path fill="#000001" d="m320 160 52 160-136.1-98.9H404L268 320z" stroke="none"/>
+</g></svg>
