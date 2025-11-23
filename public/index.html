@@ -46,6 +46,9 @@
     .history-status.miss { color: #ff8e8e; }
     .history-empty { opacity: 0.6; font-size: 13px; }
     .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between }
+    .date-row { margin-top: 8px; gap: 12px; }
+    .nav-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-buttons button { min-width: 120px; }
     button { background: #2b64ff; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-weight: 600; cursor: pointer; min-height: 40px; }
     button:disabled{ opacity: .55; cursor: not-allowed }
     .pill { padding: 6px 10px; border: 1px solid #2a2f3a; border-radius: 999px; font-size: 12px; opacity: .85 }
@@ -89,6 +92,13 @@
 <body>
   <div class="card">
     <h1>Guess the Flag</h1>
+    <div class="row date-row">
+      <div class="pill" id="dateDisplay">Date: –</div>
+      <div class="nav-buttons">
+        <button id="prevDate">← Previous Date</button>
+        <button id="nextDate">Next Date →</button>
+      </div>
+    </div>
     <div class="row">
       <div class="pill" id="progress">Layers: – / – • Guesses: 0 / 6</div>
       <div class="colors" id="colors"></div>
@@ -121,7 +131,7 @@
     <div class="row">
       <div class="controls">
         <button id="giveUp">Give Up</button>
-        <button id="skip">Skip Flag</button>
+        <button id="skip">Next Date</button>
         <button id="reset">Restart Layers</button>
       </div>
       <div class="answer" id="answer"> </div>
@@ -146,6 +156,9 @@
     const btnGiveUp = document.getElementById('giveUp');
     const btnSkip = document.getElementById('skip');
     const btnReset = document.getElementById('reset');
+    const dateDisplay = document.getElementById('dateDisplay');
+    const btnPrevDate = document.getElementById('prevDate');
+    const btnNextDate = document.getElementById('nextDate');
 
     let manifest = {};
     let order = [];
@@ -163,6 +176,14 @@
     let pendingFullFlagAlt = '';
     let countryLocations = {};
 
+    const DAY_MS = 24 * 60 * 60 * 1000;
+    const DAYS_BEFORE = 500;
+    const DAYS_AFTER = 500;
+    const TOTAL_WINDOW = DAYS_BEFORE + DAYS_AFTER + 1;
+    const todayUtc = toDateOnly(new Date());
+    const startDate = new Date(todayUtc.getTime() - DAYS_BEFORE * DAY_MS);
+    const TODAY_INDEX = DAYS_BEFORE;
+
     const COUNTRY_NAME_OVERRIDES = {
       cg: 'Republic of the Congo',
       cd: 'Democratic Republic of the Congo',
@@ -176,6 +197,42 @@
         return new Intl.DisplayNames(['en'], { type: 'region' }).of(upper) || upper;
       } catch {
         return cc.toUpperCase();
+      }
+    }
+
+    function toDateOnly(date) {
+      if (!(date instanceof Date)) return null;
+      return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+    }
+
+    function addDays(date, days) {
+      if (!(date instanceof Date)) return null;
+      return new Date(date.getTime() + days * DAY_MS);
+    }
+
+    function clampIndex(value) {
+      if (!order.length) return 0;
+      const maxAllowed = Math.min(order.length - 1, TODAY_INDEX);
+      if (value < 0) return 0;
+      if (value > maxAllowed) return maxAllowed;
+      return Math.min(value, maxAllowed);
+    }
+
+    function indexToDate(index) {
+      return new Date(startDate.getTime() + index * DAY_MS);
+    }
+
+    function dateDiffInDays(date) {
+      const only = toDateOnly(date);
+      if (!only) return 0;
+      return Math.floor((only.getTime() - startDate.getTime()) / DAY_MS);
+    }
+
+    function formatDateLabel(date) {
+      try {
+        return date.toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+      } catch {
+        return date.toISOString().slice(0, 10);
       }
     }
 
@@ -244,13 +301,13 @@
       return (value * Math.PI) / 180;
     }
 
-    function bearingBetween(fromLoc, toLoc) {
+    function rhumbBearing(fromLoc, toLoc) {
+      // Rhumb-line bearing is more intuitive (avoids polar shortcuts).
       const lat1 = toRadians(fromLoc.lat);
       const lat2 = toRadians(toLoc.lat);
       const deltaLon = toRadians(toLoc.lon - fromLoc.lon);
-      const y = Math.sin(deltaLon) * Math.cos(lat2);
-      const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(deltaLon);
-      const bearing = Math.atan2(y, x);
+      const dPhi = Math.log(Math.tan(lat2 / 2 + Math.PI / 4) / Math.tan(lat1 / 2 + Math.PI / 4));
+      const bearing = Math.atan2(deltaLon, dPhi);
       return (bearing * 180 / Math.PI + 360) % 360;
     }
 
@@ -259,7 +316,7 @@
     function describeDirection(fromLoc, toLoc) {
       if (!fromLoc || !toLoc) return null;
       if (fromLoc.lat === toLoc.lat && fromLoc.lon === toLoc.lon) return 'Here';
-      const bearing = bearingBetween(fromLoc, toLoc);
+      const bearing = rhumbBearing(fromLoc, toLoc);
       const index = Math.round(bearing / 45) % CARDINAL_DIRECTIONS.length;
       const entry = CARDINAL_DIRECTIONS[index];
       if (!entry) return null;
@@ -396,18 +453,77 @@
       return countryOptions.find((item) => item.cc === cc) || null;
     }
 
-    function shuffle(arr) {
+    function makeRng(seed) {
+      // Mulberry32 for deterministic shuffles.
+      let s = seed >>> 0;
+      return function rng() {
+        s = (s + 0x6d2b79f5) >>> 0;
+        let t = Math.imul(s ^ (s >>> 15), 1 | s);
+        t ^= t + Math.imul(t ^ (t >>> 7), 61 | t);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
+    function shuffleWithRng(arr, rng) {
       for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(rng() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
       return arr;
+    }
+
+    function buildSchedule(codes, seed) {
+      if (!codes.length) return [];
+      const rng = makeRng(seed);
+      const picks = [];
+      const pool = codes.slice();
+      while (picks.length < TOTAL_WINDOW) {
+        shuffleWithRng(pool, rng);
+        for (const cc of pool) {
+          if (picks.length >= TOTAL_WINDOW) break;
+          picks.push(cc);
+        }
+      }
+      return picks;
     }
 
     function updateProgress() {
       const totalLayers = stage.querySelectorAll('.layer').length;
       const totalDisplay = totalLayers ? totalLayers : '–';
       progress.textContent = `Layers: ${visibleCount} / ${totalDisplay} • Guesses: ${attempts} / ${MAX_GUESSES}`;
+    }
+
+    function updateDateLabel() {
+      if (!dateDisplay) return;
+      if (!order.length || idx < 0) {
+        dateDisplay.textContent = 'Date: –';
+        return;
+      }
+      const date = indexToDate(idx);
+      const offset = idx - TODAY_INDEX;
+      let suffix = `(Day ${idx + 1} of ${order.length})`;
+      if (offset === 0) {
+        suffix = 'Today';
+      } else if (offset < 0) {
+        const daysAgo = Math.abs(offset);
+        suffix = `${daysAgo === 1 ? '1 day ago' : `${daysAgo} days ago`}`;
+      } else {
+        suffix = `${offset === 1 ? 'In 1 day' : `In ${offset} days`}`;
+      }
+      dateDisplay.textContent = `Date: ${formatDateLabel(date)} — ${suffix}`;
+    }
+
+    function updateNavButtons() {
+      if (!btnPrevDate || !btnNextDate) return;
+      if (!order.length) {
+        btnPrevDate.disabled = true;
+        btnNextDate.disabled = true;
+        return;
+      }
+      btnPrevDate.disabled = idx <= 0;
+      const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
+      btnNextDate.disabled = idx >= maxIdx;
+      btnSkip.disabled = btnNextDate.disabled;
     }
 
     function setGuessControls(enabled) {
@@ -537,6 +653,8 @@
         feedback.textContent = 'No layers found for this flag.';
         setGuessControls(false);
         setGiveUp(false);
+        updateDateLabel();
+        updateNavButtons();
         return;
       }
       const zOrder = current.z || [];
@@ -564,15 +682,29 @@
       guessInput.value = '';
       guessInput.focus();
       updateProgress();
+      updateDateLabel();
+      updateNavButtons();
       revealLayer(true);
       updateProgress();
     }
 
-    function nextFlag() {
+    function goToIndex(newIndex) {
       if (order.length === 0) return;
-      idx = (idx + 1) % order.length;
+      idx = clampIndex(newIndex);
       const cc = order[idx];
       loadFlag(cc);
+    }
+
+    function nextFlag() {
+      if (order.length === 0) return;
+      const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
+      if (idx >= maxIdx) return;
+      goToIndex(idx + 1);
+    }
+
+    function prevFlag() {
+      if (order.length === 0) return;
+      goToIndex(idx - 1);
     }
 
     btnSubmitGuess.addEventListener('click', submitGuess);
@@ -603,9 +735,20 @@
         hideSuggestions();
       }
     });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' && document.activeElement !== guessInput) {
+        event.preventDefault();
+        prevFlag();
+      } else if (event.key === 'ArrowRight' && document.activeElement !== guessInput) {
+        event.preventDefault();
+        nextFlag();
+      }
+    });
     btnGiveUp.addEventListener('click', giveUp);
     btnSkip.addEventListener('click', () => nextFlag());
     btnReset.addEventListener('click', restartLayers);
+    btnPrevDate.addEventListener('click', prevFlag);
+    btnNextDate.addEventListener('click', nextFlag);
 
     async function boot() {
       const res = await fetch('/api/manifest');
@@ -632,11 +775,18 @@
       })
         .sort((a, b) => a.name.localeCompare(b.name));
 
-      order = [...validCountries];
-      shuffle(order);
+      const dateSeed = Number(todayUtc.toISOString().slice(0, 10).replace(/-/g, '')) || 1337;
+      order = buildSchedule(countryOptions.map((item) => item.cc), dateSeed);
 
-      idx = -1;
-      nextFlag();
+      if (!order.length) {
+        updateDateLabel();
+        updateNavButtons();
+        return;
+      }
+
+      idx = clampIndex(TODAY_INDEX);
+      goToIndex(idx);
+      updateNavButtons();
     }
 
     boot();

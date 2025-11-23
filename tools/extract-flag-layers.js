@@ -48,6 +48,8 @@ countriesList.forEach((country) => {
   locationByIso.set(iso, { lat, lon });
 });
 
+const SKIP_CODES = new Set(['cp', 'xx', 'um']);
+
 const MANUAL_LOCATIONS = new Map([
   ['arab', { lat: 25, lon: 45 }],
   ['asean', { lat: 12.5, lon: 103 }],
@@ -68,7 +70,6 @@ const MANUAL_LOCATIONS = new Map([
   ['sh-hl', { lat: -15.9, lon: -5.7 }],
   ['sh-ta', { lat: -37.1, lon: -12.3 }],
   ['un', { lat: 40.75, lon: -73.97 }],
-  ['xx', { lat: 0, lon: 0 }],
 ]);
 
 if (!fs.existsSync(FLAGS_DIR)) {
@@ -92,6 +93,21 @@ function toHex(c) {
     // Some odd values like 'url(#id)' for paint servers; ignore those for color buckets
     return null;
   }
+}
+
+function orderColorsForReveal(colors) {
+  const primaries = [];
+  const tail = [];
+  colors.forEach((hex) => {
+    if (!hex) return;
+    const trimmed = hex.toLowerCase();
+    if (trimmed === '#ffffff' || trimmed === '#fff' || trimmed === '#000000' || trimmed === '#000') {
+      tail.push(trimmed);
+    } else {
+      primaries.push(trimmed);
+    }
+  });
+  return [...primaries, ...tail];
 }
 
 function walkElements(svgDoc) {
@@ -472,7 +488,13 @@ function main() {
 
   for (const file of files) {
     const cc = path.basename(file, '.svg'); // e.g., us, fr, de
-    if (cc === 'cp') continue;
+    if (SKIP_CODES.has(cc)) {
+      const staleDir = path.join(OUT_DIR, cc);
+      if (fs.existsSync(staleDir)) {
+        fs.rmSync(staleDir, { recursive: true, force: true });
+      }
+      continue;
+    }
     const svgSrc = fs.readFileSync(file, 'utf8');
     const manualLocation = MANUAL_LOCATIONS.get(cc);
     const resolvedLocation = locationByIso.get(cc) || manualLocation || null;
@@ -506,14 +528,7 @@ function main() {
     }
 
     // Optional: put white/black last so the more distinctive colors show earlier.
-    const colorReveal = colors.slice().sort((a, b) => {
-      const rank = (hex) => {
-        if (hex === '#ffffff') return 99;
-        if (hex === '#000000') return 98;
-        return 0;
-      };
-      return rank(a) - rank(b) || a.localeCompare(b);
-    });
+    const colorReveal = orderColorsForReveal(colors);
 
     const layerPlans = [];
 

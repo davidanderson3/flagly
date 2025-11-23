@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-um" viewBox="0 0 640 480"><defs><clipPath id="clip-um-02" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-um-02)">
-  <path fill="none" d="M0 0h640v480H0" stroke="none"/>
-  <path stroke="none" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640" fill="none"/>
-  <path fill="#192f5d" d="M0 0h364.8v258.5H0" stroke="none"/>
-  <marker id="um-a" markerHeight="30" markerWidth="30" fill="none" stroke="none">
-    <path fill="none" d="m14 0 9 27L0 10h28L5 27z" stroke="none"/>
-  </marker>
-  <path fill="none" marker-mid="url(#um-a)" d="m0 0 16 11h61 61 61 61 60L47 37h61 61 60 61L16 63h61 61 61 61 60L47 89h61 61 60 61L16 115h61 61 61 61 60L47 141h61 61 60 61L16 166h61 61 61 61 60L47 192h61 61 60 61L16 218h61 61 61 61 60z" stroke="none"/>
-</g></svg>

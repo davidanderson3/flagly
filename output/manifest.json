@@ -7718,37 +7718,6 @@
       "lon": 32
     }
   },
-  "um": {
-    "colors": [
-      "#bd3d44",
-      "#192f5d",
-      "#192f5d",
-      "#192f5d",
-      "#ffffff",
-      "#ffffff"
-    ],
-    "files": [
-      "um__00_bd3d44.svg",
-      "um__01_192f5d.svg",
-      "um__02_192f5d.svg",
-      "um__03_192f5d.svg",
-      "um__04_ffffff.svg",
-      "um__05_ffffff.svg"
-    ],
-    "z": [
-      10,
-      30,
-      31,
-      32,
-      21,
-      50
-    ],
-    "full": "um__full.svg",
-    "location": {
-      "lat": 19.3,
-      "lon": 166.633333
-    }
-  },
   "un": {
     "colors": [
       "#4b92db",
@@ -8181,37 +8150,6 @@
     "location": {
       "lat": 42.666667,
       "lon": 21.166667
-    }
-  },
-  "xx": {
-    "colors": [
-      "#adb5bd",
-      "#adb5bd",
-      "#adb5bd",
-      "#adb5bd",
-      "#adb5bd",
-      "#ffffff"
-    ],
-    "files": [
-      "xx__00_adb5bd.svg",
-      "xx__01_adb5bd.svg",
-      "xx__02_adb5bd.svg",
-      "xx__03_adb5bd.svg",
-      "xx__04_adb5bd.svg",
-      "xx__05_ffffff.svg"
-    ],
-    "z": [
-      21,
-      22,
-      23,
-      24,
-      25,
-      10
-    ],
-    "full": "xx__full.svg",
-    "location": {
-      "lat": 0,
-      "lon": 0
     }
   },
   "ye": {

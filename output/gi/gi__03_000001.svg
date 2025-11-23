@@ -3,9 +3,9 @@
   <path fill="none" d="M0 0h640v321.6H0z" stroke="none"/>
   <g stroke="none" transform="translate(-160)scale(1.875)" fill="none">
     <g id="gi-a" fill="none" stroke-linecap="square" stroke="none">
-      <path fill="none" stroke="none" d="M196.6 116.3h64v44h-64z"/>
+      <path fill="#000001" stroke="none" d="M196.6 116.3h64v44h-64z"/>
       <path d="M229.8 153.9h-39l-8.7 5.7v6h47.7m-16.3-37c5.6 0 10.2 4.7 10.2 10.5v14.7h7.3v-56h-40.3v56h12.6v-14.7c0-5.6 4.5-10.5 10.2-10.5z" fill="none" stroke="none"/>
-      <path fill="#000001" stroke="none" d="M204.5 60h18.6v34h-18.6z"/>
+      <path fill="none" stroke="none" d="M204.5 60h18.6v34h-18.6z"/>
       <path d="M223 88.7h-16.2v-5.8h-11.9v5.8h-8v-5.8H182v10.4h41m-36.2 0h35v4.5h-35zm14-45.7V83h6v-9.7c0-3.6 2.5-6.6 6.1-6.8h.4a7 7 0 0 1 6.8 6.8V83h5.7V47.6zm-2.3-4.8v4.8h29.3v-4.8zm-3.7-9.1v9.1h35v-9.1h-5.3v4.7h-6.6v-4.7h-10v4.7h-6.5v-4.7zM182 159.6h48m31-2.8h-32.4l-9.8 4.7v7H261" fill="none" stroke="none"/>
       <path stroke-linecap="butt" d="M218.8 161.5H262" fill="none" stroke="none"/>
     </g>

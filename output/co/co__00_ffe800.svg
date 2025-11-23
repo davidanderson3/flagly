@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-co" viewBox="0 0 640 480">
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-co" viewBox="0 0 640 480"><defs><clipPath id="clip-co-00" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-co-00)">
   <g fill-rule="evenodd" stroke-width="1pt" fill="none" stroke="none">
     <path fill="#ffe800" d="M0 0h640v480H0z" stroke="none"/>
     <path fill="none" d="M0 240h640v240H0z" stroke="none"/>
     <path fill="none" d="M0 360h640v120H0z" stroke="none"/>
   </g>
-</svg>
+</g></svg>

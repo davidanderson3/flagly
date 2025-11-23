@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ma" viewBox="0 0 640 480">
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ma" viewBox="0 0 640 480"><defs><clipPath id="clip-ma-00" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-ma-00)">
   <path fill="#c1272d" d="M640 0H0v480h640z" stroke="none"/>
   <path fill="none" stroke="none" stroke-width="11.7" d="M320 179.4 284.4 289l93.2-67.6H262.4l93.2 67.6z"/>
-</svg>
+</g></svg>
