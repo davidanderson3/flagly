@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-st" viewBox="0 0 640 480"><defs><clipPath id="clip-st-02" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-st-02)">
+  <path fill="#12ad2b" d="M0 0h640v480H0z" stroke="none"/>
+  <path fill="none" d="M0 137.1h640V343H0z" stroke="none"/>
+  <path fill="none" d="M0 0v480l240-240" stroke="none"/>
+  <g id="st-c" transform="translate(351.6 240)scale(.34286)" fill="none" stroke="none">
+    <g id="st-b" fill="none" stroke="none">
+      <path id="st-a" fill="none" d="M0-200V0h100" transform="rotate(18 0 -200)" stroke="none"/>
+      <use xlink:href="#st-a" width="100%" height="100%" transform="scale(-1 1)" fill="none" stroke="none"/>
+    </g>
+    <use xlink:href="#st-b" width="100%" height="100%" transform="rotate(72)" fill="none" stroke="none"/>
+    <use xlink:href="#st-b" width="100%" height="100%" transform="rotate(144)" fill="none" stroke="none"/>
+    <use xlink:href="#st-b" width="100%" height="100%" transform="rotate(-144)" fill="none" stroke="none"/>
+    <use xlink:href="#st-b" width="100%" height="100%" transform="rotate(-72)" fill="none" stroke="none"/>
+  </g>
+  <use xlink:href="#st-c" width="100%" height="100%" x="700" transform="translate(-523.2)" fill="none" stroke="none"/>
+</g></svg>

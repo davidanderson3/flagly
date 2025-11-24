@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-gm" viewBox="0 0 640 480"><defs>
+    <clipPath id="gm-a" fill="none" stroke="none">
+      <path fill-opacity=".7" d="M0-48h640v480H0z" fill="none" stroke="none"/>
+    </clipPath>
+  <clipPath id="clip-gm-01" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="320" height="480"/></clipPath></defs><g clip-path="url(#clip-gm-01)">
+  
+  <g fill-rule="evenodd" stroke-width="1pt" clip-path="url(#gm-a)" transform="translate(0 48)" fill="none" stroke="none">
+    <path fill="#ff0000" d="M0-128h640V85.3H0z" stroke="none"/>
+    <path fill="none" d="M0 85.3h640V121H0z" stroke="none"/>
+    <path fill="none" d="M0 120.9h640V263H0z" stroke="none"/>
+    <path fill="none" d="M0 263.1h640v35.6H0z" stroke="none"/>
+    <path fill="none" d="M0 298.7h640V512H0z" stroke="none"/>
+  </g>
+</g></svg>

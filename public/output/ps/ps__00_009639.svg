@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="flag-icons-ps" viewBox="0 0 640 480"><defs><clipPath id="clip-ps-00" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-ps-00)">
+  <path fill="#009639" d="M0 0h640v480H0z" stroke="none"/>
+  <path fill="none" d="M0 0h640v320H0z" stroke="none"/>
+  <path d="M0 0h640v160H0z" fill="none" stroke="none"/>
+  <path fill="none" d="m0 0 320 240L0 480Z" stroke="none"/>
+</g></svg>

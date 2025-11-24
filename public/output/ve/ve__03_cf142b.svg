@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-ve" viewBox="0 0 640 480"><defs>
+    <g id="ve-d" transform="translate(0 -36)" fill="none" stroke="none">
+      <g id="ve-c" fill="none" stroke="none">
+        <g id="ve-b" fill="none" stroke="none">
+          <path id="ve-a" fill="none" d="M0-5-1.5-.2l2.8.9z" stroke="none"/>
+          <use xlink:href="#ve-a" width="180" height="120" transform="scale(-1 1)" fill="none" stroke="none"/>
+        </g>
+        <use xlink:href="#ve-b" width="180" height="120" transform="rotate(72)" fill="none" stroke="none"/>
+      </g>
+      <use xlink:href="#ve-b" width="180" height="120" transform="rotate(-72)" fill="none" stroke="none"/>
+      <use xlink:href="#ve-c" width="180" height="120" transform="rotate(144)" fill="none" stroke="none"/>
+    </g>
+  <clipPath id="clip-ve-03" clipPathUnits="userSpaceOnUse"><rect x="426.66666666666663" y="0" width="213.33333333333337" height="480"/></clipPath></defs><g clip-path="url(#clip-ve-03)">
+  
+  <path fill="#cf142b" d="M0 0h640v480H0z" stroke="none"/>
+  <path fill="none" d="M0 0h640v320H0z" stroke="none"/>
+  <path fill="none" d="M0 0h640v160H0z" stroke="none"/>
+  <g id="ve-f" transform="matrix(4 0 0 4 320 336)" fill="none" stroke="none">
+    <g id="ve-e" fill="none" stroke="none">
+      <use xlink:href="#ve-d" width="180" height="120" transform="rotate(10)" fill="none" stroke="none"/>
+      <use xlink:href="#ve-d" width="180" height="120" transform="rotate(30)" fill="none" stroke="none"/>
+    </g>
+    <use xlink:href="#ve-e" width="180" height="120" transform="rotate(40)" fill="none" stroke="none"/>
+  </g>
+  <use xlink:href="#ve-f" width="180" height="120" transform="rotate(-80 320 336)" fill="none" stroke="none"/>
+</g></svg>

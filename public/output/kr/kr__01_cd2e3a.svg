@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icons-kr" viewBox="0 0 640 480">
+  <defs>
+    <clipPath id="kr-a" fill="none" stroke="none">
+      <path fill-opacity=".7" d="M-95.8-.4h682.7v512H-95.8z" fill="none" stroke="none"/>
+    </clipPath>
+  </defs>
+  <g fill-rule="evenodd" clip-path="url(#kr-a)" transform="translate(89.8 .4)scale(.9375)" fill="none" stroke="none">
+    <path fill="none" d="M-95.8-.4H587v512H-95.8Z" stroke="none"/>
+    <g transform="rotate(-56.3 361.6 -101.3)scale(10.66667)" fill="none" stroke="none">
+      <g id="kr-c" fill="none" stroke="none">
+        <path id="kr-b" fill="none" d="M-6-26H6v2H-6Zm0 3H6v2H-6Zm0 3H6v2H-6Z" stroke="none"/>
+        <use xlink:href="#kr-b" width="100%" height="100%" y="44" fill="none" stroke="none"/>
+      </g>
+      <path stroke="none" d="M0 17v10" fill="none"/>
+      <path fill="none" d="M0-12a12 12 0 0 1 0 24Z" stroke="none"/>
+      <path fill="none" d="M0-12a12 12 0 0 0 0 24A6 6 0 0 0 0 0Z" stroke="none"/>
+      <circle cy="-6" r="6" fill="#cd2e3a" stroke="none"/>
+    </g>
+    <g transform="rotate(-123.7 191.2 62.2)scale(10.66667)" fill="none" stroke="none">
+      <use xlink:href="#kr-c" width="100%" height="100%" fill="none" stroke="none"/>
+      <path stroke="none" d="M0-23.5v3M0 17v3.5m0 3v3" fill="none"/>
+    </g>
+  </g>
+</svg>

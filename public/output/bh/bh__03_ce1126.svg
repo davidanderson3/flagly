@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-bh" viewBox="0 0 640 480"><defs><clipPath id="clip-bh-03" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="160" width="213.33333333333331" height="160"/></clipPath></defs><g clip-path="url(#clip-bh-03)">
+  <path fill="none" d="M0 0h640v480H0" stroke="none"/>
+  <path fill="#ce1126" d="M640 0H96l110.7 48L96 96l110.7 48L96 192l110.7 48L96 288l110.7 48L96 384l110.7 48L96 480h544" stroke="none"/>
+</g></svg>
