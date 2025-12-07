@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-mk" viewBox="0 0 640 480"><defs><clipPath id="clip-mk-02" clipPathUnits="userSpaceOnUse"><rect x="426.66666666666663" y="0" width="213.33333333333337" height="480"/></clipPath></defs><g clip-path="url(#clip-mk-02)">
-  <path fill="#d20000" d="M0 0h640v480H0z" stroke="none"/>
-  <path fill="none" d="M0 0h96l224 231.4L544 0h96L0 480h96l224-231.4L544 480h96zm640 192v96L0 192v96zM280 0l40 205.7L360 0zm0 480 40-205.7L360 480z" stroke="none"/>
-  <circle cx="320" cy="240" r="77.1" fill="none" stroke="none" stroke-width="17.1"/>
-</g></svg>

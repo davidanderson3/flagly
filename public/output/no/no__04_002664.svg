@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-no" viewBox="0 0 640 480">
-  <path fill="none" d="M0 0h640v480H0z" stroke="none"/>
-  <path fill="none" d="M180 0h120v480H180z" stroke="none"/>
-  <path fill="none" d="M0 180h640v120H0z" stroke="none"/>
-  <path fill="#002664" d="M210 0h60v480h-60z" stroke="none"/>
-  <path fill="#002664" d="M0 210h640v60H0z" stroke="none"/>
-</svg>

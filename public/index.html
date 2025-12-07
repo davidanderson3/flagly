@@ -3,155 +3,791 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guess the Flag — Layer Reveal</title>
+  <title>Guess the Flag</title>
   <style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif }
-    body { margin: 0; display: grid; place-items: center; min-height: 100vh; background: #0b0d12; color: #e8eaed }
-    .card { width: min(92vw, 820px); background: #11151c; border: 1px solid #2a2f3a; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35) }
+    body { margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 16px; background: #0b0d12; color: #e8eaed }
+    .card { width: min(96vw, 760px); max-width: 780px; background: #11151c; border: 1px solid #2a2f3a; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
     h1 { margin: 0 0 10px; font-size: 22px; font-weight: 600 }
-    .flag-stage { position: relative; width: 640px; max-width: 100%; aspect-ratio: 4/3; margin: 16px auto; background: #0e1218; border-radius: 14px; overflow: hidden; border: 1px solid #2a2f3a }
+    .flag-stage { position: relative; width: 100%; max-width: 580px; aspect-ratio: 4/3; margin: 16px auto; background: #0e1218; border-radius: 14px; overflow: hidden; border: 1px solid #2a2f3a }
     .layer { position: absolute; inset: 0; display: none }
     .layer.visible { display: block }
+    .full-flag { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 200ms ease; z-index: 10000; pointer-events: none; }
+    .full-flag.visible { opacity: 1; }
+    .fireworks { position: absolute; inset: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; opacity: 0; z-index: 10010; }
+    .fireworks.active { opacity: 1; transition: opacity 200ms ease; }
+    .fireworks span {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color, #fff);
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    .fireworks.active span {
+      animation: burst 800ms ease-out forwards;
+    }
+    @keyframes burst {
+      0% { transform: translate(0, 0) scale(0.4); opacity: 0.95; }
+      50% { opacity: 1; }
+      100% { transform: translate(var(--dx), var(--dy)) scale(1); opacity: 0; }
+    }
+    .flag-area { display: flex; gap: 16px; align-items: flex-start; justify-content: center; margin: 16px 0 4px; }
+    .guess-history { width: 280px; padding: 12px 14px; border-radius: 14px; border: 1px solid #2a2f3a; background: #0e1218; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 8px; }
+    .history-title { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; }
+    .history-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .history-list li { font-size: 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .history-info { display: flex; align-items: flex-start; flex-direction: column; gap: 4px; width: 100%; }
+    .history-name { font-weight: 600; }
+    .history-direction { font-size: 12px; padding: 2px 6px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.25); opacity: 0.85; background: rgba(255, 255, 255, 0.05); display: inline-flex; }
+    .history-status { font-size: 12px; opacity: 0.85; white-space: nowrap; }
+    .history-status.correct { color: #7cec8f; }
+    .history-status.miss { color: #ff8e8e; }
+    .history-empty { opacity: 0.6; font-size: 13px; }
     .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between }
-    button { background: #2b64ff; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-weight: 600; cursor: pointer }
-    button:disabled { opacity: .55; cursor: not-allowed }
+    .date-row { margin-top: 8px; gap: 12px; }
+    .nav-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-buttons button { min-width: 120px; }
+    button { background: #2b64ff; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-weight: 600; cursor: pointer; min-height: 40px; }
+    button:disabled{ opacity: .55; cursor: not-allowed }
     .pill { padding: 6px 10px; border: 1px solid #2a2f3a; border-radius: 999px; font-size: 12px; opacity: .85 }
     .answer { font-size: 18px; font-weight: 600; letter-spacing: .3px }
     .tiny { font-size: 12px; opacity: .75 }
     .colors { display: flex; gap: 6px; align-items: center; margin-top: 8px }
     .swatch { width: 16px; height: 16px; border-radius: 4px; border: 1px solid #0006 }
-    .controls { display: flex; gap: 8px; flex-wrap: wrap }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; }
+    .guess-row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; align-items: stretch }
+    .autosuggest { position: relative; flex: 1 1 200px; max-width: 280px; min-width: 140px }
+    .guess-row button { flex: 0 0 auto; min-width: 120px; margin-left: auto; }
+    input[type="text"] { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #2a2f3a; background: #0b0f16; color: inherit }
+    input[type="text"]:disabled { opacity: .6 }
+    .suggestion-list { position: absolute; top: 8px; left: 8px; right: 8px; background: rgba(17,21,28,0.95); border: 1px solid #2a2f3a; border-radius: 10px; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 30px rgba(0,0,0,.55); display: none; z-index: 1100; }
+    .suggestion-list button { width: 100%; border: none; background: transparent; color: inherit; padding: 8px 12px; text-align: left; font-size: 14px; cursor: pointer }
+    .suggestion-list button:hover, .suggestion-list button:focus-visible { background: #1f2430; outline: none }
+    .feedback { min-height: 20px; margin-top: 8px; font-size: 14px; color: #90c1ff }
+    @media (max-width: 720px) {
+      body { align-items: flex-start; }
+      .card { padding: 18px; }
+      .row { flex-direction: column; align-items: stretch; gap: 12px; }
+      .controls { flex-direction: column; }
+      .controls button { width: 100%; }
+      .guess-row { flex-direction: column; }
+      .guess-row button { width: 100%; }
+      .flag-stage { margin: 12px auto; }
+      .colors { flex-wrap: wrap; }
+    }
+    @media (max-width: 480px) {
+      .card { padding: 14px; }
+      button { padding: 10px; font-size: 13px; }
+      .autosuggest { max-width: 100%; }
+      .suggestion-list { top: calc(100% + 4px); }
+    }
+    @media (max-width: 900px) {
+      .flag-area { flex-direction: column; align-items: center; }
+      .guess-history { width: 100%; }
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Guess the Flag — Layer Reveal</h1>
+    <h1>Guess the Flag</h1>
+    <div class="row date-row">
+      <div class="pill" id="dateDisplay">Date: –</div>
+      <div class="nav-buttons">
+        <button id="prevDate">← Previous Date</button>
+        <button id="nextDate">Next Date →</button>
+      </div>
+    </div>
     <div class="row">
-      <div class="pill" id="progress">– / –</div>
+      <div class="pill" id="progress">Layers: – / – • Guesses: 0 / 6</div>
       <div class="colors" id="colors"></div>
     </div>
-    <div class="flag-stage" id="stage"></div>
+    <div class="guess-row">
+      <div class="autosuggest" id="guess-autosuggest">
+        <input id="guessInput" type="text" placeholder="Enter your guess…" autocomplete="off" spellcheck="false" />
+      </div>
+      <button id="submitGuess" disabled>Submit Guess</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <div class="flag-area">
+      <div class="flag-stage" id="stage">
+        <img id="fullFlag" class="full-flag" aria-hidden="true" />
+        <div class="suggestion-list" id="suggestions" role="listbox" aria-label="Matching countries"></div>
+        <div id="fireworks" class="fireworks" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="guess-history" id="guessHistory">
+        <div class="history-title">Previous guesses</div>
+        <ol class="history-list" id="guessHistoryList">
+          <li class="history-empty">No guesses yet</li>
+        </ol>
+      </div>
+    </div>
     <div class="row">
       <div class="controls">
-        <button id="reveal">Reveal Next Layer</button>
-        <button id="guess">Show Answer</button>
-        <button id="skip">Skip Flag</button>
+        <button id="giveUp">Give Up</button>
+        <button id="skip">Next Date</button>
         <button id="reset">Restart Layers</button>
       </div>
       <div class="answer" id="answer"> </div>
     </div>
-    <div class="tiny" style="margin-top:10px;">Tip: distinctive colors tend to appear first; white/black are shown last.</div>
   </div>
 
   <script>
+    const MAX_GUESSES = 6;
+
     const stage = document.getElementById('stage');
     const answer = document.getElementById('answer');
     const progress = document.getElementById('progress');
     const colorsBox = document.getElementById('colors');
-    const btnReveal = document.getElementById('reveal');
-    const btnGuess = document.getElementById('guess');
+    const feedback = document.getElementById('feedback');
+    const guessInput = document.getElementById('guessInput');
+    const btnSubmitGuess = document.getElementById('submitGuess');
+    const suggestions = document.getElementById('suggestions');
+    const autosuggest = document.getElementById('guess-autosuggest');
+    const finalFlag = document.getElementById('fullFlag');
+    const fireworks = document.getElementById('fireworks');
+    const guessHistoryList = document.getElementById('guessHistoryList');
+    const btnGiveUp = document.getElementById('giveUp');
     const btnSkip = document.getElementById('skip');
     const btnReset = document.getElementById('reset');
+    const dateDisplay = document.getElementById('dateDisplay');
+    const btnPrevDate = document.getElementById('prevDate');
+    const btnNextDate = document.getElementById('nextDate');
 
     let manifest = {};
     let order = [];
     let idx = -1;
     let current = null;
     let visibleCount = 0;
+    let attempts = 0;
+    let awaitingGuess = false;
+    const GUESS_MIN_LENGTH = 3;
+    const SUGGESTION_LIMIT = 8;
+    let countryOptions = [];
+    let selectedSuggestion = null;
+    let guessHistory = [];
+    let pendingFullFlagSrc = '';
+    let pendingFullFlagAlt = '';
+    let countryLocations = {};
+
+    const DAY_MS = 24 * 60 * 60 * 1000;
+    const DAYS_BEFORE = 500;
+    const DAYS_AFTER = 500;
+    const TOTAL_WINDOW = DAYS_BEFORE + DAYS_AFTER + 1;
+    const todayLocal = toDateOnly(new Date());
+    const startDate = new Date(todayLocal.getTime() - DAYS_BEFORE * DAY_MS);
+    const TODAY_INDEX = DAYS_BEFORE;
+
+    const COUNTRY_NAME_OVERRIDES = {
+      cg: 'Republic of the Congo',
+      cd: 'Democratic Republic of the Congo',
+    };
 
     function isoToName(cc) {
       try {
-        return new Intl.DisplayNames(['en'], { type: 'region' }).of(cc.toUpperCase()) || cc.toUpperCase();
+        const upper = cc.toUpperCase();
+        const override = COUNTRY_NAME_OVERRIDES[cc];
+        if (override) return override;
+        return new Intl.DisplayNames(['en'], { type: 'region' }).of(upper) || upper;
       } catch {
         return cc.toUpperCase();
       }
     }
 
+    function toDateOnly(date) {
+      if (!(date instanceof Date)) return null;
+      // Use local midnight so displayed dates match the viewer's timezone.
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
+
+    function addDays(date, days) {
+      if (!(date instanceof Date)) return null;
+      return new Date(date.getTime() + days * DAY_MS);
+    }
+
+    function clampIndex(value) {
+      if (!order.length) return 0;
+      const maxAllowed = Math.min(order.length - 1, TODAY_INDEX);
+      if (value < 0) return 0;
+      if (value > maxAllowed) return maxAllowed;
+      return Math.min(value, maxAllowed);
+    }
+
+    function indexToDate(index) {
+      return new Date(startDate.getTime() + index * DAY_MS);
+    }
+
+    function dateDiffInDays(date) {
+      const only = toDateOnly(date);
+      if (!only) return 0;
+      return Math.floor((only.getTime() - startDate.getTime()) / DAY_MS);
+    }
+
+    function formatDateLabel(date) {
+      try {
+        return date.toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+      } catch {
+        return date.toISOString().slice(0, 10);
+      }
+    }
+
+    function normalizeSearchText(text) {
+      if (!text) return '';
+      return text
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function hideSuggestions() {
+      if (!suggestions) return;
+      suggestions.innerHTML = '';
+      suggestions.style.display = 'none';
+    }
+
+    const FIREWORKS_PARTICLES = [
+      { dx: -56, dy: -28, color: '#7cec8f' },
+      { dx: 48, dy: -24, color: '#ffb612' },
+      { dx: -32, dy: 42, color: '#6ea8ff' },
+      { dx: 40, dy: 40, color: '#ff8e8e' },
+      { dx: -50, dy: 0, color: '#f7f7f7' },
+      { dx: 0, dy: -40, color: '#8bf0ff' },
+    ];
+
+    function triggerFireworks() {
+      if (!fireworks) return;
+      fireworks.innerHTML = '';
+      FIREWORKS_PARTICLES.forEach((particle) => {
+        const span = document.createElement('span');
+        span.style.setProperty('--dx', `${particle.dx}px`);
+        span.style.setProperty('--dy', `${particle.dy}px`);
+        span.style.setProperty('--color', particle.color);
+        fireworks.appendChild(span);
+      });
+      fireworks.classList.remove('active');
+      void fireworks.offsetWidth;
+      fireworks.classList.add('active');
+      if (fireworks.timeoutId) {
+        clearTimeout(fireworks.timeoutId);
+      }
+      fireworks.timeoutId = setTimeout(() => {
+        fireworks.classList.remove('active');
+      }, 900);
+    }
+
+    function resetGuessSelection() {
+      selectedSuggestion = null;
+      btnSubmitGuess.disabled = true;
+      hideSuggestions();
+    }
+
+    const CARDINAL_DIRECTIONS = [
+      { name: 'N', symbol: '↑' },
+      { name: 'NE', symbol: '↗' },
+      { name: 'E', symbol: '→' },
+      { name: 'SE', symbol: '↘' },
+      { name: 'S', symbol: '↓' },
+      { name: 'SW', symbol: '↙' },
+      { name: 'W', symbol: '←' },
+      { name: 'NW', symbol: '↖' },
+    ];
+
+    function toRadians(value) {
+      return (value * Math.PI) / 180;
+    }
+
+    function rhumbBearing(fromLoc, toLoc) {
+      // Rhumb-line bearing is more intuitive (avoids polar shortcuts).
+      const lat1 = toRadians(fromLoc.lat);
+      const lat2 = toRadians(toLoc.lat);
+      const deltaLon = toRadians(toLoc.lon - fromLoc.lon);
+      const dPhi = Math.log(Math.tan(lat2 / 2 + Math.PI / 4) / Math.tan(lat1 / 2 + Math.PI / 4));
+      const bearing = Math.atan2(deltaLon, dPhi);
+      return (bearing * 180 / Math.PI + 360) % 360;
+    }
+
+    const DIRECTION_BLOCKLIST = new Set(['aq']);
+
+    function describeDirection(fromLoc, toLoc) {
+      if (!fromLoc || !toLoc) return null;
+      if (fromLoc.lat === toLoc.lat && fromLoc.lon === toLoc.lon) return 'Here';
+      const bearing = rhumbBearing(fromLoc, toLoc);
+      const index = Math.round(bearing / 45) % CARDINAL_DIRECTIONS.length;
+      const entry = CARDINAL_DIRECTIONS[index];
+      if (!entry) return null;
+      return `${entry.name} ${entry.symbol}`;
+    }
+
+    function renderGuessHistory() {
+      if (!guessHistoryList) return;
+      guessHistoryList.innerHTML = '';
+      if (!guessHistory.length) {
+        const empty = document.createElement('li');
+        empty.className = 'history-empty';
+        empty.textContent = 'No guesses yet';
+        guessHistoryList.appendChild(empty);
+        return;
+      }
+      guessHistory.forEach((entry, index) => {
+        const li = document.createElement('li');
+        const info = document.createElement('div');
+        info.className = 'history-info';
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'history-name';
+        nameSpan.textContent = `${index + 1}. ${entry.name}`;
+        info.appendChild(nameSpan);
+        if (entry.direction) {
+          const directionSpan = document.createElement('span');
+          directionSpan.className = 'history-direction';
+          directionSpan.textContent = entry.direction;
+          info.appendChild(directionSpan);
+        }
+        const status = document.createElement('span');
+        status.className = `history-status ${entry.correct ? 'correct' : 'miss'}`;
+        status.setAttribute('aria-label', entry.correct ? 'Correct guess' : 'Incorrect guess');
+        status.textContent = entry.correct ? '✔' : '✕';
+        li.appendChild(info);
+        li.appendChild(status);
+        guessHistoryList.appendChild(li);
+      });
+    }
+
+    function addGuessHistory(name, correct, direction) {
+      guessHistory.push({ name, correct, direction });
+      renderGuessHistory();
+    }
+
+    function hideFullFlag() {
+      if (!finalFlag) return;
+      finalFlag.classList.remove('visible');
+      finalFlag.removeAttribute('src');
+      finalFlag.alt = '';
+    }
+
+    function showFullFlag() {
+      if (!finalFlag || !pendingFullFlagSrc) return;
+      finalFlag.src = pendingFullFlagSrc;
+      finalFlag.alt = pendingFullFlagAlt || '';
+      finalFlag.classList.add('visible');
+    }
+
     function clearStage() {
-      stage.innerHTML = '';
+      stage.querySelectorAll('.layer').forEach((layer) => layer.remove());
       colorsBox.innerHTML = '';
       visibleCount = 0;
       answer.textContent = ' ';
-      progress.textContent = '– / –';
+      feedback.textContent = '';
+      attempts = 0;
+      awaitingGuess = false;
+      guessInput.value = '';
+      resetGuessSelection();
+      guessHistory = [];
+      renderGuessHistory();
+      hideFullFlag();
+      pendingFullFlagSrc = '';
+      pendingFullFlagAlt = '';
+      progress.textContent = `Layers: – / – • Guesses: 0 / ${MAX_GUESSES}`;
     }
 
-    function shuffle(arr) {
+    function renderSuggestions(matches) {
+      if (!suggestions) return;
+      suggestions.innerHTML = '';
+      matches.forEach((item) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.cc = item.cc;
+        button.textContent = item.name;
+        suggestions.appendChild(button);
+      });
+      suggestions.style.display = matches.length ? 'block' : 'none';
+    }
+
+    function handleGuessInput() {
+      if (!guessInput) return;
+      const text = guessInput.value.trim();
+      selectedSuggestion = null;
+      btnSubmitGuess.disabled = true;
+      hideSuggestions();
+      if (text.length < GUESS_MIN_LENGTH) {
+        return;
+      }
+      const normalized = normalizeSearchText(text);
+      const matches = countryOptions
+        .filter((item) => item.searchName.includes(normalized))
+        .slice(0, SUGGESTION_LIMIT);
+      if (!matches.length) {
+        return;
+      }
+      renderSuggestions(matches);
+    }
+
+    function handleSuggestionClick(event) {
+      if (!suggestions || !guessInput || guessInput.disabled) return;
+      const button = event.target.closest('button');
+      if (!button || !suggestions.contains(button)) return;
+      const cc = button.dataset.cc;
+      const match = countryOptions.find((item) => item.cc === cc);
+      if (!match) return;
+      chooseSuggestion(match);
+      guessInput.focus();
+    }
+
+    function chooseSuggestion(match) {
+      if (!match) return;
+      selectedSuggestion = match;
+      guessInput.value = match.name;
+      btnSubmitGuess.disabled = false;
+      hideSuggestions();
+    }
+
+    function trySelectSingleSuggestion() {
+      if (!suggestions || suggestions.style.display === 'none') return null;
+      const buttons = Array.from(suggestions.querySelectorAll('button'));
+      if (buttons.length !== 1) return null;
+      const cc = buttons[0].dataset.cc;
+      return countryOptions.find((item) => item.cc === cc) || null;
+    }
+
+    function makeRng(seed) {
+      // Mulberry32 for deterministic shuffles.
+      let s = seed >>> 0;
+      return function rng() {
+        s = (s + 0x6d2b79f5) >>> 0;
+        let t = Math.imul(s ^ (s >>> 15), 1 | s);
+        t ^= t + Math.imul(t ^ (t >>> 7), 61 | t);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
+    function shuffleWithRng(arr, rng) {
       for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(rng() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
       return arr;
     }
 
+    function buildSchedule(codes, seed) {
+      if (!codes.length) return [];
+      const rng = makeRng(seed);
+      const picks = [];
+      const pool = codes.slice();
+      while (picks.length < TOTAL_WINDOW) {
+        shuffleWithRng(pool, rng);
+        for (const cc of pool) {
+          if (picks.length >= TOTAL_WINDOW) break;
+          picks.push(cc);
+        }
+      }
+      return picks;
+    }
+
+    function updateProgress() {
+      const totalLayers = stage.querySelectorAll('.layer').length;
+      const totalDisplay = totalLayers ? totalLayers : '–';
+      progress.textContent = `Layers: ${visibleCount} / ${totalDisplay} • Guesses: ${attempts} / ${MAX_GUESSES}`;
+    }
+
+    function updateDateLabel() {
+      if (!dateDisplay) return;
+      if (!order.length || idx < 0) {
+        dateDisplay.textContent = 'Date: –';
+        return;
+      }
+      const date = indexToDate(idx);
+      const offset = idx - TODAY_INDEX;
+      let suffix = `(Day ${idx + 1} of ${order.length})`;
+      if (offset === 0) {
+        suffix = 'Today';
+      } else if (offset < 0) {
+        const daysAgo = Math.abs(offset);
+        suffix = `${daysAgo === 1 ? '1 day ago' : `${daysAgo} days ago`}`;
+      } else {
+        suffix = `${offset === 1 ? 'In 1 day' : `In ${offset} days`}`;
+      }
+      dateDisplay.textContent = `Date: ${formatDateLabel(date)} — ${suffix}`;
+    }
+
+    function updateNavButtons() {
+      if (!btnPrevDate || !btnNextDate) return;
+      if (!order.length) {
+        btnPrevDate.disabled = true;
+        btnNextDate.disabled = true;
+        return;
+      }
+      btnPrevDate.disabled = idx <= 0;
+      const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
+      btnNextDate.disabled = idx >= maxIdx;
+      btnSkip.disabled = btnNextDate.disabled;
+    }
+
+    function setGuessControls(enabled) {
+      guessInput.disabled = !enabled;
+      if (!enabled) {
+        guessInput.value = '';
+      }
+      resetGuessSelection();
+    }
+
+    function setGiveUp(enabled) {
+      btnGiveUp.disabled = !enabled;
+    }
+
+    function revealLayer(force = false) {
+      if (!current) return;
+      if (!force && awaitingGuess) return;
+      const layers = stage.querySelectorAll('.layer');
+      if (visibleCount >= layers.length) {
+        return;
+      }
+      layers[visibleCount].classList.add('visible');
+      visibleCount++;
+      awaitingGuess = true;
+      updateProgress();
+    }
+
+    function endRound() {
+      awaitingGuess = false;
+      const layers = stage.querySelectorAll('.layer');
+      layers.forEach(l => l.classList.add('visible'));
+      visibleCount = layers.length;
+      setGuessControls(false);
+      setGiveUp(false);
+      updateProgress();
+      showFullFlag();
+    }
+
+    function submitGuess() {
+      if (!current || guessInput.disabled) return;
+      if (!selectedSuggestion) {
+        feedback.textContent = 'Select a country from the suggestions before submitting.';
+        return;
+      }
+      attempts++;
+      const name = isoToName(current.cc);
+      const correct = selectedSuggestion.cc === current.cc;
+      const directionHint = !correct && !DIRECTION_BLOCKLIST.has(selectedSuggestion.cc)
+        ? describeDirection(selectedSuggestion.location, current.location)
+        : null;
+      addGuessHistory(selectedSuggestion.name, correct, directionHint);
+      if (correct) {
+        feedback.textContent = 'Correct!';
+        answer.textContent = name;
+        triggerFireworks();
+        updateProgress();
+        endRound();
+        resetGuessSelection();
+        guessInput.value = '';
+        return;
+      }
+      if (attempts >= MAX_GUESSES) {
+        feedback.textContent = `Out of guesses. The flag was ${name}.`;
+        answer.textContent = name;
+        endRound();
+        resetGuessSelection();
+        guessInput.value = '';
+        return;
+      }
+      feedback.textContent = 'Not quite — here is another layer.';
+      guessInput.value = '';
+      resetGuessSelection();
+      const layers = stage.querySelectorAll('.layer');
+      if (visibleCount < layers.length) {
+        awaitingGuess = false;
+        revealLayer(true);
+      }
+      updateProgress();
+      guessInput.focus();
+    }
+
+    function giveUp() {
+      if (!current || btnGiveUp.disabled) return;
+      const name = isoToName(current.cc);
+      feedback.textContent = `Revealed: ${name}.`;
+      answer.textContent = name;
+      attempts = MAX_GUESSES;
+      updateProgress();
+      endRound();
+    }
+
+    function restartLayers() {
+      if (!current) return;
+      hideFullFlag();
+      const layers = stage.querySelectorAll('.layer');
+      layers.forEach(l => l.classList.remove('visible'));
+      visibleCount = 0;
+      awaitingGuess = false;
+      attempts = 0;
+      feedback.textContent = '';
+      answer.textContent = ' ';
+      guessInput.value = '';
+      setGuessControls(true);
+      setGiveUp(true);
+      revealLayer(true);
+      updateProgress();
+      guessInput.focus();
+    }
+
     function loadFlag(cc) {
       clearStage();
       current = { cc, ...manifest[cc] };
-      current.files.forEach((file) => {
+      current.location = current.location || countryLocations[cc] || null;
+      if (current.full) {
+        pendingFullFlagSrc = `/output/${cc}/${current.full}`;
+        pendingFullFlagAlt = isoToName(cc);
+        const prefetch = new Image();
+        prefetch.src = pendingFullFlagSrc;
+      } else {
+        pendingFullFlagSrc = '';
+        pendingFullFlagAlt = '';
+      }
+      if (finalFlag) {
+        hideFullFlag();
+      }
+      if (!current.files || current.files.length === 0) {
+        feedback.textContent = 'No layers found for this flag.';
+        setGuessControls(false);
+        setGiveUp(false);
+        updateDateLabel();
+        updateNavButtons();
+        return;
+      }
+      const zOrder = current.z || [];
+      current.files.forEach((file, i) => {
         const img = document.createElement('img');
         img.className = 'layer';
         img.decoding = 'async';
         img.loading = 'eager';
         img.src = `/output/${cc}/${file}`;
+        const z = zOrder[i] ?? i;
+        img.style.zIndex = String(z);
         stage.appendChild(img);
       });
 
-      current.colors.forEach((hex) => {
+      const uniqueColors = Array.from(new Set(current.colors));
+      uniqueColors.forEach(hex => {
         const sw = document.createElement('div');
         sw.className = 'swatch';
         sw.style.background = hex;
         colorsBox.appendChild(sw);
       });
 
-      progress.textContent = `0 / ${current.files.length}`;
-      btnReveal.disabled = false;
-      btnReset.disabled = false;
-      btnGuess.disabled = false;
+      setGuessControls(true);
+      setGiveUp(true);
+      guessInput.value = '';
+      guessInput.focus();
+      updateProgress();
+      updateDateLabel();
+      updateNavButtons();
+      revealLayer(true);
+      updateProgress();
     }
 
-    function revealLayer() {
-      const layers = stage.querySelectorAll('.layer');
-      if (visibleCount >= layers.length) {
-        btnReveal.disabled = true;
-        return;
-      }
-      layers[visibleCount].classList.add('visible');
-      visibleCount++;
-      progress.textContent = `${visibleCount} / ${layers.length}`;
-      if (visibleCount === layers.length) btnReveal.disabled = true;
-    }
-
-    function showAnswer() {
-      if (!current) return;
-      answer.textContent = isoToName(current.cc);
-    }
-
-    function restartLayers() {
-      if (!current) return;
-      const layers = stage.querySelectorAll('.layer');
-      layers.forEach((l) => l.classList.remove('visible'));
-      visibleCount = 0;
-      progress.textContent = `0 / ${layers.length}`;
-      answer.textContent = ' ';
-      btnReveal.disabled = false;
-    }
-
-    function nextFlag() {
-      idx = (idx + 1) % order.length;
+    function goToIndex(newIndex) {
+      if (order.length === 0) return;
+      idx = clampIndex(newIndex);
       const cc = order[idx];
       loadFlag(cc);
     }
 
+    function nextFlag() {
+      if (order.length === 0) return;
+      const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
+      if (idx >= maxIdx) return;
+      goToIndex(idx + 1);
+    }
+
+    function prevFlag() {
+      if (order.length === 0) return;
+      goToIndex(idx - 1);
+    }
+
+    btnSubmitGuess.addEventListener('click', submitGuess);
+    guessInput.addEventListener('input', handleGuessInput);
+    guessInput.addEventListener('keydown', (evt) => {
+      if (evt.key !== 'Enter') return;
+      evt.preventDefault();
+      if (!selectedSuggestion && suggestions && suggestions.style.display !== 'none') {
+        const buttons = Array.from(suggestions.querySelectorAll('button'));
+        if (buttons.length > 1) {
+          const cc = buttons[0].dataset.cc;
+          const match = countryOptions.find((item) => item.cc === cc);
+          if (match) chooseSuggestion(match);
+        } else {
+          const single = trySelectSingleSuggestion();
+          if (single) {
+            chooseSuggestion(single);
+          }
+        }
+      }
+      submitGuess();
+    });
+    if (suggestions) {
+      suggestions.addEventListener('click', handleSuggestionClick);
+    }
+    document.addEventListener('click', (event) => {
+      if (autosuggest && !autosuggest.contains(event.target) && suggestions && !suggestions.contains(event.target)) {
+        hideSuggestions();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft' && document.activeElement !== guessInput) {
+        event.preventDefault();
+        prevFlag();
+      } else if (event.key === 'ArrowRight' && document.activeElement !== guessInput) {
+        event.preventDefault();
+        nextFlag();
+      }
+    });
+    btnGiveUp.addEventListener('click', giveUp);
+    btnSkip.addEventListener('click', () => nextFlag());
+    btnReset.addEventListener('click', restartLayers);
+    btnPrevDate.addEventListener('click', prevFlag);
+    btnNextDate.addEventListener('click', nextFlag);
+
     async function boot() {
       const res = await fetch('/api/manifest');
       manifest = await res.json();
-      order = Object.keys(manifest).filter((cc) => (manifest[cc].files || []).length > 0);
-      shuffle(order);
-      idx = -1;
-      nextFlag();
-      btnReveal.addEventListener('click', revealLayer);
-      btnGuess.addEventListener('click', showAnswer);
-      btnSkip.addEventListener('click', () => nextFlag());
-      btnReset.addEventListener('click', restartLayers);
+      try {
+        const locRes = await fetch('/data/country-locations.json');
+        if (locRes.ok) {
+          countryLocations = await locRes.json();
+        }
+      } catch {
+        countryLocations = {};
+      }
+
+      const validCountries = Object.keys(manifest).filter(cc => (manifest[cc].files || []).length > 0);
+      countryOptions = validCountries.map((cc) => {
+        const entry = manifest[cc] || {};
+        const name = isoToName(cc);
+        return {
+          cc,
+          name,
+          searchName: normalizeSearchText(name),
+          location: entry.location || countryLocations[cc] || null,
+        };
+      })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      const dateSeed = Number(todayLocal.toISOString().slice(0, 10).replace(/-/g, '')) || 1337;
+      order = buildSchedule(countryOptions.map((item) => item.cc), dateSeed);
+
+      if (!order.length) {
+        updateDateLabel();
+        updateNavButtons();
+        return;
+      }
+
+      idx = clampIndex(TODAY_INDEX);
+      goToIndex(idx);
+      updateNavButtons();
     }
 
     boot();

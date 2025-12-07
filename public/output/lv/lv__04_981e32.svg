@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-lv" viewBox="0 0 640 480"><defs><clipPath id="clip-lv-04" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="320" width="213.33333333333331" height="160.00000000000003"/></clipPath></defs><g clip-path="url(#clip-lv-04)">
-  <g fill-rule="evenodd" fill="none" stroke="none">
-    <path fill="none" d="M0 0h640v480H0z" stroke="none"/>
-    <path fill="#981e32" d="M0 0h640v192H0zm0 288h640v192H0z" stroke="none"/>
-  </g>
-</g></svg>
