@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flagly Profile</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: #07090d;
+      color: #f5f7fb;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .profile-shell {
+      width: min(100%, 600px);
+      background: #0c1118;
+      border-radius: 24px;
+      border: 1px solid #222a34;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .back-link {
+      color: #7cec8f;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .back-link:hover {
+      opacity: 0.8;
+    }
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .stat-card {
+      padding: 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(61,91,255,0.25), rgba(140,248,168,0.15));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+    .stat-card .label {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+    .stat-card .value {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .history-panel {
+      margin-top: 28px;
+    }
+    .history-panel h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+    .history-table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+    }
+    .history-table thead {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      opacity: 0.7;
+    }
+    .history-table th,
+    .history-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+    }
+    .history-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .history-table .status {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .history-table .status.solved {
+      color: #7cec8f;
+    }
+    .history-table .status.failed,
+    .history-table .status.gave-up,
+    .history-table .status['gave-up'] {
+      color: #ff8e8e;
+    }
+    .history-empty {
+      opacity: 0.6;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px 0;
+    }
+    @media (max-width: 720px) {
+      body {
+        padding: 16px;
+      }
+      .profile-shell {
+        border-radius: 16px;
+      }
+      .history-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-shell">
+    <a class="back-link" href="/">
+      ← Back to Flagle
+    </a>
+    <h1>Flagly Profile</h1>
+    <div class="stats-row">
+      <div class="stat-card">
+        <span class="label">GAMES PLAYED</span>
+        <span class="value" id="statPlayed">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="label">SOLVED</span>
+        <span class="value" id="statSolved">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="label">AVG ATTEMPTS</span>
+        <span class="value" id="statAttempts">—</span>
+      </div>
+    </div>
+    <div class="history-panel">
+      <h2>Play history</h2>
+      <div class="history-table-wrapper">
+        <table class="history-table" id="historyList"></table>
+      </div>
+    </div>
+  </div>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+    import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+
+    const LOCAL_RESULT_PREFIX = 'flagly-result-';
+    const config = window.FIREBASE_CONFIG || null;
+    const app = config ? initializeApp(config) : null;
+    const db = app ? getFirestore(app) : null;
+    const auth = app ? getAuth(app) : null;
+
+    function formatDisplayDate(dateStr) {
+      try {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en', {
+          weekday: 'short',
+          month: 'short',
+          day: 'numeric',
+        });
+      } catch {
+        return dateStr;
+      }
+    }
+
+    function parseLocalEntry(value) {
+      try {
+        const parsed = JSON.parse(value);
+        return {
+          date: parsed.date,
+          status: parsed.status,
+          attempts: Number(parsed.attempts) || 0,
+          timestamp: Number(parsed.timestamp) || 0,
+        };
+      } catch {
+        return null;
+      }
+    }
+
+    function loadLocalResultsMap() {
+      const map = new Map();
+      if (typeof localStorage === 'undefined') return map;
+      for (let i = 0; i < localStorage.length; i += 1) {
+        const key = localStorage.key(i);
+        if (!key || !key.startsWith(LOCAL_RESULT_PREFIX)) continue;
+        const raw = localStorage.getItem(key);
+        if (!raw) continue;
+        const entry = parseLocalEntry(raw);
+        if (!entry || !entry.date) continue;
+        map.set(entry.date, entry);
+      }
+      return map;
+    }
+
+    function persistLocalResult(dateKey, payload) {
+      if (typeof localStorage === 'undefined' || !dateKey || !payload) return;
+      try {
+        const storageKey = `${LOCAL_RESULT_PREFIX}${dateKey}`;
+        localStorage.setItem(storageKey, JSON.stringify(payload));
+      } catch (err) {
+        console.error('Persisting local result failed', err);
+      }
+    }
+
+    function normalizeRemoteResult(data) {
+      if (!data || !data.date) return null;
+      const stamp = data.timestamp && typeof data.timestamp.toMillis === 'function'
+        ? data.timestamp.toMillis()
+        : Number(data.timestamp) || 0;
+      return {
+        date: data.date,
+        status: data.status,
+        attempts: Number(data.attempts) || 0,
+        timestamp: stamp,
+      };
+    }
+
+    async function loadRemoteResults(uid) {
+      if (!uid || !db) return [];
+      try {
+        const snapshot = await getDocs(collection(db, 'users', uid, 'results'));
+        return snapshot.docs
+          .map((doc) => normalizeRemoteResult(doc.data()))
+          .filter(Boolean);
+      } catch (err) {
+        console.error('Loading remote results failed', err);
+        return [];
+      }
+    }
+
+    function mergeResults(localMap, remoteEntries) {
+      const merged = new Map(localMap);
+      remoteEntries.forEach((entry) => {
+        const current = merged.get(entry.date);
+        if (!current || (entry.timestamp || 0) >= (current.timestamp || 0)) {
+          merged.set(entry.date, entry);
+          persistLocalResult(entry.date, entry);
+        }
+      });
+      return Array.from(merged.values())
+        .sort((a, b) => {
+          if (a.date === b.date) {
+            return (b.timestamp || 0) - (a.timestamp || 0);
+          }
+          return b.date.localeCompare(a.date);
+        });
+    }
+
+    function renderStats(results) {
+      const playedEl = document.getElementById('statPlayed');
+      const solvedEl = document.getElementById('statSolved');
+      const attemptsEl = document.getElementById('statAttempts');
+      if (playedEl) playedEl.textContent = String(results.length);
+      const solvedCount = results.filter((entry) => entry.status === 'solved').length;
+      if (solvedEl) solvedEl.textContent = String(solvedCount);
+      const solvedAttempts = results.filter((entry) => entry.status === 'solved' && entry.attempts > 0);
+      if (!solvedAttempts.length) {
+        if (attemptsEl) attemptsEl.textContent = '—';
+      } else {
+        const avg = solvedAttempts.reduce((sum, entry) => sum + entry.attempts, 0) / solvedAttempts.length;
+        if (attemptsEl) attemptsEl.textContent = avg.toFixed(1);
+      }
+    }
+
+    function renderHistory(results) {
+      const container = document.getElementById('historyList');
+      if (!container) return;
+      container.innerHTML = '';
+      const thead = document.createElement('thead');
+      thead.innerHTML = `
+        <tr>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Attempts</th>
+        </tr>
+      `;
+      container.appendChild(thead);
+      if (!results.length) {
+        const emptyRow = document.createElement('tr');
+        const emptyCell = document.createElement('td');
+        emptyCell.colSpan = 3;
+        emptyCell.className = 'history-empty';
+        emptyCell.textContent = 'No games yet. Play a flag and your history appears here.';
+        emptyRow.appendChild(emptyCell);
+        container.appendChild(emptyRow);
+        return;
+      }
+      const tbody = document.createElement('tbody');
+      results.forEach((entry) => {
+        const row = document.createElement('tr');
+        const dateCell = document.createElement('td');
+        dateCell.textContent = formatDisplayDate(entry.date);
+        const statusCell = document.createElement('td');
+        const statusClass = entry.status || 'unknown';
+        statusCell.className = `status ${statusClass}`;
+        statusCell.textContent = (entry.status || 'unknown').toUpperCase();
+        const attemptsCell = document.createElement('td');
+        attemptsCell.textContent = entry.attempts || 0;
+        row.append(dateCell, statusCell, attemptsCell);
+        tbody.appendChild(row);
+      });
+      container.appendChild(tbody);
+    }
+
+    async function refreshHistory(uid) {
+      const localMap = loadLocalResultsMap();
+      if (!uid) {
+        const results = Array.from(localMap.values()).sort((a, b) => b.date.localeCompare(a.date) || (b.timestamp || 0) - (a.timestamp || 0));
+        renderStats(results);
+        renderHistory(results);
+        return;
+      }
+      const remote = await loadRemoteResults(uid);
+      const merged = mergeResults(localMap, remote);
+      renderStats(merged);
+      renderHistory(merged);
+    }
+
+    const init = () => {
+      refreshHistory(null);
+      if (!auth) return;
+      onAuthStateChanged(auth, (user) => {
+        refreshHistory(user ? user.uid : null);
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      init();
+    });
+  </script>
+</body>
+</html>

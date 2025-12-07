@@ -3,16 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guess the Flag</title>
+  <title>Flagly</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230b0d12'/%3E%3Cpath d='M12 14h28l-6 6 6 6-6 6 6 6-6 6 6 6H12Z' fill='%232b64ff'/%3E%3C/svg%3E">
   <style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif }
     body { margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 16px; background: #0b0d12; color: #e8eaed }
-    .card { width: min(96vw, 760px); max-width: 780px; background: #11151c; border: 1px solid #2a2f3a; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-    h1 { margin: 0 0 10px; font-size: 22px; font-weight: 600 }
-    .flag-stage { position: relative; width: 100%; max-width: 580px; aspect-ratio: 4/3; margin: 16px auto; background: #0e1218; border-radius: 14px; overflow: hidden; border: 1px solid #2a2f3a }
-    .layer { position: absolute; inset: 0; display: none }
+    .page-shell { width: min(100%, 780px); margin: 0 auto; display: flex; flex-direction: column; align-items: stretch; gap: 12px; box-sizing: border-box; }
+    .card { width: min(100%, 760px); max-width: 780px; background: #11151c; border: 1px solid #2a2f3a; border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.35); display: flex; flex-direction: column; box-sizing: border-box; }
+    h1 { margin: 0; font-size: 22px; font-weight: 600 }
+    .title-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .title-row h1 { margin: 0; flex: 1 1 0; min-width: 0; }
+    .auth-row { display: flex; justify-content: flex-start; align-items: center; gap: 12px; margin-bottom: 0; flex-wrap: wrap; position: relative; }
+    .profile-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; opacity: 0.9; margin-left: auto; }
+    .profile-avatar { width: 34px; height: 34px; border-radius: 999px; background: #1a1f2a; border: 1px solid #2a2f3a; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: #7cec8f; overflow: hidden; }
+    .profile-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .profile-panel { position: absolute; top: 48px; right: 0; min-width: 220px; padding: 12px; border-radius: 12px; background: #0e1218; border: 1px solid #2a2f3a; box-shadow: 0 12px 30px rgba(0,0,0,.45); display: none; z-index: 10100; }
+    .profile-panel h3 { margin: 0 0 8px; font-size: 15px; }
+    .profile-panel .profile-meta { font-size: 13px; opacity: 0.85; margin: 0 0 6px; word-break: break-word; }
+    .profile-panel .profile-meta strong { font-weight: 600; }
+    .flag-stage { position: relative; width: min(66vw, 380px); max-width: 380px; aspect-ratio: 4/3; margin: 16px auto; background: #0e1218; border-radius: 14px; overflow: hidden; border: 2px solid #000; box-shadow: 0 0 0 4px #fff; }
+    .layer { position: absolute; inset: 0; display: none; width: 100%; height: 100%; object-fit: contain; font-size: 0; color: transparent; }
     .layer.visible { display: block }
-    .full-flag { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 200ms ease; z-index: 10000; pointer-events: none; }
+    .full-flag { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 200ms ease; z-index: 10000; pointer-events: none; font-size: 0; color: transparent; }
     .full-flag.visible { opacity: 1; }
     .fireworks { position: absolute; inset: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; opacity: 0; z-index: 10010; }
     .fireworks.active { opacity: 1; transition: opacity 200ms ease; }
@@ -26,19 +38,31 @@
       transform: translate(-50%, -50%) scale(0);
     }
     .fireworks.active span {
-      animation: burst 800ms ease-out forwards;
+      animation: var(--anim, burst) 900ms ease-out forwards;
     }
     @keyframes burst {
-      0% { transform: translate(0, 0) scale(0.4); opacity: 0.95; }
-      50% { opacity: 1; }
-      100% { transform: translate(var(--dx), var(--dy)) scale(1); opacity: 0; }
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0.95; }
+      45% { opacity: 1; }
+      100% { transform: translate(var(--dx), var(--dy)) scale(2); opacity: 0; }
     }
-    .flag-area { display: flex; gap: 16px; align-items: flex-start; justify-content: center; margin: 16px 0 4px; }
-    .guess-history { width: 280px; padding: 12px 14px; border-radius: 14px; border: 1px solid #2a2f3a; background: #0e1218; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 8px; }
+    @keyframes swirl {
+      0% { transform: translate(0, 0) scale(0.3) rotate(0deg); opacity: 0.95; }
+      60% { opacity: 1; }
+      100% { transform: translate(var(--dx), var(--dy)) scale(1.8) rotate(540deg); opacity: 0; }
+    }
+    @keyframes arc {
+      0% { transform: translate(0, 0) scale(0.3); opacity: 0.95; }
+      50% { transform: translate(var(--mx), var(--my)) scale(1.2); opacity: 1; }
+      100% { transform: translate(var(--dx), var(--dy)) scale(1.8); opacity: 0; }
+    }
+    .flag-area { display: flex; flex-direction: column; align-items: center; gap: 6px; justify-content: center; margin: 16px 0 4px; }
+    .guess-history { width: 100%; max-width: 320px; padding: 12px 14px; border-radius: 14px; border: 1px solid #2a2f3a; background: #0e1218; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 8px; }
+    .guess-history.hidden { display: none; }
     .history-title { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.7; }
-    .history-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-    .history-list li { font-size: 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-    .history-info { display: flex; align-items: flex-start; flex-direction: column; gap: 4px; width: 100%; }
+    .history-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+    .history-list li { font-size: 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+    .history-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .history-info { display: flex; align-items: center; gap: 8px; width: 100%; flex-wrap: wrap; }
     .history-name { font-weight: 600; }
     .history-direction { font-size: 12px; padding: 2px 6px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.25); opacity: 0.85; background: rgba(255, 255, 255, 0.05); display: inline-flex; }
     .history-status { font-size: 12px; opacity: 0.85; white-space: nowrap; }
@@ -46,36 +70,95 @@
     .history-status.miss { color: #ff8e8e; }
     .history-empty { opacity: 0.6; font-size: 13px; }
     .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between }
-    .date-row { margin-top: 8px; gap: 12px; }
-    .nav-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .date-row { margin-top: 8px; gap: 12px; justify-content: center; flex-direction: column; align-items: center; text-align: center; }
+    .archive-block { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+    .archive-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.65; }
+    .nav-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
     .nav-buttons button { min-width: 120px; }
     button { background: #2b64ff; color: white; border: none; border-radius: 10px; padding: 10px 14px; font-weight: 600; cursor: pointer; min-height: 40px; }
     button:disabled{ opacity: .55; cursor: not-allowed }
     .pill { padding: 6px 10px; border: 1px solid #2a2f3a; border-radius: 999px; font-size: 12px; opacity: .85 }
-    .answer { font-size: 18px; font-weight: 600; letter-spacing: .3px }
     .tiny { font-size: 12px; opacity: .75 }
     .colors { display: flex; gap: 6px; align-items: center; margin-top: 8px }
     .swatch { width: 16px; height: 16px; border-radius: 4px; border: 1px solid #0006 }
-    .controls { display: flex; gap: 8px; flex-wrap: wrap; }
-    .guess-row { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; align-items: stretch }
-    .autosuggest { position: relative; flex: 1 1 200px; max-width: 280px; min-width: 140px }
-    .guess-row button { flex: 0 0 auto; min-width: 120px; margin-left: auto; }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .guess-actions { margin-top: 12px; justify-content: flex-start; gap: 10px; width: 100%; }
+    .guess-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 8px; margin-top: 10px; align-items: stretch; width: 100%; }
+    body.game-finished .guess-row {
+      display: none !important;
+    }
+    .autosuggest { position: relative; min-width: 0; width: 100%; }
+    #guessInput { box-sizing: border-box; width: 100%; }
+    .guess-row button { min-width: 120px; justify-self: end; }
+    #shareResults {
+      display: none;
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, #1b2a5f 0%, #2f46a9 45%, #4931a9 70%, #1c1c48 100%);
+      box-shadow: 0 10px 20px rgba(10, 16, 34, 0.5);
+      text-transform: uppercase;
+      font-size: 12px;
+      min-width: 0;
+      margin: 0 auto;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-size: 200% 200%;
+      animation: shimmer 2.6s ease-in-out infinite;
+    }
+    .share-row { justify-content: center; align-items: center; width: 100%; gap: 8px; flex-direction: column; }
+    .auth-link { display: inline-flex; justify-content: center; align-self: center; margin: 18px auto 24px; text-align: center; color: #7cec8f; font-weight: 600; text-decoration: none; width: fit-content; }
+    .auth-link.sign-in { margin: 0; padding: 0; background: none; font-weight: 600; }
+    .flag-label { text-align: center; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; opacity: 0.7; margin-top: 12px; }
+    .correct-row { text-align: center; font-size: 18px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.8; margin-top: 8px; min-height: 18px; font-weight: 700; }
+    .layer-info { text-align: center; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.65; }
     input[type="text"] { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #2a2f3a; background: #0b0f16; color: inherit }
     input[type="text"]:disabled { opacity: .6 }
-    .suggestion-list { position: absolute; top: 8px; left: 8px; right: 8px; background: rgba(17,21,28,0.95); border: 1px solid #2a2f3a; border-radius: 10px; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 30px rgba(0,0,0,.55); display: none; z-index: 1100; }
+    .suggestion-list { position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: rgba(17,21,28,0.95); border: 1px solid #2a2f3a; border-radius: 10px; max-height: 220px; overflow-y: auto; box-shadow: 0 12px 30px rgba(0,0,0,.55); display: none; z-index: 1100; }
     .suggestion-list button { width: 100%; border: none; background: transparent; color: inherit; padding: 8px 12px; text-align: left; font-size: 14px; cursor: pointer }
     .suggestion-list button:hover, .suggestion-list button:focus-visible { background: #1f2430; outline: none }
-    .feedback { min-height: 20px; margin-top: 8px; font-size: 14px; color: #90c1ff }
+    .feedback { min-height: 20px; margin-top: 8px; font-size: 14px; color: #90c1ff; text-align: center; }
+    .mobile-flash { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 700; letter-spacing: 0.3em; color: #fff; background: rgba(0, 0, 0, 0.65); opacity: 0; pointer-events: none; transition: opacity 200ms ease; z-index: 1250; padding: 12px; box-sizing: border-box; }
+    .mobile-flash.visible { opacity: 1; }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @media (min-width: 721px) {
+      .guess-history { margin: 0 auto; }
+    }
+
     @media (max-width: 720px) {
-      body { align-items: flex-start; }
-      .card { padding: 18px; }
+      body { align-items: flex-start; padding: 0 0 20px; justify-content: flex-start; }
+      .card { padding: 18px; width: 100%; max-width: 100%; border-radius: 0; margin: 0; }
       .row { flex-direction: column; align-items: stretch; gap: 12px; }
       .controls { flex-direction: column; }
       .controls button { width: 100%; }
-      .guess-row { flex-direction: column; }
-      .guess-row button { width: 100%; }
+      .guess-row { grid-template-columns: 1fr; column-gap: 0; }
+      .guess-row button { width: 100%; margin-left: 0; justify-self: stretch; }
       .flag-stage { margin: 12px auto; }
       .colors { flex-wrap: wrap; }
+      .profile-link { margin-left: 0; }
+      .profile-panel { right: 0; left: 0; top: 56px; }
+      #shareResults { width: auto; }
+      .flag-area { flex-direction: column; align-items: flex-end; order: 1; }
+      .flag-area .flag-stage { margin-left: auto; }
+      .guess-history { order: 3; width: 100%; }
+      .title-row { flex-wrap: nowrap; }
+      .guess-row { order: 2; }
+      .guess-actions { order: 4; }
+      .feedback { order: 5; }
+      .colors { order: 6; }
+      .share-row { order: 7; }
+      .date-row { order: 9; }
+      .page-shell { width: 100%; padding: 0 12px 12px; margin: 0; }
+      .auth-link { width: 100%; margin: 16px 0 24px; }
+      .controls { justify-content: flex-start; }
     }
     @media (max-width: 480px) {
       .card { padding: 14px; }
@@ -90,30 +173,21 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Guess the Flag</h1>
-    <div class="row date-row">
-      <div class="pill" id="dateDisplay">Date: –</div>
-      <div class="nav-buttons">
-        <button id="prevDate">← Previous Date</button>
-        <button id="nextDate">Next Date →</button>
+  <div class="page-shell">
+    <div class="card">
+    <div class="title-row">
+      <h1>Flagly</h1>
+      <div class="auth-row">
+        <a id="authSignIn" class="auth-link sign-in" href="#">Sign In</a>
+        <a id="profileLink" class="profile-link" href="/profile.html" style="display:none;">
+          <span class="profile-avatar" id="profileAvatar">?</span>
+        </a>
       </div>
     </div>
-    <div class="row">
-      <div class="pill" id="progress">Layers: – / – • Guesses: 0 / 6</div>
-      <div class="colors" id="colors"></div>
-    </div>
-    <div class="guess-row">
-      <div class="autosuggest" id="guess-autosuggest">
-        <input id="guessInput" type="text" placeholder="Enter your guess…" autocomplete="off" spellcheck="false" />
-      </div>
-      <button id="submitGuess" disabled>Submit Guess</button>
-    </div>
-    <div class="feedback" id="feedback"></div>
+    <div class="flag-label">GUESS THE FLAG</div>
     <div class="flag-area">
       <div class="flag-stage" id="stage">
         <img id="fullFlag" class="full-flag" aria-hidden="true" />
-        <div class="suggestion-list" id="suggestions" role="listbox" aria-label="Matching countries"></div>
         <div id="fireworks" class="fireworks" aria-hidden="true">
           <span></span>
           <span></span>
@@ -121,44 +195,82 @@
           <span></span>
         </div>
       </div>
-      <div class="guess-history" id="guessHistory">
-        <div class="history-title">Previous guesses</div>
-        <ol class="history-list" id="guessHistoryList">
-          <li class="history-empty">No guesses yet</li>
-        </ol>
-      </div>
+      <div class="correct-row" id="correctMessage"></div>
+      <div class="layer-info" id="layerInfo">NO LAYERS SHOWN</div>
+      <div class="colors" id="colors"></div>
     </div>
-    <div class="row">
-      <div class="controls">
-        <button id="giveUp">Give Up</button>
-        <button id="skip">Next Date</button>
-        <button id="reset">Restart Layers</button>
+    <div class="guess-row">
+      <div class="autosuggest" id="guess-autosuggest">
+        <input id="guessInput" type="text" placeholder="Enter your first guess" autocomplete="off" spellcheck="false" />
+        <div class="suggestion-list" id="suggestions" role="listbox" aria-label="Matching countries"></div>
       </div>
-      <div class="answer" id="answer"> </div>
+      <button id="submitGuess" disabled>Submit Guess</button>
+    </div>
+    <div class="guess-history hidden" id="guessHistory">
+      <div class="history-title">Previous guesses</div>
+      <ol class="history-list" id="guessHistoryList"></ol>
+    </div>
+    <div class="controls guess-actions">
+      <button id="giveUp">Give Up</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <div class="row share-row">
+      <button id="shareResults">Share Results</button>
+    </div>
+    <div class="row date-row">
+      <div class="pill" id="dateDisplay">Date: –</div>
+      <div class="archive-block">
+        <div class="archive-label">PLAY THE ARCHIVE:</div>
+        <div class="nav-buttons">
+          <button id="prevDate">← Previous Date</button>
+          <button id="nextDate">Next Date →</button>
+        </div>
+      </div>
     </div>
   </div>
+  <a id="authSignOut" class="auth-link" href="#" style="display:none;">Sign out</a>
+</div>
+  <div id="mobileFlash" class="mobile-flash" aria-live="polite">NOPE, TRY AGAIN</div>
+  <script src="/firebase-config.js"></script>
+  <script type="module" src="/firebase-auth.js"></script>
+  <script type="module">
+    import { getFirestore, doc, setDoc, serverTimestamp, getDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+    import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 
-  <script>
+    const firestore = getFirestore();
+    const auth = getAuth();
+    let firebaseUser = null;
+    onAuthStateChanged(auth, (user) => {
+      firebaseUser = user;
+      applySavedResult();
+    });
+
     const MAX_GUESSES = 6;
+    const LOCAL_RESULT_PREFIX = 'flagly-result-';
+    const LAST_DATE_KEY = 'flagly-last-date';
+    const LAST_INDEX_KEY = 'flagly-last-index';
 
     const stage = document.getElementById('stage');
-    const answer = document.getElementById('answer');
     const progress = document.getElementById('progress');
     const colorsBox = document.getElementById('colors');
     const feedback = document.getElementById('feedback');
     const guessInput = document.getElementById('guessInput');
     const btnSubmitGuess = document.getElementById('submitGuess');
+    const guessRow = document.querySelector('.guess-row');
     const suggestions = document.getElementById('suggestions');
     const autosuggest = document.getElementById('guess-autosuggest');
     const finalFlag = document.getElementById('fullFlag');
     const fireworks = document.getElementById('fireworks');
     const guessHistoryList = document.getElementById('guessHistoryList');
+    const guessHistoryPanel = document.getElementById('guessHistory');
     const btnGiveUp = document.getElementById('giveUp');
-    const btnSkip = document.getElementById('skip');
-    const btnReset = document.getElementById('reset');
     const dateDisplay = document.getElementById('dateDisplay');
     const btnPrevDate = document.getElementById('prevDate');
     const btnNextDate = document.getElementById('nextDate');
+    const btnShare = document.getElementById('shareResults');
+    const correctMessage = document.getElementById('correctMessage');
+    const layerInfo = document.getElementById('layerInfo');
+    const mobileFlash = document.getElementById('mobileFlash');
 
     let manifest = {};
     let order = [];
@@ -167,11 +279,15 @@
     let visibleCount = 0;
     let attempts = 0;
     let awaitingGuess = false;
+    let roundSolved = false;
+    let roundFinished = false;
     const GUESS_MIN_LENGTH = 3;
     const SUGGESTION_LIMIT = 8;
+    const ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'];
     let countryOptions = [];
     let selectedSuggestion = null;
     let guessHistory = [];
+    let guessedThisRound = new Set();
     let pendingFullFlagSrc = '';
     let pendingFullFlagAlt = '';
     let countryLocations = {};
@@ -223,6 +339,125 @@
       return new Date(startDate.getTime() + index * DAY_MS);
     }
 
+    function persistLocalResult(dateKey, payload) {
+      if (typeof localStorage === 'undefined') return;
+      try {
+        const storageKey = `${LOCAL_RESULT_PREFIX}${dateKey}`;
+        localStorage.setItem(storageKey, JSON.stringify(payload));
+      } catch (err) {
+        console.error('Persisting local result failed', err);
+      }
+    }
+
+    function normalizeRemoteResult(data) {
+      if (!data) return null;
+      const stamp = data.timestamp && typeof data.timestamp.toMillis === 'function'
+        ? data.timestamp.toMillis()
+        : Number(data.timestamp) || 0;
+      return { ...data, timestamp: stamp };
+    }
+
+    function loadLocalResult(dateKey) {
+      if (typeof localStorage === 'undefined') return null;
+      try {
+        const storageKey = `${LOCAL_RESULT_PREFIX}${dateKey}`;
+        const raw = localStorage.getItem(storageKey);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        return {
+          ...parsed,
+          timestamp: Number(parsed.timestamp) || 0,
+        };
+      } catch (err) {
+        console.error('Loading local result failed', err);
+        return null;
+      }
+    }
+
+    function formatLocalDateKey(date) {
+      if (!date) return null;
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function parseLocalDateKey(value) {
+      if (!value) return null;
+      const [year, month, day] = value.split('-').map(Number);
+      if (!year || !month || !day) return null;
+      return new Date(year, month - 1, day);
+    }
+
+    function persistLastViewedDate(date) {
+      if (!date || typeof localStorage === 'undefined') return;
+      try {
+        const iso = formatLocalDateKey(date);
+        if (!iso) return;
+        localStorage.setItem(LAST_DATE_KEY, iso);
+      } catch (err) {
+        console.error('Storing last viewed date failed', err);
+      }
+    }
+
+    function loadLastViewedDate() {
+      if (typeof localStorage === 'undefined') return null;
+      try {
+        const raw = localStorage.getItem(LAST_DATE_KEY);
+        if (!raw) return null;
+        const parsed = parseLocalDateKey(raw);
+        if (!parsed) return null;
+        return toDateOnly(parsed);
+      } catch (err) {
+        console.error('Loading last viewed date failed', err);
+        return null;
+      }
+    }
+
+    function persistLastViewedIndex(value) {
+      if (value == null || typeof localStorage === 'undefined') return;
+      try {
+        localStorage.setItem(LAST_INDEX_KEY, String(value));
+      } catch (err) {
+        console.error('Storing last viewed index failed', err);
+      }
+    }
+
+    function loadLastViewedIndex() {
+      if (typeof localStorage === 'undefined') return null;
+      try {
+        const raw = localStorage.getItem(LAST_INDEX_KEY);
+        if (raw == null) return null;
+        const parsed = Number.parseInt(raw, 10);
+        return Number.isNaN(parsed) ? null : parsed;
+      } catch (err) {
+        console.error('Loading last viewed index failed', err);
+        return null;
+      }
+    }
+
+    async function saveGameResultToAccount(status) {
+      if (!firebaseUser || !current || idx < 0) return;
+      const date = indexToDate(idx);
+      if (!date) return;
+      const dateKey = date.toISOString().slice(0, 10);
+      const payload = {
+        date: dateKey,
+        country: current.cc,
+        status,
+        attempts,
+        timestamp: serverTimestamp(),
+      };
+      const localPayload = { ...payload, timestamp: Date.now() };
+      try {
+        persistLocalResult(dateKey, localPayload);
+        const ref = doc(firestore, 'users', firebaseUser.uid, 'results', dateKey);
+        await setDoc(ref, payload, { merge: true });
+      } catch (err) {
+        console.error('Saving finished game failed', err);
+      }
+    }
+
     function dateDiffInDays(date) {
       const only = toDateOnly(date);
       if (!only) return 0;
@@ -239,10 +474,76 @@
 
     function normalizeSearchText(text) {
       if (!text) return '';
-      return text
+      const normalized = text
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase();
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ');
+      return normalized
+        .replace(/\bst\.?\b/g, 'saint')
+        .replace(/\bsaint\b/g, 'saint')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    const FIREWORKS_COLORS = ['#7cec8f', '#ffb612', '#6ea8ff', '#ff8e8e', '#f7f7f7', '#8bf0ff'];
+
+    function hideShareButton() {
+      if (!btnShare) return;
+      btnShare.style.display = 'none';
+      btnShare.disabled = false;
+      btnShare.dataset.shareText = '';
+      btnShare.textContent = 'Share Results';
+    }
+
+    const LAYER_LABELS = ['NO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT'];
+
+    function showShareButton(text) {
+      if (!btnShare) return;
+      btnShare.dataset.shareText = text || '';
+      btnShare.style.display = 'inline-flex';
+      btnShare.disabled = !text;
+      btnShare.textContent = 'Share Results';
+    }
+
+    function buildShareText(attemptsCount, dateLabel) {
+      const guessWord = attemptsCount === 1 ? '1 guess' : `${attemptsCount} guesses`;
+      return [
+        '⚑ Flagle ✨',
+        `🧭 I guessed Flagle in ${guessWord}!`,
+        `🎯 Date: ${dateLabel}`,
+        '✨ Play: https://geogeo-8008a.web.app',
+        '🔗 Share the flag fun!',
+      ].join('\n');
+    }
+
+    function updateLayerInfo() {
+      if (!layerInfo) return;
+      if (roundFinished) {
+        layerInfo.textContent = '';
+        return;
+      }
+      const index = Math.min(visibleCount, LAYER_LABELS.length - 1);
+      const label = LAYER_LABELS[index] || String(visibleCount);
+      const suffix = visibleCount === 1 ? 'LAYER' : 'LAYERS';
+      layerInfo.textContent = `${label} ${suffix} SHOWN`;
+    }
+
+    function setUnderFlagMessage(text) {
+      if (!correctMessage) return;
+      correctMessage.textContent = text;
+    }
+
+    function flashMobileTryAgain() {
+      if (!mobileFlash) return;
+      if (!window.matchMedia('(max-width: 720px)').matches) return;
+      mobileFlash.classList.add('visible');
+      if (mobileFlash.timeoutId) {
+        clearTimeout(mobileFlash.timeoutId);
+      }
+      mobileFlash.timeoutId = setTimeout(() => {
+        mobileFlash.classList.remove('visible');
+      }, 900);
     }
 
     function hideSuggestions() {
@@ -251,25 +552,104 @@
       suggestions.style.display = 'none';
     }
 
-    const FIREWORKS_PARTICLES = [
-      { dx: -56, dy: -28, color: '#7cec8f' },
-      { dx: 48, dy: -24, color: '#ffb612' },
-      { dx: -32, dy: 42, color: '#6ea8ff' },
-      { dx: 40, dy: 40, color: '#ff8e8e' },
-      { dx: -50, dy: 0, color: '#f7f7f7' },
-      { dx: 0, dy: -40, color: '#8bf0ff' },
-    ];
+    function applyResultToUI(payload, dateKey) {
+      if (!payload || !payload.status) return false;
+      attempts = typeof payload.attempts === 'number' ? payload.attempts : attempts;
+      const name = isoToName(current.cc);
+      updateProgress();
+      const dateLabel = formatDateLabel(indexToDate(idx));
+      const canonicalPayload = {
+        ...payload,
+        date: dateKey,
+        country: current.cc,
+        timestamp: payload.timestamp || Date.now(),
+      };
+      persistLocalResult(dateKey, canonicalPayload);
+      if (payload.status === 'solved') {
+        if (correctMessage) {
+          correctMessage.textContent = `CORRECT! It was ${name}`;
+        }
+        showShareButton(buildShareText(attempts, dateLabel));
+        endRound(true);
+        return true;
+      }
+      if (payload.status === 'failed') {
+        feedback.textContent = '';
+        hideShareButton();
+        setUnderFlagMessage(`OUT OF GUESSES. THE FLAG WAS ${name}`);
+        endRound(false);
+        return true;
+      }
+      if (payload.status === 'gave-up') {
+        feedback.textContent = '';
+        hideShareButton();
+        if (correctMessage) {
+          correctMessage.textContent = `REVEALED: ${name}.`;
+        }
+        endRound(false);
+        return true;
+      }
+      return false;
+    }
+
+    async function applySavedResult() {
+      if (!current || idx < 0) return;
+      const date = indexToDate(idx);
+      if (!date) return;
+      const dateKey = date.toISOString().slice(0, 10);
+      const localData = loadLocalResult(dateKey);
+      let appliedTimestamp = 0;
+      if (localData && localData.status) {
+        applyResultToUI(localData, dateKey);
+        appliedTimestamp = localData.timestamp || 0;
+      }
+      if (!firebaseUser) return;
+      const ref = doc(firestore, 'users', firebaseUser.uid, 'results', dateKey);
+      try {
+        const snap = await getDoc(ref);
+        const remoteData = snap.exists() ? normalizeRemoteResult(snap.data()) : null;
+        if (!remoteData || !remoteData.status) return;
+        if (remoteData.timestamp > appliedTimestamp) {
+          applyResultToUI(remoteData, dateKey);
+          appliedTimestamp = remoteData.timestamp;
+        } else if (localData && localData.timestamp > (remoteData?.timestamp || 0)) {
+          await saveGameResultToAccount(localData.status);
+        }
+      } catch (err) {
+        console.error('Unable to load saved result', err);
+      }
+    }
 
     function triggerFireworks() {
       if (!fireworks) return;
       fireworks.innerHTML = '';
-      FIREWORKS_PARTICLES.forEach((particle) => {
+      const animations = ['burst', 'swirl', 'arc'];
+      const count = 14;
+      for (let i = 0; i < count; i++) {
+        const angle = (i / count) * Math.PI * 2 + Math.random() * 0.4;
+        const radius = 90 + Math.random() * 80;
+        const dx = Math.cos(angle) * radius;
+        const dy = Math.sin(angle) * radius;
+        const anim = animations[i % animations.length];
         const span = document.createElement('span');
-        span.style.setProperty('--dx', `${particle.dx}px`);
-        span.style.setProperty('--dy', `${particle.dy}px`);
-        span.style.setProperty('--color', particle.color);
+        span.style.setProperty('--dx', `${dx.toFixed(1)}px`);
+        span.style.setProperty('--dy', `${dy.toFixed(1)}px`);
+        span.style.setProperty('--mx', `${(dx * 0.55).toFixed(1)}px`);
+        span.style.setProperty('--my', `${(dy * 0.55).toFixed(1)}px`);
+        span.style.setProperty('--color', FIREWORKS_COLORS[i % FIREWORKS_COLORS.length]);
+        span.style.setProperty('--anim', anim);
+        span.style.animation = `${anim} 950ms ease-out forwards`;
         fireworks.appendChild(span);
-      });
+      }
+      const centerPop = document.createElement('span');
+      centerPop.style.setProperty('--dx', '0px');
+      centerPop.style.setProperty('--dy', '0px');
+      centerPop.style.setProperty('--mx', '0px');
+      centerPop.style.setProperty('--my', '0px');
+      centerPop.style.setProperty('--color', '#ffffff');
+      centerPop.style.setProperty('--anim', 'swirl');
+      centerPop.style.animation = 'swirl 700ms ease-out forwards';
+      fireworks.appendChild(centerPop);
       fireworks.classList.remove('active');
       void fireworks.offsetWidth;
       fireworks.classList.add('active');
@@ -278,7 +658,33 @@
       }
       fireworks.timeoutId = setTimeout(() => {
         fireworks.classList.remove('active');
-      }, 900);
+      }, 1100);
+    }
+
+    async function shareResults() {
+      if (!btnShare) return;
+      const text = btnShare.dataset.shareText || '';
+      if (!text) return;
+      try {
+        if (navigator.share) {
+          await navigator.share({ text });
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          throw new Error('Sharing not supported');
+        }
+        btnShare.textContent = 'Shared!';
+      } catch (err) {
+        console.error('Share failed', err);
+        btnShare.textContent = 'Copy failed';
+      } finally {
+        btnShare.disabled = true;
+        setTimeout(() => {
+          if (!btnShare) return;
+          btnShare.disabled = false;
+          btnShare.textContent = 'Share Results';
+        }, 1400);
+      }
     }
 
     function resetGuessSelection() {
@@ -314,6 +720,10 @@
 
     const DIRECTION_BLOCKLIST = new Set(['aq']);
 
+    function resolveLocation(cc, entryLocation) {
+      return entryLocation || countryLocations[cc] || null;
+    }
+
     function describeDirection(fromLoc, toLoc) {
       if (!fromLoc || !toLoc) return null;
       if (fromLoc.lat === toLoc.lat && fromLoc.lon === toLoc.lon) return 'Here';
@@ -324,16 +734,21 @@
       return `${entry.name} ${entry.symbol}`;
     }
 
+    function updateGuessPlaceholder() {
+      if (!guessInput) return;
+      const upcoming = Math.min(attempts + 1, MAX_GUESSES);
+      const ordinal = ORDINALS[upcoming - 1] || `${upcoming}th`;
+      guessInput.placeholder = `Enter your ${ordinal} guess`;
+    }
+
     function renderGuessHistory() {
       if (!guessHistoryList) return;
       guessHistoryList.innerHTML = '';
       if (!guessHistory.length) {
-        const empty = document.createElement('li');
-        empty.className = 'history-empty';
-        empty.textContent = 'No guesses yet';
-        guessHistoryList.appendChild(empty);
+        if (guessHistoryPanel) guessHistoryPanel.classList.add('hidden');
         return;
       }
+      if (guessHistoryPanel) guessHistoryPanel.classList.remove('hidden');
       guessHistory.forEach((entry, index) => {
         const li = document.createElement('li');
         const info = document.createElement('div');
@@ -377,22 +792,36 @@
       finalFlag.classList.add('visible');
     }
 
+    function updateGameFinishedClass() {
+      if (typeof document === 'undefined' || !document.body) return;
+      document.body.classList.toggle('game-finished', roundFinished);
+    }
+    updateGameFinishedClass();
+
     function clearStage() {
       stage.querySelectorAll('.layer').forEach((layer) => layer.remove());
       colorsBox.innerHTML = '';
       visibleCount = 0;
-      answer.textContent = ' ';
       feedback.textContent = '';
       attempts = 0;
       awaitingGuess = false;
+      roundSolved = false;
+      roundFinished = false;
+      updateGameFinishedClass();
       guessInput.value = '';
       resetGuessSelection();
       guessHistory = [];
+      guessedThisRound = new Set();
       renderGuessHistory();
       hideFullFlag();
       pendingFullFlagSrc = '';
       pendingFullFlagAlt = '';
-      progress.textContent = `Layers: – / – • Guesses: 0 / ${MAX_GUESSES}`;
+      updateProgress();
+      updateGuessPlaceholder();
+      hideShareButton();
+      if (correctMessage) correctMessage.textContent = '';
+      updateLayerInfo();
+      setGuessRowVisible(true);
     }
 
     function renderSuggestions(matches) {
@@ -418,6 +847,11 @@
         return;
       }
       const normalized = normalizeSearchText(text);
+      const exactMatch = countryOptions.find((item) => item.searchName === normalized);
+      if (exactMatch) {
+        chooseSuggestion(exactMatch);
+        return;
+      }
       const matches = countryOptions
         .filter((item) => item.searchName.includes(normalized))
         .slice(0, SUGGESTION_LIMIT);
@@ -425,6 +859,9 @@
         return;
       }
       renderSuggestions(matches);
+      if (matches.length === 1 && matches[0].searchName === normalized) {
+        chooseSuggestion(matches[0]);
+      }
     }
 
     function handleSuggestionClick(event) {
@@ -489,9 +926,8 @@
     }
 
     function updateProgress() {
-      const totalLayers = stage.querySelectorAll('.layer').length;
-      const totalDisplay = totalLayers ? totalLayers : '–';
-      progress.textContent = `Layers: ${visibleCount} / ${totalDisplay} • Guesses: ${attempts} / ${MAX_GUESSES}`;
+      if (!progress) return;
+      progress.textContent = `Guesses: ${attempts} / ${MAX_GUESSES}`;
     }
 
     function updateDateLabel() {
@@ -514,6 +950,32 @@
       dateDisplay.textContent = `Date: ${formatDateLabel(date)} — ${suffix}`;
     }
 
+    function getDateFromUrl() {
+      if (typeof window === 'undefined') return null;
+      try {
+        const searchParams = new URL(window.location.href).searchParams;
+        const dateParam = searchParams.get('date');
+        if (!dateParam) return null;
+        const parsed = parseLocalDateKey(dateParam);
+        return parsed ? toDateOnly(parsed) : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function updateUrlWithDate(date) {
+      if (!date || typeof window === 'undefined' || !window.history) return;
+      try {
+        const iso = formatLocalDateKey(date);
+        if (!iso) return;
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('date', iso);
+        window.history.replaceState(null, '', currentUrl.toString());
+      } catch (err) {
+        console.error('Updating URL failed', err);
+      }
+    }
+
     function updateNavButtons() {
       if (!btnPrevDate || !btnNextDate) return;
       if (!order.length) {
@@ -524,7 +986,6 @@
       btnPrevDate.disabled = idx <= 0;
       const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
       btnNextDate.disabled = idx >= maxIdx;
-      btnSkip.disabled = btnNextDate.disabled;
     }
 
     function setGuessControls(enabled) {
@@ -539,6 +1000,15 @@
       btnGiveUp.disabled = !enabled;
     }
 
+    function setGuessRowVisible(visible) {
+      if (!guessRow) return;
+      if (roundFinished && visible) {
+        guessRow.hidden = true;
+        return;
+      }
+      guessRow.hidden = !visible;
+    }
+
     function revealLayer(force = false) {
       if (!current) return;
       if (!force && awaitingGuess) return;
@@ -550,10 +1020,14 @@
       visibleCount++;
       awaitingGuess = true;
       updateProgress();
+      updateLayerInfo();
     }
 
-    function endRound() {
+    function endRound(wasCorrect = false) {
       awaitingGuess = false;
+      roundFinished = true;
+      roundSolved = !!wasCorrect;
+      updateGameFinishedClass();
       const layers = stage.querySelectorAll('.layer');
       layers.forEach(l => l.classList.add('visible'));
       visibleCount = layers.length;
@@ -561,6 +1035,11 @@
       setGiveUp(false);
       updateProgress();
       showFullFlag();
+      updateLayerInfo();
+      if (btnGiveUp) {
+        btnGiveUp.hidden = !!wasCorrect;
+      }
+      setGuessRowVisible(false);
     }
 
     function submitGuess() {
@@ -569,32 +1048,51 @@
         feedback.textContent = 'Select a country from the suggestions before submitting.';
         return;
       }
+      guessInput.blur();
+      if (guessedThisRound.has(selectedSuggestion.cc)) {
+        feedback.textContent = `You already guessed ${selectedSuggestion.name}. Try a different country.`;
+        guessInput.value = '';
+        resetGuessSelection();
+        return;
+      }
+      guessedThisRound.add(selectedSuggestion.cc);
       attempts++;
+      updateGuessPlaceholder();
       const name = isoToName(current.cc);
       const correct = selectedSuggestion.cc === current.cc;
+      const guessLocation = resolveLocation(selectedSuggestion.cc, selectedSuggestion.location);
+      const targetLocation = resolveLocation(current.cc, current.location);
       const directionHint = !correct && !DIRECTION_BLOCKLIST.has(selectedSuggestion.cc)
-        ? describeDirection(selectedSuggestion.location, current.location)
+        ? describeDirection(guessLocation, targetLocation)
         : null;
       addGuessHistory(selectedSuggestion.name, correct, directionHint);
       if (correct) {
-        feedback.textContent = 'Correct!';
-        answer.textContent = name;
+      feedback.textContent = '';
+        if (correctMessage) {
+          correctMessage.textContent = `CORRECT! It was ${name}`;
+        }
         triggerFireworks();
+        const dateLabel = order.length && idx >= 0 ? formatDateLabel(indexToDate(idx)) : 'today';
+        showShareButton(buildShareText(attempts, dateLabel));
+        saveGameResultToAccount('solved');
         updateProgress();
-        endRound();
+        endRound(true);
         resetGuessSelection();
         guessInput.value = '';
         return;
       }
       if (attempts >= MAX_GUESSES) {
-        feedback.textContent = `Out of guesses. The flag was ${name}.`;
-        answer.textContent = name;
-        endRound();
-        resetGuessSelection();
-        guessInput.value = '';
-        return;
-      }
+      feedback.textContent = '';
+      setUnderFlagMessage(`OUT OF GUESSES. THE FLAG WAS ${name}`);
+      saveGameResultToAccount('failed');
+      endRound(false);
+      hideShareButton();
+      resetGuessSelection();
+      guessInput.value = '';
+      return;
+    }
       feedback.textContent = 'Not quite — here is another layer.';
+      flashMobileTryAgain();
       guessInput.value = '';
       resetGuessSelection();
       const layers = stage.querySelectorAll('.layer');
@@ -603,17 +1101,17 @@
         revealLayer(true);
       }
       updateProgress();
-      guessInput.focus();
     }
 
     function giveUp() {
       if (!current || btnGiveUp.disabled) return;
       const name = isoToName(current.cc);
       feedback.textContent = `Revealed: ${name}.`;
-      answer.textContent = name;
       attempts = MAX_GUESSES;
+      saveGameResultToAccount('gave-up');
       updateProgress();
-      endRound();
+      endRound(false);
+      hideShareButton();
     }
 
     function restartLayers() {
@@ -624,17 +1122,28 @@
       visibleCount = 0;
       awaitingGuess = false;
       attempts = 0;
+      guessedThisRound = new Set();
       feedback.textContent = '';
-      answer.textContent = ' ';
       guessInput.value = '';
+      roundFinished = false;
+      roundSolved = false;
+      updateGameFinishedClass();
+      setUnderFlagMessage('');
+      if (correctMessage) correctMessage.textContent = '';
       setGuessControls(true);
       setGiveUp(true);
+      setGuessRowVisible(true);
+      setGuessRowVisible(true);
+      if (btnGiveUp) btnGiveUp.hidden = false;
+      if (btnGiveUp) btnGiveUp.hidden = false;
+      hideShareButton();
+      updateGuessPlaceholder();
       revealLayer(true);
       updateProgress();
-      guessInput.focus();
+      updateLayerInfo();
     }
 
-    function loadFlag(cc) {
+    function loadFlag(cc, { focusGuess = true } = {}) {
       clearStage();
       current = { cc, ...manifest[cc] };
       current.location = current.location || countryLocations[cc] || null;
@@ -681,31 +1190,38 @@
       setGuessControls(true);
       setGiveUp(true);
       guessInput.value = '';
-      guessInput.focus();
+      if (focusGuess) {
+        guessInput.focus();
+      }
       updateProgress();
       updateDateLabel();
       updateNavButtons();
       revealLayer(true);
       updateProgress();
+      applySavedResult();
     }
 
-    function goToIndex(newIndex) {
+    function goToIndex(newIndex, options = {}) {
       if (order.length === 0) return;
       idx = clampIndex(newIndex);
       const cc = order[idx];
-      loadFlag(cc);
+      loadFlag(cc, options);
+      const currentDate = indexToDate(idx);
+      updateUrlWithDate(currentDate);
+      persistLastViewedDate(currentDate);
+      persistLastViewedIndex(idx);
     }
 
     function nextFlag() {
       if (order.length === 0) return;
       const maxIdx = Math.min(order.length - 1, TODAY_INDEX);
       if (idx >= maxIdx) return;
-      goToIndex(idx + 1);
+      goToIndex(idx + 1, { focusGuess: false });
     }
 
     function prevFlag() {
       if (order.length === 0) return;
-      goToIndex(idx - 1);
+      goToIndex(idx - 1, { focusGuess: false });
     }
 
     btnSubmitGuess.addEventListener('click', submitGuess);
@@ -746,10 +1262,19 @@
       }
     });
     btnGiveUp.addEventListener('click', giveUp);
-    btnSkip.addEventListener('click', () => nextFlag());
-    btnReset.addEventListener('click', restartLayers);
     btnPrevDate.addEventListener('click', prevFlag);
-    btnNextDate.addEventListener('click', nextFlag);
+    if (btnNextDate) btnNextDate.addEventListener('click', nextFlag);
+    if (btnShare) btnShare.addEventListener('click', shareResults);
+
+    function preventMobileScrollOnFocus() {
+      if (!guessInput) return;
+      const handler = () => {
+        if (window.matchMedia('(max-width: 720px)').matches) {
+          setTimeout(() => window.scrollTo(0, 0), 100);
+        }
+      };
+      guessInput.addEventListener('focus', handler);
+    }
 
     async function boot() {
       const res = await fetch('/api/manifest');
@@ -785,12 +1310,16 @@
         return;
       }
 
-      idx = clampIndex(TODAY_INDEX);
+      const requestedDate = getDateFromUrl();
+      const requestedIndex = requestedDate ? dateDiffInDays(requestedDate) : null;
+      const savedIndex = requestedDate ? null : loadLastViewedIndex();
+      idx = clampIndex(requestedIndex ?? savedIndex ?? TODAY_INDEX);
       goToIndex(idx);
       updateNavButtons();
     }
 
     boot();
+    preventMobileScrollOnFocus();
   </script>
 </body>
 </html>

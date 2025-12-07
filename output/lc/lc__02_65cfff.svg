@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-lc" viewBox="0 0 640 480"><defs><clipPath id="clip-lc-02" clipPathUnits="userSpaceOnUse"><rect x="213.33333333333331" y="0" width="213.33333333333331" height="480"/></clipPath></defs><g clip-path="url(#clip-lc-02)">
-  <g fill-rule="evenodd" fill="none" stroke="none">
-    <path fill="#65cfff" d="M0 0h640v480H0z" stroke="none"/>
-    <path fill="none" d="m318.9 42 162.7 395.3-322.6.9z" stroke="none"/>
-    <path fill="none" d="m319 96.5 140.8 340-279 .8z" stroke="none"/>
-    <path fill="none" d="m318.9 240.1 162.7 197.6-322.6.5z" stroke="none"/>
-  </g>
-</g></svg>

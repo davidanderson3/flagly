@@ -1,42 +1,34 @@
 #!/usr/bin/env node
 /**
- * Extract per-color layers from all flag SVGs in flag-icons.
- * Output:
- *   output/<cc>/*.svg        (layers per color)
- *   output/manifest.json     ({cc: {colors:[hex...], files:[filename...]}})
+ * Region-based extractor:
+ * - Render SVG with resvg
+ * - Flood-fill connected regions per RGBA color
+ * - Pack regions into up to TARGET_LAYERS buckets by area (largest buckets first)
+ * - Emit PNG layers with transparent background (no overlap)
+ * - Manifest lists layer files and dominant colors
  *
  * Notes:
- * - Handles fill and stroke; ignores 'none' and fully transparent.
- * - Normalizes color values to 6-char lowercase hex (#rrggbb).
- * - Preserves <defs>, viewBox, width/height, and clipping paths.
- * - For robustness, elements not matching current layer color have fill/stroke set to 'none'
- *   instead of being removed (avoids breaking clipPaths/masks).
+ * - This aims for non-overlapping, visible first layers (size/brightness) and fixes canton/stripe overlap.
+ * - Keeps full original SVG as `full` for reveal-at-end.
  */
 
 const fs = require('fs');
 const path = require('path');
-const { JSDOM } = require('jsdom');
+const glob = require('glob');
 const ColorModule = require('color');
 const Color = ColorModule.default || ColorModule;
-const glob = require('glob');
-
-function brightnessScore(hex) {
-  if (!hex) return 0;
-  if (hex.toLowerCase() === '#ffffff') return -1;
-  try {
-    return Color(hex).luminosity();
-  } catch {
-    return 0;
-  }
-}
+const { Resvg } = require('@resvg/resvg-js');
+const { PNG } = require('pngjs');
 const countriesList = require('world-countries');
-
-const SVG_NS = 'http://www.w3.org/2000/svg';
-const TARGET_LAYERS = 6;
-const SPLIT_ENTRY_THRESHOLD = 10;
 
 const FLAGS_DIR = path.join(process.cwd(), 'node_modules', 'flag-icons', 'flags', '4x3');
 const OUT_DIR = path.join(process.cwd(), 'output');
+const TARGET_LAYERS = 6;
+const MAX_PALETTE_COLORS = 8;
+const MIN_COLOR_DISTANCE = 80; // Squash near-duplicate shades to keep flags flat.
+const EDGE_FILL_SPAN = 8; // How many pixels to scan for missing edge coverage.
+
+const SKIP_CODES = new Set(['asean', 'cp', 'eu', 'gb-wls', 'mf', 'um', 'un', 'xx']);
 
 const locationByIso = new Map();
 countriesList.forEach((country) => {
@@ -48,20 +40,15 @@ countriesList.forEach((country) => {
   locationByIso.set(iso, { lat, lon });
 });
 
-const SKIP_CODES = new Set(['cp', 'xx', 'um']);
-
 const MANUAL_LOCATIONS = new Map([
   ['arab', { lat: 25, lon: 45 }],
-  ['asean', { lat: 12.5, lon: 103 }],
   ['cefta', { lat: 45.5, lon: 17 }],
   ['dg', { lat: -7.3, lon: 72.4 }],
   ['eac', { lat: 1, lon: 37 }],
   ['es-ct', { lat: 41.9, lon: 2.2 }],
   ['es-ga', { lat: 42.6, lon: -8 }],
   ['es-pv', { lat: 43, lon: -2.5 }],
-  ['eu', { lat: 50, lon: 10 }],
   ['gb-eng', { lat: 52, lon: -1.5 }],
-  ['gb-nir', { lat: 54.5, lon: -6 }],
   ['gb-sct', { lat: 56.5, lon: -4 }],
   ['gb-wls', { lat: 52.1, lon: -3.5 }],
   ['ic', { lat: 28.1, lon: -15.4 }],
@@ -69,575 +56,525 @@ const MANUAL_LOCATIONS = new Map([
   ['sh-ac', { lat: -7.9, lon: -14.3 }],
   ['sh-hl', { lat: -15.9, lon: -5.7 }],
   ['sh-ta', { lat: -37.1, lon: -12.3 }],
-  ['un', { lat: 40.75, lon: -73.97 }],
 ]);
 
-if (!fs.existsSync(FLAGS_DIR)) {
-  console.error('Could not find flag-icons SVGs. Did npm install succeed?');
-  process.exit(1);
+function brightnessScore(hex) {
+  if (!hex) return 0;
+  try {
+    return Color(hex).luminosity();
+  } catch {
+    return 0;
+  }
 }
-
-fs.mkdirSync(OUT_DIR, { recursive: true });
 
 function toHex(c) {
   try {
     if (!c) return null;
     const s = String(c).trim().toLowerCase();
     if (s === 'none' || s === 'transparent') return null;
-    // Handle hex, rgb/rgba, hsl/hsla, named colors
     const hex = Color(s).hex().toLowerCase();
-    // Normalize to #rrggbb
-    const six = Color(hex).hex().toLowerCase();
-    return six;
+    return hex.length === 4 ? Color(hex).hex().toLowerCase() : hex;
   } catch {
-    // Some odd values like 'url(#id)' for paint servers; ignore those for color buckets
     return null;
   }
 }
 
-function orderColorsForReveal(colors) {
-  const primaries = [];
-  const tail = [];
-  colors.forEach((hex) => {
+function extractPalette(svgSrc) {
+  const palette = new Set();
+  const regex = /(fill|stroke)\s*=\s*["']([^"']+)["']/gi;
+  let match;
+  while ((match = regex.exec(svgSrc))) {
+    const hex = toHex(match[2]);
+    if (hex) palette.add(hex);
+  }
+  const styleRegex = /style\s*=\s*["']([^"']+)["']/gi;
+  while ((match = styleRegex.exec(svgSrc))) {
+    const style = match[1];
+    style.split(';').forEach((part) => {
+      const [k, v] = part.split(':').map((t) => t && t.trim());
+      if (!k || !v) return;
+      if (k === 'fill' || k === 'stroke') {
+        const hex = toHex(v);
+        if (hex) palette.add(hex);
+      }
+    });
+  }
+  return Array.from(palette);
+}
+
+function quantizeBufferToPalette(buffer, palette) {
+  if (!palette || !palette.length) return buffer;
+  const pal = palette.map((hex) => {
+    const c = Color(hex).rgb().array();
+    return { hex, r: c[0], g: c[1], b: c[2] };
+  });
+  const out = Buffer.from(buffer);
+  for (let i = 0; i < out.length; i += 4) {
+    const a = out[i + 3];
+    if (a < 32) {
+      out[i] = out[i + 1] = out[i + 2] = 0;
+      out[i + 3] = 0;
+      continue;
+    }
+    const r = out[i];
+    const g = out[i + 1];
+    const b = out[i + 2];
+    let best = pal[0];
+    let bestDist = Number.MAX_SAFE_INTEGER;
+    for (const c of pal) {
+      const dr = r - c.r;
+      const dg = g - c.g;
+      const db = b - c.b;
+      const dist = dr * dr + dg * dg + db * db;
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = c;
+      }
+    }
+    out[i] = best.r;
+    out[i + 1] = best.g;
+    out[i + 2] = best.b;
+    out[i + 3] = 255;
+  }
+  return out;
+}
+
+function hexToRgb(hex) {
+  try {
+    return Color(hex).rgb().array();
+  } catch {
+    return null;
+  }
+}
+
+function colorDistanceSq(a, b) {
+  if (!Array.isArray(a) || !Array.isArray(b) || a.length < 3 || b.length < 3) return Number.MAX_SAFE_INTEGER;
+  const dr = a[0] - b[0];
+  const dg = a[1] - b[1];
+  const db = a[2] - b[2];
+  return dr * dr + dg * dg + db * db;
+}
+
+function derivePaletteFromBitmap(buffer, maxColors = MAX_PALETTE_COLORS, minDistance = MIN_COLOR_DISTANCE) {
+  if (!buffer || !buffer.length) return [];
+  const counts = new Map();
+  for (let i = 0; i < buffer.length; i += 4) {
+    const a = buffer[i + 3];
+    if (a < 32) continue;
+    const r = buffer[i];
+    const g = buffer[i + 1];
+    const b = buffer[i + 2];
+    const hex =
+      '#' +
+      [r, g, b]
+        .map((v) => v.toString(16).padStart(2, '0'))
+        .join('')
+        .toLowerCase();
+    counts.set(hex, (counts.get(hex) || 0) + 1);
+  }
+  const sorted = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
+  const palette = [];
+  const minDistanceSq = minDistance * minDistance;
+  for (const [hex] of sorted) {
+    if (palette.length >= maxColors) break;
+    const rgb = hexToRgb(hex);
+    if (!rgb) continue;
+    const isNear = palette.some((entry) => colorDistanceSq(entry.rgb, rgb) < minDistanceSq);
+    if (isNear) continue;
+    palette.push({ hex, rgb });
+  }
+  return palette.map((entry) => entry.hex);
+}
+
+function simplifyPalette(initialPalette, bitmapBuffer) {
+  const basePalette = Array.isArray(initialPalette) ? initialPalette : [];
+  const palette = [];
+  const seen = new Set();
+  const minDistanceSq = MIN_COLOR_DISTANCE * MIN_COLOR_DISTANCE;
+
+  function tryAdd(hex) {
     if (!hex) return;
-    const trimmed = hex.toLowerCase();
-    if (trimmed === '#ffffff' || trimmed === '#fff' || trimmed === '#000000' || trimmed === '#000') {
-      tail.push(trimmed);
-    } else {
-      primaries.push(trimmed);
+    const norm = hex.toLowerCase();
+    if (seen.has(norm)) return;
+    const rgb = hexToRgb(norm);
+    if (!rgb) return;
+    const isNear = palette.some((entry) => colorDistanceSq(entry.rgb, rgb) < minDistanceSq);
+    if (isNear) return;
+    palette.push({ hex: norm, rgb });
+    seen.add(norm);
+  }
+
+  basePalette.forEach(tryAdd);
+  if (!palette.length) {
+    const derived = derivePaletteFromBitmap(bitmapBuffer, MAX_PALETTE_COLORS * 2, MIN_COLOR_DISTANCE);
+    derived.forEach(tryAdd);
+    if (!palette.length && derived.length) {
+      tryAdd(derived[0]);
     }
+  }
+
+  return palette.slice(0, MAX_PALETTE_COLORS).map((entry) => entry.hex);
+}
+
+function rgbaToHex(r, g, b, a) {
+  if (a === 0) return null;
+  return (
+    '#' +
+    [r, g, b]
+      .map((v) => v.toString(16).padStart(2, '0'))
+      .join('')
+      .toLowerCase()
+  );
+}
+
+function renderSvg(svgSrc) {
+  // Force a consistent 4:3 viewport to avoid zoom/pan surprises.
+  const resvg = new Resvg(svgSrc, {
+    fitTo: { mode: 'width', value: 640 },
+    background: 'rgba(0,0,0,0)',
   });
-  return [...primaries, ...tail];
+  const rendered = resvg.render();
+  const pngBuf = Buffer.from(rendered.asPng());
+  const png = PNG.sync.read(pngBuf);
+  return { width: png.width, height: png.height, data: png.data };
 }
 
-function walkElements(svgDoc) {
-  // Collect every element within the SVG document (including the root <svg>).
-  return Array.from(svgDoc.querySelectorAll('*'));
+function isNearlyWhite(r, g, b, a) {
+  if (!Number.isFinite(r) || !Number.isFinite(g) || !Number.isFinite(b) || !Number.isFinite(a)) return false;
+  if (a < 16) return false;
+  return r >= 250 && g >= 250 && b >= 250;
 }
 
-function parseStyle(styleText) {
-  const map = {};
-  if (!styleText) return map;
-  for (const part of styleText.split(';')) {
-    const [rawK, rawV] = part.split(':');
-    if (!rawK || !rawV) continue;
-    const k = rawK.trim().toLowerCase();
-    const v = rawV.trim();
-    if (!k || !v) continue;
-    map[k] = v;
-  }
-  return map;
-}
-
-function serializeStyle(map) {
-  return Object.entries(map)
-    .map(([k, v]) => `${k}:${v}`)
-    .join(';');
-}
-
-function getViewBox(svgEl) {
-  const vb = svgEl.getAttribute('viewBox');
-  if (vb) return vb;
-  // fallback: derive from width/height if present
-  const w = svgEl.getAttribute('width');
-  const h = svgEl.getAttribute('height');
-  if (w && h) return `0 0 ${w} ${h}`;
-  // default for flag-icons 4x3 assets tends to be viewBox present already
-  return '0 0 640 480';
-}
-
-function parseViewBox(vb) {
-  if (!vb) return { minX: 0, minY: 0, width: 640, height: 480 };
-  const parts = vb.trim().split(/\s+/).map(Number);
-  if (parts.length !== 4 || parts.some((n) => Number.isNaN(n))) {
-    return { minX: 0, minY: 0, width: 640, height: 480 };
-  }
-  const [minX, minY, width, height] = parts;
-  return { minX, minY, width, height };
-}
-
-function ensureDefs(doc, svgEl) {
-  let defs = svgEl.querySelector('defs');
-  if (!defs) {
-    defs = doc.createElementNS(SVG_NS, 'defs');
-    svgEl.insertBefore(defs, svgEl.firstChild);
-  }
-  return defs;
-}
-
-function collectColorMeta(svgDoc) {
-  const els = walkElements(svgDoc);
-  const meta = new Map(); // colorHex -> Map<elementIndex, entry>
-
-  els.forEach((el, idx) => {
-    if (!(el instanceof svgDoc.defaultView.Element)) return;
-    const tag = el.tagName.toLowerCase();
-    if (tag === 'svg') return;
-
-    const styleMap = parseStyle(el.getAttribute && el.getAttribute('style'));
-    const fillSource = styleMap.hasOwnProperty('fill') ? 'style' : (el.hasAttribute && el.hasAttribute('fill') ? 'attr' : null);
-    const strokeSource = styleMap.hasOwnProperty('stroke') ? 'style' : (el.hasAttribute && el.hasAttribute('stroke') ? 'attr' : null);
-
-    const fillHex = toHex(
-      fillSource === 'style'
-        ? styleMap.fill
-        : el.getAttribute && el.getAttribute('fill')
-    );
-    const strokeHex = toHex(
-      strokeSource === 'style'
-        ? styleMap.stroke
-        : el.getAttribute && el.getAttribute('stroke')
-    );
-
-    const inDefs = Boolean(el.closest && el.closest('defs'));
-    const addEntry = (colorHex, opts) => {
-      if (!colorHex) return;
-      if (!meta.has(colorHex)) meta.set(colorHex, new Map());
-      const byElement = meta.get(colorHex);
-      if (!byElement.has(idx)) {
-        byElement.set(idx, {
-          index: idx,
-          keepFill: false,
-          keepStroke: false,
-          fillSource: null,
-          strokeSource: null,
-          inDefs,
-        });
-      }
-      const entry = byElement.get(idx);
-      if (opts.keepFill) {
-        entry.keepFill = true;
-        entry.fillSource = opts.fillSource ?? entry.fillSource;
-      }
-      if (opts.keepStroke) {
-        entry.keepStroke = true;
-        entry.strokeSource = opts.strokeSource ?? entry.strokeSource;
-      }
-    };
-
-    if (fillHex && strokeHex && fillHex === strokeHex) {
-      addEntry(fillHex, {
-        keepFill: true,
-        keepStroke: true,
-        fillSource,
-        strokeSource,
-      });
-    } else {
-      if (fillHex) {
-        addEntry(fillHex, {
-          keepFill: true,
-          fillSource,
-        });
-      }
-      if (strokeHex) {
-        addEntry(strokeHex, {
-          keepStroke: true,
-          strokeSource,
-        });
+function extendEdgeCoverage(buffer, width, height) {
+  for (let x = 0; x < width; x++) {
+    let fillY = -1;
+    let fillColor = null;
+    for (let y = 0; y <= EDGE_FILL_SPAN && y < height; y++) {
+      const idx = (y * width + x) * 4;
+      const a = buffer[idx + 3];
+      if (a === 0) continue;
+      const r = buffer[idx];
+      const g = buffer[idx + 1];
+      const b = buffer[idx + 2];
+      if (!isNearlyWhite(r, g, b, a)) {
+        fillY = y;
+        fillColor = [r, g, b, 255];
+        break;
       }
     }
-  });
-
-  return meta;
-}
-
-function splitIntoPieces(plan, pieceCount) {
-  if (!plan || pieceCount <= 1) return null;
-  const baseClip =
-    plan.clip && plan.clip.type === 'rect'
-      ? plan.clip
-      : { type: 'rect', x0: 0, x1: 1, y0: 0, y1: 1 };
-  const generation = plan.splitGeneration ?? 0;
-  const orientation = generation % 2 === 0 ? 'vertical' : 'horizontal';
-  const pieces = [];
-  for (let i = 0; i < pieceCount; i++) {
-    const nextClip = { type: 'rect', orientation };
-    if (orientation === 'vertical') {
-      const span = Math.max(baseClip.x1 - baseClip.x0, 0);
-      nextClip.x0 = baseClip.x0 + span * (i / pieceCount);
-      nextClip.x1 = baseClip.x0 + span * ((i + 1) / pieceCount);
-      nextClip.y0 = baseClip.y0;
-      nextClip.y1 = baseClip.y1;
-    } else {
-      const span = Math.max(baseClip.y1 - baseClip.y0, 0);
-      nextClip.y0 = baseClip.y0 + span * (i / pieceCount);
-      nextClip.y1 = baseClip.y0 + span * ((i + 1) / pieceCount);
-      nextClip.x0 = baseClip.x0;
-      nextClip.x1 = baseClip.x1;
+    if (fillColor && fillY > 0) {
+      for (let y = 0; y < fillY; y++) {
+        const dstIdx = (y * width + x) * 4;
+        buffer[dstIdx] = fillColor[0];
+        buffer[dstIdx + 1] = fillColor[1];
+        buffer[dstIdx + 2] = fillColor[2];
+        buffer[dstIdx + 3] = fillColor[3];
+      }
     }
-
-    pieces.push({
-      color: plan.color,
-      entries: plan.entries,
-      clip: nextClip,
-      zBase: plan.zBase,
-      splitOffset: (plan.splitOffset ?? 0) * 10 + i,
-      splitGeneration: generation + 1,
-      forceTop: plan.forceTop,
-      brightness: plan.brightness,
-    });
-  }
-  return pieces;
-}
-
-function expandLargePlans(plans) {
-  const expanded = [];
-  plans.forEach((plan) => {
-    if (!plan || !plan.entries || plan.entries.length < SPLIT_ENTRY_THRESHOLD) {
-      expanded.push(plan);
-      return;
-    }
-    const pieceCount = Math.min(3, Math.ceil(plan.entries.length / SPLIT_ENTRY_THRESHOLD));
-    const pieces = splitIntoPieces(plan, pieceCount);
-    if (pieces && pieces.length > 1) {
-      expanded.push(...pieces);
-      return;
-    }
-    expanded.push(plan);
-  });
-  return expanded;
-}
-
-function selectFinalPlans(plans, target, orderedColors) {
-  if (plans.length <= target) return plans.slice();
-
-  const byColor = new Map();
-  plans.forEach((plan) => {
-    if (!byColor.has(plan.color)) byColor.set(plan.color, []);
-    byColor.get(plan.color).push(plan);
-  });
-
-  const included = new Set();
-  const finalPlans = [];
-  const pointers = new Map();
-  const colors = [...orderedColors, ...Array.from(byColor.keys()).filter((c) => !orderedColors.includes(c))];
-
-  for (const group of byColor.values()) {
-    group.sort((a, b) => {
-      const aEntries = Array.isArray(a.entries) ? a.entries.length : 0;
-      const bEntries = Array.isArray(b.entries) ? b.entries.length : 0;
-      if (bEntries !== aEntries) return bEntries - aEntries;
-      return (a.splitOffset ?? 0) - (b.splitOffset ?? 0);
-    });
   }
 
-  for (const color of colors) {
-    const group = byColor.get(color) || [];
-    if (!group.length) continue;
-    finalPlans.push(group[0]);
-    included.add(group[0]);
-    pointers.set(color, 1);
-    if (finalPlans.length >= target) return finalPlans.slice(0, target);
+  for (let y = 0; y < height; y++) {
+    let fillX = -1;
+    let fillColor = null;
+    for (let x = 0; x <= EDGE_FILL_SPAN && x < width; x++) {
+      const idx = (y * width + x) * 4;
+      const a = buffer[idx + 3];
+      if (a === 0) continue;
+      const r = buffer[idx];
+      const g = buffer[idx + 1];
+      const b = buffer[idx + 2];
+      if (!isNearlyWhite(r, g, b, a)) {
+        fillX = x;
+        fillColor = [r, g, b, 255];
+        break;
+      }
+    }
+    if (fillColor && fillX > 0) {
+      for (let x = 0; x < fillX; x++) {
+        const dstIdx = (y * width + x) * 4;
+        buffer[dstIdx] = fillColor[0];
+        buffer[dstIdx + 1] = fillColor[1];
+        buffer[dstIdx + 2] = fillColor[2];
+        buffer[dstIdx + 3] = fillColor[3];
+      }
+    }
+  }
+}
+
+function segmentRegions(buffer, width, height) {
+  const visited = new Uint8Array(width * height);
+  const regions = [];
+  const dirs = [
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+
+  function idx(x, y) {
+    return y * width + x;
   }
 
-  let madeProgress = true;
-  while (finalPlans.length < target && madeProgress) {
-    madeProgress = false;
-    for (const color of colors) {
-      const group = byColor.get(color) || [];
-      const idx = pointers.get(color) || 0;
-      if (idx >= group.length) continue;
-      const plan = group[idx];
-      if (included.has(plan)) {
-        pointers.set(color, idx + 1);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const i = idx(x, y);
+      if (visited[i]) continue;
+      const base = i * 4;
+      const a = buffer[base + 3];
+      if (a === 0) {
+        visited[i] = 1;
         continue;
       }
-      finalPlans.push(plan);
-      included.add(plan);
-      pointers.set(color, idx + 1);
-      madeProgress = true;
-      if (finalPlans.length >= target) return finalPlans.slice(0, target);
+      const r = buffer[base];
+      const g = buffer[base + 1];
+      const b = buffer[base + 2];
+      const color = rgbaToHex(r, g, b, a);
+      if (!color) {
+        visited[i] = 1;
+        continue;
+      }
+
+      const stack = [i];
+      visited[i] = 1;
+      const pixels = [];
+      let minX = x,
+        maxX = x,
+        minY = y,
+        maxY = y;
+
+      while (stack.length) {
+        const cur = stack.pop();
+        pixels.push(cur);
+        const cx = cur % width;
+        const cy = Math.floor(cur / width);
+        if (cx < minX) minX = cx;
+        if (cx > maxX) maxX = cx;
+        if (cy < minY) minY = cy;
+        if (cy > maxY) maxY = cy;
+
+        for (const [dx, dy] of dirs) {
+          const nx = cx + dx;
+          const ny = cy + dy;
+          if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
+          const ni = idx(nx, ny);
+          if (visited[ni]) continue;
+          const baseN = ni * 4;
+          const ar = buffer[baseN + 3];
+          if (ar === 0) {
+            visited[ni] = 1;
+            continue;
+          }
+          const nr = buffer[baseN];
+          const ng = buffer[baseN + 1];
+          const nb = buffer[baseN + 2];
+          const nc = rgbaToHex(nr, ng, nb, ar);
+          if (nc !== color) continue;
+          visited[ni] = 1;
+          stack.push(ni);
+        }
+      }
+
+      regions.push({
+        color,
+        pixels,
+        area: pixels.length,
+        bbox: { minX, minY, maxX, maxY },
+      });
     }
   }
-
-  for (const plan of plans) {
-    if (finalPlans.length >= target) break;
-    if (included.has(plan)) continue;
-    finalPlans.push(plan);
-    included.add(plan);
-  }
-
-  return finalPlans.slice(0, target);
+  return regions;
 }
 
-function writeLayer(svgSrc, cc, colorHex, index, layerEntries, clip) {
-  const dom = new JSDOM(svgSrc, { contentType: 'image/svg+xml' });
-  const doc = dom.window.document;
-  const svgEl = doc.querySelector('svg');
-  if (!svgEl) return null;
+function packRegionsIntoLayers(regions, layerCount = TARGET_LAYERS) {
+  if (regions.length === 0) return [];
+  // Group by color first so solid flags (e.g., Denmark) keep full coverage in one layer.
+  const byColor = new Map();
+  regions.forEach((r) => {
+    if (!byColor.has(r.color)) byColor.set(r.color, []);
+    byColor.get(r.color).push(r);
+  });
 
-  // Ensure viewBox exists
-  if (!svgEl.getAttribute('viewBox')) {
-    svgEl.setAttribute('viewBox', getViewBox(svgEl));
-  }
-  // Remove width/height so layers scale naturally
-  svgEl.removeAttribute('width');
-  svgEl.removeAttribute('height');
+  let buckets = Array.from(byColor.entries()).map(([color, list]) => {
+    const area = list.reduce((a, r) => a + r.area, 0);
+    return { regions: list, area, colors: new Set([color]) };
+  });
 
-  const vb = parseViewBox(svgEl.getAttribute('viewBox'));
-
-  // For each element: if its fill/stroke matches colorHex, keep; otherwise set to 'none'.
-  const els = walkElements(doc);
-  const targetMap = new Map();
-  for (const entry of layerEntries) {
-    targetMap.set(entry.index, entry);
-  }
-
-  for (let i = 0; i < els.length; i++) {
-    const el = els[i];
-    if (!(el instanceof dom.window.Element)) continue;
-    if (el.tagName.toLowerCase() === 'svg' || el.tagName.toLowerCase() === 'defs') continue;
-
-    const styleMapRaw = parseStyle(el.getAttribute('style'));
-    const styleMap = { ...styleMapRaw };
-    const target = targetMap.get(i);
-    const isTarget = Boolean(target);
-
-    if (isTarget) {
-      // Fill
-      if (target.keepFill) {
-        if (target.fillSource === 'style') {
-          styleMap.fill = colorHex;
-          el.setAttribute('fill', 'none');
-        } else {
-          el.setAttribute('fill', colorHex);
-          if (styleMap.hasOwnProperty('fill')) styleMap.fill = 'none';
-        }
-      } else {
-        el.setAttribute('fill', 'none');
-        if (styleMap.hasOwnProperty('fill')) styleMap.fill = 'none';
-      }
-
-      // Stroke
-      if (target.keepStroke) {
-        if (target.strokeSource === 'style') {
-          styleMap.stroke = colorHex;
-          el.setAttribute('stroke', 'none');
-        } else {
-          el.setAttribute('stroke', colorHex);
-          if (styleMap.hasOwnProperty('stroke')) styleMap.stroke = 'none';
-        }
-      } else {
-        el.setAttribute('stroke', 'none');
-        if (styleMap.hasOwnProperty('stroke')) styleMap.stroke = 'none';
-      }
-    } else {
-      // Hide non-target elements entirely.
-      el.setAttribute('fill', 'none');
-      el.setAttribute('stroke', 'none');
-      if (styleMap.hasOwnProperty('fill')) styleMap.fill = 'none';
-      if (styleMap.hasOwnProperty('stroke')) styleMap.stroke = 'none';
-    }
-
-    if (Object.keys(styleMap).length > 0) {
-      const styleString = serializeStyle(styleMap);
-      if (styleString) {
-        el.setAttribute('style', styleString);
-      } else {
-        el.removeAttribute('style');
-      }
-    } else if (el.hasAttribute('style')) {
-      el.removeAttribute('style');
-    }
+  // If too many colors, merge smallest buckets until within limit.
+  while (buckets.length > layerCount) {
+    buckets.sort((a, b) => a.area - b.area);
+    const first = buckets.shift();
+    const second = buckets.shift();
+    const merged = {
+      regions: [...first.regions, ...second.regions],
+      area: first.area + second.area,
+      colors: new Set([...first.colors, ...second.colors]),
+    };
+    buckets.push(merged);
   }
 
-  if (clip) {
-    const defs = ensureDefs(doc, svgEl);
-    const clipId = `clip-${cc}-${String(index).padStart(2, '0')}`;
-    const clipPath = doc.createElementNS(SVG_NS, 'clipPath');
-    clipPath.setAttribute('id', clipId);
-    clipPath.setAttribute('clipPathUnits', 'userSpaceOnUse');
+  buckets.sort((a, b) => b.area - a.area);
 
-    if (clip.type === 'rect') {
-      const rect = doc.createElementNS(SVG_NS, 'rect');
-      const width = Math.max(vb.width * (clip.x1 - clip.x0), 0);
-      const height = Math.max(vb.height * (clip.y1 - clip.y0), 0);
-      rect.setAttribute('x', vb.minX + vb.width * clip.x0);
-      rect.setAttribute('y', vb.minY + vb.height * clip.y0);
-      rect.setAttribute('width', width);
-      rect.setAttribute('height', height);
-      clipPath.appendChild(rect);
+  // If we have fewer buckets than layers, split the largest buckets to reach the target.
+  function splitBucket(bucket) {
+    if (!bucket || !bucket.regions || !bucket.regions.length) return null;
+    const regions = bucket.regions.slice().sort((a, b) => b.area - a.area);
+    if (regions.length === 1) {
+      const region = regions[0];
+      if (!region.pixels || region.pixels.length < 2) return null;
+      const half = Math.ceil(region.pixels.length / 2);
+      const firstPixels = region.pixels.slice(0, half);
+      const secondPixels = region.pixels.slice(half);
+      if (!secondPixels.length) return null;
+      const makeRegion = (pixels) => ({
+        color: region.color,
+        pixels,
+        area: pixels.length,
+        bbox: region.bbox,
+      });
+      const a = { regions: [makeRegion(firstPixels)], area: firstPixels.length, colors: new Set([region.color]) };
+      const b = { regions: [makeRegion(secondPixels)], area: secondPixels.length, colors: new Set([region.color]) };
+      return [a, b];
     }
-
-    defs.appendChild(clipPath);
-
-    const group = doc.createElementNS(SVG_NS, 'g');
-    group.setAttribute('clip-path', `url(#${clipId})`);
-    const toMove = [];
-    svgEl.childNodes.forEach((node) => {
-      if (node.nodeType === 1 && node.tagName && node.tagName.toLowerCase() === 'defs') return;
-      toMove.push(node);
+    const a = { regions: [], area: 0, colors: new Set() };
+    const b = { regions: [], area: 0, colors: new Set() };
+    regions.forEach((reg) => {
+      const target = a.area <= b.area ? a : b;
+      target.regions.push(reg);
+      target.area += reg.area;
+      target.colors.add(reg.color);
     });
-    toMove.forEach((node) => group.appendChild(node));
-    svgEl.appendChild(group);
+    return [a, b];
   }
 
-  const outSvg = svgEl.outerHTML;
-  const fname = `${cc}__${String(index).padStart(2, '0')}_${colorHex.replace('#', '')}.svg`;
-  const dir = path.join(OUT_DIR, cc);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, fname), outSvg, 'utf8');
-  dom.window.close();
+  while (buckets.length < layerCount) {
+    buckets.sort((a, b) => b.area - a.area);
+    const candidate = buckets.find((b) => b.area > 1 && b.regions && b.regions.length);
+    if (!candidate) break;
+    const idx = buckets.indexOf(candidate);
+    const parts = splitBucket(candidate);
+    if (!parts || parts.length !== 2 || !parts[0] || !parts[1] || !parts[0].area || !parts[1].area) {
+      break;
+    }
+    buckets.splice(idx, 1);
+    buckets.push(parts[0], parts[1]);
+  }
+
+  function bucketScore(bucket) {
+    const c = dominantColor(bucket);
+    const b = brightnessScore(c);
+    if (!Number.isFinite(b)) return -1;
+    const penalty = b < 0.12 ? 1 : 0; // Push near-black layers to the end.
+    return b - penalty;
+  }
+
+  // Reveal order: brighter layers first, darker (incl. black) last. Tie-break by area.
+  buckets.sort((a, b) => {
+    const diff = bucketScore(b) - bucketScore(a);
+    if (diff !== 0) return diff;
+    return a.area - b.area;
+  });
+  return buckets.slice(0, layerCount);
+}
+
+function writeLayerPng(cc, idx, bucket, width, height, srcBuffer, outDir) {
+  const png = new PNG({ width, height, colorType: 6 });
+  png.data.fill(0);
+  const data = png.data;
+  bucket.regions.forEach((region) => {
+    region.pixels.forEach((pIdx) => {
+      const srcBase = pIdx * 4;
+      const dstBase = srcBase;
+      data[dstBase] = srcBuffer[srcBase];
+      data[dstBase + 1] = srcBuffer[srcBase + 1];
+      data[dstBase + 2] = srcBuffer[srcBase + 2];
+      data[dstBase + 3] = srcBuffer[srcBase + 3];
+    });
+  });
+  const fname = `${cc}__${String(idx).padStart(2, '0')}.png`;
+  const filePath = path.join(outDir, fname);
+  fs.writeFileSync(filePath, PNG.sync.write(png));
   return fname;
 }
 
+function dominantColor(bucket) {
+  // Pick the color with largest area in this bucket
+  const areaByColor = new Map();
+  bucket.regions.forEach((r) => {
+    areaByColor.set(r.color, (areaByColor.get(r.color) || 0) + r.area);
+  });
+  let best = null;
+  let bestArea = -1;
+  for (const [c, a] of areaByColor.entries()) {
+    if (a > bestArea) {
+      bestArea = a;
+      best = c;
+    }
+  }
+  return best || '#ffffff';
+}
+
 function main() {
+  if (!fs.existsSync(FLAGS_DIR)) {
+    console.error('Could not find flag-icons SVGs. Did npm install succeed?');
+    process.exit(1);
+  }
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+
   const files = glob.sync(path.join(FLAGS_DIR, '*.svg')).sort();
   const manifest = {};
   console.log(`Processing ${files.length} flags from ${FLAGS_DIR}`);
 
-  for (const file of files) {
-    const cc = path.basename(file, '.svg'); // e.g., us, fr, de
+  files.forEach((file) => {
+    const cc = path.basename(file, '.svg');
     if (SKIP_CODES.has(cc)) {
       const staleDir = path.join(OUT_DIR, cc);
       if (fs.existsSync(staleDir)) {
         fs.rmSync(staleDir, { recursive: true, force: true });
       }
-      continue;
+      return;
     }
     const svgSrc = fs.readFileSync(file, 'utf8');
+    let palette = extractPalette(svgSrc);
     const manualLocation = MANUAL_LOCATIONS.get(cc);
     const resolvedLocation = locationByIso.get(cc) || manualLocation || null;
-    const dom = new JSDOM(svgSrc, { contentType: 'image/svg+xml' });
-    const doc = dom.window.document;
-    const svgEl = doc.querySelector('svg');
-    if (!svgEl) continue;
 
-    const colorMeta = collectColorMeta(doc);
-    const colors = Array.from(colorMeta.keys());
+    // Render and segment
+    const { width, height, data } = renderSvg(svgSrc);
+    palette = simplifyPalette(palette, data);
+    if (!palette.length) {
+      console.warn(`Skipping ${cc}: could not derive a palette.`);
+      return;
+    }
+    const quantized = quantizeBufferToPalette(data, palette);
+    extendEdgeCoverage(quantized, width, height);
+    const regions = segmentRegions(quantized, width, height);
+    if (!regions.length) {
+      return;
+    }
 
-    // Clear existing directory for this flag to avoid stale layers.
+    // Pack into layers
+    const buckets = packRegionsIntoLayers(regions, TARGET_LAYERS);
+
+    // Clear dir and write
     const flagOutDir = path.join(OUT_DIR, cc);
     if (fs.existsSync(flagOutDir)) {
       fs.rmSync(flagOutDir, { recursive: true, force: true });
     }
     fs.mkdirSync(flagOutDir, { recursive: true });
+
+    // Save full original SVG
     const fullFileName = `${cc}__full.svg`;
     fs.writeFileSync(path.join(flagOutDir, fullFileName), svgSrc, 'utf8');
-
-    if (colors.length === 0) {
-      // Edge case: no explicit colors; still copy as single layer
-      manifest[cc] = {
-        colors: [],
-        files: [fullFileName],
-        z: [],
-        full: fullFileName,
-        location: resolvedLocation,
-      };
-      continue;
-    }
-
-    // Optional: put white/black last so the more distinctive colors show earlier.
-    const colorReveal = orderColorsForReveal(colors);
-
-    const layerPlans = [];
-
-    colorReveal.forEach((hex) => {
-      const entriesMap = colorMeta.get(hex);
-      if (!entriesMap) return;
-      const entries = Array.from(entriesMap.values()).sort((a, b) => a.index - b.index);
-      if (entries.length === 0) return;
-
-      const hexBrightness = brightnessScore(hex);
-
-      const groups = [];
-      let currentGroup = [entries[0]];
-      for (let i = 1; i < entries.length; i++) {
-        const prev = currentGroup[currentGroup.length - 1];
-        const next = entries[i];
-        if (next.index - prev.index <= 1) {
-          currentGroup.push(next);
-        } else {
-          groups.push(currentGroup);
-          currentGroup = [next];
-        }
-      }
-      if (currentGroup.length) groups.push(currentGroup);
-
-      groups.forEach((group) => {
-        const maxIndex = group.reduce((acc, item) => Math.max(acc, item.index), group[0].index);
-        const anyFill = group.some(item => item.keepFill);
-        const anyStroke = group.some(item => item.keepStroke);
-        const anyFillAndStroke = group.some(item => item.keepFill && item.keepStroke);
-        let offset = 0;
-        if (anyFillAndStroke) offset = 2;
-        else if (anyStroke && !anyFill) offset = 1;
-        const usesDefs = group.some(entry => entry.inDefs);
-        layerPlans.push({
-          color: hex,
-          entries: group,
-          clip: null,
-          zBase: maxIndex * 10 + offset,
-          splitOffset: 0,
-          splitGeneration: 0,
-          forceTop: usesDefs,
-          brightness: hexBrightness,
-        });
-      });
-    });
-
-    let processedPlans = expandLargePlans(layerPlans);
-
-    if (processedPlans.length > 0 && processedPlans.length < TARGET_LAYERS) {
-      const targetLayers = TARGET_LAYERS;
-      let cursor = 0;
-      let guard = 0;
-
-      while (processedPlans.length < targetLayers && processedPlans.length > 0 && guard < 60) {
-        const index = cursor % processedPlans.length;
-        const plan = processedPlans[index];
-        const remaining = targetLayers - layerPlans.length;
-        const pieceCount = Math.min(remaining + 1, 3);
-        if (pieceCount <= 1) {
-          cursor++;
-          guard++;
-          continue;
-        }
-        const pieces = splitIntoPieces(plan, pieceCount);
-        if (pieces && pieces.length > 1) {
-          processedPlans.splice(index, 1, ...pieces);
-        }
-        cursor++;
-        guard++;
-      }
-    }
-
-    layerPlans.splice(0, layerPlans.length, ...processedPlans);
-
-    if (layerPlans.length > TARGET_LAYERS) {
-      const selected = selectFinalPlans(layerPlans, TARGET_LAYERS, colorReveal);
-      layerPlans.splice(0, layerPlans.length, ...selected);
-    }
-
-    // Order the plans by their rendering depth so stacking matches the flattened flag.
-    layerPlans.sort((a, b) => {
-      const brightnessDiff = (b.brightness ?? 0) - (a.brightness ?? 0);
-      if (brightnessDiff !== 0) return brightnessDiff;
-      const DETAIL_BOOST = 1_000_000;
-      const depth = (plan) => {
-        const base = plan.zBase ?? 0;
-        const offset = plan.splitOffset ?? 0;
-        return base * 1000 + offset + (plan.forceTop ? DETAIL_BOOST : 0);
-      };
-      return depth(a) - depth(b);
-    });
 
     const filesOut = [];
     const colorsOut = [];
     const zStack = [];
-    const baseUsage = new Map();
-    let layerSeq = 0;
 
-    layerPlans.forEach((plan) => {
-      const fname = writeLayer(svgSrc, cc, plan.color, layerSeq, plan.entries, plan.clip);
-      if (!fname) return;
+    buckets.forEach((bucket, idx) => {
+      const fname = writeLayerPng(cc, idx, bucket, width, height, quantized, flagOutDir);
       filesOut.push(fname);
-      colorsOut.push(plan.color);
-      const base = plan.zBase;
-      const offset = baseUsage.get(base) || 0;
-      baseUsage.set(base, offset + 1);
-      zStack.push(base + offset);
-      layerSeq++;
+      colorsOut.push(dominantColor(bucket));
+      zStack.push(idx);
     });
 
     manifest[cc] = {
@@ -647,8 +584,7 @@ function main() {
       full: fullFileName,
       location: resolvedLocation,
     };
-    dom.window.close();
-  }
+  });
 
   fs.writeFileSync(path.join(OUT_DIR, 'manifest.json'), JSON.stringify(manifest, null, 2));
   console.log('Done. Wrote output/manifest.json');

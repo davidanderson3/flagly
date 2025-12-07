@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:layer-diff": "node tools/check-layer-diff.mjs",
     "build:hosting": "node tools/extract-flag-layers.js && rm -rf public/output && cp -R output public/output"
   },
   "keywords": [],
@@ -11,12 +12,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "color": "^5.0.2",
     "express": "^5.1.0",
     "fast-xml-parser": "^5.3.0",
     "flag-icons": "^7.5.0",
     "glob": "^11.0.3",
     "jsdom": "^27.0.1",
+    "pngjs": "^7.0.0",
     "world-countries": "^5.1.0"
   }
 }

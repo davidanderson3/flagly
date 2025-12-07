@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-td" viewBox="0 0 640 480"><defs><clipPath id="clip-td-03" clipPathUnits="userSpaceOnUse"><rect x="426.66666666666663" y="0" width="213.33333333333337" height="480"/></clipPath></defs><g clip-path="url(#clip-td-03)">
-  <g fill-rule="evenodd" fill="none" stroke="none">
-    <path fill="#002664" d="M0 0h214v480H0z" stroke="none"/>
-    <path fill="none" d="M426 0h214v480H426z" stroke="none"/>
-    <path fill="none" d="M214 0h212v480H214z" stroke="none"/>
-  </g>
-</g></svg>

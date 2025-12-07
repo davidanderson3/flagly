@@ -1,28 +1,28 @@
 {
   "ad": {
     "colors": [
+      "#ffffff",
       "#fedf00",
       "#c7b37f",
-      "#d52b1e",
       "#d0103a",
       "#703d29",
       "#0018a8"
     ],
     "files": [
-      "ad__00_fedf00.svg",
-      "ad__01_c7b37f.svg",
-      "ad__02_d52b1e.svg",
-      "ad__03_d0103a.svg",
-      "ad__04_703d29.svg",
-      "ad__05_0018a8.svg"
+      "ad__00.png",
+      "ad__01.png",
+      "ad__02.png",
+      "ad__03.png",
+      "ad__04.png",
+      "ad__05.png"
     ],
     "z": [
-      20,
-      40,
-      1110,
-      10,
-      1060,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ad__full.svg",
     "location": {
@@ -32,28 +32,28 @@
   },
   "ae": {
     "colors": [
+      "#ffffff",
+      "#ff0000",
       "#ff0000",
       "#00732f",
       "#00732f",
-      "#00732f",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ae__00_ff0000.svg",
-      "ae__01_00732f.svg",
-      "ae__02_00732f.svg",
-      "ae__03_00732f.svg",
-      "ae__04_000001.svg",
-      "ae__05_ffffff.svg"
+      "ae__00.png",
+      "ae__01.png",
+      "ae__02.png",
+      "ae__03.png",
+      "ae__04.png",
+      "ae__05.png"
     ],
     "z": [
-      40,
-      10,
-      11,
-      12,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ae__full.svg",
     "location": {
@@ -63,28 +63,28 @@
   },
   "af": {
     "colors": [
+      "#ffffff",
       "#009900",
       "#bd6b00",
       "#bf0000",
-      "#bf0000",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "af__00_009900.svg",
-      "af__01_bd6b00.svg",
-      "af__02_bf0000.svg",
-      "af__03_bf0000.svg",
-      "af__04_000001.svg",
-      "af__05_ffffff.svg"
+      "af__00.png",
+      "af__01.png",
+      "af__02.png",
+      "af__03.png",
+      "af__04.png",
+      "af__05.png"
     ],
     "z": [
-      30,
-      220,
-      40,
-      170,
-      20,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "af__full.svg",
     "location": {
@@ -94,28 +94,28 @@
   },
   "ag": {
     "colors": [
+      "#ffffff",
       "#fcd116",
       "#0072c6",
       "#ce1126",
-      "#000001",
-      "#000001",
-      "#ffffff"
+      "#ce1126",
+      "#000001"
     ],
     "files": [
-      "ag__00_fcd116.svg",
-      "ag__01_0072c6.svg",
-      "ag__02_ce1126.svg",
-      "ag__03_000001.svg",
-      "ag__04_000001.svg",
-      "ag__05_ffffff.svg"
+      "ag__00.png",
+      "ag__01.png",
+      "ag__02.png",
+      "ag__03.png",
+      "ag__04.png",
+      "ag__05.png"
     ],
     "z": [
-      90,
-      70,
-      80,
-      60,
-      61,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ag__full.svg",
     "location": {
@@ -125,28 +125,28 @@
   },
   "ai": {
     "colors": [
-      "#fdc301",
+      "#ffffff",
       "#99ccff",
       "#ff9900",
       "#c8102e",
       "#012169",
-      "#ffffff"
+      "#012169"
     ],
     "files": [
-      "ai__00_fdc301.svg",
-      "ai__01_99ccff.svg",
-      "ai__02_ff9900.svg",
-      "ai__03_c8102e.svg",
-      "ai__04_012169.svg",
-      "ai__05_ffffff.svg"
+      "ai__00.png",
+      "ai__01.png",
+      "ai__02.png",
+      "ai__03.png",
+      "ai__04.png",
+      "ai__05.png"
     ],
     "z": [
-      220,
-      210,
-      20,
-      71,
-      50,
-      61
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ai__full.svg",
     "location": {
@@ -164,20 +164,20 @@
       "#000001"
     ],
     "files": [
-      "al__00_ff0000.svg",
-      "al__01_ff0000.svg",
-      "al__02_ff0000.svg",
-      "al__03_ff0000.svg",
-      "al__04_ff0000.svg",
-      "al__05_000001.svg"
+      "al__00.png",
+      "al__01.png",
+      "al__02.png",
+      "al__03.png",
+      "al__04.png",
+      "al__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "al__full.svg",
     "location": {
@@ -188,27 +188,27 @@
   "am": {
     "colors": [
       "#f2a800",
+      "#f2a800",
       "#d90012",
       "#d90012",
-      "#d90012",
-      "#d90012",
+      "#0033a0",
       "#0033a0"
     ],
     "files": [
-      "am__00_f2a800.svg",
-      "am__01_d90012.svg",
-      "am__02_d90012.svg",
-      "am__03_d90012.svg",
-      "am__04_d90012.svg",
-      "am__05_0033a0.svg"
+      "am__00.png",
+      "am__01.png",
+      "am__02.png",
+      "am__03.png",
+      "am__04.png",
+      "am__05.png"
     ],
     "z": [
-      30,
-      10,
-      11,
-      12,
-      13,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "am__full.svg",
     "location": {
@@ -218,28 +218,28 @@
   },
   "ao": {
     "colors": [
-      "#ffee00",
       "#ffec00",
       "#ff0000",
+      "#ff0000",
+      "#ff0000",
       "#000001",
-      "#000001",
-      "#000000"
+      "#000001"
     ],
     "files": [
-      "ao__00_ffee00.svg",
-      "ao__01_ffec00.svg",
-      "ao__02_ff0000.svg",
-      "ao__03_000001.svg",
-      "ao__04_000001.svg",
-      "ao__05_000000.svg"
+      "ao__00.png",
+      "ao__01.png",
+      "ao__02.png",
+      "ao__03.png",
+      "ao__04.png",
+      "ao__05.png"
     ],
     "z": [
-      60,
-      50,
-      20,
-      30,
-      70,
-      101
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ao__full.svg",
     "location": {
@@ -249,28 +249,28 @@
   },
   "aq": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#3a7dce",
       "#3a7dce",
       "#3a7dce",
-      "#3a7dce",
-      "#3a7dce",
-      "#ffffff"
+      "#3a7dce"
     ],
     "files": [
-      "aq__00_3a7dce.svg",
-      "aq__01_3a7dce.svg",
-      "aq__02_3a7dce.svg",
-      "aq__03_3a7dce.svg",
-      "aq__04_3a7dce.svg",
-      "aq__05_ffffff.svg"
+      "aq__00.png",
+      "aq__01.png",
+      "aq__02.png",
+      "aq__03.png",
+      "aq__04.png",
+      "aq__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "aq__full.svg",
     "location": {
@@ -280,28 +280,28 @@
   },
   "ar": {
     "colors": [
-      "#f6b40e",
+      "#ffffff",
       "#f6b40e",
       "#74acdf",
-      "#843511",
-      "#85340a",
-      "#ffffff"
+      "#74acdf",
+      "#74acdf",
+      "#85340a"
     ],
     "files": [
-      "ar__00_f6b40e.svg",
-      "ar__01_f6b40e.svg",
-      "ar__02_74acdf.svg",
-      "ar__03_843511.svg",
-      "ar__04_85340a.svg",
-      "ar__05_ffffff.svg"
+      "ar__00.png",
+      "ar__01.png",
+      "ar__02.png",
+      "ar__03.png",
+      "ar__04.png",
+      "ar__05.png"
     ],
     "z": [
-      40,
-      150,
-      10,
-      160,
-      260,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ar__full.svg",
     "location": {
@@ -311,28 +311,28 @@
   },
   "arab": {
     "colors": [
-      "#f7c608",
+      "#ffffff",
       "#f7c608",
       "#006233",
       "#006233",
-      "#000000",
-      "#ffffff"
+      "#006233",
+      "#000000"
     ],
     "files": [
-      "arab__00_f7c608.svg",
-      "arab__01_f7c608.svg",
-      "arab__02_006233.svg",
-      "arab__03_006233.svg",
-      "arab__04_000000.svg",
-      "arab__05_ffffff.svg"
+      "arab__00.png",
+      "arab__01.png",
+      "arab__02.png",
+      "arab__03.png",
+      "arab__04.png",
+      "arab__05.png"
     ],
     "z": [
-      610,
-      630,
-      10,
-      590,
-      161,
-      160
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "arab__full.svg",
     "location": {
@@ -342,28 +342,28 @@
   },
   "as": {
     "colors": [
+      "#ffffff",
       "#ffc221",
-      "#aa5323",
+      "#999999",
       "#bd1021",
-      "#7b3c20",
       "#5a3719",
       "#000066"
     ],
     "files": [
-      "as__00_ffc221.svg",
-      "as__01_aa5323.svg",
-      "as__02_bd1021.svg",
-      "as__03_7b3c20.svg",
-      "as__04_5a3719.svg",
-      "as__05_000066.svg"
+      "as__00.png",
+      "as__01.png",
+      "as__02.png",
+      "as__03.png",
+      "as__04.png",
+      "as__05.png"
     ],
     "z": [
-      210,
-      530,
-      20,
-      370,
-      390,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "as__full.svg",
     "location": {
@@ -371,61 +371,30 @@
       "lon": -170
     }
   },
-  "asean": {
-    "colors": [
-      "#f9e300",
-      "#ed2939",
-      "#0039a6",
-      "#0039a6",
-      "#0039a6",
-      "#ffffff"
-    ],
-    "files": [
-      "asean__00_f9e300.svg",
-      "asean__01_ed2939.svg",
-      "asean__02_0039a6.svg",
-      "asean__03_0039a6.svg",
-      "asean__04_0039a6.svg",
-      "asean__05_ffffff.svg"
-    ],
-    "z": [
-      50,
-      30,
-      10,
-      11,
-      12,
-      20
-    ],
-    "full": "asean__full.svg",
-    "location": {
-      "lat": 12.5,
-      "lon": 103
-    }
-  },
   "at": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#c8102e",
       "#c8102e",
       "#c8102e",
-      "#c8102e",
-      "#c8102e",
-      "#ffffff"
+      "#c8102e"
     ],
     "files": [
-      "at__00_c8102e.svg",
-      "at__01_c8102e.svg",
-      "at__02_c8102e.svg",
-      "at__03_c8102e.svg",
-      "at__04_c8102e.svg",
-      "at__05_ffffff.svg"
+      "at__00.png",
+      "at__01.png",
+      "at__02.png",
+      "at__03.png",
+      "at__04.png",
+      "at__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "at__full.svg",
     "location": {
@@ -435,28 +404,28 @@
   },
   "au": {
     "colors": [
-      "#ff0000",
+      "#ffffff",
       "#ff0000",
       "#00008b",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#00008b",
+      "#00008b",
+      "#00008b"
     ],
     "files": [
-      "au__00_ff0000.svg",
-      "au__01_ff0000.svg",
-      "au__02_00008b.svg",
-      "au__03_ffffff.svg",
-      "au__04_ffffff.svg",
-      "au__05_ffffff.svg"
+      "au__00.png",
+      "au__01.png",
+      "au__02.png",
+      "au__03.png",
+      "au__04.png",
+      "au__05.png"
     ],
     "z": [
-      30,
-      50,
-      10,
-      20,
-      40,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "au__full.svg",
     "location": {
@@ -467,27 +436,27 @@
   "aw": {
     "colors": [
       "#ffff00",
-      "#ccccff",
+      "#ccffff",
+      "#ffcccc",
       "#99cccc",
-      "#66cccc",
       "#3399cc",
-      "#cc6666"
+      "#cc0000"
     ],
     "files": [
-      "aw__00_ffff00.svg",
-      "aw__01_ccccff.svg",
-      "aw__02_99cccc.svg",
-      "aw__03_66cccc.svg",
-      "aw__04_3399cc.svg",
-      "aw__05_cc6666.svg"
+      "aw__00.png",
+      "aw__01.png",
+      "aw__02.png",
+      "aw__03.png",
+      "aw__04.png",
+      "aw__05.png"
     ],
     "z": [
-      60,
-      80,
-      70,
-      90,
-      50,
-      100
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "aw__full.svg",
     "location": {
@@ -505,20 +474,20 @@
       "#0053a5"
     ],
     "files": [
-      "ax__00_ffce00.svg",
-      "ax__01_d21034.svg",
-      "ax__02_0053a5.svg",
-      "ax__03_0053a5.svg",
-      "ax__04_0053a5.svg",
-      "ax__05_0053a5.svg"
+      "ax__00.png",
+      "ax__01.png",
+      "ax__02.png",
+      "ax__03.png",
+      "ax__04.png",
+      "ax__05.png"
     ],
     "z": [
-      60,
-      90,
-      50,
-      51,
-      52,
-      53
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ax__full.svg",
     "location": {
@@ -528,28 +497,28 @@
   },
   "az": {
     "colors": [
+      "#ffffff",
+      "#00b9e4",
       "#00b9e4",
       "#3f9c35",
-      "#ed2939",
-      "#ed2939",
-      "#ffffff",
-      "#ffffff"
+      "#3f9c35",
+      "#ed2939"
     ],
     "files": [
-      "az__00_00b9e4.svg",
-      "az__01_3f9c35.svg",
-      "az__02_ed2939.svg",
-      "az__03_ed2939.svg",
-      "az__04_ffffff.svg",
-      "az__05_ffffff.svg"
+      "az__00.png",
+      "az__01.png",
+      "az__02.png",
+      "az__03.png",
+      "az__04.png",
+      "az__05.png"
     ],
     "z": [
-      30,
-      10,
-      20,
-      50,
-      40,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "az__full.svg",
     "location": {
@@ -559,28 +528,28 @@
   },
   "ba": {
     "colors": [
+      "#ffffff",
+      "#ffcc00",
       "#ffcc00",
       "#000099",
       "#000099",
-      "#000099",
-      "#000099",
-      "#ffffff"
+      "#000099"
     ],
     "files": [
-      "ba__00_ffcc00.svg",
-      "ba__01_000099.svg",
-      "ba__02_000099.svg",
-      "ba__03_000099.svg",
-      "ba__04_000099.svg",
-      "ba__05_ffffff.svg"
+      "ba__00.png",
+      "ba__01.png",
+      "ba__02.png",
+      "ba__03.png",
+      "ba__04.png",
+      "ba__05.png"
     ],
     "z": [
-      60,
-      50,
-      51,
-      52,
-      53,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ba__full.svg",
     "location": {
@@ -598,20 +567,20 @@
       "#000001"
     ],
     "files": [
-      "bb__00_ffc726.svg",
-      "bb__01_00267f.svg",
-      "bb__02_00267f.svg",
-      "bb__03_00267f.svg",
-      "bb__04_00267f.svg",
-      "bb__05_000001.svg"
+      "bb__00.png",
+      "bb__01.png",
+      "bb__02.png",
+      "bb__03.png",
+      "bb__04.png",
+      "bb__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bb__full.svg",
     "location": {
@@ -622,27 +591,27 @@
   "bd": {
     "colors": [
       "#f42a41",
-      "#006a4e",
+      "#f42a41",
       "#006a4e",
       "#006a4e",
       "#006a4e",
       "#006a4e"
     ],
     "files": [
-      "bd__00_f42a41.svg",
-      "bd__01_006a4e.svg",
-      "bd__02_006a4e.svg",
-      "bd__03_006a4e.svg",
-      "bd__04_006a4e.svg",
-      "bd__05_006a4e.svg"
+      "bd__00.png",
+      "bd__01.png",
+      "bd__02.png",
+      "bd__03.png",
+      "bd__04.png",
+      "bd__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      14
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bd__full.svg",
     "location": {
@@ -653,27 +622,27 @@
   "be": {
     "colors": [
       "#ffd90c",
+      "#ffd90c",
       "#f31830",
-      "#000001",
-      "#000001",
+      "#f31830",
       "#000001",
       "#000001"
     ],
     "files": [
-      "be__00_ffd90c.svg",
-      "be__01_f31830.svg",
-      "be__02_000001.svg",
-      "be__03_000001.svg",
-      "be__04_000001.svg",
-      "be__05_000001.svg"
+      "be__00.png",
+      "be__01.png",
+      "be__02.png",
+      "be__03.png",
+      "be__04.png",
+      "be__05.png"
     ],
     "z": [
-      30,
-      40,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "be__full.svg",
     "location": {
@@ -685,26 +654,26 @@
     "colors": [
       "#fff300",
       "#35a100",
-      "#de0000",
+      "#35a100",
       "#de0000",
       "#de0000",
       "#de0000"
     ],
     "files": [
-      "bf__00_fff300.svg",
-      "bf__01_35a100.svg",
-      "bf__02_de0000.svg",
-      "bf__03_de0000.svg",
-      "bf__04_de0000.svg",
-      "bf__05_de0000.svg"
+      "bf__00.png",
+      "bf__01.png",
+      "bf__02.png",
+      "bf__03.png",
+      "bf__04.png",
+      "bf__05.png"
     ],
     "z": [
-      40,
-      30,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bf__full.svg",
     "location": {
@@ -714,28 +683,28 @@
   },
   "bg": {
     "colors": [
-      "#00966e",
-      "#00966e",
+      "#ffffff",
+      "#ffffff",
       "#00966e",
       "#00966e",
       "#d62612",
-      "#ffffff"
+      "#d62612"
     ],
     "files": [
-      "bg__00_00966e.svg",
-      "bg__01_00966e.svg",
-      "bg__02_00966e.svg",
-      "bg__03_00966e.svg",
-      "bg__04_d62612.svg",
-      "bg__05_ffffff.svg"
+      "bg__00.png",
+      "bg__01.png",
+      "bg__02.png",
+      "bg__03.png",
+      "bg__04.png",
+      "bg__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bg__full.svg",
     "location": {
@@ -745,28 +714,28 @@
   },
   "bh": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#ce1126",
       "#ce1126",
       "#ce1126",
-      "#ce1126",
-      "#ce1126",
-      "#ffffff"
+      "#ce1126"
     ],
     "files": [
-      "bh__00_ce1126.svg",
-      "bh__01_ce1126.svg",
-      "bh__02_ce1126.svg",
-      "bh__03_ce1126.svg",
-      "bh__04_ce1126.svg",
-      "bh__05_ffffff.svg"
+      "bh__00.png",
+      "bh__01.png",
+      "bh__02.png",
+      "bh__03.png",
+      "bh__04.png",
+      "bh__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bh__full.svg",
     "location": {
@@ -776,28 +745,28 @@
   },
   "bi": {
     "colors": [
-      "#18b637",
+      "#ffffff",
+      "#ffffff",
       "#18b637",
       "#18b637",
       "#cf0921",
-      "#cf0921",
-      "#ffffff"
+      "#cf0921"
     ],
     "files": [
-      "bi__00_18b637.svg",
-      "bi__01_18b637.svg",
-      "bi__02_18b637.svg",
-      "bi__03_cf0921.svg",
-      "bi__04_cf0921.svg",
-      "bi__05_ffffff.svg"
+      "bi__00.png",
+      "bi__01.png",
+      "bi__02.png",
+      "bi__03.png",
+      "bi__04.png",
+      "bi__05.png"
     ],
     "z": [
-      50,
-      51,
-      101,
-      60,
-      100,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bi__full.svg",
     "location": {
@@ -808,27 +777,27 @@
   "bj": {
     "colors": [
       "#ffd600",
+      "#ffd600",
       "#319400",
-      "#808080",
-      "#808080",
-      "#808080",
+      "#319400",
+      "#de2110",
       "#de2110"
     ],
     "files": [
-      "bj__00_ffd600.svg",
-      "bj__01_319400.svg",
-      "bj__02_808080.svg",
-      "bj__03_808080.svg",
-      "bj__04_808080.svg",
-      "bj__05_de2110.svg"
+      "bj__00.png",
+      "bj__01.png",
+      "bj__02.png",
+      "bj__03.png",
+      "bj__04.png",
+      "bj__05.png"
     ],
     "z": [
-      70,
-      60,
-      30,
-      31,
-      32,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bj__full.svg",
     "location": {
@@ -838,28 +807,28 @@
   },
   "bl": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "bl__00_e1000f.svg",
-      "bl__01_000091.svg",
-      "bl__02_000091.svg",
-      "bl__03_000091.svg",
-      "bl__04_000091.svg",
-      "bl__05_ffffff.svg"
+      "bl__00.png",
+      "bl__01.png",
+      "bl__02.png",
+      "bl__03.png",
+      "bl__04.png",
+      "bl__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bl__full.svg",
     "location": {
@@ -869,28 +838,28 @@
   },
   "bm": {
     "colors": [
+      "#ffffff",
       "#64b4d1",
       "#2f8f22",
-      "#d40000",
       "#cf142b",
-      "#784421",
-      "#00247d"
+      "#00247d",
+      "#000000"
     ],
     "files": [
-      "bm__00_64b4d1.svg",
-      "bm__01_2f8f22.svg",
-      "bm__02_d40000.svg",
-      "bm__03_cf142b.svg",
-      "bm__04_784421.svg",
-      "bm__05_00247d.svg"
+      "bm__00.png",
+      "bm__01.png",
+      "bm__02.png",
+      "bm__03.png",
+      "bm__04.png",
+      "bm__05.png"
     ],
     "z": [
-      60,
-      30,
-      50,
-      10,
-      110,
-      531
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bm__full.svg",
     "location": {
@@ -900,28 +869,28 @@
   },
   "bn": {
     "colors": [
+      "#ffffff",
       "#f7e017",
       "#f7e017",
       "#f7e017",
       "#cf1126",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "bn__00_f7e017.svg",
-      "bn__01_f7e017.svg",
-      "bn__02_f7e017.svg",
-      "bn__03_cf1126.svg",
-      "bn__04_000001.svg",
-      "bn__05_ffffff.svg"
+      "bn__00.png",
+      "bn__01.png",
+      "bn__02.png",
+      "bn__03.png",
+      "bn__04.png",
+      "bn__05.png"
     ],
     "z": [
-      10,
-      11,
-      250,
-      40,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bn__full.svg",
     "location": {
@@ -933,26 +902,26 @@
     "colors": [
       "#e7e7e7",
       "#ffe000",
-      "#00e519",
+      "#00a6de",
       "#d52b1e",
-      "#a05a2c",
-      "#007934"
+      "#007934",
+      "#452c25"
     ],
     "files": [
-      "bo__00_e7e7e7.svg",
-      "bo__01_ffe000.svg",
-      "bo__02_00e519.svg",
-      "bo__03_d52b1e.svg",
-      "bo__04_a05a2c.svg",
-      "bo__05_007934.svg"
+      "bo__00.png",
+      "bo__01.png",
+      "bo__02.png",
+      "bo__03.png",
+      "bo__04.png",
+      "bo__05.png"
     ],
     "z": [
-      5020,
-      810,
-      160,
-      830,
-      40,
-      2320
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bo__full.svg",
     "location": {
@@ -962,28 +931,28 @@
   },
   "bq": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ae1c28",
       "#ae1c28",
       "#21468b",
-      "#21468b",
-      "#21468b",
-      "#21468b",
-      "#ffffff"
+      "#21468b"
     ],
     "files": [
-      "bq__00_ae1c28.svg",
-      "bq__01_21468b.svg",
-      "bq__02_21468b.svg",
-      "bq__03_21468b.svg",
-      "bq__04_21468b.svg",
-      "bq__05_ffffff.svg"
+      "bq__00.png",
+      "bq__01.png",
+      "bq__02.png",
+      "bq__03.png",
+      "bq__04.png",
+      "bq__05.png"
     ],
     "z": [
-      30,
-      10,
-      11,
-      12,
-      13,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bq__full.svg",
     "location": {
@@ -994,27 +963,27 @@
   "br": {
     "colors": [
       "#ffffef",
-      "#f7ffff",
       "#f8e509",
-      "#309e3a",
+      "#229e45",
+      "#229e45",
       "#229e45",
       "#2b49a3"
     ],
     "files": [
-      "br__00_ffffef.svg",
-      "br__01_f7ffff.svg",
-      "br__02_f8e509.svg",
-      "br__03_309e3a.svg",
-      "br__04_229e45.svg",
-      "br__05_2b49a3.svg"
+      "br__00.png",
+      "br__01.png",
+      "br__02.png",
+      "br__03.png",
+      "br__04.png",
+      "br__05.png"
     ],
     "z": [
-      70,
-      120,
-      30,
-      90,
-      20,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "br__full.svg",
     "location": {
@@ -1025,27 +994,27 @@
   "bs": {
     "colors": [
       "#ffe900",
-      "#ffe900",
-      "#ffe900",
+      "#08ced6",
+      "#08ced6",
       "#08ced6",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "bs__00_ffe900.svg",
-      "bs__01_ffe900.svg",
-      "bs__02_ffe900.svg",
-      "bs__03_08ced6.svg",
-      "bs__04_000001.svg",
-      "bs__05_ffffff.svg"
+      "bs__00.png",
+      "bs__01.png",
+      "bs__02.png",
+      "bs__03.png",
+      "bs__04.png",
+      "bs__05.png"
     ],
     "z": [
-      60,
-      61,
-      62,
-      70,
-      80,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bs__full.svg",
     "location": {
@@ -1055,28 +1024,28 @@
   },
   "bt": {
     "colors": [
+      "#ffffff",
+      "#ffd520",
+      "#ffd520",
       "#ffd520",
       "#ff4e12",
-      "#000000",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "bt__00_ffd520.svg",
-      "bt__01_ff4e12.svg",
-      "bt__02_000000.svg",
-      "bt__03_ffffff.svg",
-      "bt__04_ffffff.svg",
-      "bt__05_ffffff.svg"
+      "bt__00.png",
+      "bt__01.png",
+      "bt__02.png",
+      "bt__03.png",
+      "bt__04.png",
+      "bt__05.png"
     ],
     "z": [
-      10,
-      20,
-      31,
-      40,
-      580,
-      820
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bt__full.svg",
     "location": {
@@ -1086,28 +1055,28 @@
   },
   "bv": {
     "colors": [
+      "#ffffff",
       "#d72828",
       "#d72828",
       "#d72828",
       "#d72828",
-      "#003897",
-      "#ffffff"
+      "#003897"
     ],
     "files": [
-      "bv__00_d72828.svg",
-      "bv__01_d72828.svg",
-      "bv__02_d72828.svg",
-      "bv__03_d72828.svg",
-      "bv__04_003897.svg",
-      "bv__05_ffffff.svg"
+      "bv__00.png",
+      "bv__01.png",
+      "bv__02.png",
+      "bv__03.png",
+      "bv__04.png",
+      "bv__05.png"
     ],
     "z": [
-      60,
-      61,
-      62,
-      63,
-      80,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bv__full.svg",
     "location": {
@@ -1117,28 +1086,28 @@
   },
   "bw": {
     "colors": [
+      "#ffffff",
       "#00cbff",
       "#00cbff",
       "#00cbff",
       "#00cbff",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "bw__00_00cbff.svg",
-      "bw__01_00cbff.svg",
-      "bw__02_00cbff.svg",
-      "bw__03_00cbff.svg",
-      "bw__04_000001.svg",
-      "bw__05_ffffff.svg"
+      "bw__00.png",
+      "bw__01.png",
+      "bw__02.png",
+      "bw__03.png",
+      "bw__04.png",
+      "bw__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bw__full.svg",
     "location": {
@@ -1148,28 +1117,28 @@
   },
   "by": {
     "colors": [
+      "#ffffff",
       "#007c30",
       "#ce1720",
       "#ce1720",
       "#ce1720",
-      "#ce1720",
-      "#ffffff"
+      "#ce1720"
     ],
     "files": [
-      "by__00_007c30.svg",
-      "by__01_ce1720.svg",
-      "by__02_ce1720.svg",
-      "by__03_ce1720.svg",
-      "by__04_ce1720.svg",
-      "by__05_ffffff.svg"
+      "by__00.png",
+      "by__01.png",
+      "by__02.png",
+      "by__03.png",
+      "by__04.png",
+      "by__05.png"
     ],
     "z": [
-      120,
-      40,
-      41,
-      42,
-      43,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "by__full.svg",
     "location": {
@@ -1179,28 +1148,28 @@
   },
   "bz": {
     "colors": [
+      "#ffffff",
+      "#9dd7ff",
       "#007f00",
       "#ce1126",
-      "#005800",
       "#003f87",
-      "#730000",
       "#552300"
     ],
     "files": [
-      "bz__00_007f00.svg",
-      "bz__01_ce1126.svg",
-      "bz__02_005800.svg",
-      "bz__03_003f87.svg",
-      "bz__04_730000.svg",
-      "bz__05_552300.svg"
+      "bz__00.png",
+      "bz__01.png",
+      "bz__02.png",
+      "bz__03.png",
+      "bz__04.png",
+      "bz__05.png"
     ],
     "z": [
-      160,
-      120,
-      170,
-      130,
-      180,
-      151
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "bz__full.svg",
     "location": {
@@ -1210,28 +1179,28 @@
   },
   "ca": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#d52b1e",
       "#d52b1e",
       "#d52b1e",
-      "#d52b1e",
-      "#d52b1e",
-      "#ffffff"
+      "#d52b1e"
     ],
     "files": [
-      "ca__00_d52b1e.svg",
-      "ca__01_d52b1e.svg",
-      "ca__02_d52b1e.svg",
-      "ca__03_d52b1e.svg",
-      "ca__04_d52b1e.svg",
-      "ca__05_ffffff.svg"
+      "ca__00.png",
+      "ca__01.png",
+      "ca__02.png",
+      "ca__03.png",
+      "ca__04.png",
+      "ca__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ca__full.svg",
     "location": {
@@ -1242,27 +1211,27 @@
   "cc": {
     "colors": [
       "#ffe000",
-      "#ffe000",
       "#008000",
       "#008000",
-      "#7b3100",
+      "#008000",
+      "#008000",
       "#802000"
     ],
     "files": [
-      "cc__00_ffe000.svg",
-      "cc__01_ffe000.svg",
-      "cc__02_008000.svg",
-      "cc__03_008000.svg",
-      "cc__04_7b3100.svg",
-      "cc__05_802000.svg"
+      "cc__00.png",
+      "cc__01.png",
+      "cc__02.png",
+      "cc__03.png",
+      "cc__04.png",
+      "cc__05.png"
     ],
     "z": [
-      50,
-      70,
-      40,
-      60,
-      81,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cc__full.svg",
     "location": {
@@ -1280,20 +1249,20 @@
       "#ce1021"
     ],
     "files": [
-      "cd__00_f7d618.svg",
-      "cd__01_007fff.svg",
-      "cd__02_007fff.svg",
-      "cd__03_007fff.svg",
-      "cd__04_007fff.svg",
-      "cd__05_ce1021.svg"
+      "cd__00.png",
+      "cd__01.png",
+      "cd__02.png",
+      "cd__03.png",
+      "cd__04.png",
+      "cd__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cd__full.svg",
     "location": {
@@ -1304,27 +1273,27 @@
   "cefta": {
     "colors": [
       "#ffcc00",
-      "#ffcc00",
+      "#003399",
       "#003399",
       "#003399",
       "#003399",
       "#003399"
     ],
     "files": [
-      "cefta__00_ffcc00.svg",
-      "cefta__01_ffcc00.svg",
-      "cefta__02_003399.svg",
-      "cefta__03_003399.svg",
-      "cefta__04_003399.svg",
-      "cefta__05_003399.svg"
+      "cefta__00.png",
+      "cefta__01.png",
+      "cefta__02.png",
+      "cefta__03.png",
+      "cefta__04.png",
+      "cefta__05.png"
     ],
     "z": [
-      31,
-      110,
-      10,
-      11,
-      12,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cefta__full.svg",
     "location": {
@@ -1334,28 +1303,28 @@
   },
   "cf": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#ffff00",
       "#009a00",
       "#ff0000",
-      "#0000ff",
-      "#ffffff"
+      "#0000ff"
     ],
     "files": [
-      "cf__00_ffff00.svg",
-      "cf__01_ffff00.svg",
-      "cf__02_009a00.svg",
-      "cf__03_ff0000.svg",
-      "cf__04_0000ff.svg",
-      "cf__05_ffffff.svg"
+      "cf__00.png",
+      "cf__01.png",
+      "cf__02.png",
+      "cf__03.png",
+      "cf__04.png",
+      "cf__05.png"
     ],
     "z": [
-      60,
-      100,
-      70,
-      90,
-      50,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cf__full.svg",
     "location": {
@@ -1367,26 +1336,26 @@
     "colors": [
       "#ffff00",
       "#ffff00",
-      "#ffff00",
-      "#ffff00",
       "#00ca00",
+      "#00ca00",
+      "#ff0000",
       "#ff0000"
     ],
     "files": [
-      "cg__00_ffff00.svg",
-      "cg__01_ffff00.svg",
-      "cg__02_ffff00.svg",
-      "cg__03_ffff00.svg",
-      "cg__04_00ca00.svg",
-      "cg__05_ff0000.svg"
+      "cg__00.png",
+      "cg__01.png",
+      "cg__02.png",
+      "cg__03.png",
+      "cg__04.png",
+      "cg__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      53,
-      60,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cg__full.svg",
     "location": {
@@ -1396,28 +1365,28 @@
   },
   "ch": {
     "colors": [
+      "#ffffff",
       "#ff0000",
       "#ff0000",
       "#ff0000",
       "#ff0000",
-      "#ff0000",
-      "#ffffff"
+      "#ff0000"
     ],
     "files": [
-      "ch__00_ff0000.svg",
-      "ch__01_ff0000.svg",
-      "ch__02_ff0000.svg",
-      "ch__03_ff0000.svg",
-      "ch__04_ff0000.svg",
-      "ch__05_ffffff.svg"
+      "ch__00.png",
+      "ch__01.png",
+      "ch__02.png",
+      "ch__03.png",
+      "ch__04.png",
+      "ch__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ch__full.svg",
     "location": {
@@ -1427,28 +1396,28 @@
   },
   "ci": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ff9a00",
       "#ff9a00",
       "#00cd00",
-      "#00cd00",
-      "#00cd00",
-      "#00cd00",
-      "#ffffff"
+      "#00cd00"
     ],
     "files": [
-      "ci__00_ff9a00.svg",
-      "ci__01_00cd00.svg",
-      "ci__02_00cd00.svg",
-      "ci__03_00cd00.svg",
-      "ci__04_00cd00.svg",
-      "ci__05_ffffff.svg"
+      "ci__00.png",
+      "ci__01.png",
+      "ci__02.png",
+      "ci__03.png",
+      "ci__04.png",
+      "ci__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ci__full.svg",
     "location": {
@@ -1458,28 +1427,28 @@
   },
   "ck": {
     "colors": [
-      "#c8102e",
-      "#c8102e",
-      "#000066",
-      "#000066",
       "#ffffff",
-      "#ffffff"
+      "#c8102e",
+      "#000066",
+      "#000066",
+      "#000066",
+      "#000066"
     ],
     "files": [
-      "ck__00_c8102e.svg",
-      "ck__01_c8102e.svg",
-      "ck__02_000066.svg",
-      "ck__03_000066.svg",
-      "ck__04_ffffff.svg",
-      "ck__05_ffffff.svg"
+      "ck__00.png",
+      "ck__01.png",
+      "ck__02.png",
+      "ck__03.png",
+      "ck__04.png",
+      "ck__05.png"
     ],
     "z": [
-      50,
-      70,
-      10,
-      30,
-      20,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ck__full.svg",
     "location": {
@@ -1489,28 +1458,28 @@
   },
   "cl": {
     "colors": [
-      "#d52b1e",
-      "#0039a6",
-      "#0039a6",
-      "#0039a6",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#ffffff",
+      "#d52b1e",
+      "#d52b1e",
+      "#0039a6"
     ],
     "files": [
-      "cl__00_d52b1e.svg",
-      "cl__01_0039a6.svg",
-      "cl__02_0039a6.svg",
-      "cl__03_0039a6.svg",
-      "cl__04_ffffff.svg",
-      "cl__05_ffffff.svg"
+      "cl__00.png",
+      "cl__01.png",
+      "cl__02.png",
+      "cl__03.png",
+      "cl__04.png",
+      "cl__05.png"
     ],
     "z": [
-      80,
-      60,
-      61,
-      62,
-      50,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cl__full.svg",
     "location": {
@@ -1521,27 +1490,27 @@
   "cm": {
     "colors": [
       "#fcd116",
-      "#007a5e",
-      "#007a5e",
+      "#fcd116",
+      "#fcd116",
       "#007a5e",
       "#007a5e",
       "#ce1126"
     ],
     "files": [
-      "cm__00_fcd116.svg",
-      "cm__01_007a5e.svg",
-      "cm__02_007a5e.svg",
-      "cm__03_007a5e.svg",
-      "cm__04_007a5e.svg",
-      "cm__05_ce1126.svg"
+      "cm__00.png",
+      "cm__01.png",
+      "cm__02.png",
+      "cm__03.png",
+      "cm__04.png",
+      "cm__05.png"
     ],
     "z": [
-      40,
-      10,
-      11,
-      12,
-      13,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cm__full.svg",
     "location": {
@@ -1552,27 +1521,27 @@
   "cn": {
     "colors": [
       "#ffff00",
-      "#ffff00",
-      "#ffff00",
-      "#ffff00",
-      "#ffff00",
+      "#ee1c25",
+      "#ee1c25",
+      "#ee1c25",
+      "#ee1c25",
       "#ee1c25"
     ],
     "files": [
-      "cn__00_ffff00.svg",
-      "cn__01_ffff00.svg",
-      "cn__02_ffff00.svg",
-      "cn__03_ffff00.svg",
-      "cn__04_ffff00.svg",
-      "cn__05_ee1c25.svg"
+      "cn__00.png",
+      "cn__01.png",
+      "cn__02.png",
+      "cn__03.png",
+      "cn__04.png",
+      "cn__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cn__full.svg",
     "location": {
@@ -1584,26 +1553,26 @@
     "colors": [
       "#ffe800",
       "#ffe800",
-      "#ffe800",
-      "#ffe800",
       "#da0010",
+      "#da0010",
+      "#00148e",
       "#00148e"
     ],
     "files": [
-      "co__00_ffe800.svg",
-      "co__01_ffe800.svg",
-      "co__02_ffe800.svg",
-      "co__03_ffe800.svg",
-      "co__04_da0010.svg",
-      "co__05_00148e.svg"
+      "co__00.png",
+      "co__01.png",
+      "co__02.png",
+      "co__03.png",
+      "co__04.png",
+      "co__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "co__full.svg",
     "location": {
@@ -1613,28 +1582,28 @@
   },
   "cr": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#d90000",
       "#d90000",
       "#0000b4",
-      "#0000b4",
-      "#0000b4",
-      "#0000b4",
-      "#ffffff"
+      "#0000b4"
     ],
     "files": [
-      "cr__00_d90000.svg",
-      "cr__01_0000b4.svg",
-      "cr__02_0000b4.svg",
-      "cr__03_0000b4.svg",
-      "cr__04_0000b4.svg",
-      "cr__05_ffffff.svg"
+      "cr__00.png",
+      "cr__01.png",
+      "cr__02.png",
+      "cr__03.png",
+      "cr__04.png",
+      "cr__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      22,
-      23,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cr__full.svg",
     "location": {
@@ -1644,28 +1613,28 @@
   },
   "cu": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#cb1515",
       "#cb1515",
       "#002a8f",
-      "#002a8f",
-      "#002a8f",
-      "#ffffff",
-      "#ffffff"
+      "#002a8f"
     ],
     "files": [
-      "cu__00_cb1515.svg",
-      "cu__01_002a8f.svg",
-      "cu__02_002a8f.svg",
-      "cu__03_002a8f.svg",
-      "cu__04_ffffff.svg",
-      "cu__05_ffffff.svg"
+      "cu__00.png",
+      "cu__01.png",
+      "cu__02.png",
+      "cu__03.png",
+      "cu__04.png",
+      "cu__05.png"
     ],
     "z": [
-      70,
-      50,
-      51,
-      52,
-      60,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cu__full.svg",
     "location": {
@@ -1675,28 +1644,28 @@
   },
   "cv": {
     "colors": [
+      "#ffffff",
       "#ffce08",
       "#de3929",
       "#081873",
       "#081873",
-      "#081873",
-      "#ffffff"
+      "#081873"
     ],
     "files": [
-      "cv__00_ffce08.svg",
-      "cv__01_de3929.svg",
-      "cv__02_081873.svg",
-      "cv__03_081873.svg",
-      "cv__04_081873.svg",
-      "cv__05_ffffff.svg"
+      "cv__00.png",
+      "cv__01.png",
+      "cv__02.png",
+      "cv__03.png",
+      "cv__04.png",
+      "cv__05.png"
     ],
     "z": [
-      80,
-      70,
-      60,
-      61,
-      62,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cv__full.svg",
     "location": {
@@ -1706,28 +1675,28 @@
   },
   "cw": {
     "colors": [
+      "#ffffff",
       "#f9e814",
       "#002b7f",
       "#002b7f",
       "#002b7f",
-      "#002b7f",
-      "#ffffff"
+      "#002b7f"
     ],
     "files": [
-      "cw__00_f9e814.svg",
-      "cw__01_002b7f.svg",
-      "cw__02_002b7f.svg",
-      "cw__03_002b7f.svg",
-      "cw__04_002b7f.svg",
-      "cw__05_ffffff.svg"
+      "cw__00.png",
+      "cw__01.png",
+      "cw__02.png",
+      "cw__03.png",
+      "cw__04.png",
+      "cw__05.png"
     ],
     "z": [
-      70,
-      60,
-      61,
-      62,
-      63,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cw__full.svg",
     "location": {
@@ -1737,28 +1706,28 @@
   },
   "cx": {
     "colors": [
-      "#ffc639",
+      "#ffffff",
       "#ffc639",
       "#1c8a42",
       "#1c8a42",
       "#0021ad",
-      "#ffffff"
+      "#0021ad"
     ],
     "files": [
-      "cx__00_ffc639.svg",
-      "cx__01_ffc639.svg",
-      "cx__02_1c8a42.svg",
-      "cx__03_1c8a42.svg",
-      "cx__04_0021ad.svg",
-      "cx__05_ffffff.svg"
+      "cx__00.png",
+      "cx__01.png",
+      "cx__02.png",
+      "cx__03.png",
+      "cx__04.png",
+      "cx__05.png"
     ],
     "z": [
-      30,
-      50,
-      20,
-      40,
-      10,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cx__full.svg",
     "location": {
@@ -1768,28 +1737,28 @@
   },
   "cy": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#d47600",
-      "#435125",
-      "#435125",
-      "#435125",
-      "#435125",
-      "#ffffff"
+      "#435125"
     ],
     "files": [
-      "cy__00_d47600.svg",
-      "cy__01_435125.svg",
-      "cy__02_435125.svg",
-      "cy__03_435125.svg",
-      "cy__04_435125.svg",
-      "cy__05_ffffff.svg"
+      "cy__00.png",
+      "cy__01.png",
+      "cy__02.png",
+      "cy__03.png",
+      "cy__04.png",
+      "cy__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cy__full.svg",
     "location": {
@@ -1799,28 +1768,28 @@
   },
   "cz": {
     "colors": [
-      "#d7141a",
-      "#d7141a",
+      "#ffffff",
+      "#ffffff",
       "#d7141a",
       "#d7141a",
       "#11457e",
-      "#ffffff"
+      "#11457e"
     ],
     "files": [
-      "cz__00_d7141a.svg",
-      "cz__01_d7141a.svg",
-      "cz__02_d7141a.svg",
-      "cz__03_d7141a.svg",
-      "cz__04_11457e.svg",
-      "cz__05_ffffff.svg"
+      "cz__00.png",
+      "cz__01.png",
+      "cz__02.png",
+      "cz__03.png",
+      "cz__04.png",
+      "cz__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "cz__full.svg",
     "location": {
@@ -1832,26 +1801,26 @@
     "colors": [
       "#ffcc00",
       "#ffcc00",
-      "#ffcc00",
-      "#ffcc00",
       "#ff0000",
+      "#ff0000",
+      "#000001",
       "#000001"
     ],
     "files": [
-      "de__00_ffcc00.svg",
-      "de__01_ffcc00.svg",
-      "de__02_ffcc00.svg",
-      "de__03_ffcc00.svg",
-      "de__04_ff0000.svg",
-      "de__05_000001.svg"
+      "de__00.png",
+      "de__01.png",
+      "de__02.png",
+      "de__03.png",
+      "de__04.png",
+      "de__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "de__full.svg",
     "location": {
@@ -1861,28 +1830,28 @@
   },
   "dg": {
     "colors": [
+      "#ffffff",
       "#fff100",
       "#808080",
-      "#cc0000",
       "#a24300",
       "#006d00",
       "#000063"
     ],
     "files": [
-      "dg__00_fff100.svg",
-      "dg__01_808080.svg",
-      "dg__02_cc0000.svg",
-      "dg__03_a24300.svg",
-      "dg__04_006d00.svg",
-      "dg__05_000063.svg"
+      "dg__00.png",
+      "dg__01.png",
+      "dg__02.png",
+      "dg__03.png",
+      "dg__04.png",
+      "dg__05.png"
     ],
     "z": [
-      1030,
-      1050,
-      620,
-      30,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "dg__full.svg",
     "location": {
@@ -1894,26 +1863,26 @@
     "colors": [
       "#fffefe",
       "#00cc00",
-      "#00cc00",
-      "#00cc00",
+      "#6699ff",
+      "#6699ff",
       "#6699ff",
       "#ff0000"
     ],
     "files": [
-      "dj__00_fffefe.svg",
-      "dj__01_00cc00.svg",
-      "dj__02_00cc00.svg",
-      "dj__03_00cc00.svg",
-      "dj__04_6699ff.svg",
-      "dj__05_ff0000.svg"
+      "dj__00.png",
+      "dj__01.png",
+      "dj__02.png",
+      "dj__03.png",
+      "dj__04.png",
+      "dj__05.png"
     ],
     "z": [
-      70,
-      50,
-      51,
-      52,
-      60,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "dj__full.svg",
     "location": {
@@ -1923,28 +1892,28 @@
   },
   "dk": {
     "colors": [
+      "#ffffff",
       "#c8102e",
       "#c8102e",
       "#c8102e",
       "#c8102e",
-      "#c8102e",
-      "#ffffff"
+      "#c8102e"
     ],
     "files": [
-      "dk__00_c8102e.svg",
-      "dk__01_c8102e.svg",
-      "dk__02_c8102e.svg",
-      "dk__03_c8102e.svg",
-      "dk__04_c8102e.svg",
-      "dk__05_ffffff.svg"
+      "dk__00.png",
+      "dk__01.png",
+      "dk__02.png",
+      "dk__03.png",
+      "dk__04.png",
+      "dk__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "dk__full.svg",
     "location": {
@@ -1954,28 +1923,28 @@
   },
   "dm": {
     "colors": [
-      "#ffe700",
+      "#ffffff",
       "#ffd600",
-      "#009200",
       "#108c00",
       "#e72910",
+      "#804bff",
       "#000001"
     ],
     "files": [
-      "dm__00_ffe700.svg",
-      "dm__01_ffd600.svg",
-      "dm__02_009200.svg",
-      "dm__03_108c00.svg",
-      "dm__04_e72910.svg",
-      "dm__05_000001.svg"
+      "dm__00.png",
+      "dm__01.png",
+      "dm__02.png",
+      "dm__03.png",
+      "dm__04.png",
+      "dm__05.png"
     ],
     "z": [
-      150,
-      70,
-      540,
-      50,
-      120,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "dm__full.svg",
     "location": {
@@ -1985,28 +1954,28 @@
   },
   "do": {
     "colors": [
-      "#ffff00",
-      "#eac102",
+      "#ffffff",
+      "#008f4c",
+      "#808000",
       "#ce1126",
       "#006300",
-      "#002d62",
-      "#201b18"
+      "#002d62"
     ],
     "files": [
-      "do__00_ffff00.svg",
-      "do__01_eac102.svg",
-      "do__02_ce1126.svg",
-      "do__03_006300.svg",
-      "do__04_002d62.svg",
-      "do__05_201b18.svg"
+      "do__00.png",
+      "do__01.png",
+      "do__02.png",
+      "do__03.png",
+      "do__04.png",
+      "do__05.png"
     ],
     "z": [
-      120,
-      100,
-      30,
-      110,
-      960,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "do__full.svg",
     "location": {
@@ -2016,28 +1985,28 @@
   },
   "dz": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#d21034",
       "#006233",
-      "#006233",
-      "#006233",
-      "#006233",
-      "#ffffff"
+      "#006233"
     ],
     "files": [
-      "dz__00_d21034.svg",
-      "dz__01_006233.svg",
-      "dz__02_006233.svg",
-      "dz__03_006233.svg",
-      "dz__04_006233.svg",
-      "dz__05_ffffff.svg"
+      "dz__00.png",
+      "dz__01.png",
+      "dz__02.png",
+      "dz__03.png",
+      "dz__04.png",
+      "dz__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "dz__full.svg",
     "location": {
@@ -2047,28 +2016,28 @@
   },
   "eac": {
     "colors": [
+      "#ffffff",
       "#ffff00",
-      "#fbf014",
       "#0087ff",
       "#ff0000",
       "#008300",
       "#000001"
     ],
     "files": [
-      "eac__00_ffff00.svg",
-      "eac__01_fbf014.svg",
-      "eac__02_0087ff.svg",
-      "eac__03_ff0000.svg",
-      "eac__04_008300.svg",
-      "eac__05_000001.svg"
+      "eac__00.png",
+      "eac__01.png",
+      "eac__02.png",
+      "eac__03.png",
+      "eac__04.png",
+      "eac__05.png"
     ],
     "z": [
-      70,
-      350,
-      30,
-      50,
-      80,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "eac__full.svg",
     "location": {
@@ -2079,27 +2048,27 @@
   "ec": {
     "colors": [
       "#ffe800",
-      "#ffdf00",
+      "#cececc",
       "#808080",
+      "#b74d00",
       "#da0010",
-      "#0000c4",
       "#00148e"
     ],
     "files": [
-      "ec__00_ffe800.svg",
-      "ec__01_ffdf00.svg",
-      "ec__02_808080.svg",
-      "ec__03_da0010.svg",
-      "ec__04_0000c4.svg",
-      "ec__05_00148e.svg"
+      "ec__00.png",
+      "ec__01.png",
+      "ec__02.png",
+      "ec__03.png",
+      "ec__04.png",
+      "ec__05.png"
     ],
     "z": [
-      20,
-      850,
-      80,
-      40,
-      830,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ec__full.svg",
     "location": {
@@ -2109,28 +2078,28 @@
   },
   "ee": {
     "colors": [
-      "#1791ff",
-      "#1791ff",
+      "#ffffff",
+      "#ffffff",
       "#1791ff",
       "#1791ff",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ee__00_1791ff.svg",
-      "ee__01_1791ff.svg",
-      "ee__02_1791ff.svg",
-      "ee__03_1791ff.svg",
-      "ee__04_000001.svg",
-      "ee__05_ffffff.svg"
+      "ee__00.png",
+      "ee__01.png",
+      "ee__02.png",
+      "ee__03.png",
+      "ee__04.png",
+      "ee__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      20,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ee__full.svg",
     "location": {
@@ -2140,28 +2109,28 @@
   },
   "eg": {
     "colors": [
-      "#c09300",
+      "#ffffff",
       "#c09300",
       "#ce1126",
+      "#ce1126",
       "#000001",
-      "#ffffff",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "eg__00_c09300.svg",
-      "eg__01_c09300.svg",
-      "eg__02_ce1126.svg",
-      "eg__03_000001.svg",
-      "eg__04_ffffff.svg",
-      "eg__05_ffffff.svg"
+      "eg__00.png",
+      "eg__01.png",
+      "eg__02.png",
+      "eg__03.png",
+      "eg__04.png",
+      "eg__05.png"
     ],
     "z": [
-      41,
-      300,
-      30,
-      10,
-      20,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "eg__full.svg",
     "location": {
@@ -2171,28 +2140,28 @@
   },
   "eh": {
     "colors": [
+      "#ffffff",
       "#007a3d",
       "#c4111b",
       "#c4111b",
-      "#000001",
-      "#ffffff",
-      "#ffffff"
+      "#c4111b",
+      "#000001"
     ],
     "files": [
-      "eh__00_007a3d.svg",
-      "eh__01_c4111b.svg",
-      "eh__02_c4111b.svg",
-      "eh__03_000001.svg",
-      "eh__04_ffffff.svg",
-      "eh__05_ffffff.svg"
+      "eh__00.png",
+      "eh__01.png",
+      "eh__02.png",
+      "eh__03.png",
+      "eh__04.png",
+      "eh__05.png"
     ],
     "z": [
-      60,
-      90,
-      110,
-      50,
-      70,
-      100
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "eh__full.svg",
     "location": {
@@ -2210,20 +2179,20 @@
       "#be0027"
     ],
     "files": [
-      "er__00_f3e295.svg",
-      "er__01_b4d7f4.svg",
-      "er__02_239e46.svg",
-      "er__03_be0027.svg",
-      "er__04_be0027.svg",
-      "er__05_be0027.svg"
+      "er__00.png",
+      "er__01.png",
+      "er__02.png",
+      "er__03.png",
+      "er__04.png",
+      "er__05.png"
     ],
     "z": [
-      50,
-      30,
-      40,
-      20,
-      21,
-      22
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "er__full.svg",
     "location": {
@@ -2237,24 +2206,24 @@
       "#fcdd09",
       "#fcdd09",
       "#fcdd09",
-      "#fcdd09",
+      "#da121a",
       "#da121a"
     ],
     "files": [
-      "es-ct__00_fcdd09.svg",
-      "es-ct__01_fcdd09.svg",
-      "es-ct__02_fcdd09.svg",
-      "es-ct__03_fcdd09.svg",
-      "es-ct__04_fcdd09.svg",
-      "es-ct__05_da121a.svg"
+      "es-ct__00.png",
+      "es-ct__01.png",
+      "es-ct__02.png",
+      "es-ct__03.png",
+      "es-ct__04.png",
+      "es-ct__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      21
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "es-ct__full.svg",
     "location": {
@@ -2264,28 +2233,28 @@
   },
   "es-ga": {
     "colors": [
+      "#ffffff",
       "#cccccc",
-      "#c8b100",
       "#bcac0b",
       "#0099cc",
       "#d81126",
-      "#005bbf"
+      "#000000"
     ],
     "files": [
-      "es-ga__00_cccccc.svg",
-      "es-ga__01_c8b100.svg",
-      "es-ga__02_bcac0b.svg",
-      "es-ga__03_0099cc.svg",
-      "es-ga__04_d81126.svg",
-      "es-ga__05_005bbf.svg"
+      "es-ga__00.png",
+      "es-ga__01.png",
+      "es-ga__02.png",
+      "es-ga__03.png",
+      "es-ga__04.png",
+      "es-ga__05.png"
     ],
     "z": [
-      130,
-      100,
-      90,
-      30,
-      70,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "es-ga__full.svg",
     "location": {
@@ -2295,28 +2264,28 @@
   },
   "es-pv": {
     "colors": [
+      "#ffffff",
+      "#009b48",
       "#009b48",
       "#d52b1e",
       "#d52b1e",
-      "#d52b1e",
-      "#d52b1e",
-      "#ffffff"
+      "#d52b1e"
     ],
     "files": [
-      "es-pv__00_009b48.svg",
-      "es-pv__01_d52b1e.svg",
-      "es-pv__02_d52b1e.svg",
-      "es-pv__03_d52b1e.svg",
-      "es-pv__04_d52b1e.svg",
-      "es-pv__05_ffffff.svg"
+      "es-pv__00.png",
+      "es-pv__01.png",
+      "es-pv__02.png",
+      "es-pv__03.png",
+      "es-pv__04.png",
+      "es-pv__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "es-pv__full.svg",
     "location": {
@@ -2326,28 +2295,28 @@
   },
   "es": {
     "colors": [
+      "#cccccc",
       "#f1bf00",
-      "#c8b100",
       "#058e6e",
+      "#db4446",
       "#005bbf",
-      "#ad1519",
       "#aa151b"
     ],
     "files": [
-      "es__00_f1bf00.svg",
-      "es__01_c8b100.svg",
-      "es__02_058e6e.svg",
-      "es__03_005bbf.svg",
-      "es__04_ad1519.svg",
-      "es__05_aa151b.svg"
+      "es__00.png",
+      "es__01.png",
+      "es__02.png",
+      "es__03.png",
+      "es__04.png",
+      "es__05.png"
     ],
     "z": [
-      20,
-      3310,
-      320,
-      960,
-      30,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "es__full.svg",
     "location": {
@@ -2358,27 +2327,27 @@
   "et": {
     "colors": [
       "#ffc621",
-      "#ffc621",
-      "#ffc621",
       "#ef2118",
+      "#298c08",
+      "#298c08",
       "#298c08",
       "#006bc6"
     ],
     "files": [
-      "et__00_ffc621.svg",
-      "et__01_ffc621.svg",
-      "et__02_ffc621.svg",
-      "et__03_ef2118.svg",
-      "et__04_298c08.svg",
-      "et__05_006bc6.svg"
+      "et__00.png",
+      "et__01.png",
+      "et__02.png",
+      "et__03.png",
+      "et__04.png",
+      "et__05.png"
     ],
     "z": [
-      50,
-      51,
-      90,
-      60,
-      70,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "et__full.svg",
     "location": {
@@ -2386,61 +2355,30 @@
       "lon": 38
     }
   },
-  "eu": {
-    "colors": [
-      "#ffcc00",
-      "#003399",
-      "#003399",
-      "#003399",
-      "#003399",
-      "#003399"
-    ],
-    "files": [
-      "eu__00_ffcc00.svg",
-      "eu__01_003399.svg",
-      "eu__02_003399.svg",
-      "eu__03_003399.svg",
-      "eu__04_003399.svg",
-      "eu__05_003399.svg"
-    ],
-    "z": [
-      110,
-      100,
-      101,
-      102,
-      103,
-      104
-    ],
-    "full": "eu__full.svg",
-    "location": {
-      "lat": 50,
-      "lon": 10
-    }
-  },
   "fi": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#002f6c",
-      "#002f6c",
-      "#002f6c",
-      "#002f6c",
-      "#002f6c",
-      "#ffffff"
+      "#002f6c"
     ],
     "files": [
-      "fi__00_002f6c.svg",
-      "fi__01_002f6c.svg",
-      "fi__02_002f6c.svg",
-      "fi__03_002f6c.svg",
-      "fi__04_002f6c.svg",
-      "fi__05_ffffff.svg"
+      "fi__00.png",
+      "fi__01.png",
+      "fi__02.png",
+      "fi__03.png",
+      "fi__04.png",
+      "fi__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      34,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fi__full.svg",
     "location": {
@@ -2450,28 +2388,28 @@
   },
   "fj": {
     "colors": [
-      "#ffd100",
+      "#ffffff",
       "#68bfe5",
       "#00a651",
       "#d21034",
       "#964b36",
-      "#000001"
+      "#012169"
     ],
     "files": [
-      "fj__00_ffd100.svg",
-      "fj__01_68bfe5.svg",
-      "fj__02_00a651.svg",
-      "fj__03_d21034.svg",
-      "fj__04_964b36.svg",
-      "fj__05_000001.svg"
+      "fj__00.png",
+      "fj__01.png",
+      "fj__02.png",
+      "fj__03.png",
+      "fj__04.png",
+      "fj__05.png"
     ],
     "z": [
-      120,
-      10,
-      970,
-      50,
-      440,
-      610
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fj__full.svg",
     "location": {
@@ -2481,28 +2419,28 @@
   },
   "fk": {
     "colors": [
-      "#fefefe",
-      "#c4c4c2",
+      "#ffffff",
       "#bcbcbc",
+      "#dd8b59",
       "#0072c4",
-      "#005120",
+      "#512007",
       "#012169"
     ],
     "files": [
-      "fk__00_fefefe.svg",
-      "fk__01_c4c4c2.svg",
-      "fk__02_bcbcbc.svg",
-      "fk__03_0072c4.svg",
-      "fk__04_005120.svg",
-      "fk__05_012169.svg"
+      "fk__00.png",
+      "fk__01.png",
+      "fk__02.png",
+      "fk__03.png",
+      "fk__04.png",
+      "fk__05.png"
     ],
     "z": [
-      310,
-      330,
-      300,
-      280,
-      360,
-      160
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fk__full.svg",
     "location": {
@@ -2512,28 +2450,28 @@
   },
   "fm": {
     "colors": [
+      "#ffffff",
       "#6797d6",
       "#6797d6",
       "#6797d6",
       "#6797d6",
-      "#6797d6",
-      "#ffffff"
+      "#6797d6"
     ],
     "files": [
-      "fm__00_6797d6.svg",
-      "fm__01_6797d6.svg",
-      "fm__02_6797d6.svg",
-      "fm__03_6797d6.svg",
-      "fm__04_6797d6.svg",
-      "fm__05_ffffff.svg"
+      "fm__00.png",
+      "fm__01.png",
+      "fm__02.png",
+      "fm__03.png",
+      "fm__04.png",
+      "fm__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      53,
-      54,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fm__full.svg",
     "location": {
@@ -2543,28 +2481,28 @@
   },
   "fo": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#d72828",
-      "#003897",
-      "#003897",
-      "#003897",
-      "#003897",
-      "#ffffff"
+      "#003897"
     ],
     "files": [
-      "fo__00_d72828.svg",
-      "fo__01_003897.svg",
-      "fo__02_003897.svg",
-      "fo__03_003897.svg",
-      "fo__04_003897.svg",
-      "fo__05_ffffff.svg"
+      "fo__00.png",
+      "fo__01.png",
+      "fo__02.png",
+      "fo__03.png",
+      "fo__04.png",
+      "fo__05.png"
     ],
     "z": [
-      70,
-      60,
-      61,
-      62,
-      63,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fo__full.svg",
     "location": {
@@ -2574,28 +2512,28 @@
   },
   "fr": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "fr__00_e1000f.svg",
-      "fr__01_000091.svg",
-      "fr__02_000091.svg",
-      "fr__03_000091.svg",
-      "fr__04_000091.svg",
-      "fr__05_ffffff.svg"
+      "fr__00.png",
+      "fr__01.png",
+      "fr__02.png",
+      "fr__03.png",
+      "fr__04.png",
+      "fr__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "fr__full.svg",
     "location": {
@@ -2607,26 +2545,26 @@
     "colors": [
       "#ffe700",
       "#ffe700",
-      "#ffe700",
-      "#ffe700",
       "#36a100",
+      "#36a100",
+      "#006dbc",
       "#006dbc"
     ],
     "files": [
-      "ga__00_ffe700.svg",
-      "ga__01_ffe700.svg",
-      "ga__02_ffe700.svg",
-      "ga__03_ffe700.svg",
-      "ga__04_36a100.svg",
-      "ga__05_006dbc.svg"
+      "ga__00.png",
+      "ga__01.png",
+      "ga__02.png",
+      "ga__03.png",
+      "ga__04.png",
+      "ga__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ga__full.svg",
     "location": {
@@ -2636,28 +2574,28 @@
   },
   "gb-eng": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#ce1124",
-      "#ce1124",
-      "#ce1124",
-      "#ce1124",
-      "#ce1124",
-      "#ffffff"
+      "#ce1124"
     ],
     "files": [
-      "gb-eng__00_ce1124.svg",
-      "gb-eng__01_ce1124.svg",
-      "gb-eng__02_ce1124.svg",
-      "gb-eng__03_ce1124.svg",
-      "gb-eng__04_ce1124.svg",
-      "gb-eng__05_ffffff.svg"
+      "gb-eng__00.png",
+      "gb-eng__01.png",
+      "gb-eng__02.png",
+      "gb-eng__03.png",
+      "gb-eng__04.png",
+      "gb-eng__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      34,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gb-eng__full.svg",
     "location": {
@@ -2667,59 +2605,56 @@
   },
   "gb-nir": {
     "colors": [
-      "#ebeae3",
+      "#ffffff",
       "#ffcc00",
+      "#916c68",
       "#cc0000",
-      "#b02320",
-      "#161111",
-      "#121116"
+      "#4d3126",
+      "#000000"
     ],
     "files": [
-      "gb-nir__00_ebeae3.svg",
-      "gb-nir__01_ffcc00.svg",
-      "gb-nir__02_cc0000.svg",
-      "gb-nir__03_b02320.svg",
-      "gb-nir__04_161111.svg",
-      "gb-nir__05_121116.svg"
+      "gb-nir__00.png",
+      "gb-nir__01.png",
+      "gb-nir__02.png",
+      "gb-nir__03.png",
+      "gb-nir__04.png",
+      "gb-nir__05.png"
     ],
     "z": [
-      50,
-      860,
-      30,
-      70,
-      61,
-      851
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gb-nir__full.svg",
-    "location": {
-      "lat": 54.5,
-      "lon": -6
-    }
+    "location": null
   },
   "gb-sct": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#0065bd",
       "#0065bd",
       "#0065bd",
-      "#0065bd",
-      "#0065bd",
-      "#ffffff"
+      "#0065bd"
     ],
     "files": [
-      "gb-sct__00_0065bd.svg",
-      "gb-sct__01_0065bd.svg",
-      "gb-sct__02_0065bd.svg",
-      "gb-sct__03_0065bd.svg",
-      "gb-sct__04_0065bd.svg",
-      "gb-sct__05_ffffff.svg"
+      "gb-sct__00.png",
+      "gb-sct__01.png",
+      "gb-sct__02.png",
+      "gb-sct__03.png",
+      "gb-sct__04.png",
+      "gb-sct__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      21
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gb-sct__full.svg",
     "location": {
@@ -2727,61 +2662,30 @@
       "lon": -4
     }
   },
-  "gb-wls": {
-    "colors": [
-      "#00ab39",
-      "#00ab39",
-      "#00ab39",
-      "#d21034",
-      "#000000",
-      "#ffffff"
-    ],
-    "files": [
-      "gb-wls__00_00ab39.svg",
-      "gb-wls__01_00ab39.svg",
-      "gb-wls__02_00ab39.svg",
-      "gb-wls__03_d21034.svg",
-      "gb-wls__04_000000.svg",
-      "gb-wls__05_ffffff.svg"
-    ],
-    "z": [
-      10,
-      11,
-      12,
-      40,
-      31,
-      20
-    ],
-    "full": "gb-wls__full.svg",
-    "location": {
-      "lat": 52.1,
-      "lon": -3.5
-    }
-  },
   "gb": {
     "colors": [
-      "#c8102e",
-      "#c8102e",
-      "#012169",
-      "#012169",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#012169"
     ],
     "files": [
-      "gb__00_c8102e.svg",
-      "gb__01_c8102e.svg",
-      "gb__02_012169.svg",
-      "gb__03_012169.svg",
-      "gb__04_ffffff.svg",
-      "gb__05_ffffff.svg"
+      "gb__00.png",
+      "gb__01.png",
+      "gb__02.png",
+      "gb__03.png",
+      "gb__04.png",
+      "gb__05.png"
     ],
     "z": [
-      30,
-      50,
-      10,
-      11,
-      20,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gb__full.svg",
     "location": {
@@ -2793,26 +2697,26 @@
     "colors": [
       "#fcd116",
       "#fcd116",
-      "#fcd116",
       "#007a5e",
+      "#ce1126",
       "#ce1126",
       "#ce1126"
     ],
     "files": [
-      "gd__00_fcd116.svg",
-      "gd__01_fcd116.svg",
-      "gd__02_fcd116.svg",
-      "gd__03_007a5e.svg",
-      "gd__04_ce1126.svg",
-      "gd__05_ce1126.svg"
+      "gd__00.png",
+      "gd__01.png",
+      "gd__02.png",
+      "gd__03.png",
+      "gd__04.png",
+      "gd__05.png"
     ],
     "z": [
-      120,
-      190,
-      40,
-      110,
-      100,
-      130
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gd__full.svg",
     "location": {
@@ -2822,28 +2726,28 @@
   },
   "ge": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#ff0000",
       "#ff0000",
-      "#ff0000",
-      "#ff0000",
-      "#ff0000",
-      "#ffffff"
+      "#ff0000"
     ],
     "files": [
-      "ge__00_ff0000.svg",
-      "ge__01_ff0000.svg",
-      "ge__02_ff0000.svg",
-      "ge__03_ff0000.svg",
-      "ge__04_ff0000.svg",
-      "ge__05_ffffff.svg"
+      "ge__00.png",
+      "ge__01.png",
+      "ge__02.png",
+      "ge__03.png",
+      "ge__04.png",
+      "ge__05.png"
     ],
     "z": [
-      40,
-      41,
-      42,
-      43,
-      44,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ge__full.svg",
     "location": {
@@ -2853,28 +2757,28 @@
   },
   "gf": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "gf__00_e1000f.svg",
-      "gf__01_000091.svg",
-      "gf__02_000091.svg",
-      "gf__03_000091.svg",
-      "gf__04_000091.svg",
-      "gf__05_ffffff.svg"
+      "gf__00.png",
+      "gf__01.png",
+      "gf__02.png",
+      "gf__03.png",
+      "gf__04.png",
+      "gf__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gf__full.svg",
     "location": {
@@ -2884,28 +2788,28 @@
   },
   "gg": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#f9dd16",
-      "#e8112d",
-      "#e8112d",
-      "#e8112d",
-      "#e8112d",
-      "#ffffff"
+      "#e8112d"
     ],
     "files": [
-      "gg__00_f9dd16.svg",
-      "gg__01_e8112d.svg",
-      "gg__02_e8112d.svg",
-      "gg__03_e8112d.svg",
-      "gg__04_e8112d.svg",
-      "gg__05_ffffff.svg"
+      "gg__00.png",
+      "gg__01.png",
+      "gg__02.png",
+      "gg__03.png",
+      "gg__04.png",
+      "gg__05.png"
     ],
     "z": [
-      40,
-      30,
-      31,
-      32,
-      33,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gg__full.svg",
     "location": {
@@ -2917,26 +2821,26 @@
     "colors": [
       "#fcd116",
       "#ce1126",
-      "#006b3f",
+      "#ce1126",
       "#006b3f",
       "#006b3f",
       "#000001"
     ],
     "files": [
-      "gh__00_fcd116.svg",
-      "gh__01_ce1126.svg",
-      "gh__02_006b3f.svg",
-      "gh__03_006b3f.svg",
-      "gh__04_006b3f.svg",
-      "gh__05_000001.svg"
+      "gh__00.png",
+      "gh__01.png",
+      "gh__02.png",
+      "gh__03.png",
+      "gh__04.png",
+      "gh__05.png"
     ],
     "z": [
-      20,
-      30,
-      10,
-      11,
-      12,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gh__full.svg",
     "location": {
@@ -2946,28 +2850,28 @@
   },
   "gi": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#f8d80e",
       "#da000c",
-      "#da000c",
-      "#000001",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "gi__00_f8d80e.svg",
-      "gi__01_da000c.svg",
-      "gi__02_da000c.svg",
-      "gi__03_000001.svg",
-      "gi__04_000000.svg",
-      "gi__05_ffffff.svg"
+      "gi__00.png",
+      "gi__01.png",
+      "gi__02.png",
+      "gi__03.png",
+      "gi__04.png",
+      "gi__05.png"
     ],
     "z": [
-      110,
-      10,
-      40,
-      50,
-      31,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gi__full.svg",
     "location": {
@@ -2977,28 +2881,28 @@
   },
   "gl": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#d00c33",
       "#d00c33",
-      "#d00c33",
-      "#d00c33",
-      "#d00c33",
-      "#ffffff"
+      "#d00c33"
     ],
     "files": [
-      "gl__00_d00c33.svg",
-      "gl__01_d00c33.svg",
-      "gl__02_d00c33.svg",
-      "gl__03_d00c33.svg",
-      "gl__04_d00c33.svg",
-      "gl__05_ffffff.svg"
+      "gl__00.png",
+      "gl__01.png",
+      "gl__02.png",
+      "gl__03.png",
+      "gl__04.png",
+      "gl__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gl__full.svg",
     "location": {
@@ -3008,28 +2912,28 @@
   },
   "gm": {
     "colors": [
+      "#ffffff",
       "#009900",
       "#ff0000",
       "#ff0000",
       "#000099",
-      "#ffffff",
-      "#ffffff"
+      "#000099"
     ],
     "files": [
-      "gm__00_009900.svg",
-      "gm__01_ff0000.svg",
-      "gm__02_ff0000.svg",
-      "gm__03_000099.svg",
-      "gm__04_ffffff.svg",
-      "gm__05_ffffff.svg"
+      "gm__00.png",
+      "gm__01.png",
+      "gm__02.png",
+      "gm__03.png",
+      "gm__04.png",
+      "gm__05.png"
     ],
     "z": [
-      90,
-      50,
-      51,
-      70,
-      60,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gm__full.svg",
     "location": {
@@ -3040,27 +2944,27 @@
   "gn": {
     "colors": [
       "#ffff00",
+      "#ffff00",
       "#009900",
-      "#ff0000",
-      "#ff0000",
+      "#009900",
       "#ff0000",
       "#ff0000"
     ],
     "files": [
-      "gn__00_ffff00.svg",
-      "gn__01_009900.svg",
-      "gn__02_ff0000.svg",
-      "gn__03_ff0000.svg",
-      "gn__04_ff0000.svg",
-      "gn__05_ff0000.svg"
+      "gn__00.png",
+      "gn__01.png",
+      "gn__02.png",
+      "gn__03.png",
+      "gn__04.png",
+      "gn__05.png"
     ],
     "z": [
-      30,
-      40,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gn__full.svg",
     "location": {
@@ -3070,28 +2974,28 @@
   },
   "gp": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "gp__00_e1000f.svg",
-      "gp__01_000091.svg",
-      "gp__02_000091.svg",
-      "gp__03_000091.svg",
-      "gp__04_000091.svg",
-      "gp__05_ffffff.svg"
+      "gp__00.png",
+      "gp__01.png",
+      "gp__02.png",
+      "gp__03.png",
+      "gp__04.png",
+      "gp__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gp__full.svg",
     "location": {
@@ -3101,28 +3005,28 @@
   },
   "gq": {
     "colors": [
+      "#ffffff",
       "#3e9a00",
       "#009a3b",
       "#e32118",
-      "#a36629",
       "#0073ce",
       "#73452b"
     ],
     "files": [
-      "gq__00_3e9a00.svg",
-      "gq__01_009a3b.svg",
-      "gq__02_e32118.svg",
-      "gq__03_a36629.svg",
-      "gq__04_0073ce.svg",
-      "gq__05_73452b.svg"
+      "gq__00.png",
+      "gq__01.png",
+      "gq__02.png",
+      "gq__03.png",
+      "gq__04.png",
+      "gq__05.png"
     ],
     "z": [
-      30,
-      110,
-      10,
-      90,
-      40,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gq__full.svg",
     "location": {
@@ -3132,28 +3036,28 @@
   },
   "gr": {
     "colors": [
-      "#0d5eaf",
-      "#0d5eaf",
-      "#0d5eaf",
       "#ffffff",
       "#ffffff",
-      "#ffffff"
+      "#0d5eaf",
+      "#0d5eaf",
+      "#0d5eaf",
+      "#0d5eaf"
     ],
     "files": [
-      "gr__00_0d5eaf.svg",
-      "gr__01_0d5eaf.svg",
-      "gr__02_0d5eaf.svg",
-      "gr__03_ffffff.svg",
-      "gr__04_ffffff.svg",
-      "gr__05_ffffff.svg"
+      "gr__00.png",
+      "gr__01.png",
+      "gr__02.png",
+      "gr__03.png",
+      "gr__04.png",
+      "gr__05.png"
     ],
     "z": [
-      10,
-      30,
-      60,
-      20,
-      40,
-      100
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gr__full.svg",
     "location": {
@@ -3163,28 +3067,28 @@
   },
   "gs": {
     "colors": [
+      "#ffffff",
       "#ffbb00",
-      "#3ec26d",
-      "#656263",
-      "#00713d",
+      "#cdad56",
       "#6a4c2d",
-      "#000066"
+      "#000066",
+      "#000000"
     ],
     "files": [
-      "gs__00_ffbb00.svg",
-      "gs__01_3ec26d.svg",
-      "gs__02_656263.svg",
-      "gs__03_00713d.svg",
-      "gs__04_6a4c2d.svg",
-      "gs__05_000066.svg"
+      "gs__00.png",
+      "gs__01.png",
+      "gs__02.png",
+      "gs__03.png",
+      "gs__04.png",
+      "gs__05.png"
     ],
     "z": [
-      220,
-      241,
-      200,
-      230,
-      170,
-      160
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gs__full.svg",
     "location": {
@@ -3194,28 +3098,28 @@
   },
   "gt": {
     "colors": [
+      "#ffffff",
+      "#f9f0aa",
+      "#8c959d",
       "#4997d0",
       "#67923d",
-      "#ba1f3e",
-      "#406325",
-      "#24420e",
-      "#511124"
+      "#24420e"
     ],
     "files": [
-      "gt__00_4997d0.svg",
-      "gt__01_67923d.svg",
-      "gt__02_ba1f3e.svg",
-      "gt__03_406325.svg",
-      "gt__04_24420e.svg",
-      "gt__05_511124.svg"
+      "gt__00.png",
+      "gt__01.png",
+      "gt__02.png",
+      "gt__03.png",
+      "gt__04.png",
+      "gt__05.png"
     ],
     "z": [
-      280,
-      520,
-      560,
-      700,
-      311,
-      561
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gt__full.svg",
     "location": {
@@ -3227,26 +3131,26 @@
     "colors": [
       "#fdf9a1",
       "#cbe0e5",
-      "#add2d9",
+      "#a79270",
       "#179a3b",
       "#be0027",
       "#3b5aa3"
     ],
     "files": [
-      "gu__00_fdf9a1.svg",
-      "gu__01_cbe0e5.svg",
-      "gu__02_add2d9.svg",
-      "gu__03_179a3b.svg",
-      "gu__04_be0027.svg",
-      "gu__05_3b5aa3.svg"
+      "gu__00.png",
+      "gu__01.png",
+      "gu__02.png",
+      "gu__03.png",
+      "gu__04.png",
+      "gu__05.png"
     ],
     "z": [
-      50,
-      30,
-      40,
-      60,
-      10,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gu__full.svg",
     "location": {
@@ -3257,27 +3161,27 @@
   "gw": {
     "colors": [
       "#fcd116",
+      "#fcd116",
       "#009e49",
-      "#ce1126",
-      "#ce1126",
+      "#009e49",
       "#ce1126",
       "#000001"
     ],
     "files": [
-      "gw__00_fcd116.svg",
-      "gw__01_009e49.svg",
-      "gw__02_ce1126.svg",
-      "gw__03_ce1126.svg",
-      "gw__04_ce1126.svg",
-      "gw__05_000001.svg"
+      "gw__00.png",
+      "gw__01.png",
+      "gw__02.png",
+      "gw__03.png",
+      "gw__04.png",
+      "gw__05.png"
     ],
     "z": [
-      20,
-      30,
-      10,
-      11,
-      12,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gw__full.svg",
     "location": {
@@ -3287,28 +3191,28 @@
   },
   "gy": {
     "colors": [
+      "#ffffff",
       "#ffde08",
       "#399408",
       "#399408",
       "#de2110",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "gy__00_ffde08.svg",
-      "gy__01_399408.svg",
-      "gy__02_399408.svg",
-      "gy__03_de2110.svg",
-      "gy__04_000001.svg",
-      "gy__05_ffffff.svg"
+      "gy__00.png",
+      "gy__01.png",
+      "gy__02.png",
+      "gy__03.png",
+      "gy__04.png",
+      "gy__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      60,
-      50,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "gy__full.svg",
     "location": {
@@ -3318,28 +3222,28 @@
   },
   "hk": {
     "colors": [
+      "#ffffff",
       "#ec1b2e",
       "#ec1b2e",
       "#ec1b2e",
       "#ec1b2e",
-      "#ec1b2e",
-      "#ffffff"
+      "#ec1b2e"
     ],
     "files": [
-      "hk__00_ec1b2e.svg",
-      "hk__01_ec1b2e.svg",
-      "hk__02_ec1b2e.svg",
-      "hk__03_ec1b2e.svg",
-      "hk__04_ec1b2e.svg",
-      "hk__05_ffffff.svg"
+      "hk__00.png",
+      "hk__01.png",
+      "hk__02.png",
+      "hk__03.png",
+      "hk__04.png",
+      "hk__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "hk__full.svg",
     "location": {
@@ -3349,28 +3253,28 @@
   },
   "hm": {
     "colors": [
-      "#ff0000",
+      "#ffffff",
       "#ff0000",
       "#00008b",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#00008b",
+      "#00008b",
+      "#00008b"
     ],
     "files": [
-      "hm__00_ff0000.svg",
-      "hm__01_ff0000.svg",
-      "hm__02_00008b.svg",
-      "hm__03_ffffff.svg",
-      "hm__04_ffffff.svg",
-      "hm__05_ffffff.svg"
+      "hm__00.png",
+      "hm__01.png",
+      "hm__02.png",
+      "hm__03.png",
+      "hm__04.png",
+      "hm__05.png"
     ],
     "z": [
-      30,
-      50,
-      10,
-      20,
-      40,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "hm__full.svg",
     "location": {
@@ -3380,28 +3284,28 @@
   },
   "hn": {
     "colors": [
+      "#ffffff",
       "#18c3df",
       "#18c3df",
       "#18c3df",
       "#18c3df",
-      "#18c3df",
-      "#ffffff"
+      "#18c3df"
     ],
     "files": [
-      "hn__00_18c3df.svg",
-      "hn__01_18c3df.svg",
-      "hn__02_18c3df.svg",
-      "hn__03_18c3df.svg",
-      "hn__04_18c3df.svg",
-      "hn__05_ffffff.svg"
+      "hn__00.png",
+      "hn__01.png",
+      "hn__02.png",
+      "hn__03.png",
+      "hn__04.png",
+      "hn__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "hn__full.svg",
     "location": {
@@ -3411,28 +3315,28 @@
   },
   "hr": {
     "colors": [
+      "#ffffff",
       "#f7db17",
       "#0093dd",
       "#ff0000",
       "#171796",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "hr__00_f7db17.svg",
-      "hr__01_0093dd.svg",
-      "hr__02_ff0000.svg",
-      "hr__03_171796.svg",
-      "hr__04_000000.svg",
-      "hr__05_ffffff.svg"
+      "hr__00.png",
+      "hr__01.png",
+      "hr__02.png",
+      "hr__03.png",
+      "hr__04.png",
+      "hr__05.png"
     ],
     "z": [
-      120,
-      90,
-      30,
-      10,
-      101,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "hr__full.svg",
     "location": {
@@ -3442,28 +3346,28 @@
   },
   "ht": {
     "colors": [
+      "#ffffff",
       "#f1b517",
       "#d21034",
-      "#d20014",
       "#016a16",
-      "#0a328c",
+      "#503200",
       "#00209f"
     ],
     "files": [
-      "ht__00_f1b517.svg",
-      "ht__01_d21034.svg",
-      "ht__02_d20014.svg",
-      "ht__03_016a16.svg",
-      "ht__04_0a328c.svg",
-      "ht__05_00209f.svg"
+      "ht__00.png",
+      "ht__01.png",
+      "ht__02.png",
+      "ht__03.png",
+      "ht__04.png",
+      "ht__05.png"
     ],
     "z": [
-      30,
-      10,
-      150,
-      352,
-      140,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ht__full.svg",
     "location": {
@@ -3473,28 +3377,28 @@
   },
   "hu": {
     "colors": [
-      "#388d00",
-      "#388d00",
+      "#ffffff",
+      "#ffffff",
       "#388d00",
       "#388d00",
       "#d43516",
-      "#ffffff"
+      "#d43516"
     ],
     "files": [
-      "hu__00_388d00.svg",
-      "hu__01_388d00.svg",
-      "hu__02_388d00.svg",
-      "hu__03_388d00.svg",
-      "hu__04_d43516.svg",
-      "hu__05_ffffff.svg"
+      "hu__00.png",
+      "hu__01.png",
+      "hu__02.png",
+      "hu__03.png",
+      "hu__04.png",
+      "hu__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "hu__full.svg",
     "location": {
@@ -3504,28 +3408,28 @@
   },
   "ic": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffcc00",
       "#ffcc00",
       "#0768a9",
-      "#0768a9",
-      "#0768a9",
-      "#0768a9",
-      "#ffffff"
+      "#0768a9"
     ],
     "files": [
-      "ic__00_ffcc00.svg",
-      "ic__01_0768a9.svg",
-      "ic__02_0768a9.svg",
-      "ic__03_0768a9.svg",
-      "ic__04_0768a9.svg",
-      "ic__05_ffffff.svg"
+      "ic__00.png",
+      "ic__01.png",
+      "ic__02.png",
+      "ic__03.png",
+      "ic__04.png",
+      "ic__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      22,
-      23,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ic__full.svg",
     "location": {
@@ -3535,28 +3439,28 @@
   },
   "id": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#e70011",
       "#e70011",
       "#e70011",
-      "#e70011",
-      "#e70011",
-      "#ffffff"
+      "#e70011"
     ],
     "files": [
-      "id__00_e70011.svg",
-      "id__01_e70011.svg",
-      "id__02_e70011.svg",
-      "id__03_e70011.svg",
-      "id__04_e70011.svg",
-      "id__05_ffffff.svg"
+      "id__00.png",
+      "id__01.png",
+      "id__02.png",
+      "id__03.png",
+      "id__04.png",
+      "id__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "id__full.svg",
     "location": {
@@ -3566,28 +3470,28 @@
   },
   "ie": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ff7900",
       "#ff7900",
       "#009a49",
-      "#009a49",
-      "#009a49",
-      "#009a49",
-      "#ffffff"
+      "#009a49"
     ],
     "files": [
-      "ie__00_ff7900.svg",
-      "ie__01_009a49.svg",
-      "ie__02_009a49.svg",
-      "ie__03_009a49.svg",
-      "ie__04_009a49.svg",
-      "ie__05_ffffff.svg"
+      "ie__00.png",
+      "ie__01.png",
+      "ie__02.png",
+      "ie__03.png",
+      "ie__04.png",
+      "ie__05.png"
     ],
     "z": [
-      40,
-      30,
-      31,
-      32,
-      33,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ie__full.svg",
     "location": {
@@ -3597,28 +3501,28 @@
   },
   "il": {
     "colors": [
-      "#0038b8",
-      "#0038b8",
-      "#0038b8",
       "#ffffff",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#ffffff",
+      "#0038b8",
+      "#0038b8"
     ],
     "files": [
-      "il__00_0038b8.svg",
-      "il__01_0038b8.svg",
-      "il__02_0038b8.svg",
-      "il__03_ffffff.svg",
-      "il__04_ffffff.svg",
-      "il__05_ffffff.svg"
+      "il__00.png",
+      "il__01.png",
+      "il__02.png",
+      "il__03.png",
+      "il__04.png",
+      "il__05.png"
     ],
     "z": [
-      60,
-      61,
-      80,
-      50,
-      70,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "il__full.svg",
     "location": {
@@ -3628,28 +3532,28 @@
   },
   "im": {
     "colors": [
+      "#ffffff",
       "#ffef00",
-      "#ffec00",
-      "#ffe606",
       "#ba0000",
-      "#000000",
-      "#ffffff"
+      "#ba0000",
+      "#ba0000",
+      "#000000"
     ],
     "files": [
-      "im__00_ffef00.svg",
-      "im__01_ffec00.svg",
-      "im__02_ffe606.svg",
-      "im__03_ba0000.svg",
-      "im__04_000000.svg",
-      "im__05_ffffff.svg"
+      "im__00.png",
+      "im__01.png",
+      "im__02.png",
+      "im__03.png",
+      "im__04.png",
+      "im__05.png"
     ],
     "z": [
-      60,
-      80,
-      130,
-      50,
-      151,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "im__full.svg",
     "location": {
@@ -3659,28 +3563,28 @@
   },
   "in": {
     "colors": [
+      "#ffffff",
+      "#ff9933",
       "#ff9933",
       "#128807",
-      "#000088",
-      "#000088",
-      "#ffffff",
-      "#ffffff"
+      "#128807",
+      "#000088"
     ],
     "files": [
-      "in__00_ff9933.svg",
-      "in__01_128807.svg",
-      "in__02_000088.svg",
-      "in__03_000088.svg",
-      "in__04_ffffff.svg",
-      "in__05_ffffff.svg"
+      "in__00.png",
+      "in__01.png",
+      "in__02.png",
+      "in__03.png",
+      "in__04.png",
+      "in__05.png"
     ],
     "z": [
-      10,
-      30,
-      50,
-      70,
-      20,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "in__full.svg",
     "location": {
@@ -3690,28 +3594,28 @@
   },
   "io": {
     "colors": [
+      "#ffffff",
       "#fff100",
       "#808080",
-      "#cc0000",
       "#a24300",
       "#006d00",
       "#000063"
     ],
     "files": [
-      "io__00_fff100.svg",
-      "io__01_808080.svg",
-      "io__02_cc0000.svg",
-      "io__03_a24300.svg",
-      "io__04_006d00.svg",
-      "io__05_000063.svg"
+      "io__00.png",
+      "io__01.png",
+      "io__02.png",
+      "io__03.png",
+      "io__04.png",
+      "io__05.png"
     ],
     "z": [
-      1030,
-      1050,
-      620,
-      30,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "io__full.svg",
     "location": {
@@ -3721,28 +3625,28 @@
   },
   "iq": {
     "colors": [
+      "#ffffff",
       "#007a3d",
       "#ce1126",
       "#ce1126",
-      "#ce1126",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "iq__00_007a3d.svg",
-      "iq__01_ce1126.svg",
-      "iq__02_ce1126.svg",
-      "iq__03_ce1126.svg",
-      "iq__04_000001.svg",
-      "iq__05_ffffff.svg"
+      "iq__00.png",
+      "iq__01.png",
+      "iq__02.png",
+      "iq__03.png",
+      "iq__04.png",
+      "iq__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      22,
-      30,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "iq__full.svg",
     "location": {
@@ -3752,28 +3656,28 @@
   },
   "ir": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#239f40",
-      "#239e3f",
       "#da0000",
-      "#da0000",
-      "#d90000",
-      "#ffffff"
+      "#da0000"
     ],
     "files": [
-      "ir__00_239f40.svg",
-      "ir__01_239e3f.svg",
-      "ir__02_da0000.svg",
-      "ir__03_da0000.svg",
-      "ir__04_d90000.svg",
-      "ir__05_ffffff.svg"
+      "ir__00.png",
+      "ir__01.png",
+      "ir__02.png",
+      "ir__03.png",
+      "ir__04.png",
+      "ir__05.png"
     ],
     "z": [
-      550,
-      1850,
-      60,
-      1860,
-      1840,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ir__full.svg",
     "location": {
@@ -3783,28 +3687,28 @@
   },
   "is": {
     "colors": [
+      "#ffffff",
       "#d72828",
       "#003897",
       "#003897",
       "#003897",
-      "#003897",
-      "#ffffff"
+      "#003897"
     ],
     "files": [
-      "is__00_d72828.svg",
-      "is__01_003897.svg",
-      "is__02_003897.svg",
-      "is__03_003897.svg",
-      "is__04_003897.svg",
-      "is__05_ffffff.svg"
+      "is__00.png",
+      "is__01.png",
+      "is__02.png",
+      "is__03.png",
+      "is__04.png",
+      "is__05.png"
     ],
     "z": [
-      70,
-      50,
-      51,
-      52,
-      53,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "is__full.svg",
     "location": {
@@ -3814,28 +3718,28 @@
   },
   "it": {
     "colors": [
-      "#009246",
-      "#009246",
+      "#ffffff",
+      "#ffffff",
       "#009246",
       "#009246",
       "#ce2b37",
-      "#ffffff"
+      "#ce2b37"
     ],
     "files": [
-      "it__00_009246.svg",
-      "it__01_009246.svg",
-      "it__02_009246.svg",
-      "it__03_009246.svg",
-      "it__04_ce2b37.svg",
-      "it__05_ffffff.svg"
+      "it__00.png",
+      "it__01.png",
+      "it__02.png",
+      "it__03.png",
+      "it__04.png",
+      "it__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "it__full.svg",
     "location": {
@@ -3845,28 +3749,28 @@
   },
   "je": {
     "colors": [
+      "#ffffff",
       "#ffd700",
+      "#d1b948",
       "#377bc8",
       "#806600",
-      "#cf142b",
-      "#2c5aa0",
-      "#800000"
+      "#cf142b"
     ],
     "files": [
-      "je__00_ffd700.svg",
-      "je__01_377bc8.svg",
-      "je__02_806600.svg",
-      "je__03_cf142b.svg",
-      "je__04_2c5aa0.svg",
-      "je__05_800000.svg"
+      "je__00.png",
+      "je__01.png",
+      "je__02.png",
+      "je__03.png",
+      "je__04.png",
+      "je__05.png"
     ],
     "z": [
-      290,
-      60,
-      81,
-      40,
-      61,
-      41
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "je__full.svg",
     "location": {
@@ -3877,27 +3781,27 @@
   "jm": {
     "colors": [
       "#ffcc00",
+      "#ffcc00",
       "#009900",
-      "#000001",
-      "#000001",
+      "#009900",
       "#000001",
       "#000001"
     ],
     "files": [
-      "jm__00_ffcc00.svg",
-      "jm__01_009900.svg",
-      "jm__02_000001.svg",
-      "jm__03_000001.svg",
-      "jm__04_000001.svg",
-      "jm__05_000001.svg"
+      "jm__00.png",
+      "jm__01.png",
+      "jm__02.png",
+      "jm__03.png",
+      "jm__04.png",
+      "jm__05.png"
     ],
     "z": [
-      50,
-      30,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "jm__full.svg",
     "location": {
@@ -3907,28 +3811,28 @@
   },
   "jo": {
     "colors": [
+      "#ffffff",
       "#009900",
       "#ff0000",
+      "#ff0000",
       "#000001",
-      "#000001",
-      "#ffffff",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "jo__00_009900.svg",
-      "jo__01_ff0000.svg",
-      "jo__02_000001.svg",
-      "jo__03_000001.svg",
-      "jo__04_ffffff.svg",
-      "jo__05_ffffff.svg"
+      "jo__00.png",
+      "jo__01.png",
+      "jo__02.png",
+      "jo__03.png",
+      "jo__04.png",
+      "jo__05.png"
     ],
     "z": [
-      80,
-      90,
-      60,
-      61,
-      70,
-      100
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "jo__full.svg",
     "location": {
@@ -3938,28 +3842,28 @@
   },
   "jp": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#bc002d",
-      "#bc002d",
-      "#bc002d",
-      "#bc002d",
-      "#bc002d",
-      "#ffffff"
+      "#bc002d"
     ],
     "files": [
-      "jp__00_bc002d.svg",
-      "jp__01_bc002d.svg",
-      "jp__02_bc002d.svg",
-      "jp__03_bc002d.svg",
-      "jp__04_bc002d.svg",
-      "jp__05_ffffff.svg"
+      "jp__00.png",
+      "jp__01.png",
+      "jp__02.png",
+      "jp__03.png",
+      "jp__04.png",
+      "jp__05.png"
     ],
     "z": [
-      60,
-      61,
-      62,
-      63,
-      64,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "jp__full.svg",
     "location": {
@@ -3969,28 +3873,28 @@
   },
   "ke": {
     "colors": [
+      "#ffffff",
+      "#bb0000",
       "#bb0000",
       "#006600",
       "#000001",
-      "#000000",
-      "#ffffff",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ke__00_bb0000.svg",
-      "ke__01_006600.svg",
-      "ke__02_000001.svg",
-      "ke__03_000000.svg",
-      "ke__04_ffffff.svg",
-      "ke__05_ffffff.svg"
+      "ke__00.png",
+      "ke__01.png",
+      "ke__02.png",
+      "ke__03.png",
+      "ke__04.png",
+      "ke__05.png"
     ],
     "z": [
-      100,
-      50,
-      40,
-      71,
-      30,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ke__full.svg",
     "location": {
@@ -4008,20 +3912,20 @@
       "#ff0000"
     ],
     "files": [
-      "kg__00_ffff00.svg",
-      "kg__01_ff0000.svg",
-      "kg__02_ff0000.svg",
-      "kg__03_ff0000.svg",
-      "kg__04_ff0000.svg",
-      "kg__05_ff0000.svg"
+      "kg__00.png",
+      "kg__01.png",
+      "kg__02.png",
+      "kg__03.png",
+      "kg__04.png",
+      "kg__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      14
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kg__full.svg",
     "location": {
@@ -4031,28 +3935,28 @@
   },
   "kh": {
     "colors": [
+      "#ffffff",
+      "#e00025",
       "#e00025",
       "#032ea1",
       "#032ea1",
-      "#032ea1",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "kh__00_e00025.svg",
-      "kh__01_032ea1.svg",
-      "kh__02_032ea1.svg",
-      "kh__03_032ea1.svg",
-      "kh__04_000000.svg",
-      "kh__05_ffffff.svg"
+      "kh__00.png",
+      "kh__01.png",
+      "kh__02.png",
+      "kh__03.png",
+      "kh__04.png",
+      "kh__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      31,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kh__full.svg",
     "location": {
@@ -4062,28 +3966,28 @@
   },
   "ki": {
     "colors": [
-      "#ffc84b",
+      "#ffffff",
       "#fec74a",
-      "#d8aa3f",
-      "#d9a43e",
+      "#e73e2d",
+      "#e73e2d",
       "#e73e2d",
       "#005989"
     ],
     "files": [
-      "ki__00_ffc84b.svg",
-      "ki__01_fec74a.svg",
-      "ki__02_d8aa3f.svg",
-      "ki__03_d9a43e.svg",
-      "ki__04_e73e2d.svg",
-      "ki__05_005989.svg"
+      "ki__00.png",
+      "ki__01.png",
+      "ki__02.png",
+      "ki__03.png",
+      "ki__04.png",
+      "ki__05.png"
     ],
     "z": [
-      300,
-      230,
-      231,
-      311,
-      50,
-      240
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ki__full.svg",
     "location": {
@@ -4093,28 +3997,28 @@
   },
   "km": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#239e46",
+      "#239e46",
       "#be0027",
-      "#3b5aa3",
-      "#ffffff",
-      "#ffffff"
+      "#3b5aa3"
     ],
     "files": [
-      "km__00_ffff00.svg",
-      "km__01_239e46.svg",
-      "km__02_be0027.svg",
-      "km__03_3b5aa3.svg",
-      "km__04_ffffff.svg",
-      "km__05_ffffff.svg"
+      "km__00.png",
+      "km__01.png",
+      "km__02.png",
+      "km__03.png",
+      "km__04.png",
+      "km__05.png"
     ],
     "z": [
-      50,
-      90,
-      70,
-      80,
-      60,
-      110
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "km__full.svg",
     "location": {
@@ -4124,28 +4028,28 @@
   },
   "kn": {
     "colors": [
-      "#ffe900",
+      "#ffffff",
       "#ffe900",
       "#35a100",
       "#c70000",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "kn__00_ffe900.svg",
-      "kn__01_ffe900.svg",
-      "kn__02_35a100.svg",
-      "kn__03_c70000.svg",
-      "kn__04_000001.svg",
-      "kn__05_ffffff.svg"
+      "kn__00.png",
+      "kn__01.png",
+      "kn__02.png",
+      "kn__03.png",
+      "kn__04.png",
+      "kn__05.png"
     ],
     "z": [
-      50,
-      51,
-      60,
-      70,
-      80,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kn__full.svg",
     "location": {
@@ -4155,28 +4059,28 @@
   },
   "kp": {
     "colors": [
+      "#ffffff",
       "#c60000",
-      "#c40000",
+      "#c60000",
+      "#c60000",
       "#3e5698",
-      "#3e5698",
-      "#000000",
-      "#ffffff"
+      "#3e5698"
     ],
     "files": [
-      "kp__00_c60000.svg",
-      "kp__01_c40000.svg",
-      "kp__02_3e5698.svg",
-      "kp__03_3e5698.svg",
-      "kp__04_000000.svg",
-      "kp__05_ffffff.svg"
+      "kp__00.png",
+      "kp__01.png",
+      "kp__02.png",
+      "kp__03.png",
+      "kp__04.png",
+      "kp__05.png"
     ],
     "z": [
-      70,
-      100,
-      60,
-      80,
-      51,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kp__full.svg",
     "location": {
@@ -4186,28 +4090,28 @@
   },
   "kr": {
     "colors": [
-      "#cd2e3a",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#cd2e3a",
       "#0047a0",
-      "#000001",
-      "#ffffff",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "kr__00_cd2e3a.svg",
-      "kr__01_cd2e3a.svg",
-      "kr__02_0047a0.svg",
-      "kr__03_000001.svg",
-      "kr__04_ffffff.svg",
-      "kr__05_ffffff.svg"
+      "kr__00.png",
+      "kr__01.png",
+      "kr__02.png",
+      "kr__03.png",
+      "kr__04.png",
+      "kr__05.png"
     ],
     "z": [
-      110,
-      130,
-      120,
-      80,
-      50,
-      101
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kr__full.svg",
     "location": {
@@ -4217,28 +4121,28 @@
   },
   "kw": {
     "colors": [
+      "#ffffff",
+      "#00d941",
       "#00d941",
       "#f31830",
       "#f31830",
-      "#f31830",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "kw__00_00d941.svg",
-      "kw__01_f31830.svg",
-      "kw__02_f31830.svg",
-      "kw__03_f31830.svg",
-      "kw__04_000001.svg",
-      "kw__05_ffffff.svg"
+      "kw__00.png",
+      "kw__01.png",
+      "kw__02.png",
+      "kw__03.png",
+      "kw__04.png",
+      "kw__05.png"
     ],
     "z": [
-      70,
-      60,
-      61,
-      62,
-      80,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kw__full.svg",
     "location": {
@@ -4248,28 +4152,28 @@
   },
   "ky": {
     "colors": [
+      "#ffffff",
       "#fcea83",
       "#c8102e",
+      "#0b50a0",
       "#00493d",
-      "#073163",
-      "#012169",
       "#000066"
     ],
     "files": [
-      "ky__00_fcea83.svg",
-      "ky__01_c8102e.svg",
-      "ky__02_00493d.svg",
-      "ky__03_073163.svg",
-      "ky__04_012169.svg",
-      "ky__05_000066.svg"
+      "ky__00.png",
+      "ky__01.png",
+      "ky__02.png",
+      "ky__03.png",
+      "ky__04.png",
+      "ky__05.png"
     ],
     "z": [
-      160,
-      40,
-      200,
-      260,
-      20,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ky__full.svg",
     "location": {
@@ -4280,27 +4184,27 @@
   "kz": {
     "colors": [
       "#ffec2d",
-      "#ffec2d",
+      "#00abc2",
       "#00abc2",
       "#00abc2",
       "#00abc2",
       "#00abc2"
     ],
     "files": [
-      "kz__00_ffec2d.svg",
-      "kz__01_ffec2d.svg",
-      "kz__02_00abc2.svg",
-      "kz__03_00abc2.svg",
-      "kz__04_00abc2.svg",
-      "kz__05_00abc2.svg"
+      "kz__00.png",
+      "kz__01.png",
+      "kz__02.png",
+      "kz__03.png",
+      "kz__04.png",
+      "kz__05.png"
     ],
     "z": [
-      20,
-      181,
-      10,
-      11,
-      12,
-      13
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "kz__full.svg",
     "location": {
@@ -4310,28 +4214,28 @@
   },
   "la": {
     "colors": [
-      "#ce1126",
+      "#ffffff",
       "#ce1126",
       "#ce1126",
       "#ce1126",
       "#002868",
-      "#ffffff"
+      "#002868"
     ],
     "files": [
-      "la__00_ce1126.svg",
-      "la__01_ce1126.svg",
-      "la__02_ce1126.svg",
-      "la__03_ce1126.svg",
-      "la__04_002868.svg",
-      "la__05_ffffff.svg"
+      "la__00.png",
+      "la__01.png",
+      "la__02.png",
+      "la__03.png",
+      "la__04.png",
+      "la__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      53,
-      60,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "la__full.svg",
     "location": {
@@ -4341,28 +4245,28 @@
   },
   "lb": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#00a850",
       "#ee161f",
-      "#ee161f",
-      "#ee161f",
-      "#ffffff",
-      "#ffffff"
+      "#ee161f"
     ],
     "files": [
-      "lb__00_00a850.svg",
-      "lb__01_ee161f.svg",
-      "lb__02_ee161f.svg",
-      "lb__03_ee161f.svg",
-      "lb__04_ffffff.svg",
-      "lb__05_ffffff.svg"
+      "lb__00.png",
+      "lb__01.png",
+      "lb__02.png",
+      "lb__03.png",
+      "lb__04.png",
+      "lb__05.png"
     ],
     "z": [
-      80,
-      60,
-      61,
-      62,
-      70,
-      92
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lb__full.svg",
     "location": {
@@ -4372,28 +4276,28 @@
   },
   "lc": {
     "colors": [
+      "#ffffff",
       "#ffce00",
       "#65cfff",
       "#65cfff",
       "#65cfff",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "lc__00_ffce00.svg",
-      "lc__01_65cfff.svg",
-      "lc__02_65cfff.svg",
-      "lc__03_65cfff.svg",
-      "lc__04_000001.svg",
-      "lc__05_ffffff.svg"
+      "lc__00.png",
+      "lc__01.png",
+      "lc__02.png",
+      "lc__03.png",
+      "lc__04.png",
+      "lc__05.png"
     ],
     "z": [
-      50,
-      20,
-      21,
-      22,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lc__full.svg",
     "location": {
@@ -4405,26 +4309,26 @@
     "colors": [
       "#ffd83d",
       "#ce1126",
+      "#ce1126",
+      "#ce1126",
       "#002b7f",
-      "#000001",
-      "#000001",
       "#000000"
     ],
     "files": [
-      "li__00_ffd83d.svg",
-      "li__01_ce1126.svg",
-      "li__02_002b7f.svg",
-      "li__03_000001.svg",
-      "li__04_000001.svg",
-      "li__05_000000.svg"
+      "li__00.png",
+      "li__01.png",
+      "li__02.png",
+      "li__03.png",
+      "li__04.png",
+      "li__05.png"
     ],
     "z": [
-      30,
-      20,
-      10,
-      80,
-      300,
-      31
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "li__full.svg",
     "location": {
@@ -4438,24 +4342,24 @@
       "#ff5b00",
       "#005641",
       "#8d2029",
-      "#000001",
+      "#8d2029",
       "#000000"
     ],
     "files": [
-      "lk__00_ffb700.svg",
-      "lk__01_ff5b00.svg",
-      "lk__02_005641.svg",
-      "lk__03_8d2029.svg",
-      "lk__04_000001.svg",
-      "lk__05_000000.svg"
+      "lk__00.png",
+      "lk__01.png",
+      "lk__02.png",
+      "lk__03.png",
+      "lk__04.png",
+      "lk__05.png"
     ],
     "z": [
-      10,
-      20,
-      30,
-      40,
-      180,
-      51
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lk__full.svg",
     "location": {
@@ -4465,28 +4369,28 @@
   },
   "lr": {
     "colors": [
-      "#cc0000",
-      "#000066",
-      "#000066",
-      "#000066",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#cc0000",
+      "#cc0000",
+      "#cc0000",
+      "#000066"
     ],
     "files": [
-      "lr__00_cc0000.svg",
-      "lr__01_000066.svg",
-      "lr__02_000066.svg",
-      "lr__03_000066.svg",
-      "lr__04_ffffff.svg",
-      "lr__05_ffffff.svg"
+      "lr__00.png",
+      "lr__01.png",
+      "lr__02.png",
+      "lr__03.png",
+      "lr__04.png",
+      "lr__05.png"
     ],
     "z": [
-      80,
-      60,
-      61,
-      62,
-      50,
-      90
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lr__full.svg",
     "location": {
@@ -4496,28 +4400,28 @@
   },
   "ls": {
     "colors": [
-      "#009543",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#009543",
       "#00209f",
-      "#000000",
-      "#ffffff",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "ls__00_009543.svg",
-      "ls__01_009543.svg",
-      "ls__02_00209f.svg",
-      "ls__03_000000.svg",
-      "ls__04_ffffff.svg",
-      "ls__05_ffffff.svg"
+      "ls__00.png",
+      "ls__01.png",
+      "ls__02.png",
+      "ls__03.png",
+      "ls__04.png",
+      "ls__05.png"
     ],
     "z": [
-      20,
-      21,
-      30,
-      51,
-      10,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ls__full.svg",
     "location": {
@@ -4528,27 +4432,27 @@
   "lt": {
     "colors": [
       "#fdb913",
+      "#fdb913",
       "#c1272d",
-      "#006a44",
-      "#006a44",
+      "#c1272d",
       "#006a44",
       "#006a44"
     ],
     "files": [
-      "lt__00_fdb913.svg",
-      "lt__01_c1272d.svg",
-      "lt__02_006a44.svg",
-      "lt__03_006a44.svg",
-      "lt__04_006a44.svg",
-      "lt__05_006a44.svg"
+      "lt__00.png",
+      "lt__01.png",
+      "lt__02.png",
+      "lt__03.png",
+      "lt__04.png",
+      "lt__05.png"
     ],
     "z": [
-      40,
-      30,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lt__full.svg",
     "location": {
@@ -4558,28 +4462,28 @@
   },
   "lu": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#00a1de",
       "#00a1de",
       "#ed2939",
-      "#ed2939",
-      "#ed2939",
-      "#ed2939",
-      "#ffffff"
+      "#ed2939"
     ],
     "files": [
-      "lu__00_00a1de.svg",
-      "lu__01_ed2939.svg",
-      "lu__02_ed2939.svg",
-      "lu__03_ed2939.svg",
-      "lu__04_ed2939.svg",
-      "lu__05_ffffff.svg"
+      "lu__00.png",
+      "lu__01.png",
+      "lu__02.png",
+      "lu__03.png",
+      "lu__04.png",
+      "lu__05.png"
     ],
     "z": [
-      30,
-      10,
-      11,
-      12,
-      13,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lu__full.svg",
     "location": {
@@ -4589,28 +4493,28 @@
   },
   "lv": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#981e32",
       "#981e32",
       "#981e32",
-      "#981e32",
-      "#981e32",
-      "#ffffff"
+      "#981e32"
     ],
     "files": [
-      "lv__00_981e32.svg",
-      "lv__01_981e32.svg",
-      "lv__02_981e32.svg",
-      "lv__03_981e32.svg",
-      "lv__04_981e32.svg",
-      "lv__05_ffffff.svg"
+      "lv__00.png",
+      "lv__01.png",
+      "lv__02.png",
+      "lv__03.png",
+      "lv__04.png",
+      "lv__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      34,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "lv__full.svg",
     "location": {
@@ -4620,28 +4524,28 @@
   },
   "ly": {
     "colors": [
-      "#239e46",
+      "#ffffff",
       "#239e46",
       "#239e46",
       "#e70013",
       "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ly__00_239e46.svg",
-      "ly__01_239e46.svg",
-      "ly__02_239e46.svg",
-      "ly__03_e70013.svg",
-      "ly__04_000001.svg",
-      "ly__05_ffffff.svg"
+      "ly__00.png",
+      "ly__01.png",
+      "ly__02.png",
+      "ly__03.png",
+      "ly__04.png",
+      "ly__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      70,
-      60,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ly__full.svg",
     "location": {
@@ -4659,20 +4563,20 @@
       "#006233"
     ],
     "files": [
-      "ma__00_c1272d.svg",
-      "ma__01_c1272d.svg",
-      "ma__02_c1272d.svg",
-      "ma__03_c1272d.svg",
-      "ma__04_c1272d.svg",
-      "ma__05_006233.svg"
+      "ma__00.png",
+      "ma__01.png",
+      "ma__02.png",
+      "ma__03.png",
+      "ma__04.png",
+      "ma__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      21
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ma__full.svg",
     "location": {
@@ -4682,28 +4586,28 @@
   },
   "mc": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#f31830",
       "#f31830",
       "#f31830",
-      "#f31830",
-      "#f31830",
-      "#ffffff"
+      "#f31830"
     ],
     "files": [
-      "mc__00_f31830.svg",
-      "mc__01_f31830.svg",
-      "mc__02_f31830.svg",
-      "mc__03_f31830.svg",
-      "mc__04_f31830.svg",
-      "mc__05_ffffff.svg"
+      "mc__00.png",
+      "mc__01.png",
+      "mc__02.png",
+      "mc__03.png",
+      "mc__04.png",
+      "mc__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mc__full.svg",
     "location": {
@@ -4715,26 +4619,26 @@
     "colors": [
       "#ffde00",
       "#a77b3b",
-      "#ff1900",
-      "#ff0000",
       "#de2110",
-      "#00319c"
+      "#564dff",
+      "#00319c",
+      "#000000"
     ],
     "files": [
-      "md__00_ffde00.svg",
-      "md__01_a77b3b.svg",
-      "md__02_ff1900.svg",
-      "md__03_ff0000.svg",
-      "md__04_de2110.svg",
-      "md__05_00319c.svg"
+      "md__00.png",
+      "md__01.png",
+      "md__02.png",
+      "md__03.png",
+      "md__04.png",
+      "md__05.png"
     ],
     "z": [
-      30,
-      60,
-      50,
-      290,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "md__full.svg",
     "location": {
@@ -4744,28 +4648,28 @@
   },
   "me": {
     "colors": [
-      "#d4af3a",
       "#d3ae3b",
       "#6d8c3e",
-      "#b96b29",
+      "#c40308",
+      "#c40308",
       "#c40308",
       "#1d5e91"
     ],
     "files": [
-      "me__00_d4af3a.svg",
-      "me__01_d3ae3b.svg",
-      "me__02_6d8c3e.svg",
-      "me__03_b96b29.svg",
-      "me__04_c40308.svg",
-      "me__05_1d5e91.svg"
+      "me__00.png",
+      "me__01.png",
+      "me__02.png",
+      "me__03.png",
+      "me__04.png",
+      "me__05.png"
     ],
     "z": [
-      610,
-      10,
-      70,
-      760,
-      20,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "me__full.svg",
     "location": {
@@ -4773,61 +4677,30 @@
       "lon": 19.3
     }
   },
-  "mf": {
-    "colors": [
-      "#e1000f",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
-    ],
-    "files": [
-      "mf__00_e1000f.svg",
-      "mf__01_000091.svg",
-      "mf__02_000091.svg",
-      "mf__03_000091.svg",
-      "mf__04_000091.svg",
-      "mf__05_ffffff.svg"
-    ],
-    "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
-    ],
-    "full": "mf__full.svg",
-    "location": {
-      "lat": 18.08333333,
-      "lon": -63.95
-    }
-  },
   "mg": {
     "colors": [
-      "#fc3d32",
-      "#fc3d32",
+      "#ffffff",
+      "#ffffff",
       "#fc3d32",
       "#fc3d32",
       "#007e3a",
-      "#ffffff"
+      "#007e3a"
     ],
     "files": [
-      "mg__00_fc3d32.svg",
-      "mg__01_fc3d32.svg",
-      "mg__02_fc3d32.svg",
-      "mg__03_fc3d32.svg",
-      "mg__04_007e3a.svg",
-      "mg__05_ffffff.svg"
+      "mg__00.png",
+      "mg__01.png",
+      "mg__02.png",
+      "mg__03.png",
+      "mg__04.png",
+      "mg__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mg__full.svg",
     "location": {
@@ -4837,28 +4710,28 @@
   },
   "mh": {
     "colors": [
+      "#ffffff",
       "#e2ae57",
       "#3b5aa3",
       "#3b5aa3",
       "#3b5aa3",
-      "#3b5aa3",
-      "#ffffff"
+      "#3b5aa3"
     ],
     "files": [
-      "mh__00_e2ae57.svg",
-      "mh__01_3b5aa3.svg",
-      "mh__02_3b5aa3.svg",
-      "mh__03_3b5aa3.svg",
-      "mh__04_3b5aa3.svg",
-      "mh__05_ffffff.svg"
+      "mh__00.png",
+      "mh__01.png",
+      "mh__02.png",
+      "mh__03.png",
+      "mh__04.png",
+      "mh__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mh__full.svg",
     "location": {
@@ -4869,27 +4742,27 @@
   "mk": {
     "colors": [
       "#ffe600",
-      "#d20000",
+      "#ffe600",
       "#d20000",
       "#d20000",
       "#d20000",
       "#d20000"
     ],
     "files": [
-      "mk__00_ffe600.svg",
-      "mk__01_d20000.svg",
-      "mk__02_d20000.svg",
-      "mk__03_d20000.svg",
-      "mk__04_d20000.svg",
-      "mk__05_d20000.svg"
+      "mk__00.png",
+      "mk__01.png",
+      "mk__02.png",
+      "mk__03.png",
+      "mk__04.png",
+      "mk__05.png"
     ],
     "z": [
-      30,
-      10,
-      11,
-      12,
-      13,
-      31
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mk__full.svg",
     "location": {
@@ -4900,27 +4773,27 @@
   "ml": {
     "colors": [
       "#ffff00",
+      "#ffff00",
       "#009a00",
-      "#ff0000",
-      "#ff0000",
+      "#009a00",
       "#ff0000",
       "#ff0000"
     ],
     "files": [
-      "ml__00_ffff00.svg",
-      "ml__01_009a00.svg",
-      "ml__02_ff0000.svg",
-      "ml__03_ff0000.svg",
-      "ml__04_ff0000.svg",
-      "ml__05_ff0000.svg"
+      "ml__00.png",
+      "ml__01.png",
+      "ml__02.png",
+      "ml__03.png",
+      "ml__04.png",
+      "ml__05.png"
     ],
     "z": [
-      40,
-      30,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ml__full.svg",
     "location": {
@@ -4930,28 +4803,28 @@
   },
   "mm": {
     "colors": [
-      "#fecb00",
+      "#ffffff",
       "#fecb00",
       "#fecb00",
       "#34b233",
       "#ea2839",
-      "#ffffff"
+      "#ea2839"
     ],
     "files": [
-      "mm__00_fecb00.svg",
-      "mm__01_fecb00.svg",
-      "mm__02_fecb00.svg",
-      "mm__03_34b233.svg",
-      "mm__04_ea2839.svg",
-      "mm__05_ffffff.svg"
+      "mm__00.png",
+      "mm__01.png",
+      "mm__02.png",
+      "mm__03.png",
+      "mm__04.png",
+      "mm__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      20,
-      30,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mm__full.svg",
     "location": {
@@ -4961,28 +4834,28 @@
   },
   "mn": {
     "colors": [
+      "#ffd900",
       "#da2032",
       "#da2032",
       "#da2032",
-      "#da2032",
-      "#da2032",
+      "#0066b3",
       "#0066b3"
     ],
     "files": [
-      "mn__00_da2032.svg",
-      "mn__01_da2032.svg",
-      "mn__02_da2032.svg",
-      "mn__03_da2032.svg",
-      "mn__04_da2032.svg",
-      "mn__05_0066b3.svg"
+      "mn__00.png",
+      "mn__01.png",
+      "mn__02.png",
+      "mn__03.png",
+      "mn__04.png",
+      "mn__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      40,
-      80,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mn__full.svg",
     "location": {
@@ -4992,28 +4865,28 @@
   },
   "mo": {
     "colors": [
+      "#ffffff",
       "#fbd116",
-      "#fbd116",
       "#00785e",
       "#00785e",
       "#00785e",
-      "#ffffff"
+      "#00785e"
     ],
     "files": [
-      "mo__00_fbd116.svg",
-      "mo__01_fbd116.svg",
-      "mo__02_00785e.svg",
-      "mo__03_00785e.svg",
-      "mo__04_00785e.svg",
-      "mo__05_ffffff.svg"
+      "mo__00.png",
+      "mo__01.png",
+      "mo__02.png",
+      "mo__03.png",
+      "mo__04.png",
+      "mo__05.png"
     ],
     "z": [
-      20,
-      50,
-      10,
-      11,
-      12,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mo__full.svg",
     "location": {
@@ -5023,28 +4896,28 @@
   },
   "mp": {
     "colors": [
+      "#ffffff",
       "#ffd200",
-      "#ef8a10",
       "#8c8a8c",
+      "#de2010",
       "#0071bc",
-      "#217900",
-      "#6b18b5"
+      "#000000"
     ],
     "files": [
-      "mp__00_ffd200.svg",
-      "mp__01_ef8a10.svg",
-      "mp__02_8c8a8c.svg",
-      "mp__03_0071bc.svg",
-      "mp__04_217900.svg",
-      "mp__05_6b18b5.svg"
+      "mp__00.png",
+      "mp__01.png",
+      "mp__02.png",
+      "mp__03.png",
+      "mp__04.png",
+      "mp__05.png"
     ],
     "z": [
-      80,
-      81,
-      120,
-      50,
-      780,
-      540
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mp__full.svg",
     "location": {
@@ -5055,27 +4928,27 @@
   "mq": {
     "colors": [
       "#00a650",
+      "#00a650",
       "#ef1923",
-      "#231f1e",
       "#231f1e",
       "#231f1e",
       "#231f1e"
     ],
     "files": [
-      "mq__00_00a650.svg",
-      "mq__01_ef1923.svg",
-      "mq__02_231f1e.svg",
-      "mq__03_231f1e.svg",
-      "mq__04_231f1e.svg",
-      "mq__05_231f1e.svg"
+      "mq__00.png",
+      "mq__01.png",
+      "mq__02.png",
+      "mq__03.png",
+      "mq__04.png",
+      "mq__05.png"
     ],
     "z": [
-      20,
-      30,
-      10,
-      11,
-      12,
-      13
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mq__full.svg",
     "location": {
@@ -5087,26 +4960,26 @@
     "colors": [
       "#ffc400",
       "#cd2a3e",
-      "#cd2a3e",
-      "#cd2a3e",
-      "#cd2a3e",
+      "#006233",
+      "#006233",
+      "#006233",
       "#006233"
     ],
     "files": [
-      "mr__00_ffc400.svg",
-      "mr__01_cd2a3e.svg",
-      "mr__02_cd2a3e.svg",
-      "mr__03_cd2a3e.svg",
-      "mr__04_cd2a3e.svg",
-      "mr__05_006233.svg"
+      "mr__00.png",
+      "mr__01.png",
+      "mr__02.png",
+      "mr__03.png",
+      "mr__04.png",
+      "mr__05.png"
     ],
     "z": [
-      40,
-      10,
-      11,
-      12,
-      13,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mr__full.svg",
     "location": {
@@ -5116,28 +4989,28 @@
   },
   "ms": {
     "colors": [
-      "#ffdf00",
-      "#ff9a08",
+      "#ffffff",
       "#00a2bd",
       "#008021",
       "#a53d08",
-      "#012169"
+      "#012169",
+      "#000000"
     ],
     "files": [
-      "ms__00_ffdf00.svg",
-      "ms__01_ff9a08.svg",
-      "ms__02_00a2bd.svg",
-      "ms__03_008021.svg",
-      "ms__04_a53d08.svg",
-      "ms__05_012169.svg"
+      "ms__00.png",
+      "ms__01.png",
+      "ms__02.png",
+      "ms__03.png",
+      "ms__04.png",
+      "ms__05.png"
     ],
     "z": [
-      81,
-      70,
-      30,
-      110,
-      40,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ms__full.svg",
     "location": {
@@ -5147,28 +5020,28 @@
   },
   "mt": {
     "colors": [
-      "#cf142b",
-      "#cf142b",
-      "#000000",
-      "#000000",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#cf142b",
+      "#cf142b",
+      "#cf142b",
+      "#000000"
     ],
     "files": [
-      "mt__00_cf142b.svg",
-      "mt__01_cf142b.svg",
-      "mt__02_000000.svg",
-      "mt__03_000000.svg",
-      "mt__04_ffffff.svg",
-      "mt__05_ffffff.svg"
+      "mt__00.png",
+      "mt__01.png",
+      "mt__02.png",
+      "mt__03.png",
+      "mt__04.png",
+      "mt__05.png"
     ],
     "z": [
-      20,
-      41,
-      31,
-      241,
-      10,
-      280
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mt__full.svg",
     "location": {
@@ -5180,26 +5053,26 @@
     "colors": [
       "#ffcd00",
       "#00a04d",
-      "#00a04d",
-      "#00a04d",
       "#ee2737",
+      "#ee2737",
+      "#151f6d",
       "#151f6d"
     ],
     "files": [
-      "mu__00_ffcd00.svg",
-      "mu__01_00a04d.svg",
-      "mu__02_00a04d.svg",
-      "mu__03_00a04d.svg",
-      "mu__04_ee2737.svg",
-      "mu__05_151f6d.svg"
+      "mu__00.png",
+      "mu__01.png",
+      "mu__02.png",
+      "mu__03.png",
+      "mu__04.png",
+      "mu__05.png"
     ],
     "z": [
-      50,
-      20,
-      21,
-      22,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mu__full.svg",
     "location": {
@@ -5209,28 +5082,28 @@
   },
   "mv": {
     "colors": [
+      "#ffffff",
       "#007e3a",
-      "#007e3a",
       "#d21034",
       "#d21034",
       "#d21034",
-      "#ffffff"
+      "#d21034"
     ],
     "files": [
-      "mv__00_007e3a.svg",
-      "mv__01_007e3a.svg",
-      "mv__02_d21034.svg",
-      "mv__03_d21034.svg",
-      "mv__04_d21034.svg",
-      "mv__05_ffffff.svg"
+      "mv__00.png",
+      "mv__01.png",
+      "mv__02.png",
+      "mv__03.png",
+      "mv__04.png",
+      "mv__05.png"
     ],
     "z": [
-      20,
-      40,
-      10,
-      11,
-      12,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mv__full.svg",
     "location": {
@@ -5243,25 +5116,25 @@
       "#f41408",
       "#f41408",
       "#f41408",
-      "#f31509",
+      "#21873b",
       "#21873b",
       "#000001"
     ],
     "files": [
-      "mw__00_f41408.svg",
-      "mw__01_f41408.svg",
-      "mw__02_f41408.svg",
-      "mw__03_f31509.svg",
-      "mw__04_21873b.svg",
-      "mw__05_000001.svg"
+      "mw__00.png",
+      "mw__01.png",
+      "mw__02.png",
+      "mw__03.png",
+      "mw__04.png",
+      "mw__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      60,
-      30,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mw__full.svg",
     "location": {
@@ -5271,28 +5144,28 @@
   },
   "mx": {
     "colors": [
+      "#ffffff",
       "#fcca3e",
-      "#9ca168",
       "#aa8c30",
-      "#717732",
       "#ce1126",
-      "#006847"
+      "#006847",
+      "#231f20"
     ],
     "files": [
-      "mx__00_fcca3e.svg",
-      "mx__01_9ca168.svg",
-      "mx__02_aa8c30.svg",
-      "mx__03_717732.svg",
-      "mx__04_ce1126.svg",
-      "mx__05_006847.svg"
+      "mx__00.png",
+      "mx__01.png",
+      "mx__02.png",
+      "mx__03.png",
+      "mx__04.png",
+      "mx__05.png"
     ],
     "z": [
-      380,
-      470,
-      430,
-      450,
-      80,
-      100
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mx__full.svg",
     "location": {
@@ -5302,28 +5175,28 @@
   },
   "my": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#ffcc00",
       "#cc0000",
       "#cc0000",
-      "#000066",
-      "#ffffff",
-      "#ffffff"
+      "#000066"
     ],
     "files": [
-      "my__00_ffcc00.svg",
-      "my__01_cc0000.svg",
-      "my__02_cc0000.svg",
-      "my__03_000066.svg",
-      "my__04_ffffff.svg",
-      "my__05_ffffff.svg"
+      "my__00.png",
+      "my__01.png",
+      "my__02.png",
+      "my__03.png",
+      "my__04.png",
+      "my__05.png"
     ],
     "z": [
-      180,
-      30,
-      50,
-      170,
-      40,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "my__full.svg",
     "location": {
@@ -5333,28 +5206,28 @@
   },
   "mz": {
     "colors": [
+      "#ffffff",
+      "#ffca00",
       "#ffca00",
       "#009a00",
       "#ff0000",
-      "#000001",
-      "#000000",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "mz__00_ffca00.svg",
-      "mz__01_009a00.svg",
-      "mz__02_ff0000.svg",
-      "mz__03_000001.svg",
-      "mz__04_000000.svg",
-      "mz__05_ffffff.svg"
+      "mz__00.png",
+      "mz__01.png",
+      "mz__02.png",
+      "mz__03.png",
+      "mz__04.png",
+      "mz__05.png"
     ],
     "z": [
-      90,
-      50,
-      100,
-      70,
-      161,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "mz__full.svg",
     "location": {
@@ -5364,28 +5237,28 @@
   },
   "na": {
     "colors": [
+      "#ffffff",
       "#ffe700",
       "#38a100",
       "#c70000",
-      "#3662a2",
-      "#3662a2",
-      "#ffffff"
+      "#c70000",
+      "#3662a2"
     ],
     "files": [
-      "na__00_ffe700.svg",
-      "na__01_38a100.svg",
-      "na__02_c70000.svg",
-      "na__03_3662a2.svg",
-      "na__04_3662a2.svg",
-      "na__05_ffffff.svg"
+      "na__00.png",
+      "na__01.png",
+      "na__02.png",
+      "na__03.png",
+      "na__04.png",
+      "na__05.png"
     ],
     "z": [
-      90,
-      70,
-      80,
-      60,
-      100,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "na__full.svg",
     "location": {
@@ -5398,25 +5271,25 @@
       "#fae600",
       "#ed4135",
       "#009543",
+      "#009543",
       "#0035ad",
-      "#000001",
       "#000000"
     ],
     "files": [
-      "nc__00_fae600.svg",
-      "nc__01_ed4135.svg",
-      "nc__02_009543.svg",
-      "nc__03_0035ad.svg",
-      "nc__04_000001.svg",
-      "nc__05_000000.svg"
+      "nc__00.png",
+      "nc__01.png",
+      "nc__02.png",
+      "nc__03.png",
+      "nc__04.png",
+      "nc__05.png"
     ],
     "z": [
-      40,
-      20,
-      10,
-      30,
-      100,
-      51
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nc__full.svg",
     "location": {
@@ -5426,28 +5299,28 @@
   },
   "ne": {
     "colors": [
-      "#0db02b",
-      "#0db02b",
+      "#ffffff",
       "#0db02b",
       "#0db02b",
       "#e05206",
-      "#ffffff"
+      "#e05206",
+      "#e05206"
     ],
     "files": [
-      "ne__00_0db02b.svg",
-      "ne__01_0db02b.svg",
-      "ne__02_0db02b.svg",
-      "ne__03_0db02b.svg",
-      "ne__04_e05206.svg",
-      "ne__05_ffffff.svg"
+      "ne__00.png",
+      "ne__01.png",
+      "ne__02.png",
+      "ne__03.png",
+      "ne__04.png",
+      "ne__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ne__full.svg",
     "location": {
@@ -5457,28 +5330,28 @@
   },
   "nf": {
     "colors": [
-      "#198200",
-      "#198200",
-      "#198200",
-      "#000000",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#198200",
+      "#198200",
+      "#198200",
+      "#000000"
     ],
     "files": [
-      "nf__00_198200.svg",
-      "nf__01_198200.svg",
-      "nf__02_198200.svg",
-      "nf__03_000000.svg",
-      "nf__04_ffffff.svg",
-      "nf__05_ffffff.svg"
+      "nf__00.png",
+      "nf__01.png",
+      "nf__02.png",
+      "nf__03.png",
+      "nf__04.png",
+      "nf__05.png"
     ],
     "z": [
-      40,
-      41,
-      42,
-      61,
-      20,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nf__full.svg",
     "location": {
@@ -5488,28 +5361,28 @@
   },
   "ng": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#008753",
       "#008753",
       "#008753",
-      "#008753",
-      "#008753",
-      "#ffffff"
+      "#008753"
     ],
     "files": [
-      "ng__00_008753.svg",
-      "ng__01_008753.svg",
-      "ng__02_008753.svg",
-      "ng__03_008753.svg",
-      "ng__04_008753.svg",
-      "ng__05_ffffff.svg"
+      "ng__00.png",
+      "ng__01.png",
+      "ng__02.png",
+      "ng__03.png",
+      "ng__04.png",
+      "ng__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      34,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ng__full.svg",
     "location": {
@@ -5519,28 +5392,28 @@
   },
   "ni": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#17c0eb",
       "#c8a400",
-      "#ff6600",
       "#ff0000",
       "#0067c6"
     ],
     "files": [
-      "ni__00_ffff00.svg",
-      "ni__01_17c0eb.svg",
-      "ni__02_c8a400.svg",
-      "ni__03_ff6600.svg",
-      "ni__04_ff0000.svg",
-      "ni__05_0067c6.svg"
+      "ni__00.png",
+      "ni__01.png",
+      "ni__02.png",
+      "ni__03.png",
+      "ni__04.png",
+      "ni__05.png"
     ],
     "z": [
-      550,
-      392,
-      340,
-      540,
-      530,
-      320
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ni__full.svg",
     "location": {
@@ -5550,28 +5423,28 @@
   },
   "nl": {
     "colors": [
-      "#ae1c28",
-      "#ae1c28",
+      "#ffffff",
+      "#ffffff",
       "#ae1c28",
       "#ae1c28",
       "#21468b",
-      "#ffffff"
+      "#21468b"
     ],
     "files": [
-      "nl__00_ae1c28.svg",
-      "nl__01_ae1c28.svg",
-      "nl__02_ae1c28.svg",
-      "nl__03_ae1c28.svg",
-      "nl__04_21468b.svg",
-      "nl__05_ffffff.svg"
+      "nl__00.png",
+      "nl__01.png",
+      "nl__02.png",
+      "nl__03.png",
+      "nl__04.png",
+      "nl__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nl__full.svg",
     "location": {
@@ -5581,28 +5454,28 @@
   },
   "no": {
     "colors": [
+      "#ffffff",
       "#ed2939",
       "#ed2939",
       "#ed2939",
       "#ed2939",
-      "#002664",
-      "#ffffff"
+      "#002664"
     ],
     "files": [
-      "no__00_ed2939.svg",
-      "no__01_ed2939.svg",
-      "no__02_ed2939.svg",
-      "no__03_ed2939.svg",
-      "no__04_002664.svg",
-      "no__05_ffffff.svg"
+      "no__00.png",
+      "no__01.png",
+      "no__02.png",
+      "no__03.png",
+      "no__04.png",
+      "no__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      50,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "no__full.svg",
     "location": {
@@ -5612,28 +5485,28 @@
   },
   "np": {
     "colors": [
+      "#ffffff",
       "#ce0000",
       "#ce0000",
       "#ce0000",
       "#ce0000",
-      "#000063",
-      "#ffffff"
+      "#000063"
     ],
     "files": [
-      "np__00_ce0000.svg",
-      "np__01_ce0000.svg",
-      "np__02_ce0000.svg",
-      "np__03_ce0000.svg",
-      "np__04_000063.svg",
-      "np__05_ffffff.svg"
+      "np__00.png",
+      "np__01.png",
+      "np__02.png",
+      "np__03.png",
+      "np__04.png",
+      "np__05.png"
     ],
     "z": [
-      60,
-      61,
-      62,
-      63,
-      61,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "np__full.svg",
     "location": {
@@ -5643,28 +5516,28 @@
   },
   "nr": {
     "colors": [
+      "#ffffff",
       "#ffb20d",
       "#002170",
       "#002170",
       "#002170",
-      "#002170",
-      "#ffffff"
+      "#002170"
     ],
     "files": [
-      "nr__00_ffb20d.svg",
-      "nr__01_002170.svg",
-      "nr__02_002170.svg",
-      "nr__03_002170.svg",
-      "nr__04_002170.svg",
-      "nr__05_ffffff.svg"
+      "nr__00.png",
+      "nr__01.png",
+      "nr__02.png",
+      "nr__03.png",
+      "nr__04.png",
+      "nr__05.png"
     ],
     "z": [
-      60,
-      50,
-      51,
-      52,
-      53,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nr__full.svg",
     "location": {
@@ -5674,28 +5547,28 @@
   },
   "nu": {
     "colors": [
+      "#ffffff",
+      "#fedd00",
       "#fedd00",
       "#fedd00",
       "#c8102e",
-      "#012169",
-      "#012169",
-      "#ffffff"
+      "#012169"
     ],
     "files": [
-      "nu__00_fedd00.svg",
-      "nu__01_fedd00.svg",
-      "nu__02_c8102e.svg",
-      "nu__03_012169.svg",
-      "nu__04_012169.svg",
-      "nu__05_ffffff.svg"
+      "nu__00.png",
+      "nu__01.png",
+      "nu__02.png",
+      "nu__03.png",
+      "nu__04.png",
+      "nu__05.png"
     ],
     "z": [
-      10,
-      80,
-      40,
-      20,
-      70,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nu__full.svg",
     "location": {
@@ -5705,28 +5578,28 @@
   },
   "nz": {
     "colors": [
+      "#ffffff",
       "#cc142b",
-      "#cc142b",
-      "#c8102e",
       "#00247d",
-      "#012169",
-      "#ffffff"
+      "#00247d",
+      "#00247d",
+      "#00247d"
     ],
     "files": [
-      "nz__00_cc142b.svg",
-      "nz__01_cc142b.svg",
-      "nz__02_c8102e.svg",
-      "nz__03_00247d.svg",
-      "nz__04_012169.svg",
-      "nz__05_ffffff.svg"
+      "nz__00.png",
+      "nz__01.png",
+      "nz__02.png",
+      "nz__03.png",
+      "nz__04.png",
+      "nz__05.png"
     ],
     "z": [
-      130,
-      160,
-      250,
-      100,
-      230,
-      120
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "nz__full.svg",
     "location": {
@@ -5736,28 +5609,28 @@
   },
   "om": {
     "colors": [
+      "#ffffff",
       "#ef2d29",
-      "#ef2d28",
-      "#009025",
-      "#ef0000",
-      "#ef0000",
-      "#ffffff"
+      "#ef2d29",
+      "#ef2d29",
+      "#ef2d29",
+      "#009025"
     ],
     "files": [
-      "om__00_ef2d29.svg",
-      "om__01_ef2d28.svg",
-      "om__02_009025.svg",
-      "om__03_ef0000.svg",
-      "om__04_ef0000.svg",
-      "om__05_ffffff.svg"
+      "om__00.png",
+      "om__01.png",
+      "om__02.png",
+      "om__03.png",
+      "om__04.png",
+      "om__05.png"
     ],
     "z": [
-      50,
-      81,
-      60,
-      370,
-      540,
-      360
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "om__full.svg",
     "location": {
@@ -5767,28 +5640,28 @@
   },
   "pa": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#db0000",
-      "#db0000",
-      "#db0000",
-      "#d80000",
       "#0000ab",
-      "#ffffff"
+      "#0000ab",
+      "#0000ab"
     ],
     "files": [
-      "pa__00_db0000.svg",
-      "pa__01_db0000.svg",
-      "pa__02_db0000.svg",
-      "pa__03_d80000.svg",
-      "pa__04_0000ab.svg",
-      "pa__05_ffffff.svg"
+      "pa__00.png",
+      "pa__01.png",
+      "pa__02.png",
+      "pa__03.png",
+      "pa__04.png",
+      "pa__05.png"
     ],
     "z": [
-      70,
-      71,
-      72,
-      90,
-      80,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pa__full.svg",
     "location": {
@@ -5798,28 +5671,28 @@
   },
   "pc": {
     "colors": [
-      "#00aec7",
+      "#ffffff",
       "#00aec7",
       "#003da5",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#003da5",
+      "#003da5",
+      "#003da5"
     ],
     "files": [
-      "pc__00_00aec7.svg",
-      "pc__01_00aec7.svg",
-      "pc__02_003da5.svg",
-      "pc__03_ffffff.svg",
-      "pc__04_ffffff.svg",
-      "pc__05_ffffff.svg"
+      "pc__00.png",
+      "pc__01.png",
+      "pc__02.png",
+      "pc__03.png",
+      "pc__04.png",
+      "pc__05.png"
     ],
     "z": [
-      281,
-      300,
-      10,
-      30,
-      290,
-      310
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pc__full.svg",
     "location": {
@@ -5829,28 +5702,28 @@
   },
   "pe": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#d91023",
       "#d91023",
       "#d91023",
-      "#d91023",
-      "#d91023",
-      "#ffffff"
+      "#d91023"
     ],
     "files": [
-      "pe__00_d91023.svg",
-      "pe__01_d91023.svg",
-      "pe__02_d91023.svg",
-      "pe__03_d91023.svg",
-      "pe__04_d91023.svg",
-      "pe__05_ffffff.svg"
+      "pe__00.png",
+      "pe__01.png",
+      "pe__02.png",
+      "pe__03.png",
+      "pe__04.png",
+      "pe__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pe__full.svg",
     "location": {
@@ -5860,28 +5733,28 @@
   },
   "pf": {
     "colors": [
+      "#ffffff",
       "#ef7d08",
       "#ff0000",
-      "#de2010",
+      "#ff0000",
       "#083d9c",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "pf__00_ef7d08.svg",
-      "pf__01_ff0000.svg",
-      "pf__02_de2010.svg",
-      "pf__03_083d9c.svg",
-      "pf__04_000000.svg",
-      "pf__05_ffffff.svg"
+      "pf__00.png",
+      "pf__01.png",
+      "pf__02.png",
+      "pf__03.png",
+      "pf__04.png",
+      "pf__05.png"
     ],
     "z": [
-      110,
-      80,
-      140,
-      72,
-      81,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pf__full.svg",
     "location": {
@@ -5891,28 +5764,28 @@
   },
   "pg": {
     "colors": [
+      "#ffffff",
       "#ffcc00",
       "#ff0000",
       "#ff0000",
       "#000001",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "pg__00_ffcc00.svg",
-      "pg__01_ff0000.svg",
-      "pg__02_ff0000.svg",
-      "pg__03_000001.svg",
-      "pg__04_000001.svg",
-      "pg__05_ffffff.svg"
+      "pg__00.png",
+      "pg__01.png",
+      "pg__02.png",
+      "pg__03.png",
+      "pg__04.png",
+      "pg__05.png"
     ],
     "z": [
-      42,
-      30,
-      52,
-      20,
-      21,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pg__full.svg",
     "location": {
@@ -5922,28 +5795,28 @@
   },
   "ph": {
     "colors": [
+      "#ffffff",
       "#fcd116",
       "#ce1126",
+      "#ce1126",
       "#0038a8",
-      "#0038a8",
-      "#0038a8",
-      "#ffffff"
+      "#0038a8"
     ],
     "files": [
-      "ph__00_fcd116.svg",
-      "ph__01_ce1126.svg",
-      "ph__02_0038a8.svg",
-      "ph__03_0038a8.svg",
-      "ph__04_0038a8.svg",
-      "ph__05_ffffff.svg"
+      "ph__00.png",
+      "ph__01.png",
+      "ph__02.png",
+      "ph__03.png",
+      "ph__04.png",
+      "ph__05.png"
     ],
     "z": [
-      40,
-      20,
-      10,
-      11,
-      12,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ph__full.svg",
     "location": {
@@ -5953,28 +5826,28 @@
   },
   "pk": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#0c590b",
       "#0c590b",
       "#0c590b",
-      "#0c590b",
-      "#0c590b",
-      "#ffffff"
+      "#0c590b"
     ],
     "files": [
-      "pk__00_0c590b.svg",
-      "pk__01_0c590b.svg",
-      "pk__02_0c590b.svg",
-      "pk__03_0c590b.svg",
-      "pk__04_0c590b.svg",
-      "pk__05_ffffff.svg"
+      "pk__00.png",
+      "pk__01.png",
+      "pk__02.png",
+      "pk__03.png",
+      "pk__04.png",
+      "pk__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      53,
-      54,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pk__full.svg",
     "location": {
@@ -5984,28 +5857,28 @@
   },
   "pl": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#dc143c",
-      "#dc143c",
-      "#dc143c",
-      "#dc143c",
-      "#dc143c",
-      "#ffffff"
+      "#dc143c"
     ],
     "files": [
-      "pl__00_dc143c.svg",
-      "pl__01_dc143c.svg",
-      "pl__02_dc143c.svg",
-      "pl__03_dc143c.svg",
-      "pl__04_dc143c.svg",
-      "pl__05_ffffff.svg"
+      "pl__00.png",
+      "pl__01.png",
+      "pl__02.png",
+      "pl__03.png",
+      "pl__04.png",
+      "pl__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      34,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pl__full.svg",
     "location": {
@@ -6015,28 +5888,28 @@
   },
   "pm": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "pm__00_e1000f.svg",
-      "pm__01_000091.svg",
-      "pm__02_000091.svg",
-      "pm__03_000091.svg",
-      "pm__04_000091.svg",
-      "pm__05_ffffff.svg"
+      "pm__00.png",
+      "pm__01.png",
+      "pm__02.png",
+      "pm__03.png",
+      "pm__04.png",
+      "pm__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pm__full.svg",
     "location": {
@@ -6046,28 +5919,28 @@
   },
   "pn": {
     "colors": [
+      "#ffffff",
       "#f7e017",
+      "#96877d",
       "#337321",
       "#c8102e",
-      "#316d3a",
-      "#00247d",
-      "#012169"
+      "#00247d"
     ],
     "files": [
-      "pn__00_f7e017.svg",
-      "pn__01_337321.svg",
-      "pn__02_c8102e.svg",
-      "pn__03_316d3a.svg",
-      "pn__04_00247d.svg",
-      "pn__05_012169.svg"
+      "pn__00.png",
+      "pn__01.png",
+      "pn__02.png",
+      "pn__03.png",
+      "pn__04.png",
+      "pn__05.png"
     ],
     "z": [
-      230,
-      80,
-      40,
-      110,
-      10,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pn__full.svg",
     "location": {
@@ -6077,28 +5950,28 @@
   },
   "pr": {
     "colors": [
-      "#ed0000",
+      "#ffffff",
+      "#ffffff",
       "#ed0000",
       "#ed0000",
       "#0050f0",
-      "#ffffff",
-      "#ffffff"
+      "#0050f0"
     ],
     "files": [
-      "pr__00_ed0000.svg",
-      "pr__01_ed0000.svg",
-      "pr__02_ed0000.svg",
-      "pr__03_0050f0.svg",
-      "pr__04_ffffff.svg",
-      "pr__05_ffffff.svg"
+      "pr__00.png",
+      "pr__01.png",
+      "pr__02.png",
+      "pr__03.png",
+      "pr__04.png",
+      "pr__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      70,
-      60,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pr__full.svg",
     "location": {
@@ -6108,28 +5981,28 @@
   },
   "ps": {
     "colors": [
+      "#ffffff",
       "#009639",
       "#009639",
       "#009639",
       "#009639",
-      "#ed2e38",
-      "#ffffff"
+      "#ed2e38"
     ],
     "files": [
-      "ps__00_009639.svg",
-      "ps__01_009639.svg",
-      "ps__02_009639.svg",
-      "ps__03_009639.svg",
-      "ps__04_ed2e38.svg",
-      "ps__05_ffffff.svg"
+      "ps__00.png",
+      "ps__01.png",
+      "ps__02.png",
+      "ps__03.png",
+      "ps__04.png",
+      "ps__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ps__full.svg",
     "location": {
@@ -6139,28 +6012,28 @@
   },
   "pt": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#ff0000",
       "#006600",
       "#003399",
-      "#000001",
       "#000000"
     ],
     "files": [
-      "pt__00_ffff00.svg",
-      "pt__01_ff0000.svg",
-      "pt__02_006600.svg",
-      "pt__03_003399.svg",
-      "pt__04_000001.svg",
-      "pt__05_000000.svg"
+      "pt__00.png",
+      "pt__01.png",
+      "pt__02.png",
+      "pt__03.png",
+      "pt__04.png",
+      "pt__05.png"
     ],
     "z": [
-      30,
-      10,
-      20,
-      410,
-      340,
-      231
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pt__full.svg",
     "location": {
@@ -6178,20 +6051,20 @@
       "#4aadd6"
     ],
     "files": [
-      "pw__00_ffde00.svg",
-      "pw__01_4aadd6.svg",
-      "pw__02_4aadd6.svg",
-      "pw__03_4aadd6.svg",
-      "pw__04_4aadd6.svg",
-      "pw__05_4aadd6.svg"
+      "pw__00.png",
+      "pw__01.png",
+      "pw__02.png",
+      "pw__03.png",
+      "pw__04.png",
+      "pw__05.png"
     ],
     "z": [
-      60,
-      50,
-      51,
-      52,
-      53,
-      54
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "pw__full.svg",
     "location": {
@@ -6201,28 +6074,28 @@
   },
   "py": {
     "colors": [
+      "#ffffff",
       "#fedf00",
       "#009b3a",
       "#d52b1e",
       "#0038a8",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "py__00_fedf00.svg",
-      "py__01_009b3a.svg",
-      "py__02_d52b1e.svg",
-      "py__03_0038a8.svg",
-      "py__04_000000.svg",
-      "py__05_ffffff.svg"
+      "py__00.png",
+      "py__01.png",
+      "py__02.png",
+      "py__03.png",
+      "py__04.png",
+      "py__05.png"
     ],
     "z": [
-      1530,
-      90,
-      30,
-      10,
-      41,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "py__full.svg",
     "location": {
@@ -6232,28 +6105,28 @@
   },
   "qa": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#8d1b3d",
       "#8d1b3d",
       "#8d1b3d",
-      "#8d1b3d",
-      "#8d1b3d",
-      "#ffffff"
+      "#8d1b3d"
     ],
     "files": [
-      "qa__00_8d1b3d.svg",
-      "qa__01_8d1b3d.svg",
-      "qa__02_8d1b3d.svg",
-      "qa__03_8d1b3d.svg",
-      "qa__04_8d1b3d.svg",
-      "qa__05_ffffff.svg"
+      "qa__00.png",
+      "qa__01.png",
+      "qa__02.png",
+      "qa__03.png",
+      "qa__04.png",
+      "qa__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "qa__full.svg",
     "location": {
@@ -6263,28 +6136,28 @@
   },
   "re": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "re__00_e1000f.svg",
-      "re__01_000091.svg",
-      "re__02_000091.svg",
-      "re__03_000091.svg",
-      "re__04_000091.svg",
-      "re__05_ffffff.svg"
+      "re__00.png",
+      "re__01.png",
+      "re__02.png",
+      "re__03.png",
+      "re__04.png",
+      "re__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "re__full.svg",
     "location": {
@@ -6295,27 +6168,27 @@
   "ro": {
     "colors": [
       "#ffde00",
+      "#ffde00",
       "#de2110",
-      "#00319c",
-      "#00319c",
+      "#de2110",
       "#00319c",
       "#00319c"
     ],
     "files": [
-      "ro__00_ffde00.svg",
-      "ro__01_de2110.svg",
-      "ro__02_00319c.svg",
-      "ro__03_00319c.svg",
-      "ro__04_00319c.svg",
-      "ro__05_00319c.svg"
+      "ro__00.png",
+      "ro__01.png",
+      "ro__02.png",
+      "ro__03.png",
+      "ro__04.png",
+      "ro__05.png"
     ],
     "z": [
-      30,
-      40,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ro__full.svg",
     "location": {
@@ -6325,28 +6198,28 @@
   },
   "rs": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#edb92e",
       "#c6363c",
       "#0c4076",
-      "#0c4076",
-      "#21231e",
-      "#ffffff"
+      "#21231e"
     ],
     "files": [
-      "rs__00_edb92e.svg",
-      "rs__01_c6363c.svg",
-      "rs__02_0c4076.svg",
-      "rs__03_0c4076.svg",
-      "rs__04_21231e.svg",
-      "rs__05_ffffff.svg"
+      "rs__00.png",
+      "rs__01.png",
+      "rs__02.png",
+      "rs__03.png",
+      "rs__04.png",
+      "rs__05.png"
     ],
     "z": [
-      140,
-      70,
-      60,
-      170,
-      2080,
-      2090
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "rs__full.svg",
     "location": {
@@ -6356,28 +6229,28 @@
   },
   "ru": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#d52b1e",
       "#d52b1e",
       "#0039a6",
-      "#0039a6",
-      "#0039a6",
-      "#0039a6",
-      "#ffffff"
+      "#0039a6"
     ],
     "files": [
-      "ru__00_d52b1e.svg",
-      "ru__01_0039a6.svg",
-      "ru__02_0039a6.svg",
-      "ru__03_0039a6.svg",
-      "ru__04_0039a6.svg",
-      "ru__05_ffffff.svg"
+      "ru__00.png",
+      "ru__01.png",
+      "ru__02.png",
+      "ru__03.png",
+      "ru__04.png",
+      "ru__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ru__full.svg",
     "location": {
@@ -6388,27 +6261,27 @@
   "rw": {
     "colors": [
       "#fad201",
-      "#e5be01",
-      "#e5be01",
+      "#fad201",
+      "#00a1de",
       "#00a1de",
       "#00a1de",
       "#20603d"
     ],
     "files": [
-      "rw__00_fad201.svg",
-      "rw__01_e5be01.svg",
-      "rw__02_e5be01.svg",
-      "rw__03_00a1de.svg",
-      "rw__04_00a1de.svg",
-      "rw__05_20603d.svg"
+      "rw__00.png",
+      "rw__01.png",
+      "rw__02.png",
+      "rw__03.png",
+      "rw__04.png",
+      "rw__05.png"
     ],
     "z": [
-      20,
-      60,
-      90,
-      30,
-      91,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "rw__full.svg",
     "location": {
@@ -6418,28 +6291,28 @@
   },
   "sa": {
     "colors": [
-      "#165d31",
-      "#165d31",
-      "#165d31",
       "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#165d31",
+      "#165d31",
+      "#165d31",
+      "#165d31",
+      "#165d31"
     ],
     "files": [
-      "sa__00_165d31.svg",
-      "sa__01_165d31.svg",
-      "sa__02_165d31.svg",
-      "sa__03_ffffff.svg",
-      "sa__04_ffffff.svg",
-      "sa__05_ffffff.svg"
+      "sa__00.png",
+      "sa__01.png",
+      "sa__02.png",
+      "sa__03.png",
+      "sa__04.png",
+      "sa__05.png"
     ],
     "z": [
-      50,
-      130,
-      180,
-      120,
-      170,
-      190
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sa__full.svg",
     "location": {
@@ -6449,28 +6322,28 @@
   },
   "sb": {
     "colors": [
+      "#ffffff",
       "#ffcc00",
       "#006000",
       "#0000d6",
       "#0000d6",
-      "#0000d6",
-      "#ffffff"
+      "#0000d6"
     ],
     "files": [
-      "sb__00_ffcc00.svg",
-      "sb__01_006000.svg",
-      "sb__02_0000d6.svg",
-      "sb__03_0000d6.svg",
-      "sb__04_0000d6.svg",
-      "sb__05_ffffff.svg"
+      "sb__00.png",
+      "sb__01.png",
+      "sb__02.png",
+      "sb__03.png",
+      "sb__04.png",
+      "sb__05.png"
     ],
     "z": [
-      70,
-      60,
-      50,
-      51,
-      52,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sb__full.svg",
     "location": {
@@ -6480,28 +6353,28 @@
   },
   "sc": {
     "colors": [
+      "#ffffff",
       "#fcd955",
       "#d92223",
       "#d92223",
       "#007a39",
-      "#003d88",
-      "#ffffff"
+      "#003d88"
     ],
     "files": [
-      "sc__00_fcd955.svg",
-      "sc__01_d92223.svg",
-      "sc__02_d92223.svg",
-      "sc__03_007a39.svg",
-      "sc__04_003d88.svg",
-      "sc__05_ffffff.svg"
+      "sc__00.png",
+      "sc__01.png",
+      "sc__02.png",
+      "sc__03.png",
+      "sc__04.png",
+      "sc__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      50,
-      40,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sc__full.svg",
     "location": {
@@ -6511,28 +6384,28 @@
   },
   "sd": {
     "colors": [
+      "#ffffff",
       "#009a00",
       "#ff0000",
+      "#ff0000",
       "#000001",
-      "#000001",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "sd__00_009a00.svg",
-      "sd__01_ff0000.svg",
-      "sd__02_000001.svg",
-      "sd__03_000001.svg",
-      "sd__04_000001.svg",
-      "sd__05_ffffff.svg"
+      "sd__00.png",
+      "sd__01.png",
+      "sd__02.png",
+      "sd__03.png",
+      "sd__04.png",
+      "sd__05.png"
     ],
     "z": [
-      80,
-      70,
-      50,
-      51,
-      52,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sd__full.svg",
     "location": {
@@ -6543,27 +6416,27 @@
   "se": {
     "colors": [
       "#fecb00",
-      "#005293",
+      "#fecb00",
       "#005293",
       "#005293",
       "#005293",
       "#005293"
     ],
     "files": [
-      "se__00_fecb00.svg",
-      "se__01_005293.svg",
-      "se__02_005293.svg",
-      "se__03_005293.svg",
-      "se__04_005293.svg",
-      "se__05_005293.svg"
+      "se__00.png",
+      "se__01.png",
+      "se__02.png",
+      "se__03.png",
+      "se__04.png",
+      "se__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      14
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "se__full.svg",
     "location": {
@@ -6573,28 +6446,28 @@
   },
   "sg": {
     "colors": [
-      "#df0000",
-      "#df0000",
-      "#df0000",
-      "#df0000",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
+      "#df0000",
+      "#df0000"
     ],
     "files": [
-      "sg__00_df0000.svg",
-      "sg__01_df0000.svg",
-      "sg__02_df0000.svg",
-      "sg__03_df0000.svg",
-      "sg__04_ffffff.svg",
-      "sg__05_ffffff.svg"
+      "sg__00.png",
+      "sg__01.png",
+      "sg__02.png",
+      "sg__03.png",
+      "sg__04.png",
+      "sg__05.png"
     ],
     "z": [
-      60,
-      61,
-      62,
-      63,
-      50,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sg__full.svg",
     "location": {
@@ -6604,28 +6477,28 @@
   },
   "sh-ac": {
     "colors": [
-      "#fdf2e8",
-      "#d5ccc0",
+      "#ffffff",
       "#979696",
       "#1b81b6",
       "#494037",
-      "#012169"
+      "#012169",
+      "#000000"
     ],
     "files": [
-      "sh-ac__00_fdf2e8.svg",
-      "sh-ac__01_d5ccc0.svg",
-      "sh-ac__02_979696.svg",
-      "sh-ac__03_1b81b6.svg",
-      "sh-ac__04_494037.svg",
-      "sh-ac__05_012169.svg"
+      "sh-ac__00.png",
+      "sh-ac__01.png",
+      "sh-ac__02.png",
+      "sh-ac__03.png",
+      "sh-ac__04.png",
+      "sh-ac__05.png"
     ],
     "z": [
-      40,
-      30,
-      190,
-      150,
-      60,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sh-ac__full.svg",
     "location": {
@@ -6635,28 +6508,28 @@
   },
   "sh-hl": {
     "colors": [
-      "#e8ece9",
+      "#ffffff",
+      "#bca76b",
       "#128bbf",
       "#c8102e",
       "#69522b",
-      "#012169",
       "#000066"
     ],
     "files": [
-      "sh-hl__00_e8ece9.svg",
-      "sh-hl__01_128bbf.svg",
-      "sh-hl__02_c8102e.svg",
-      "sh-hl__03_69522b.svg",
-      "sh-hl__04_012169.svg",
-      "sh-hl__05_000066.svg"
+      "sh-hl__00.png",
+      "sh-hl__01.png",
+      "sh-hl__02.png",
+      "sh-hl__03.png",
+      "sh-hl__04.png",
+      "sh-hl__05.png"
     ],
     "z": [
-      80,
-      70,
-      40,
-      90,
-      20,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sh-hl__full.svg",
     "location": {
@@ -6666,28 +6539,28 @@
   },
   "sh-ta": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#8fc5ff",
       "#cf6200",
       "#366cc9",
-      "#5d3100",
       "#000066"
     ],
     "files": [
-      "sh-ta__00_ffff00.svg",
-      "sh-ta__01_8fc5ff.svg",
-      "sh-ta__02_cf6200.svg",
-      "sh-ta__03_366cc9.svg",
-      "sh-ta__04_5d3100.svg",
-      "sh-ta__05_000066.svg"
+      "sh-ta__00.png",
+      "sh-ta__01.png",
+      "sh-ta__02.png",
+      "sh-ta__03.png",
+      "sh-ta__04.png",
+      "sh-ta__05.png"
     ],
     "z": [
-      50,
-      20,
-      70,
-      30,
-      40,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sh-ta__full.svg",
     "location": {
@@ -6697,28 +6570,28 @@
   },
   "sh": {
     "colors": [
-      "#c8102e",
-      "#c8102e",
-      "#012169",
-      "#012169",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#c8102e",
+      "#c8102e",
+      "#c8102e",
+      "#012169"
     ],
     "files": [
-      "sh__00_c8102e.svg",
-      "sh__01_c8102e.svg",
-      "sh__02_012169.svg",
-      "sh__03_012169.svg",
-      "sh__04_ffffff.svg",
-      "sh__05_ffffff.svg"
+      "sh__00.png",
+      "sh__01.png",
+      "sh__02.png",
+      "sh__03.png",
+      "sh__04.png",
+      "sh__05.png"
     ],
     "z": [
-      30,
-      50,
-      10,
-      11,
-      20,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sh__full.svg",
     "location": {
@@ -6728,28 +6601,28 @@
   },
   "si": {
     "colors": [
+      "#ffffff",
       "#ffdf00",
       "#d50000",
       "#d50000",
       "#0000bf",
-      "#0000bf",
-      "#ffffff"
+      "#0000bf"
     ],
     "files": [
-      "si__00_ffdf00.svg",
-      "si__01_d50000.svg",
-      "si__02_d50000.svg",
-      "si__03_0000bf.svg",
-      "si__04_0000bf.svg",
-      "si__05_ffffff.svg"
+      "si__00.png",
+      "si__01.png",
+      "si__02.png",
+      "si__03.png",
+      "si__04.png",
+      "si__05.png"
     ],
     "z": [
-      100,
-      60,
-      80,
-      70,
-      90,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "si__full.svg",
     "location": {
@@ -6759,28 +6632,28 @@
   },
   "sj": {
     "colors": [
+      "#ffffff",
       "#ef2b2d",
       "#ef2b2d",
       "#ef2b2d",
       "#ef2b2d",
-      "#002868",
-      "#ffffff"
+      "#002868"
     ],
     "files": [
-      "sj__00_ef2b2d.svg",
-      "sj__01_ef2b2d.svg",
-      "sj__02_ef2b2d.svg",
-      "sj__03_ef2b2d.svg",
-      "sj__04_002868.svg",
-      "sj__05_ffffff.svg"
+      "sj__00.png",
+      "sj__01.png",
+      "sj__02.png",
+      "sj__03.png",
+      "sj__04.png",
+      "sj__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      50,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sj__full.svg",
     "location": {
@@ -6790,28 +6663,28 @@
   },
   "sk": {
     "colors": [
-      "#ee1c25",
-      "#ee1c25",
-      "#0b4ea2",
-      "#0b4ea2",
       "#ffffff",
-      "#ffffff"
+      "#ffffff",
+      "#ffffff",
+      "#ee1c25",
+      "#ee1c25",
+      "#0b4ea2"
     ],
     "files": [
-      "sk__00_ee1c25.svg",
-      "sk__01_ee1c25.svg",
-      "sk__02_0b4ea2.svg",
-      "sk__03_0b4ea2.svg",
-      "sk__04_ffffff.svg",
-      "sk__05_ffffff.svg"
+      "sk__00.png",
+      "sk__01.png",
+      "sk__02.png",
+      "sk__03.png",
+      "sk__04.png",
+      "sk__05.png"
     ],
     "z": [
-      10,
-      50,
-      20,
-      70,
-      40,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sk__full.svg",
     "location": {
@@ -6821,28 +6694,28 @@
   },
   "sl": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#00cd00",
       "#00cd00",
       "#0000cd",
-      "#0000cd",
-      "#0000cd",
-      "#0000cd",
-      "#ffffff"
+      "#0000cd"
     ],
     "files": [
-      "sl__00_00cd00.svg",
-      "sl__01_0000cd.svg",
-      "sl__02_0000cd.svg",
-      "sl__03_0000cd.svg",
-      "sl__04_0000cd.svg",
-      "sl__05_ffffff.svg"
+      "sl__00.png",
+      "sl__01.png",
+      "sl__02.png",
+      "sl__03.png",
+      "sl__04.png",
+      "sl__05.png"
     ],
     "z": [
-      40,
-      20,
-      21,
-      22,
-      23,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sl__full.svg",
     "location": {
@@ -6852,28 +6725,28 @@
   },
   "sm": {
     "colors": [
+      "#ffffff",
       "#ffdd00",
-      "#65c7ff",
-      "#4fd46b",
       "#19b6ef",
       "#3a9d4f",
-      "#7d6c00"
+      "#7d6c00",
+      "#000000"
     ],
     "files": [
-      "sm__00_ffdd00.svg",
-      "sm__01_65c7ff.svg",
-      "sm__02_4fd46b.svg",
-      "sm__03_19b6ef.svg",
-      "sm__04_3a9d4f.svg",
-      "sm__05_7d6c00.svg"
+      "sm__00.png",
+      "sm__01.png",
+      "sm__02.png",
+      "sm__03.png",
+      "sm__04.png",
+      "sm__05.png"
     ],
     "z": [
-      230,
-      110,
-      90,
-      20,
-      51,
-      41
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sm__full.svg",
     "location": {
@@ -6887,24 +6760,24 @@
       "#0b7226",
       "#0b7226",
       "#0b7226",
-      "#0b7226",
+      "#bc0000",
       "#bc0000"
     ],
     "files": [
-      "sn__00_ffff00.svg",
-      "sn__01_0b7226.svg",
-      "sn__02_0b7226.svg",
-      "sn__03_0b7226.svg",
-      "sn__04_0b7226.svg",
-      "sn__05_bc0000.svg"
+      "sn__00.png",
+      "sn__01.png",
+      "sn__02.png",
+      "sn__03.png",
+      "sn__04.png",
+      "sn__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      50,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sn__full.svg",
     "location": {
@@ -6914,28 +6787,28 @@
   },
   "so": {
     "colors": [
+      "#ffffff",
       "#40a6ff",
       "#40a6ff",
       "#40a6ff",
       "#40a6ff",
-      "#40a6ff",
-      "#ffffff"
+      "#40a6ff"
     ],
     "files": [
-      "so__00_40a6ff.svg",
-      "so__01_40a6ff.svg",
-      "so__02_40a6ff.svg",
-      "so__03_40a6ff.svg",
-      "so__04_40a6ff.svg",
-      "so__05_ffffff.svg"
+      "so__00.png",
+      "so__01.png",
+      "so__02.png",
+      "so__03.png",
+      "so__04.png",
+      "so__05.png"
     ],
     "z": [
-      50,
-      51,
-      52,
-      53,
-      54,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "so__full.svg",
     "location": {
@@ -6945,28 +6818,28 @@
   },
   "sr": {
     "colors": [
+      "#ffffff",
       "#ecc81d",
       "#377e3f",
       "#377e3f",
-      "#377e3f",
       "#b40a2d",
-      "#ffffff"
+      "#b40a2d"
     ],
     "files": [
-      "sr__00_ecc81d.svg",
-      "sr__01_377e3f.svg",
-      "sr__02_377e3f.svg",
-      "sr__03_377e3f.svg",
-      "sr__04_b40a2d.svg",
-      "sr__05_ffffff.svg"
+      "sr__00.png",
+      "sr__01.png",
+      "sr__02.png",
+      "sr__03.png",
+      "sr__04.png",
+      "sr__05.png"
     ],
     "z": [
-      40,
-      10,
-      11,
-      12,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sr__full.svg",
     "location": {
@@ -6976,28 +6849,28 @@
   },
   "ss": {
     "colors": [
+      "#ffffff",
       "#fcdd09",
       "#078930",
       "#da121a",
       "#0f47af",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ss__00_fcdd09.svg",
-      "ss__01_078930.svg",
-      "ss__02_da121a.svg",
-      "ss__03_0f47af.svg",
-      "ss__04_000001.svg",
-      "ss__05_ffffff.svg"
+      "ss__00.png",
+      "ss__01.png",
+      "ss__02.png",
+      "ss__03.png",
+      "ss__04.png",
+      "ss__05.png"
     ],
     "z": [
-      60,
-      10,
-      40,
-      50,
-      30,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ss__full.svg",
     "location": {
@@ -7008,27 +6881,27 @@
   "st": {
     "colors": [
       "#ffce00",
-      "#12ad2b",
+      "#ffce00",
       "#12ad2b",
       "#12ad2b",
       "#d21034",
       "#000001"
     ],
     "files": [
-      "st__00_ffce00.svg",
-      "st__01_12ad2b.svg",
-      "st__02_12ad2b.svg",
-      "st__03_12ad2b.svg",
-      "st__04_d21034.svg",
-      "st__05_000001.svg"
+      "st__00.png",
+      "st__01.png",
+      "st__02.png",
+      "st__03.png",
+      "st__04.png",
+      "st__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      30,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "st__full.svg",
     "location": {
@@ -7038,28 +6911,28 @@
   },
   "sv": {
     "colors": [
-      "#e60000",
+      "#ffffff",
+      "#ffcc00",
+      "#ff7500",
       "#1f601a",
       "#0f47af",
-      "#00209f",
-      "#011d33",
-      "#011322"
+      "#033054"
     ],
     "files": [
-      "sv__00_e60000.svg",
-      "sv__01_1f601a.svg",
-      "sv__02_0f47af.svg",
-      "sv__03_00209f.svg",
-      "sv__04_011d33.svg",
-      "sv__05_011322.svg"
+      "sv__00.png",
+      "sv__01.png",
+      "sv__02.png",
+      "sv__03.png",
+      "sv__04.png",
+      "sv__05.png"
     ],
     "z": [
-      5220,
-      230,
-      10,
-      490,
-      540,
-      500
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sv__full.svg",
     "location": {
@@ -7069,28 +6942,28 @@
   },
   "sx": {
     "colors": [
+      "#ffffff",
       "#ffff00",
       "#80cfe1",
-      "#ff0000",
       "#7e7e7e",
       "#ed2939",
       "#002395"
     ],
     "files": [
-      "sx__00_ffff00.svg",
-      "sx__01_80cfe1.svg",
-      "sx__02_ff0000.svg",
-      "sx__03_7e7e7e.svg",
-      "sx__04_ed2939.svg",
-      "sx__05_002395.svg"
+      "sx__00.png",
+      "sx__01.png",
+      "sx__02.png",
+      "sx__03.png",
+      "sx__04.png",
+      "sx__05.png"
     ],
     "z": [
-      80,
-      110,
-      100,
-      340,
-      50,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sx__full.svg",
     "location": {
@@ -7100,28 +6973,28 @@
   },
   "sy": {
     "colors": [
+      "#ffffff",
       "#007a3d",
       "#007a3d",
       "#007a3d",
       "#007a3d",
-      "#ce1126",
-      "#ffffff"
+      "#ce1126"
     ],
     "files": [
-      "sy__00_007a3d.svg",
-      "sy__01_007a3d.svg",
-      "sy__02_007a3d.svg",
-      "sy__03_007a3d.svg",
-      "sy__04_ce1126.svg",
-      "sy__05_ffffff.svg"
+      "sy__00.png",
+      "sy__01.png",
+      "sy__02.png",
+      "sy__03.png",
+      "sy__04.png",
+      "sy__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sy__full.svg",
     "location": {
@@ -7131,28 +7004,28 @@
   },
   "sz": {
     "colors": [
+      "#ffffff",
       "#ffd900",
-      "#b3b3b3",
       "#3e5eb9",
       "#b10c0c",
-      "#a70000",
-      "#333333"
+      "#333333",
+      "#000000"
     ],
     "files": [
-      "sz__00_ffd900.svg",
-      "sz__01_b3b3b3.svg",
-      "sz__02_3e5eb9.svg",
-      "sz__03_b10c0c.svg",
-      "sz__04_a70000.svg",
-      "sz__05_333333.svg"
+      "sz__00.png",
+      "sz__01.png",
+      "sz__02.png",
+      "sz__03.png",
+      "sz__04.png",
+      "sz__05.png"
     ],
     "z": [
-      20,
-      220,
-      10,
-      30,
-      200,
-      210
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "sz__full.svg",
     "location": {
@@ -7162,28 +7035,28 @@
   },
   "tc": {
     "colors": [
+      "#ffffff",
       "#fcd116",
-      "#f1b2dc",
-      "#fcad56",
-      "#ffa1a1",
+      "#009e49",
+      "#ce1126",
       "#9e540a",
       "#002868"
     ],
     "files": [
-      "tc__00_fcd116.svg",
-      "tc__01_f1b2dc.svg",
-      "tc__02_fcad56.svg",
-      "tc__03_ffa1a1.svg",
-      "tc__04_9e540a.svg",
-      "tc__05_002868.svg"
+      "tc__00.png",
+      "tc__01.png",
+      "tc__02.png",
+      "tc__03.png",
+      "tc__04.png",
+      "tc__05.png"
     ],
     "z": [
-      30,
-      80,
-      60,
-      70,
-      100,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tc__full.svg",
     "location": {
@@ -7194,27 +7067,27 @@
   "td": {
     "colors": [
       "#fecb00",
+      "#fecb00",
       "#c60c30",
-      "#002664",
-      "#002664",
+      "#c60c30",
       "#002664",
       "#002664"
     ],
     "files": [
-      "td__00_fecb00.svg",
-      "td__01_c60c30.svg",
-      "td__02_002664.svg",
-      "td__03_002664.svg",
-      "td__04_002664.svg",
-      "td__05_002664.svg"
+      "td__00.png",
+      "td__01.png",
+      "td__02.png",
+      "td__03.png",
+      "td__04.png",
+      "td__05.png"
     ],
     "z": [
-      40,
-      30,
-      20,
-      21,
-      22,
-      23
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "td__full.svg",
     "location": {
@@ -7224,28 +7097,28 @@
   },
   "tf": {
     "colors": [
+      "#ffffff",
       "#ed2939",
       "#002395",
       "#002395",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff"
+      "#002395",
+      "#002395"
     ],
     "files": [
-      "tf__00_ed2939.svg",
-      "tf__01_002395.svg",
-      "tf__02_002395.svg",
-      "tf__03_ffffff.svg",
-      "tf__04_ffffff.svg",
-      "tf__05_ffffff.svg"
+      "tf__00.png",
+      "tf__01.png",
+      "tf__02.png",
+      "tf__03.png",
+      "tf__04.png",
+      "tf__05.png"
     ],
     "z": [
-      60,
-      30,
-      50,
-      40,
-      70,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tf__full.svg",
     "location": {
@@ -7255,28 +7128,28 @@
   },
   "tg": {
     "colors": [
+      "#ffffff",
       "#ffe300",
       "#ffe300",
       "#118600",
       "#118600",
-      "#d80000",
-      "#ffffff"
+      "#d80000"
     ],
     "files": [
-      "tg__00_ffe300.svg",
-      "tg__01_ffe300.svg",
-      "tg__02_118600.svg",
-      "tg__03_118600.svg",
-      "tg__04_d80000.svg",
-      "tg__05_ffffff.svg"
+      "tg__00.png",
+      "tg__01.png",
+      "tg__02.png",
+      "tg__03.png",
+      "tg__04.png",
+      "tg__05.png"
     ],
     "z": [
-      50,
-      51,
-      60,
-      90,
-      70,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tg__full.svg",
     "location": {
@@ -7288,26 +7161,26 @@
     "colors": [
       "#f4f5f8",
       "#f4f5f8",
-      "#f4f5f8",
-      "#f4f5f8",
       "#a51931",
+      "#a51931",
+      "#2d2a4a",
       "#2d2a4a"
     ],
     "files": [
-      "th__00_f4f5f8.svg",
-      "th__01_f4f5f8.svg",
-      "th__02_f4f5f8.svg",
-      "th__03_f4f5f8.svg",
-      "th__04_a51931.svg",
-      "th__05_2d2a4a.svg"
+      "th__00.png",
+      "th__01.png",
+      "th__02.png",
+      "th__03.png",
+      "th__04.png",
+      "th__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "th__full.svg",
     "location": {
@@ -7317,28 +7190,28 @@
   },
   "tj": {
     "colors": [
-      "#f8c300",
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#f8c300",
       "#cc0000",
-      "#006600",
-      "#ffffff",
-      "#ffffff"
+      "#006600"
     ],
     "files": [
-      "tj__00_f8c300.svg",
-      "tj__01_f8c300.svg",
-      "tj__02_cc0000.svg",
-      "tj__03_006600.svg",
-      "tj__04_ffffff.svg",
-      "tj__05_ffffff.svg"
+      "tj__00.png",
+      "tj__01.png",
+      "tj__02.png",
+      "tj__03.png",
+      "tj__04.png",
+      "tj__05.png"
     ],
     "z": [
-      40,
-      120,
-      30,
-      10,
-      20,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tj__full.svg",
     "location": {
@@ -7348,28 +7221,28 @@
   },
   "tk": {
     "colors": [
+      "#ffffff",
       "#fed100",
       "#00247d",
       "#00247d",
       "#00247d",
-      "#00247d",
-      "#ffffff"
+      "#00247d"
     ],
     "files": [
-      "tk__00_fed100.svg",
-      "tk__01_00247d.svg",
-      "tk__02_00247d.svg",
-      "tk__03_00247d.svg",
-      "tk__04_00247d.svg",
-      "tk__05_ffffff.svg"
+      "tk__00.png",
+      "tk__01.png",
+      "tk__02.png",
+      "tk__03.png",
+      "tk__04.png",
+      "tk__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tk__full.svg",
     "location": {
@@ -7379,28 +7252,28 @@
   },
   "tl": {
     "colors": [
+      "#ffffff",
       "#f8c00c",
       "#cb000f",
       "#cb000f",
       "#cb000f",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "tl__00_f8c00c.svg",
-      "tl__01_cb000f.svg",
-      "tl__02_cb000f.svg",
-      "tl__03_cb000f.svg",
-      "tl__04_000001.svg",
-      "tl__05_ffffff.svg"
+      "tl__00.png",
+      "tl__01.png",
+      "tl__02.png",
+      "tl__03.png",
+      "tl__04.png",
+      "tl__05.png"
     ],
     "z": [
-      60,
-      50,
-      51,
-      52,
-      70,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tl__full.svg",
     "location": {
@@ -7410,28 +7283,28 @@
   },
   "tm": {
     "colors": [
+      "#ffffff",
       "#ffc72c",
       "#00843d",
       "#00843d",
       "#d22630",
-      "#383739",
-      "#ffffff"
+      "#383739"
     ],
     "files": [
-      "tm__00_ffc72c.svg",
-      "tm__01_00843d.svg",
-      "tm__02_00843d.svg",
-      "tm__03_d22630.svg",
-      "tm__04_383739.svg",
-      "tm__05_ffffff.svg"
+      "tm__00.png",
+      "tm__01.png",
+      "tm__02.png",
+      "tm__03.png",
+      "tm__04.png",
+      "tm__05.png"
     ],
     "z": [
-      300,
-      10,
-      320,
-      400,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tm__full.svg",
     "location": {
@@ -7441,28 +7314,28 @@
   },
   "tn": {
     "colors": [
+      "#ffffff",
       "#e70013",
       "#e70013",
       "#e70013",
       "#e70013",
-      "#e70013",
-      "#ffffff"
+      "#e70013"
     ],
     "files": [
-      "tn__00_e70013.svg",
-      "tn__01_e70013.svg",
-      "tn__02_e70013.svg",
-      "tn__03_e70013.svg",
-      "tn__04_e70013.svg",
-      "tn__05_ffffff.svg"
+      "tn__00.png",
+      "tn__01.png",
+      "tn__02.png",
+      "tn__03.png",
+      "tn__04.png",
+      "tn__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      13,
-      14,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tn__full.svg",
     "location": {
@@ -7472,28 +7345,28 @@
   },
   "to": {
     "colors": [
+      "#ffffff",
       "#c10000",
       "#c10000",
       "#c10000",
       "#c10000",
-      "#c10000",
-      "#ffffff"
+      "#c10000"
     ],
     "files": [
-      "to__00_c10000.svg",
-      "to__01_c10000.svg",
-      "to__02_c10000.svg",
-      "to__03_c10000.svg",
-      "to__04_c10000.svg",
-      "to__05_ffffff.svg"
+      "to__00.png",
+      "to__01.png",
+      "to__02.png",
+      "to__03.png",
+      "to__04.png",
+      "to__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      40,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "to__full.svg",
     "location": {
@@ -7503,28 +7376,28 @@
   },
   "tr": {
     "colors": [
-      "#e30a17",
-      "#e30a17",
-      "#e30a17",
-      "#e30a17",
       "#ffffff",
-      "#ffffff"
+      "#e30a17",
+      "#e30a17",
+      "#e30a17",
+      "#e30a17",
+      "#e30a17"
     ],
     "files": [
-      "tr__00_e30a17.svg",
-      "tr__01_e30a17.svg",
-      "tr__02_e30a17.svg",
-      "tr__03_e30a17.svg",
-      "tr__04_ffffff.svg",
-      "tr__05_ffffff.svg"
+      "tr__00.png",
+      "tr__01.png",
+      "tr__02.png",
+      "tr__03.png",
+      "tr__04.png",
+      "tr__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      40,
-      30,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tr__full.svg",
     "location": {
@@ -7534,28 +7407,28 @@
   },
   "tt": {
     "colors": [
+      "#ffffff",
       "#e00000",
       "#e00000",
       "#e00000",
       "#e00000",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "tt__00_e00000.svg",
-      "tt__01_e00000.svg",
-      "tt__02_e00000.svg",
-      "tt__03_e00000.svg",
-      "tt__04_000001.svg",
-      "tt__05_ffffff.svg"
+      "tt__00.png",
+      "tt__01.png",
+      "tt__02.png",
+      "tt__03.png",
+      "tt__04.png",
+      "tt__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tt__full.svg",
     "location": {
@@ -7565,28 +7438,28 @@
   },
   "tv": {
     "colors": [
+      "#ffffff",
       "#fff40d",
       "#009fca",
+      "#009fca",
       "#c8102e",
-      "#c8102e",
-      "#012169",
-      "#ffffff"
+      "#012169"
     ],
     "files": [
-      "tv__00_fff40d.svg",
-      "tv__01_009fca.svg",
-      "tv__02_c8102e.svg",
-      "tv__03_c8102e.svg",
-      "tv__04_012169.svg",
-      "tv__05_ffffff.svg"
+      "tv__00.png",
+      "tv__01.png",
+      "tv__02.png",
+      "tv__03.png",
+      "tv__04.png",
+      "tv__05.png"
     ],
     "z": [
-      20,
-      10,
-      50,
-      70,
-      30,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tv__full.svg",
     "location": {
@@ -7596,28 +7469,28 @@
   },
   "tw": {
     "colors": [
-      "#ff0000",
-      "#ff0000",
-      "#000095",
-      "#000095",
       "#ffffff",
-      "#ffffff"
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#000095"
     ],
     "files": [
-      "tw__00_ff0000.svg",
-      "tw__01_ff0000.svg",
-      "tw__02_000095.svg",
-      "tw__03_000095.svg",
-      "tw__04_ffffff.svg",
-      "tw__05_ffffff.svg"
+      "tw__00.png",
+      "tw__01.png",
+      "tw__02.png",
+      "tw__03.png",
+      "tw__04.png",
+      "tw__05.png"
     ],
     "z": [
-      40,
-      41,
-      50,
-      280,
-      60,
-      290
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tw__full.svg",
     "location": {
@@ -7629,26 +7502,26 @@
     "colors": [
       "#ffff00",
       "#0099ff",
-      "#0099ff",
-      "#0099ff",
       "#009900",
+      "#009900",
+      "#000001",
       "#000001"
     ],
     "files": [
-      "tz__00_ffff00.svg",
-      "tz__01_0099ff.svg",
-      "tz__02_0099ff.svg",
-      "tz__03_0099ff.svg",
-      "tz__04_009900.svg",
-      "tz__05_000001.svg"
+      "tz__00.png",
+      "tz__01.png",
+      "tz__02.png",
+      "tz__03.png",
+      "tz__04.png",
+      "tz__05.png"
     ],
     "z": [
-      80,
-      50,
-      51,
-      52,
-      60,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "tz__full.svg",
     "location": {
@@ -7660,26 +7533,26 @@
     "colors": [
       "#ffd700",
       "#ffd700",
-      "#ffd700",
-      "#ffd700",
-      "#ffd700",
+      "#0057b8",
+      "#0057b8",
+      "#0057b8",
       "#0057b8"
     ],
     "files": [
-      "ua__00_ffd700.svg",
-      "ua__01_ffd700.svg",
-      "ua__02_ffd700.svg",
-      "ua__03_ffd700.svg",
-      "ua__04_ffd700.svg",
-      "ua__05_0057b8.svg"
+      "ua__00.png",
+      "ua__01.png",
+      "ua__02.png",
+      "ua__03.png",
+      "ua__04.png",
+      "ua__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      24,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ua__full.svg",
     "location": {
@@ -7691,26 +7564,26 @@
     "colors": [
       "#fffdff",
       "#ffe700",
+      "#ffe700",
       "#9ca69c",
       "#de3908",
-      "#de3108",
       "#000001"
     ],
     "files": [
-      "ug__00_fffdff.svg",
-      "ug__01_ffe700.svg",
-      "ug__02_9ca69c.svg",
-      "ug__03_de3908.svg",
-      "ug__04_de3108.svg",
-      "ug__05_000001.svg"
+      "ug__00.png",
+      "ug__01.png",
+      "ug__02.png",
+      "ug__03.png",
+      "ug__04.png",
+      "ug__05.png"
     ],
     "z": [
-      100,
-      50,
-      162,
-      70,
-      110,
-      60
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ug__full.svg",
     "location": {
@@ -7718,61 +7591,30 @@
       "lon": 32
     }
   },
-  "un": {
-    "colors": [
-      "#4b92db",
-      "#4b92db",
-      "#4b92db",
-      "#4b92db",
-      "#ffffff",
-      "#ffffff"
-    ],
-    "files": [
-      "un__00_4b92db.svg",
-      "un__01_4b92db.svg",
-      "un__02_4b92db.svg",
-      "un__03_4b92db.svg",
-      "un__04_ffffff.svg",
-      "un__05_ffffff.svg"
-    ],
-    "z": [
-      10,
-      11,
-      12,
-      13,
-      30,
-      130
-    ],
-    "full": "un__full.svg",
-    "location": {
-      "lat": 40.75,
-      "lon": -73.97
-    }
-  },
   "us": {
     "colors": [
-      "#bd3d44",
+      "#ffffff",
+      "#ffffff",
       "#bd3d44",
       "#bd3d44",
       "#192f5d",
-      "#ffffff",
-      "#ffffff"
+      "#192f5d"
     ],
     "files": [
-      "us__00_bd3d44.svg",
-      "us__01_bd3d44.svg",
-      "us__02_bd3d44.svg",
-      "us__03_192f5d.svg",
-      "us__04_ffffff.svg",
-      "us__05_ffffff.svg"
+      "us__00.png",
+      "us__01.png",
+      "us__02.png",
+      "us__03.png",
+      "us__04.png",
+      "us__05.png"
     ],
     "z": [
-      10,
-      11,
-      12,
-      30,
-      21,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "us__full.svg",
     "location": {
@@ -7782,28 +7624,28 @@
   },
   "uy": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#ffffff",
       "#fcd116",
       "#0038a8",
-      "#0038a8",
-      "#0038a8",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "uy__00_fcd116.svg",
-      "uy__01_0038a8.svg",
-      "uy__02_0038a8.svg",
-      "uy__03_0038a8.svg",
-      "uy__04_000000.svg",
-      "uy__05_ffffff.svg"
+      "uy__00.png",
+      "uy__01.png",
+      "uy__02.png",
+      "uy__03.png",
+      "uy__04.png",
+      "uy__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      31,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "uy__full.svg",
     "location": {
@@ -7813,28 +7655,28 @@
   },
   "uz": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#1eb53a",
       "#1eb53a",
       "#0099b5",
-      "#0099b5",
-      "#ce1126",
-      "#ffffff",
-      "#ffffff"
+      "#ce1126"
     ],
     "files": [
-      "uz__00_1eb53a.svg",
-      "uz__01_0099b5.svg",
-      "uz__02_0099b5.svg",
-      "uz__03_ce1126.svg",
-      "uz__04_ffffff.svg",
-      "uz__05_ffffff.svg"
+      "uz__00.png",
+      "uz__01.png",
+      "uz__02.png",
+      "uz__03.png",
+      "uz__04.png",
+      "uz__05.png"
     ],
     "z": [
-      10,
-      20,
-      60,
-      30,
-      50,
-      70
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "uz__full.svg",
     "location": {
@@ -7844,28 +7686,28 @@
   },
   "va": {
     "colors": [
+      "#ffffff",
       "#ffe000",
       "#cccccc",
       "#ce9d09",
       "#fa0204",
-      "#000000",
-      "#ffffff"
+      "#000000"
     ],
     "files": [
-      "va__00_ffe000.svg",
-      "va__01_cccccc.svg",
-      "va__02_ce9d09.svg",
-      "va__03_fa0204.svg",
-      "va__04_000000.svg",
-      "va__05_ffffff.svg"
+      "va__00.png",
+      "va__01.png",
+      "va__02.png",
+      "va__03.png",
+      "va__04.png",
+      "va__05.png"
     ],
     "z": [
-      20,
-      180,
-      1710,
-      470,
-      31,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "va__full.svg",
     "location": {
@@ -7877,26 +7719,26 @@
     "colors": [
       "#f4f100",
       "#f4f100",
-      "#f4f100",
       "#199a00",
       "#199a00",
+      "#0058aa",
       "#0058aa"
     ],
     "files": [
-      "vc__00_f4f100.svg",
-      "vc__01_f4f100.svg",
-      "vc__02_f4f100.svg",
-      "vc__03_199a00.svg",
-      "vc__04_199a00.svg",
-      "vc__05_0058aa.svg"
+      "vc__00.png",
+      "vc__01.png",
+      "vc__02.png",
+      "vc__03.png",
+      "vc__04.png",
+      "vc__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      30,
-      50,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "vc__full.svg",
     "location": {
@@ -7906,28 +7748,28 @@
   },
   "ve": {
     "colors": [
+      "#ffffff",
+      "#ffcc00",
       "#ffcc00",
       "#cf142b",
       "#cf142b",
-      "#cf142b",
-      "#00247d",
-      "#ffffff"
+      "#00247d"
     ],
     "files": [
-      "ve__00_ffcc00.svg",
-      "ve__01_cf142b.svg",
-      "ve__02_cf142b.svg",
-      "ve__03_cf142b.svg",
-      "ve__04_00247d.svg",
-      "ve__05_ffffff.svg"
+      "ve__00.png",
+      "ve__01.png",
+      "ve__02.png",
+      "ve__03.png",
+      "ve__04.png",
+      "ve__05.png"
     ],
     "z": [
-      120,
-      100,
-      101,
-      102,
-      110,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ve__full.svg",
     "location": {
@@ -7937,28 +7779,28 @@
   },
   "vg": {
     "colors": [
+      "#ffffff",
       "#ffc6b5",
       "#ffc72c",
       "#c8102e",
       "#006129",
-      "#012169",
       "#000066"
     ],
     "files": [
-      "vg__00_ffc6b5.svg",
-      "vg__01_ffc72c.svg",
-      "vg__02_c8102e.svg",
-      "vg__03_006129.svg",
-      "vg__04_012169.svg",
-      "vg__05_000066.svg"
+      "vg__00.png",
+      "vg__01.png",
+      "vg__02.png",
+      "vg__03.png",
+      "vg__04.png",
+      "vg__05.png"
     ],
     "z": [
-      320,
-      150,
-      80,
-      130,
-      60,
-      50
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "vg__full.svg",
     "location": {
@@ -7968,28 +7810,28 @@
   },
   "vi": {
     "colors": [
+      "#ffffff",
       "#f4c53d",
       "#369443",
       "#0081c6",
-      "#a60032",
       "#162667",
       "#010002"
     ],
     "files": [
-      "vi__00_f4c53d.svg",
-      "vi__01_369443.svg",
-      "vi__02_0081c6.svg",
-      "vi__03_a60032.svg",
-      "vi__04_162667.svg",
-      "vi__05_010002.svg"
+      "vi__00.png",
+      "vi__01.png",
+      "vi__02.png",
+      "vi__03.png",
+      "vi__04.png",
+      "vi__05.png"
     ],
     "z": [
-      30,
-      20,
-      210,
-      230,
-      240,
-      241
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "vi__full.svg",
     "location": {
@@ -8007,20 +7849,20 @@
       "#da251d"
     ],
     "files": [
-      "vn__00_ffff00.svg",
-      "vn__01_da251d.svg",
-      "vn__02_da251d.svg",
-      "vn__03_da251d.svg",
-      "vn__04_da251d.svg",
-      "vn__05_da251d.svg"
+      "vn__00.png",
+      "vn__01.png",
+      "vn__02.png",
+      "vn__03.png",
+      "vn__04.png",
+      "vn__05.png"
     ],
     "z": [
-      60,
-      50,
-      51,
-      52,
-      53,
-      54
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "vn__full.svg",
     "location": {
@@ -8031,27 +7873,27 @@
   "vu": {
     "colors": [
       "#fdce12",
-      "#fdce12",
-      "#fdce12",
       "#009543",
+      "#d21034",
+      "#d21034",
       "#d21034",
       "#000000"
     ],
     "files": [
-      "vu__00_fdce12.svg",
-      "vu__01_fdce12.svg",
-      "vu__02_fdce12.svg",
-      "vu__03_009543.svg",
-      "vu__04_d21034.svg",
-      "vu__05_000000.svg"
+      "vu__00.png",
+      "vu__01.png",
+      "vu__02.png",
+      "vu__03.png",
+      "vu__04.png",
+      "vu__05.png"
     ],
     "z": [
-      71,
-      90,
-      121,
-      40,
-      50,
-      81
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "vu__full.svg",
     "location": {
@@ -8061,28 +7903,28 @@
   },
   "wf": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "wf__00_e1000f.svg",
-      "wf__01_000091.svg",
-      "wf__02_000091.svg",
-      "wf__03_000091.svg",
-      "wf__04_000091.svg",
-      "wf__05_ffffff.svg"
+      "wf__00.png",
+      "wf__01.png",
+      "wf__02.png",
+      "wf__03.png",
+      "wf__04.png",
+      "wf__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "wf__full.svg",
     "location": {
@@ -8092,28 +7934,28 @@
   },
   "ws": {
     "colors": [
+      "#ffffff",
       "#ce1126",
       "#ce1126",
       "#ce1126",
       "#ce1126",
-      "#002b7f",
-      "#ffffff"
+      "#002b7f"
     ],
     "files": [
-      "ws__00_ce1126.svg",
-      "ws__01_ce1126.svg",
-      "ws__02_ce1126.svg",
-      "ws__03_ce1126.svg",
-      "ws__04_002b7f.svg",
-      "ws__05_ffffff.svg"
+      "ws__00.png",
+      "ws__01.png",
+      "ws__02.png",
+      "ws__03.png",
+      "ws__04.png",
+      "ws__05.png"
     ],
     "z": [
-      20,
-      21,
-      22,
-      23,
-      30,
-      40
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ws__full.svg",
     "location": {
@@ -8123,28 +7965,28 @@
   },
   "xk": {
     "colors": [
+      "#ffffff",
       "#d0a650",
       "#244aa5",
       "#244aa5",
       "#244aa5",
-      "#244aa5",
-      "#ffffff"
+      "#244aa5"
     ],
     "files": [
-      "xk__00_d0a650.svg",
-      "xk__01_244aa5.svg",
-      "xk__02_244aa5.svg",
-      "xk__03_244aa5.svg",
-      "xk__04_244aa5.svg",
-      "xk__05_ffffff.svg"
+      "xk__00.png",
+      "xk__01.png",
+      "xk__02.png",
+      "xk__03.png",
+      "xk__04.png",
+      "xk__05.png"
     ],
     "z": [
-      20,
-      10,
-      11,
-      12,
-      13,
-      30
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "xk__full.svg",
     "location": {
@@ -8154,28 +7996,28 @@
   },
   "ye": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
       "#f10600",
       "#f10600",
       "#f10600",
-      "#f10600",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "ye__00_f10600.svg",
-      "ye__01_f10600.svg",
-      "ye__02_f10600.svg",
-      "ye__03_f10600.svg",
-      "ye__04_000001.svg",
-      "ye__05_ffffff.svg"
+      "ye__00.png",
+      "ye__01.png",
+      "ye__02.png",
+      "ye__03.png",
+      "ye__04.png",
+      "ye__05.png"
     ],
     "z": [
-      30,
-      31,
-      32,
-      33,
-      40,
-      20
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "ye__full.svg",
     "location": {
@@ -8185,28 +8027,28 @@
   },
   "yt": {
     "colors": [
+      "#ffffff",
+      "#ffffff",
+      "#e1000f",
       "#e1000f",
       "#000091",
-      "#000091",
-      "#000091",
-      "#000091",
-      "#ffffff"
+      "#000091"
     ],
     "files": [
-      "yt__00_e1000f.svg",
-      "yt__01_000091.svg",
-      "yt__02_000091.svg",
-      "yt__03_000091.svg",
-      "yt__04_000091.svg",
-      "yt__05_ffffff.svg"
+      "yt__00.png",
+      "yt__01.png",
+      "yt__02.png",
+      "yt__03.png",
+      "yt__04.png",
+      "yt__05.png"
     ],
     "z": [
-      30,
-      20,
-      21,
-      22,
-      23,
-      10
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "yt__full.svg",
     "location": {
@@ -8216,28 +8058,28 @@
   },
   "za": {
     "colors": [
+      "#ffffff",
       "#ffb915",
       "#e1392d",
       "#007847",
       "#000c8a",
-      "#000001",
-      "#ffffff"
+      "#000001"
     ],
     "files": [
-      "za__00_ffb915.svg",
-      "za__01_e1392d.svg",
-      "za__02_007847.svg",
-      "za__03_000c8a.svg",
-      "za__04_000001.svg",
-      "za__05_ffffff.svg"
+      "za__00.png",
+      "za__01.png",
+      "za__02.png",
+      "za__03.png",
+      "za__04.png",
+      "za__05.png"
     ],
     "z": [
-      90,
-      80,
-      100,
-      70,
-      60,
-      110
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "za__full.svg",
     "location": {
@@ -8248,27 +8090,27 @@
   "zm": {
     "colors": [
       "#ef7d00",
-      "#ef7d00",
+      "#198a00",
+      "#198a00",
       "#198a00",
       "#de2010",
-      "#000001",
-      "#000000"
+      "#000001"
     ],
     "files": [
-      "zm__00_ef7d00.svg",
-      "zm__01_ef7d00.svg",
-      "zm__02_198a00.svg",
-      "zm__03_de2010.svg",
-      "zm__04_000001.svg",
-      "zm__05_000000.svg"
+      "zm__00.png",
+      "zm__01.png",
+      "zm__02.png",
+      "zm__03.png",
+      "zm__04.png",
+      "zm__05.png"
     ],
     "z": [
-      60,
-      90,
-      50,
-      80,
-      70,
-      91
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "zm__full.svg",
     "location": {
@@ -8278,28 +8120,28 @@
   },
   "zw": {
     "colors": [
+      "#ffffff",
       "#ffd200",
-      "#ffcc00",
       "#d40000",
       "#006400",
-      "#0000ff",
+      "#006400",
       "#000001"
     ],
     "files": [
-      "zw__00_ffd200.svg",
-      "zw__01_ffcc00.svg",
-      "zw__02_d40000.svg",
-      "zw__03_006400.svg",
-      "zw__04_0000ff.svg",
-      "zw__05_000001.svg"
+      "zw__00.png",
+      "zw__01.png",
+      "zw__02.png",
+      "zw__03.png",
+      "zw__04.png",
+      "zw__05.png"
     ],
     "z": [
-      60,
-      120,
-      70,
-      50,
-      30,
-      80
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
     ],
     "full": "zw__full.svg",
     "location": {

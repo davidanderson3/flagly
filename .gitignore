@@ -1,2 +1,4 @@
+/public/output/
 node_modules/*
-
+output/
+public/firebase-config.js
