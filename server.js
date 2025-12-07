@@ -14,6 +14,10 @@ app.get('/api/manifest', (req, res) => {
   res.json(data);
 });
 
+app.get('/admin-local', (req, res) => {
+  res.sendFile(path.join(process.cwd(), 'admin-local.html'));
+});
+
 app.use('/output', express.static(OUT_DIR, { fallthrough: false }));
 app.use('/', express.static(PUB_DIR, { fallthrough: false }));
 

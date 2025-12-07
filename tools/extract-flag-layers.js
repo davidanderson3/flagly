@@ -29,6 +29,11 @@ const MIN_COLOR_DISTANCE = 80; // Squash near-duplicate shades to keep flags fla
 const EDGE_FILL_SPAN = 8; // How many pixels to scan for missing edge coverage.
 
 const SKIP_CODES = new Set(['asean', 'cp', 'eu', 'gb-wls', 'mf', 'um', 'un', 'xx']);
+const RECOGNIZED_COUNTRY_CODES = new Set(
+  countriesList
+    .map((country) => (country.cca2 ? String(country.cca2).toLowerCase() : null))
+    .filter(Boolean)
+);
 
 const locationByIso = new Map();
 countriesList.forEach((country) => {
@@ -41,21 +46,9 @@ countriesList.forEach((country) => {
 });
 
 const MANUAL_LOCATIONS = new Map([
-  ['arab', { lat: 25, lon: 45 }],
-  ['cefta', { lat: 45.5, lon: 17 }],
   ['dg', { lat: -7.3, lon: 72.4 }],
-  ['eac', { lat: 1, lon: 37 }],
-  ['es-ct', { lat: 41.9, lon: 2.2 }],
-  ['es-ga', { lat: 42.6, lon: -8 }],
-  ['es-pv', { lat: 43, lon: -2.5 }],
-  ['gb-eng', { lat: 52, lon: -1.5 }],
-  ['gb-sct', { lat: 56.5, lon: -4 }],
-  ['gb-wls', { lat: 52.1, lon: -3.5 }],
   ['ic', { lat: 28.1, lon: -15.4 }],
   ['pc', { lat: -25, lon: -130.1 }],
-  ['sh-ac', { lat: -7.9, lon: -14.3 }],
-  ['sh-hl', { lat: -15.9, lon: -5.7 }],
-  ['sh-ta', { lat: -37.1, lon: -12.3 }],
 ]);
 
 function brightnessScore(hex) {
@@ -526,7 +519,7 @@ function main() {
 
   files.forEach((file) => {
     const cc = path.basename(file, '.svg');
-    if (SKIP_CODES.has(cc)) {
+    if (!RECOGNIZED_COUNTRY_CODES.has(cc) || SKIP_CODES.has(cc)) {
       const staleDir = path.join(OUT_DIR, cc);
       if (fs.existsSync(staleDir)) {
         fs.rmSync(staleDir, { recursive: true, force: true });

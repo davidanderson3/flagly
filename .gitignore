@@ -2,3 +2,4 @@
 node_modules/*
 output/
 public/firebase-config.js
+admin-local.html

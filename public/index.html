@@ -608,7 +608,12 @@
       try {
         const snap = await getDoc(ref);
         const remoteData = snap.exists() ? normalizeRemoteResult(snap.data()) : null;
-        if (!remoteData || !remoteData.status) return;
+      if (!remoteData || !remoteData.status) {
+        if (localData && firebaseUser) {
+          await saveGameResultToAccount(localData.status);
+        }
+        return;
+      }
         if (remoteData.timestamp > appliedTimestamp) {
           applyResultToUI(remoteData, dateKey);
           appliedTimestamp = remoteData.timestamp;

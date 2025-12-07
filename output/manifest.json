@@ -309,37 +309,6 @@
       "lon": -64
     }
   },
-  "arab": {
-    "colors": [
-      "#ffffff",
-      "#f7c608",
-      "#006233",
-      "#006233",
-      "#006233",
-      "#000000"
-    ],
-    "files": [
-      "arab__00.png",
-      "arab__01.png",
-      "arab__02.png",
-      "arab__03.png",
-      "arab__04.png",
-      "arab__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "arab__full.svg",
-    "location": {
-      "lat": 25,
-      "lon": 45
-    }
-  },
   "as": {
     "colors": [
       "#ffffff",
@@ -1270,37 +1239,6 @@
       "lon": 25
     }
   },
-  "cefta": {
-    "colors": [
-      "#ffcc00",
-      "#003399",
-      "#003399",
-      "#003399",
-      "#003399",
-      "#003399"
-    ],
-    "files": [
-      "cefta__00.png",
-      "cefta__01.png",
-      "cefta__02.png",
-      "cefta__03.png",
-      "cefta__04.png",
-      "cefta__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "cefta__full.svg",
-    "location": {
-      "lat": 45.5,
-      "lon": 17
-    }
-  },
   "cf": {
     "colors": [
       "#ffffff",
@@ -1828,37 +1766,6 @@
       "lon": 9
     }
   },
-  "dg": {
-    "colors": [
-      "#ffffff",
-      "#fff100",
-      "#808080",
-      "#a24300",
-      "#006d00",
-      "#000063"
-    ],
-    "files": [
-      "dg__00.png",
-      "dg__01.png",
-      "dg__02.png",
-      "dg__03.png",
-      "dg__04.png",
-      "dg__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "dg__full.svg",
-    "location": {
-      "lat": -7.3,
-      "lon": 72.4
-    }
-  },
   "dj": {
     "colors": [
       "#fffefe",
@@ -2014,37 +1921,6 @@
       "lon": 3
     }
   },
-  "eac": {
-    "colors": [
-      "#ffffff",
-      "#ffff00",
-      "#0087ff",
-      "#ff0000",
-      "#008300",
-      "#000001"
-    ],
-    "files": [
-      "eac__00.png",
-      "eac__01.png",
-      "eac__02.png",
-      "eac__03.png",
-      "eac__04.png",
-      "eac__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "eac__full.svg",
-    "location": {
-      "lat": 1,
-      "lon": 37
-    }
-  },
   "ec": {
     "colors": [
       "#ffe800",
@@ -2198,99 +2074,6 @@
     "location": {
       "lat": 15,
       "lon": 39
-    }
-  },
-  "es-ct": {
-    "colors": [
-      "#fcdd09",
-      "#fcdd09",
-      "#fcdd09",
-      "#fcdd09",
-      "#da121a",
-      "#da121a"
-    ],
-    "files": [
-      "es-ct__00.png",
-      "es-ct__01.png",
-      "es-ct__02.png",
-      "es-ct__03.png",
-      "es-ct__04.png",
-      "es-ct__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "es-ct__full.svg",
-    "location": {
-      "lat": 41.9,
-      "lon": 2.2
-    }
-  },
-  "es-ga": {
-    "colors": [
-      "#ffffff",
-      "#cccccc",
-      "#bcac0b",
-      "#0099cc",
-      "#d81126",
-      "#000000"
-    ],
-    "files": [
-      "es-ga__00.png",
-      "es-ga__01.png",
-      "es-ga__02.png",
-      "es-ga__03.png",
-      "es-ga__04.png",
-      "es-ga__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "es-ga__full.svg",
-    "location": {
-      "lat": 42.6,
-      "lon": -8
-    }
-  },
-  "es-pv": {
-    "colors": [
-      "#ffffff",
-      "#009b48",
-      "#009b48",
-      "#d52b1e",
-      "#d52b1e",
-      "#d52b1e"
-    ],
-    "files": [
-      "es-pv__00.png",
-      "es-pv__01.png",
-      "es-pv__02.png",
-      "es-pv__03.png",
-      "es-pv__04.png",
-      "es-pv__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "es-pv__full.svg",
-    "location": {
-      "lat": 43,
-      "lon": -2.5
     }
   },
   "es": {
@@ -2570,96 +2353,6 @@
     "location": {
       "lat": -1,
       "lon": 11.75
-    }
-  },
-  "gb-eng": {
-    "colors": [
-      "#ffffff",
-      "#ffffff",
-      "#ffffff",
-      "#ffffff",
-      "#ce1124",
-      "#ce1124"
-    ],
-    "files": [
-      "gb-eng__00.png",
-      "gb-eng__01.png",
-      "gb-eng__02.png",
-      "gb-eng__03.png",
-      "gb-eng__04.png",
-      "gb-eng__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "gb-eng__full.svg",
-    "location": {
-      "lat": 52,
-      "lon": -1.5
-    }
-  },
-  "gb-nir": {
-    "colors": [
-      "#ffffff",
-      "#ffcc00",
-      "#916c68",
-      "#cc0000",
-      "#4d3126",
-      "#000000"
-    ],
-    "files": [
-      "gb-nir__00.png",
-      "gb-nir__01.png",
-      "gb-nir__02.png",
-      "gb-nir__03.png",
-      "gb-nir__04.png",
-      "gb-nir__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "gb-nir__full.svg",
-    "location": null
-  },
-  "gb-sct": {
-    "colors": [
-      "#ffffff",
-      "#ffffff",
-      "#0065bd",
-      "#0065bd",
-      "#0065bd",
-      "#0065bd"
-    ],
-    "files": [
-      "gb-sct__00.png",
-      "gb-sct__01.png",
-      "gb-sct__02.png",
-      "gb-sct__03.png",
-      "gb-sct__04.png",
-      "gb-sct__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "gb-sct__full.svg",
-    "location": {
-      "lat": 56.5,
-      "lon": -4
     }
   },
   "gb": {
@@ -3404,37 +3097,6 @@
     "location": {
       "lat": 47,
       "lon": 20
-    }
-  },
-  "ic": {
-    "colors": [
-      "#ffffff",
-      "#ffffff",
-      "#ffcc00",
-      "#ffcc00",
-      "#0768a9",
-      "#0768a9"
-    ],
-    "files": [
-      "ic__00.png",
-      "ic__01.png",
-      "ic__02.png",
-      "ic__03.png",
-      "ic__04.png",
-      "ic__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "ic__full.svg",
-    "location": {
-      "lat": 28.1,
-      "lon": -15.4
     }
   },
   "id": {
@@ -5669,37 +5331,6 @@
       "lon": -80
     }
   },
-  "pc": {
-    "colors": [
-      "#ffffff",
-      "#00aec7",
-      "#003da5",
-      "#003da5",
-      "#003da5",
-      "#003da5"
-    ],
-    "files": [
-      "pc__00.png",
-      "pc__01.png",
-      "pc__02.png",
-      "pc__03.png",
-      "pc__04.png",
-      "pc__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "pc__full.svg",
-    "location": {
-      "lat": -25,
-      "lon": -130.1
-    }
-  },
   "pe": {
     "colors": [
       "#ffffff",
@@ -6473,99 +6104,6 @@
     "location": {
       "lat": 1.36666666,
       "lon": 103.8
-    }
-  },
-  "sh-ac": {
-    "colors": [
-      "#ffffff",
-      "#979696",
-      "#1b81b6",
-      "#494037",
-      "#012169",
-      "#000000"
-    ],
-    "files": [
-      "sh-ac__00.png",
-      "sh-ac__01.png",
-      "sh-ac__02.png",
-      "sh-ac__03.png",
-      "sh-ac__04.png",
-      "sh-ac__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "sh-ac__full.svg",
-    "location": {
-      "lat": -7.9,
-      "lon": -14.3
-    }
-  },
-  "sh-hl": {
-    "colors": [
-      "#ffffff",
-      "#bca76b",
-      "#128bbf",
-      "#c8102e",
-      "#69522b",
-      "#000066"
-    ],
-    "files": [
-      "sh-hl__00.png",
-      "sh-hl__01.png",
-      "sh-hl__02.png",
-      "sh-hl__03.png",
-      "sh-hl__04.png",
-      "sh-hl__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "sh-hl__full.svg",
-    "location": {
-      "lat": -15.9,
-      "lon": -5.7
-    }
-  },
-  "sh-ta": {
-    "colors": [
-      "#ffffff",
-      "#ffff00",
-      "#8fc5ff",
-      "#cf6200",
-      "#366cc9",
-      "#000066"
-    ],
-    "files": [
-      "sh-ta__00.png",
-      "sh-ta__01.png",
-      "sh-ta__02.png",
-      "sh-ta__03.png",
-      "sh-ta__04.png",
-      "sh-ta__05.png"
-    ],
-    "z": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5
-    ],
-    "full": "sh-ta__full.svg",
-    "location": {
-      "lat": -37.1,
-      "lon": -12.3
     }
   },
   "sh": {
