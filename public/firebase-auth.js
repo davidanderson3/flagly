@@ -84,14 +84,21 @@ if (missingConfig) {
     if (profileLink && profileAvatar) {
       profileLink.style.display = 'inline-flex';
       profileLink.href = '/profile.html';
-      const photo = user.photoURL;
       profileAvatar.textContent = '';
       profileAvatar.innerHTML = '';
+      const photo = user.photoURL;
       if (photo) {
-        const img = document.createElement('img');
-        img.src = photo;
+        const img = new Image();
         img.alt = 'Profile';
-        profileAvatar.appendChild(img);
+        img.decoding = 'async';
+        img.addEventListener('load', () => {
+          profileAvatar.innerHTML = '';
+          profileAvatar.appendChild(img);
+        });
+        img.addEventListener('error', () => {
+          profileAvatar.textContent = getInitial(user);
+        });
+        img.src = photo;
       } else {
         profileAvatar.textContent = getInitial(user);
       }

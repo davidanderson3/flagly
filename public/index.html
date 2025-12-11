@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flagly</title>
+  <title>Flagulous</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230b0d12'/%3E%3Cpath d='M12 14h28l-6 6 6 6-6 6 6 6-6 6 6 6H12Z' fill='%232b64ff'/%3E%3C/svg%3E">
   <style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif }
@@ -71,6 +71,7 @@
     .history-empty { opacity: 0.6; font-size: 13px; }
     .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between }
     .date-row { margin-top: 8px; gap: 12px; justify-content: center; flex-direction: column; align-items: center; text-align: center; }
+    .give-up-row { justify-content: center; }
     .archive-block { display: flex; flex-direction: column; gap: 6px; align-items: center; }
     .archive-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.65; }
     .nav-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
@@ -111,6 +112,40 @@
       animation: shimmer 2.6s ease-in-out infinite;
     }
     .share-row { justify-content: center; align-items: center; width: 100%; gap: 8px; flex-direction: column; }
+    .share-row button {
+      width: min(100%, 240px);
+    }
+    .share-note {
+      min-height: 1.5em;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-top: 2px;
+      transition: opacity 200ms ease;
+    }
+    .share-note.visible {
+      opacity: 1;
+    }
+    .leaderboard-link {
+      display: none;
+      background: linear-gradient(135deg, #2b5ca9 0%, #7cec8f 70%);
+      color: #030b05;
+      border: 1px solid rgba(12, 30, 9, 0.25);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(11, 78, 20, 0.35);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
     .auth-link { display: inline-flex; justify-content: center; align-self: center; margin: 18px auto 24px; text-align: center; color: #7cec8f; font-weight: 600; text-decoration: none; width: fit-content; }
     .auth-link.sign-in { margin: 0; padding: 0; background: none; font-weight: 600; }
     .flag-label { text-align: center; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; opacity: 0.7; margin-top: 12px; }
@@ -122,7 +157,7 @@
     .suggestion-list button { width: 100%; border: none; background: transparent; color: inherit; padding: 8px 12px; text-align: left; font-size: 14px; cursor: pointer }
     .suggestion-list button:hover, .suggestion-list button:focus-visible { background: #1f2430; outline: none }
     .feedback { min-height: 20px; margin-top: 8px; font-size: 14px; color: #90c1ff; text-align: center; }
-    .mobile-flash { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; text-transform: uppercase; font-weight: 700; letter-spacing: 0.3em; color: #fff; background: rgba(0, 0, 0, 0.65); opacity: 0; pointer-events: none; transition: opacity 200ms ease; z-index: 1250; padding: 12px; box-sizing: border-box; }
+    .mobile-flash { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; text-transform: none; font-weight: 700; letter-spacing: 0; font-size: 64px; color: #ff8e8e; background: rgba(0, 0, 0, 0.6); opacity: 0; pointer-events: none; transition: opacity 150ms ease; z-index: 1250; padding: 12px; box-sizing: border-box; }
     .mobile-flash.visible { opacity: 1; }
     @keyframes shimmer {
       0% { background-position: 0% 50%; }
@@ -176,7 +211,7 @@
   <div class="page-shell">
     <div class="card">
     <div class="title-row">
-      <h1>Flagly</h1>
+      <h1>Flagulous</h1>
       <div class="auth-row">
         <a id="authSignIn" class="auth-link sign-in" href="#">Sign In</a>
         <a id="profileLink" class="profile-link" href="/profile.html" style="display:none;">
@@ -210,12 +245,11 @@
       <div class="history-title">Previous guesses</div>
       <ol class="history-list" id="guessHistoryList"></ol>
     </div>
-    <div class="controls guess-actions">
-      <button id="giveUp">Give Up</button>
-    </div>
     <div class="feedback" id="feedback"></div>
     <div class="row share-row">
       <button id="shareResults">Share Results</button>
+      <button id="leaderboardLink" class="leaderboard-link" type="button">View Leaderboard</button>
+      <div class="share-note" id="shareLinkMessage" aria-live="polite"></div>
     </div>
     <div class="row date-row">
       <div class="pill" id="dateDisplay">Date: –</div>
@@ -227,28 +261,37 @@
         </div>
       </div>
     </div>
+    <div class="controls guess-actions give-up-row">
+      <button id="giveUp">Give Up</button>
+    </div>
   </div>
   <a id="authSignOut" class="auth-link" href="#" style="display:none;">Sign out</a>
 </div>
-  <div id="mobileFlash" class="mobile-flash" aria-live="polite">NOPE, TRY AGAIN</div>
+  <div id="mobileFlash" class="mobile-flash" aria-live="polite">✘</div>
   <script src="/firebase-config.js"></script>
   <script type="module" src="/firebase-auth.js"></script>
   <script type="module">
-    import { getFirestore, doc, setDoc, serverTimestamp, getDoc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+    import { getFirestore, doc, setDoc, serverTimestamp, getDoc, updateDoc, increment, collection, arrayUnion } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
     import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 
     const firestore = getFirestore();
     const auth = getAuth();
     let firebaseUser = null;
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       firebaseUser = user;
+      if (currentSharePayload) {
+        void recordShareForPayload(currentSharePayload);
+      }
+      await hydrateHistoryClearedAt(firebaseUser ? firebaseUser.uid : null);
       applySavedResult();
+      void processPendingShareLink();
     });
 
     const MAX_GUESSES = 6;
     const LOCAL_RESULT_PREFIX = 'flagly-result-';
     const LAST_DATE_KEY = 'flagly-last-date';
     const LAST_INDEX_KEY = 'flagly-last-index';
+    const HISTORY_CLEARED_KEY = 'flagly-history-cleared-at';
 
     const stage = document.getElementById('stage');
     const progress = document.getElementById('progress');
@@ -271,6 +314,8 @@
     const correctMessage = document.getElementById('correctMessage');
     const layerInfo = document.getElementById('layerInfo');
     const mobileFlash = document.getElementById('mobileFlash');
+    const shareLinkMessage = document.getElementById('shareLinkMessage');
+    const leaderboardLink = document.getElementById('leaderboardLink');
 
     let manifest = {};
     let order = [];
@@ -296,14 +341,43 @@
     const DAYS_BEFORE = 500;
     const DAYS_AFTER = 500;
     const TOTAL_WINDOW = DAYS_BEFORE + DAYS_AFTER + 1;
-    const todayLocal = toDateOnly(new Date());
-    const startDate = new Date(todayLocal.getTime() - DAYS_BEFORE * DAY_MS);
+    const SCHEDULE_SEED_ISO = '2024-01-01';
+    const SCHEDULE_SEED_VALUE = Number(SCHEDULE_SEED_ISO.replace(/-/g, '')) || 1337;
+    const MOBILE_BREAKPOINT_QUERY = '(max-width: 720px)';
+
+    function isMobileViewport() {
+      if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return false;
+      return window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches;
+    }
+
+    function shouldBlurAfterGuess() {
+      return isMobileViewport();
+    }
+
+    function getLocalMidnight(date = new Date()) {
+      if (!(date instanceof Date)) return null;
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
+
+    let todayLocalMidnight = null;
+    let startDate = null;
     const TODAY_INDEX = DAYS_BEFORE;
 
     const COUNTRY_NAME_OVERRIDES = {
       cg: 'Republic of the Congo',
       cd: 'Democratic Republic of the Congo',
     };
+    const SHARE_PARAM = 'shareId';
+    const SHARE_PENDING_KEY = 'flagly-share-link';
+    const SHARE_PAYLOAD_PREFIX = 'flagly-share-payload-';
+    const INDEX_PARAM = 'idx';
+    const ARCHIVE_PARAM = 'archive';
+    const shareRecordedIds = new Set();
+    const MAX_SHARE_ID_LENGTH = 8;
+    let currentSharePayload = null;
+    let shareLinkInProgress = false;
+    let shareLinkTimeoutId = null;
+    let initialShareId = null;
 
     function isoToName(cc) {
       try {
@@ -318,8 +392,7 @@
 
     function toDateOnly(date) {
       if (!(date instanceof Date)) return null;
-      // Use local midnight so displayed dates match the viewer's timezone.
-      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
     }
 
     function addDays(date, days) {
@@ -339,6 +412,52 @@
       return new Date(startDate.getTime() + index * DAY_MS);
     }
 
+    function captureGuessHistorySnapshot() {
+      return guessHistory.map((entry) => ({
+        name: entry.name || '',
+        cc: entry.cc || '',
+        correct: !!entry.correct,
+        direction: entry.direction || null,
+      }));
+    }
+
+    function hydrateGuessHistory(entries) {
+      if (!Array.isArray(entries)) {
+        guessHistory = [];
+        guessedThisRound = new Set();
+        renderGuessHistory();
+        return;
+      }
+      guessHistory = entries.map((entry) => ({
+        name: entry.name || '',
+        cc: entry.cc || '',
+        correct: !!entry.correct,
+        direction: entry.direction || null,
+      }));
+      guessedThisRound = new Set(guessHistory.map((entry) => entry.cc).filter(Boolean));
+      renderGuessHistory();
+    }
+
+    function buildPersistentPayload(dateKey, status) {
+      return {
+        date: dateKey,
+        country: current?.cc || '',
+        status,
+        attempts,
+        timestamp: Date.now(),
+        guessHistory: captureGuessHistorySnapshot(),
+      };
+    }
+
+    function persistInProgressState() {
+      if (!current || idx < 0) return;
+      const date = indexToDate(idx);
+      if (!date) return;
+      const dateKey = formatLocalDateKey(date);
+      if (!dateKey) return;
+      persistLocalResult(dateKey, buildPersistentPayload(dateKey, 'in-progress'));
+    }
+
     function persistLocalResult(dateKey, payload) {
       if (typeof localStorage === 'undefined') return;
       try {
@@ -349,12 +468,83 @@
       }
     }
 
+    function readLocalHistoryClearedAt() {
+      if (typeof localStorage === 'undefined') return 0;
+      try {
+        const raw = localStorage.getItem(HISTORY_CLEARED_KEY);
+        return raw ? Number(raw) || 0 : 0;
+      } catch (err) {
+        console.error('Loading history clear timestamp failed', err);
+        return 0;
+      }
+    }
+
+    let localHistoryClearedAt = readLocalHistoryClearedAt();
+    let remoteHistoryClearedAt = 0;
+
+    function setLocalHistoryClearedAt(value) {
+      if (typeof localStorage === 'undefined' || value == null) return;
+      try {
+        localStorage.setItem(HISTORY_CLEARED_KEY, String(value));
+        localHistoryClearedAt = value;
+      } catch (err) {
+        console.error('Storing history clear timestamp failed', err);
+      }
+    }
+
+    function getEffectiveHistoryClearedAt() {
+      return Math.max(localHistoryClearedAt || 0, remoteHistoryClearedAt || 0);
+    }
+
+    function removeLocalResult(dateKey) {
+      if (typeof localStorage === 'undefined' || !dateKey) return;
+      try {
+        const storageKey = `${LOCAL_RESULT_PREFIX}${dateKey}`;
+        localStorage.removeItem(storageKey);
+      } catch (err) {
+        console.error('Removing local result failed', err);
+      }
+    }
+
+    function shouldIgnoreEntry(entry) {
+      if (!entry) return false;
+      const clearedAt = getEffectiveHistoryClearedAt();
+      if (!clearedAt) return false;
+      const timestamp = Number(entry.timestamp) || 0;
+      return timestamp && timestamp <= clearedAt;
+    }
+
+
     function normalizeRemoteResult(data) {
       if (!data) return null;
       const stamp = data.timestamp && typeof data.timestamp.toMillis === 'function'
         ? data.timestamp.toMillis()
         : Number(data.timestamp) || 0;
       return { ...data, timestamp: stamp };
+    }
+
+
+    async function hydrateHistoryClearedAt(uid) {
+      remoteHistoryClearedAt = 0;
+      if (!uid) return 0;
+      try {
+        const metaRef = doc(firestore, 'users', uid);
+        const metaSnap = await getDoc(metaRef);
+        const clearedAtField = metaSnap.exists() ? metaSnap.data()?.historyClearedAt : null;
+        const timestamp = clearedAtField
+          ? (typeof clearedAtField.toMillis === 'function'
+            ? clearedAtField.toMillis()
+            : Number(clearedAtField) || 0)
+          : 0;
+        if (timestamp) {
+          remoteHistoryClearedAt = timestamp;
+          setLocalHistoryClearedAt(timestamp);
+        }
+        return timestamp;
+      } catch (err) {
+        console.error('Loading history metadata failed', err);
+        return 0;
+      }
     }
 
     function loadLocalResult(dateKey) {
@@ -375,24 +565,27 @@
     }
 
     function formatLocalDateKey(date) {
-      if (!date) return null;
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
+      return formatIsoDateKey(date);
     }
 
     function parseLocalDateKey(value) {
       if (!value) return null;
-      const [year, month, day] = value.split('-').map(Number);
-      if (!year || !month || !day) return null;
-      return new Date(year, month - 1, day);
+      const parsed = new Date(`${value}T00:00:00`);
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    function formatIsoDateKey(date) {
+      if (!date) return null;
+      const year = date.getUTCFullYear();
+      const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(date.getUTCDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
     }
 
     function persistLastViewedDate(date) {
       if (!date || typeof localStorage === 'undefined') return;
       try {
-        const iso = formatLocalDateKey(date);
+        const iso = formatIsoDateKey(date);
         if (!iso) return;
         localStorage.setItem(LAST_DATE_KEY, iso);
       } catch (err) {
@@ -405,9 +598,7 @@
       try {
         const raw = localStorage.getItem(LAST_DATE_KEY);
         if (!raw) return null;
-        const parsed = parseLocalDateKey(raw);
-        if (!parsed) return null;
-        return toDateOnly(parsed);
+        return parseLocalDateKey(raw);
       } catch (err) {
         console.error('Loading last viewed date failed', err);
         return null;
@@ -448,9 +639,17 @@
         attempts,
         timestamp: serverTimestamp(),
       };
-      const localPayload = { ...payload, timestamp: Date.now() };
+      const localPayload = {
+        ...payload,
+        timestamp: Date.now(),
+        guessHistory: captureGuessHistorySnapshot(),
+      };
+      const displayName = firebaseUser.displayName || firebaseUser.email || 'Flagulous Player';
       try {
         persistLocalResult(dateKey, localPayload);
+        await setDoc(doc(firestore, 'users', firebaseUser.uid), {
+          displayName,
+        }, { merge: true });
         const ref = doc(firestore, 'users', firebaseUser.uid, 'results', dateKey);
         await setDoc(ref, payload, { merge: true });
       } catch (err) {
@@ -459,14 +658,20 @@
     }
 
     function dateDiffInDays(date) {
-      const only = toDateOnly(date);
-      if (!only) return 0;
-      return Math.floor((only.getTime() - startDate.getTime()) / DAY_MS);
+      const only = getLocalMidnight(date);
+      const base = startDate ? getLocalMidnight(startDate) : null;
+      if (!only || !base) return 0;
+      return Math.floor((only.getTime() - base.getTime()) / DAY_MS);
     }
 
     function formatDateLabel(date) {
       try {
-        return date.toLocaleDateString('en', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+        return new Intl.DateTimeFormat('en', {
+          weekday: 'long',
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric',
+        }).format(date);
       } catch {
         return date.toISOString().slice(0, 10);
       }
@@ -488,33 +693,160 @@
 
     const FIREWORKS_COLORS = ['#7cec8f', '#ffb612', '#6ea8ff', '#ff8e8e', '#f7f7f7', '#8bf0ff'];
 
+    function showLeaderboardLink(show) {
+      if (!leaderboardLink) return;
+      leaderboardLink.style.display = show ? 'inline-flex' : 'none';
+    }
+
     function hideShareButton() {
       if (!btnShare) return;
       btnShare.style.display = 'none';
       btnShare.disabled = false;
       btnShare.dataset.shareText = '';
+      btnShare.dataset.shareId = '';
       btnShare.textContent = 'Share Results';
+      currentSharePayload = null;
+      setShareLinkMessage('');
+      showLeaderboardLink(false);
     }
 
     const LAYER_LABELS = ['NO', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT'];
 
-    function showShareButton(text) {
-      if (!btnShare) return;
-      btnShare.dataset.shareText = text || '';
-      btnShare.style.display = 'inline-flex';
-      btnShare.disabled = !text;
-      btnShare.textContent = 'Share Results';
+    function generateShareId() {
+      if (typeof window === 'undefined') {
+        return Math.random().toString(36).slice(2, 10);
+      }
+      const cryptoObj = window.crypto || window.msCrypto;
+      if (cryptoObj && cryptoObj.randomUUID) {
+        return cryptoObj.randomUUID().slice(0, MAX_SHARE_ID_LENGTH);
+      }
+      return Math.random().toString(36).slice(2, 2 + MAX_SHARE_ID_LENGTH);
     }
 
-    function buildShareText(attemptsCount, dateLabel) {
+    function getShareStorageKey(dateKey) {
+      return `${SHARE_PAYLOAD_PREFIX}${dateKey}`;
+    }
+
+    function loadSharePayload(dateKey) {
+      if (!dateKey || typeof localStorage === 'undefined') return null;
+      try {
+        const raw = localStorage.getItem(getShareStorageKey(dateKey));
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch (err) {
+        console.error('Loading share payload failed', err);
+        return null;
+      }
+    }
+
+    function persistSharePayload(dateKey, payload) {
+      if (!dateKey || !payload || typeof localStorage === 'undefined') return;
+      try {
+        localStorage.setItem(getShareStorageKey(dateKey), JSON.stringify(payload));
+      } catch (err) {
+        console.error('Persisting share payload failed', err);
+      }
+    }
+
+    function buildShareUrl(dateKey, shareId, index) {
+      try {
+        const url = typeof window === 'undefined' ? new URL('https://geogeo-8008a.web.app') : new URL(window.location.href);
+        const base = new URL(url.origin);
+        base.searchParams.set('date', dateKey);
+        base.searchParams.set(SHARE_PARAM, shareId);
+        if (typeof index === 'number' && Number.isFinite(index)) {
+          base.searchParams.set(INDEX_PARAM, String(index));
+        }
+        base.searchParams.set(ARCHIVE_PARAM, '1');
+        return base.toString();
+      } catch {
+        return 'https://geogeo-8008a.web.app';
+      }
+    }
+
+    function buildSharePayload(attemptsCount, dateLabel, dateKey, index) {
       const guessWord = attemptsCount === 1 ? '1 guess' : `${attemptsCount} guesses`;
-      return [
-        '⚑ Flagle ✨',
-        `🧭 I guessed Flagle in ${guessWord}!`,
-        `🎯 Date: ${dateLabel}`,
-        '✨ Play: https://geogeo-8008a.web.app',
-        '🔗 Share the flag fun!',
-      ].join('\n');
+      const safeDateKey = dateKey || formatLocalDateKey(new Date());
+      const stored = loadSharePayload(safeDateKey);
+      const shareId = (stored && stored.shareId) ? stored.shareId : generateShareId();
+      const shareUrl = buildShareUrl(safeDateKey, shareId, index);
+      const payload = {
+        shareId,
+        attempts: attemptsCount,
+        dateKey: safeDateKey,
+        index: Number.isFinite(index) ? index : null,
+        text: [
+        '⚑ Flagulous ✨',
+        `🧭 I guessed Flagulous in ${guessWord}!`,
+          `🎯 Date: ${dateLabel}`,
+          `✨ Play: ${shareUrl}`,
+        ].join('\n'),
+      };
+      persistSharePayload(safeDateKey, payload);
+      return payload;
+    }
+
+    function showShareButton(payload) {
+      if (!btnShare) return;
+      if (!payload) {
+        hideShareButton();
+        return;
+      }
+      currentSharePayload = payload;
+      btnShare.dataset.shareText = payload.text || '';
+      btnShare.dataset.shareId = payload.shareId || '';
+      btnShare.style.display = 'inline-flex';
+      btnShare.disabled = !payload.text;
+      btnShare.textContent = 'Share Results';
+      setShareLinkMessage('');
+      if (firebaseUser) {
+        void recordShareForPayload(payload);
+      }
+    }
+
+    function setShareLinkMessage(text) {
+      if (!shareLinkMessage) return;
+      if (!text) {
+        shareLinkMessage.classList.remove('visible');
+        shareLinkMessage.textContent = '';
+        return;
+      }
+      shareLinkMessage.textContent = text;
+      shareLinkMessage.classList.add('visible');
+      if (shareLinkTimeoutId) {
+        clearTimeout(shareLinkTimeoutId);
+      }
+      shareLinkTimeoutId = window.setTimeout(() => {
+        shareLinkMessage.classList.remove('visible');
+      }, 3600);
+    }
+
+    async function recordShareForPayload(payload) {
+      if (!payload?.shareId || !firebaseUser) return;
+      if (shareRecordedIds.has(payload.shareId)) return;
+      shareRecordedIds.add(payload.shareId);
+      const shareRef = doc(firestore, 'shares', payload.shareId);
+      const statsRef = doc(firestore, 'shareStats', firebaseUser.uid);
+        const sharerName = firebaseUser.displayName || firebaseUser.email || 'Flagulous Player';
+      try {
+        await setDoc(shareRef, {
+          shareId: payload.shareId,
+          sharerUid: firebaseUser.uid,
+          sharerName,
+          date: payload.dateKey,
+          index: payload.index ?? null,
+          attempts: payload.attempts,
+          timestamp: serverTimestamp(),
+        }, { merge: true });
+        await setDoc(statsRef, {
+          displayName: sharerName,
+          shareCount: increment(1),
+          lastSharedAt: serverTimestamp(),
+        }, { merge: true });
+      } catch (err) {
+        console.error('Recording share failed', err);
+        shareRecordedIds.delete(payload.shareId);
+      }
     }
 
     function updateLayerInfo() {
@@ -543,7 +875,7 @@
       }
       mobileFlash.timeoutId = setTimeout(() => {
         mobileFlash.classList.remove('visible');
-      }, 900);
+      }, 400);
     }
 
     function hideSuggestions() {
@@ -563,13 +895,27 @@
         date: dateKey,
         country: current.cc,
         timestamp: payload.timestamp || Date.now(),
+        guessHistory: captureGuessHistorySnapshot(),
       };
       persistLocalResult(dateKey, canonicalPayload);
+      if (payload.status === 'in-progress') {
+        attempts = typeof payload.attempts === 'number' ? payload.attempts : attempts;
+        setGuessControls(true);
+        setGiveUp(true);
+        updateProgress();
+        return true;
+      }
       if (payload.status === 'solved') {
         if (correctMessage) {
           correctMessage.textContent = `CORRECT! It was ${name}`;
         }
-        showShareButton(buildShareText(attempts, dateLabel));
+        const resolvedDate = indexToDate(idx);
+        const safeDateKey = formatLocalDateKey(resolvedDate);
+        const sharePayload = buildSharePayload(attempts, dateLabel, safeDateKey, idx);
+        showShareButton(sharePayload);
+        if (firebaseUser) {
+          void recordShareForPayload(sharePayload);
+        }
         endRound(true);
         return true;
       }
@@ -597,8 +943,18 @@
       const date = indexToDate(idx);
       if (!date) return;
       const dateKey = date.toISOString().slice(0, 10);
-      const localData = loadLocalResult(dateKey);
+      let localData = loadLocalResult(dateKey);
       let appliedTimestamp = 0;
+      if (localData && localData.guessHistory) {
+        hydrateGuessHistory(localData.guessHistory);
+      } else {
+        hydrateGuessHistory([]);
+      }
+      if (shouldIgnoreEntry(localData)) {
+        removeLocalResult(dateKey);
+        localData = null;
+        hydrateGuessHistory([]);
+      }
       if (localData && localData.status) {
         applyResultToUI(localData, dateKey);
         appliedTimestamp = localData.timestamp || 0;
@@ -608,12 +964,16 @@
       try {
         const snap = await getDoc(ref);
         const remoteData = snap.exists() ? normalizeRemoteResult(snap.data()) : null;
-      if (!remoteData || !remoteData.status) {
-        if (localData && firebaseUser) {
-          await saveGameResultToAccount(localData.status);
+        if (remoteData && shouldIgnoreEntry(remoteData)) {
+          removeLocalResult(dateKey);
+          return;
         }
-        return;
-      }
+        if (!remoteData || !remoteData.status) {
+          if (localData && firebaseUser) {
+            await saveGameResultToAccount(localData.status);
+          }
+          return;
+        }
         if (remoteData.timestamp > appliedTimestamp) {
           applyResultToUI(remoteData, dateKey);
           appliedTimestamp = remoteData.timestamp;
@@ -717,9 +1077,15 @@
       // Rhumb-line bearing is more intuitive (avoids polar shortcuts).
       const lat1 = toRadians(fromLoc.lat);
       const lat2 = toRadians(toLoc.lat);
-      const deltaLon = toRadians(toLoc.lon - fromLoc.lon);
+      let deltaLon = toLoc.lon - fromLoc.lon;
+      if (deltaLon > 180) {
+        deltaLon -= 360;
+      } else if (deltaLon < -180) {
+        deltaLon += 360;
+      }
+      const dLonRad = toRadians(deltaLon);
       const dPhi = Math.log(Math.tan(lat2 / 2 + Math.PI / 4) / Math.tan(lat1 / 2 + Math.PI / 4));
-      const bearing = Math.atan2(deltaLon, dPhi);
+      const bearing = Math.atan2(dLonRad, dPhi);
       return (bearing * 180 / Math.PI + 360) % 360;
     }
 
@@ -775,12 +1141,34 @@
         li.appendChild(info);
         li.appendChild(status);
         guessHistoryList.appendChild(li);
-      });
+        });
     }
 
-    function addGuessHistory(name, correct, direction) {
-      guessHistory.push({ name, correct, direction });
+    async function linkAccounts(sharerUid, shareeUid, sharerName, shareeName) {
+      if (!firestore || !sharerUid || !shareeUid || sharerUid === shareeUid) return;
+      try {
+        console.log('[linkAccounts] starting', { sharerUid, shareeUid });
+        await Promise.all([
+          setDoc(doc(firestore, 'users', sharerUid), {
+            linkedAccounts: arrayUnion(shareeUid),
+          }, { merge: true }),
+          setDoc(doc(firestore, 'users', shareeUid), {
+            displayName: shareeName || 'Flagulous Player',
+            linkedAccounts: arrayUnion(sharerUid),
+          }, { merge: true }),
+        ]);
+        console.log('[linkAccounts] write complete', { sharerUid, shareeUid });
+      } catch (err) {
+        console.error('Linking accounts failed', err);
+      }
+    }
+
+    function addGuessHistory(name, correct, direction, cc) {
+      const entry = { name, correct, direction, cc: cc || '' };
+      guessHistory.push(entry);
+      if (cc) guessedThisRound.add(cc);
       renderGuessHistory();
+      persistInProgressState();
     }
 
     function hideFullFlag() {
@@ -852,7 +1240,10 @@
         return;
       }
       const normalized = normalizeSearchText(text);
-      const exactMatch = countryOptions.find((item) => item.searchName === normalized);
+      const exactMatch = countryOptions.find((item) => {
+        const candidateName = item.name.trim();
+        return normalized === item.searchName && candidateName.length === text.length;
+      });
       if (exactMatch) {
         chooseSuggestion(exactMatch);
         return;
@@ -942,7 +1333,8 @@
         return;
       }
       const date = indexToDate(idx);
-      const offset = idx - TODAY_INDEX;
+      const today = todayLocalMidnight || getLocalMidnight(new Date());
+      const offset = Math.round((date.getTime() - today.getTime()) / DAY_MS);
       let suffix = `(Day ${idx + 1} of ${order.length})`;
       if (offset === 0) {
         suffix = 'Today';
@@ -961,20 +1353,172 @@
         const searchParams = new URL(window.location.href).searchParams;
         const dateParam = searchParams.get('date');
         if (!dateParam) return null;
-        const parsed = parseLocalDateKey(dateParam);
-        return parsed ? toDateOnly(parsed) : null;
+        return parseLocalDateKey(dateParam);
       } catch {
         return null;
+      }
+    }
+
+    function getShareIdFromUrl() {
+      if (typeof window === 'undefined') return null;
+      try {
+        const searchParams = new URL(window.location.href).searchParams;
+        const shareId = searchParams.get(SHARE_PARAM);
+        return shareId ? String(shareId).trim() : null;
+      } catch {
+        return null;
+      }
+    }
+
+    function getIndexFromUrl() {
+      if (typeof window === 'undefined') return null;
+      try {
+        const searchParams = new URL(window.location.href).searchParams;
+        const value = searchParams.get(INDEX_PARAM);
+        if (!value) return null;
+        const parsed = Number.parseInt(value, 10);
+        return Number.isNaN(parsed) ? null : parsed;
+      } catch {
+        return null;
+      }
+    }
+
+    function getArchiveParamFromUrl() {
+      if (typeof window === 'undefined') return false;
+      try {
+        const searchParams = new URL(window.location.href).searchParams;
+        return searchParams.get(ARCHIVE_PARAM) === '1';
+      } catch {
+        return false;
+      }
+    }
+
+    function persistPendingShareId(value) {
+      if (!value || typeof localStorage === 'undefined') return;
+      try {
+        localStorage.setItem(SHARE_PENDING_KEY, value);
+      } catch (err) {
+        console.error('Persisting pending share link failed', err);
+      }
+    }
+
+    function loadPendingShareId() {
+      if (typeof localStorage === 'undefined') return null;
+      try {
+        const stored = localStorage.getItem(SHARE_PENDING_KEY);
+        return stored ? String(stored).trim() : null;
+      } catch (err) {
+        console.error('Loading pending share link failed', err);
+        return null;
+      }
+    }
+
+    function clearPendingShareId() {
+      if (typeof localStorage === 'undefined') return;
+      try {
+        localStorage.removeItem(SHARE_PENDING_KEY);
+      } catch (err) {
+        console.error('Clearing pending share link failed', err);
+      }
+    }
+
+    function captureShareIdFromUrl() {
+      if (typeof window === 'undefined' || !window.history) return;
+      const shareId = getShareIdFromUrl();
+      if (!shareId) return;
+      persistPendingShareId(shareId);
+      try {
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.delete(SHARE_PARAM);
+        window.history.replaceState(null, '', currentUrl.toString());
+      } catch {
+        // ignore
+      }
+    }
+
+    async function processPendingShareLink() {
+      const shareId = loadPendingShareId();
+      if (!shareId || !firebaseUser) return;
+      const linked = await linkShareToAccount(shareId);
+      if (linked) {
+        clearPendingShareId();
+      }
+    }
+
+    async function linkShareToAccount(shareId) {
+      if (!shareId || !firebaseUser || shareLinkInProgress) return false;
+      shareLinkInProgress = true;
+      try {
+        const shareRef = doc(firestore, 'shares', shareId);
+        const snap = await getDoc(shareRef);
+        if (!snap.exists()) {
+          console.warn('Share link not found', shareId);
+          return false;
+        }
+        const shareData = snap.data() || {};
+        console.log('[share] linking', { shareId, shareData, uid: firebaseUser.uid });
+        if (!shareData.sharerUid || shareData.sharerUid === firebaseUser.uid) {
+          setShareLinkMessage('Share already belongs to you.');
+          return true;
+        }
+        const connectionRef = doc(firestore, 'shares', shareId, 'connections', firebaseUser.uid);
+        const connectionSnap = await getDoc(connectionRef);
+        let isNewConnection = false;
+        if (!connectionSnap.exists()) {
+          isNewConnection = true;
+          await setDoc(connectionRef, {
+            shareId,
+            shareeUid: firebaseUser.uid,
+            linkedAt: serverTimestamp(),
+            sharerUid: shareData.sharerUid,
+            sharerName: shareData.sharerName || null,
+            date: shareData.date || null,
+            attempts: shareData.attempts || null,
+          });
+          await updateDoc(shareRef, { shareeCount: increment(1) });
+          if (shareData.sharerUid) {
+            await setDoc(doc(firestore, 'shareStats', shareData.sharerUid), {
+              displayName: shareData.sharerName || '',
+              shareeCount: increment(1),
+            }, { merge: true });
+          }
+          const shareeStatsRef = doc(firestore, 'shareStats', firebaseUser.uid);
+          const shareeName = firebaseUser.displayName || firebaseUser.email || 'Flagulous Player';
+          await setDoc(shareeStatsRef, {
+            displayName: shareeName,
+            shareeCount: increment(1),
+          }, { merge: true });
+        }
+        const shareeName = firebaseUser.displayName || firebaseUser.email || 'Flagulous Player';
+        if (shareData.sharerUid) {
+          const sharerName = shareData.sharerName || 'Flagulous Player';
+          await linkAccounts(shareData.sharerUid, firebaseUser.uid, sharerName, shareeName);
+        }
+        setShareLinkMessage(isNewConnection
+          ? `Connected to ${shareData.sharerName || 'your sharer'}!`
+          : `Already connected to ${shareData.sharerName || 'that sharer'}.`);
+        return true;
+      } catch (err) {
+        console.error('Linking share failed', err);
+        return false;
+      } finally {
+        shareLinkInProgress = false;
       }
     }
 
     function updateUrlWithDate(date) {
       if (!date || typeof window === 'undefined' || !window.history) return;
       try {
-        const iso = formatLocalDateKey(date);
+        const iso = formatIsoDateKey(date);
         if (!iso) return;
         const currentUrl = new URL(window.location.href);
         currentUrl.searchParams.set('date', iso);
+        const todayIso = formatIsoDateKey(todayLocalMidnight || getLocalMidnight(new Date()));
+        if (iso !== todayIso) {
+          currentUrl.searchParams.set(ARCHIVE_PARAM, '1');
+        } else {
+          currentUrl.searchParams.delete(ARCHIVE_PARAM);
+        }
         window.history.replaceState(null, '', currentUrl.toString());
       } catch (err) {
         console.error('Updating URL failed', err);
@@ -1042,8 +1586,9 @@
       showFullFlag();
       updateLayerInfo();
       if (btnGiveUp) {
-        btnGiveUp.hidden = !!wasCorrect;
+        btnGiveUp.hidden = true;
       }
+      showLeaderboardLink(true);
       setGuessRowVisible(false);
     }
 
@@ -1053,7 +1598,9 @@
         feedback.textContent = 'Select a country from the suggestions before submitting.';
         return;
       }
-      guessInput.blur();
+      if (guessInput && shouldBlurAfterGuess()) {
+        guessInput.blur();
+      }
       if (guessedThisRound.has(selectedSuggestion.cc)) {
         feedback.textContent = `You already guessed ${selectedSuggestion.name}. Try a different country.`;
         guessInput.value = '';
@@ -1070,15 +1617,18 @@
       const directionHint = !correct && !DIRECTION_BLOCKLIST.has(selectedSuggestion.cc)
         ? describeDirection(guessLocation, targetLocation)
         : null;
-      addGuessHistory(selectedSuggestion.name, correct, directionHint);
+      addGuessHistory(selectedSuggestion.name, correct, directionHint, selectedSuggestion.cc);
       if (correct) {
       feedback.textContent = '';
         if (correctMessage) {
           correctMessage.textContent = `CORRECT! It was ${name}`;
         }
         triggerFireworks();
-        const dateLabel = order.length && idx >= 0 ? formatDateLabel(indexToDate(idx)) : 'today';
-        showShareButton(buildShareText(attempts, dateLabel));
+        const currentDate = order.length && idx >= 0 ? indexToDate(idx) : new Date();
+        const dateLabel = currentDate ? formatDateLabel(currentDate) : 'today';
+        const dateKey = formatLocalDateKey(currentDate);
+        const sharePayload = buildSharePayload(attempts, dateLabel, dateKey, idx);
+        showShareButton(sharePayload);
         saveGameResultToAccount('solved');
         updateProgress();
         endRound(true);
@@ -1106,6 +1656,9 @@
         revealLayer(true);
       }
       updateProgress();
+      if (guessInput && !shouldBlurAfterGuess()) {
+        guessInput.focus();
+      }
     }
 
     function giveUp() {
@@ -1137,6 +1690,7 @@
       if (correctMessage) correctMessage.textContent = '';
       setGuessControls(true);
       setGiveUp(true);
+      if (btnGiveUp) btnGiveUp.hidden = false;
       setGuessRowVisible(true);
       setGuessRowVisible(true);
       if (btnGiveUp) btnGiveUp.hidden = false;
@@ -1199,6 +1753,7 @@
         guessInput.focus();
       }
       updateProgress();
+      showLeaderboardLink(false);
       updateDateLabel();
       updateNavButtons();
       revealLayer(true);
@@ -1270,6 +1825,20 @@
     btnPrevDate.addEventListener('click', prevFlag);
     if (btnNextDate) btnNextDate.addEventListener('click', nextFlag);
     if (btnShare) btnShare.addEventListener('click', shareResults);
+    if (leaderboardLink) {
+      leaderboardLink.addEventListener('click', () => {
+        const currentDate = indexToDate(idx);
+        const iso = currentDate ? formatLocalDateKey(currentDate) : formatLocalDateKey(new Date());
+        const todayIso = formatIsoDateKey(todayLocalMidnight || getLocalMidnight(new Date()));
+        const params = new URLSearchParams();
+        if (iso) params.set('date', iso);
+        if (iso && todayIso && iso !== todayIso) {
+          params.set('archive', '1');
+        }
+        params.set('highlight', '1');
+        window.location.href = `/profile.html?${params.toString()}`;
+      });
+    }
 
     function preventMobileScrollOnFocus() {
       if (!guessInput) return;
@@ -1306,8 +1875,10 @@
       })
         .sort((a, b) => a.name.localeCompare(b.name));
 
-      const dateSeed = Number(todayLocal.toISOString().slice(0, 10).replace(/-/g, '')) || 1337;
-      order = buildSchedule(countryOptions.map((item) => item.cc), dateSeed);
+      const scheduleCodes = [...validCountries].sort((a, b) => a.localeCompare(b));
+      todayLocalMidnight = getLocalMidnight(new Date());
+      startDate = new Date(todayLocalMidnight.getTime() - DAYS_BEFORE * DAY_MS);
+      order = buildSchedule(scheduleCodes, SCHEDULE_SEED_VALUE);
 
       if (!order.length) {
         updateDateLabel();
@@ -1315,14 +1886,29 @@
         return;
       }
 
-      const requestedDate = getDateFromUrl();
-      const requestedIndex = requestedDate ? dateDiffInDays(requestedDate) : null;
-      const savedIndex = requestedDate ? null : loadLastViewedIndex();
-      idx = clampIndex(requestedIndex ?? savedIndex ?? TODAY_INDEX);
+      const archiveParam = getArchiveParamFromUrl();
+      const shouldHonorRequestedDate = archiveParam || Boolean(initialShareId);
+      const requestedDate = shouldHonorRequestedDate ? getDateFromUrl() : null;
+      const requestedIndex = shouldHonorRequestedDate ? getIndexFromUrl() : null;
+      const resolvedIndex = shouldHonorRequestedDate
+        ? requestedIndex ?? (requestedDate ? dateDiffInDays(requestedDate) : null)
+        : null;
+      const todayIso = formatIsoDateKey(todayLocalMidnight || getLocalMidnight(new Date()));
+      let savedIndex = null;
+      if (!shouldHonorRequestedDate) {
+        const savedDate = loadLastViewedDate();
+        const savedDateIso = savedDate ? formatIsoDateKey(savedDate) : null;
+        if (savedDateIso === todayIso) {
+          savedIndex = loadLastViewedIndex();
+        }
+      }
+      idx = clampIndex(resolvedIndex ?? savedIndex ?? TODAY_INDEX);
       goToIndex(idx);
       updateNavButtons();
     }
 
+    initialShareId = getShareIdFromUrl();
+    captureShareIdFromUrl();
     boot();
     preventMobileScrollOnFocus();
   </script>

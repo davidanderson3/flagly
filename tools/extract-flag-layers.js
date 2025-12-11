@@ -23,6 +23,8 @@ const countriesList = require('world-countries');
 
 const FLAGS_DIR = path.join(process.cwd(), 'node_modules', 'flag-icons', 'flags', '4x3');
 const OUT_DIR = path.join(process.cwd(), 'output');
+const MANIFEST_FILE = path.join(OUT_DIR, 'manifest.json');
+const ORDER_FILE = path.join(OUT_DIR, 'manifest-order.json');
 const TARGET_LAYERS = 6;
 const MAX_PALETTE_COLORS = 8;
 const MIN_COLOR_DISTANCE = 80; // Squash near-duplicate shades to keep flags flat.
@@ -506,6 +508,38 @@ function dominantColor(bucket) {
   return best || '#ffffff';
 }
 
+function readExistingOrder() {
+  try {
+    if (!fs.existsSync(ORDER_FILE)) return null;
+    const payload = fs.readFileSync(ORDER_FILE, 'utf8');
+    const parsed = JSON.parse(payload);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch (err) {
+    console.warn('Unable to read manifest order file', err);
+    return null;
+  }
+}
+
+function buildFinalOrder(existingOrder, manifest) {
+  const seen = new Set();
+  const order = [];
+  if (Array.isArray(existingOrder)) {
+    existingOrder.forEach((cc) => {
+      if (cc && manifest[cc]) {
+        order.push(cc);
+        seen.add(cc);
+      }
+    });
+  }
+  const remaining = Object.keys(manifest)
+    .filter((cc) => !seen.has(cc))
+    .sort();
+  remaining.forEach((cc) => {
+    order.push(cc);
+  });
+  return order;
+}
+
 function main() {
   if (!fs.existsSync(FLAGS_DIR)) {
     console.error('Could not find flag-icons SVGs. Did npm install succeed?');
@@ -579,7 +613,16 @@ function main() {
     };
   });
 
-  fs.writeFileSync(path.join(OUT_DIR, 'manifest.json'), JSON.stringify(manifest, null, 2));
+  const existingOrder = readExistingOrder();
+  const finalOrder = buildFinalOrder(existingOrder, manifest);
+  const orderedManifest = {};
+  finalOrder.forEach((cc) => {
+    if (manifest[cc]) {
+      orderedManifest[cc] = manifest[cc];
+    }
+  });
+  fs.writeFileSync(MANIFEST_FILE, JSON.stringify(orderedManifest, null, 2));
+  fs.writeFileSync(ORDER_FILE, JSON.stringify(finalOrder, null, 2));
   console.log('Done. Wrote output/manifest.json');
 }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flagly Profile</title>
+  <title>Flagulous Profile</title>
   <style>
     :root {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -14,17 +14,18 @@
       margin: 0;
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      padding: 24px;
+      padding: 16px;
+      background: #07090d;
     }
     .profile-shell {
-      width: min(100%, 600px);
+      width: min(100%, 780px);
       background: #0c1118;
       border-radius: 24px;
       border: 1px solid #222a34;
       box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
-      padding: 24px;
+      padding: 18px;
       box-sizing: border-box;
     }
     h1 {
@@ -74,12 +75,44 @@
     .history-panel {
       margin-top: 28px;
     }
+    .leaderboard-panel {
+      margin: 18px auto 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      padding: 16px clamp(10px, 3vw, 20px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      width: min(100%, 750px);
+      max-width: calc(100vw - 32px);
+      box-sizing: border-box;
+    }
+    .leaderboard-panel.glow {
+      animation: glow-border 1.2s ease-in-out;
+      border-color: #7cec8f;
+      box-shadow: 0 0 0 2px rgba(124, 236, 143, 0.4);
+    }
+    @keyframes glow-border {
+      0% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 0 rgba(124, 236, 143, 0);
+      }
+      70% {
+        border-color: #7cec8f;
+        box-shadow: 0 0 0 6px rgba(124, 236, 143, 0.35);
+      }
+      100% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 0 rgba(124, 236, 143, 0);
+      }
+    }
     .history-panel h2 {
       margin: 0 0 12px;
       font-size: 16px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       opacity: 0.75;
+    }
+    .leaderboard-panel h2 {
+      text-align: center;
     }
     .history-table-wrapper {
       width: 100%;
@@ -91,6 +124,39 @@
       margin-top: 12px;
       font-size: 14px;
       letter-spacing: 0.05em;
+    }
+    .leaderboard-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .leaderboard-controls button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #f5f7fb;
+      letter-spacing: 0;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .leaderboard-arrow {
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    .leaderboard-date-label {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.7;
     }
     .history-table thead {
       text-transform: uppercase;
@@ -107,17 +173,19 @@
     .history-table tbody tr:last-child td {
       border-bottom: none;
     }
-    .history-table .status {
+    .history-table .status,
+    .leaderboard-table .status {
       font-weight: 600;
-      text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-    .history-table .status.solved {
+    .status-icon {
+      font-size: 1.1rem;
+    }
+    .status-icon.solved {
       color: #7cec8f;
     }
-    .history-table .status.failed,
-    .history-table .status.gave-up,
-    .history-table .status['gave-up'] {
+    .status-icon.failed,
+    .status-icon.gave-up {
       color: #ff8e8e;
     }
     .history-empty {
@@ -125,6 +193,21 @@
       font-size: 14px;
       text-align: center;
       padding: 20px 0;
+    }
+    .clear-history {
+      margin-top: 16px;
+      text-align: center;
+    }
+    .clear-history button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #7cec8f;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 11px;
+      cursor: pointer;
     }
     @media (max-width: 720px) {
       body {
@@ -139,13 +222,14 @@
       }
     }
   </style>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230b0d12'/%3E%3Cpath d='M12 14h28l-6 6 6 6-6 6 6 6-6 6 6 6H12Z' fill='%232b64ff'/%3E%3C/svg%3E">
 </head>
 <body>
   <div class="profile-shell">
     <a class="back-link" href="/">
-      ← Back to Flagle
+      ← Back to Flagulous
     </a>
-    <h1>Flagly Profile</h1>
+    <h1>Flagulous Profile</h1>
     <div class="stats-row">
       <div class="stat-card">
         <span class="label">GAMES PLAYED</span>
@@ -160,36 +244,194 @@
         <span class="value" id="statAttempts">—</span>
       </div>
     </div>
+    <div class="history-panel leaderboard-panel">
+      <h2>Leaderboard</h2>
+      <div class="leaderboard-controls">
+        <button id="leaderboardPrevDay" type="button" aria-label="Previous day">
+          <span class="leaderboard-arrow" aria-hidden="true">⟵</span>
+        </button>
+        <span id="leaderboardDateLabel" class="leaderboard-date-label">Today</span>
+        <button id="leaderboardNextDay" type="button" aria-label="Next day">
+          <span class="leaderboard-arrow" aria-hidden="true">⟶</span>
+        </button>
+      </div>
+      <div class="history-table-wrapper">
+        <table class="history-table leaderboard-table" id="leaderboardTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Player</th>
+              <th>Guesses</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody">
+            <tr>
+              <td colspan="4" class="history-empty">Loading leaderboard…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <div class="history-panel">
       <h2>Play history</h2>
       <div class="history-table-wrapper">
         <table class="history-table" id="historyList"></table>
       </div>
     </div>
+    <div class="clear-history">
+      <button id="clearHistory" type="button">Clear History</button>
+    </div>
   </div>
   <script src="/firebase-config.js"></script>
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
-    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+    import {
+      getFirestore,
+      collection,
+      getDocs,
+      deleteDoc,
+      doc,
+      getDoc,
+      setDoc,
+      serverTimestamp,
+    } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
     import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 
     const LOCAL_RESULT_PREFIX = 'flagly-result-';
+    const HISTORY_CLEARED_KEY = 'flagly-history-cleared-at';
     const config = window.FIREBASE_CONFIG || null;
     const app = config ? initializeApp(config) : null;
     const db = app ? getFirestore(app) : null;
     const auth = app ? getAuth(app) : null;
+    const leaderboardBody = document.getElementById('leaderboardBody');
+    const leaderboardPrevDay = document.getElementById('leaderboardPrevDay');
+    const leaderboardNextDay = document.getElementById('leaderboardNextDay');
+    const leaderboardDateLabel = document.getElementById('leaderboardDateLabel');
+    const btnClearHistory = document.getElementById('clearHistory');
+    const initialUrlLeaderboardDate = getLeaderboardDateFromUrl();
+    let leaderboardCurrentDate = initialUrlLeaderboardDate || getLocalMidnight(new Date());
+    let leaderboardDateAutoSet = false;
+    let leaderboardDateManual = Boolean(initialUrlLeaderboardDate);
+    const leaderboardPanel = document.querySelector('.leaderboard-panel');
+    const highlightParam = new URL(window.location.href).searchParams.get('highlight') === '1';
+    let highlightTriggered = false;
+
+    function parseIsoDateOnly(value, options = {}) {
+      if (!value) return null;
+      const assumeLocal = options.assumeLocal === true;
+      const parts = String(value).split('-').map((part) => Number(part));
+      if (parts.length < 3 || parts.some((num) => Number.isNaN(num))) {
+        return null;
+      }
+      const [year, month, day] = parts;
+      if (assumeLocal) {
+        return new Date(year, month - 1, day);
+      }
+      return new Date(Date.UTC(year, month - 1, day));
+    }
 
     function formatDisplayDate(dateStr) {
+      const date = parseIsoDateOnly(dateStr, { assumeLocal: true });
+      if (!date) return dateStr;
+      return date.toLocaleDateString('en', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+
+    function getLeaderboardDateFromUrl() {
+      if (typeof window === 'undefined') return null;
       try {
-        const date = new Date(dateStr);
-        return date.toLocaleDateString('en', {
-          weekday: 'short',
-          month: 'short',
-          day: 'numeric',
-        });
+        const params = new URL(window.location.href).searchParams;
+        const dateValue = params.get('date');
+        if (!dateValue) return null;
+        const parsed = parseIsoDateOnly(dateValue, { assumeLocal: true });
+        return parsed;
       } catch {
-        return dateStr;
+        return null;
       }
+    }
+
+    function updateUrlWithDate(date) {
+      if (!date || typeof window === 'undefined' || !window.history) return;
+      try {
+        const params = new URL(window.location.href);
+        const iso = formatIsoDateKey(date);
+        if (iso) {
+          params.searchParams.set('date', iso);
+        } else {
+          params.searchParams.delete('date');
+        }
+        window.history.replaceState(null, '', params.toString());
+      } catch {
+        // ignore
+      }
+    }
+
+    function formatLeaderboardDateLabel(date) {
+      if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+      return date.toLocaleDateString('en', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+
+    function updateLeaderboardDateLabel(date) {
+      if (!leaderboardDateLabel) return;
+      leaderboardDateLabel.textContent = formatLeaderboardDateLabel(date) || 'Today';
+    }
+
+    function updateLeaderboardNav(date) {
+      const today = getLocalMidnight(new Date());
+      if (leaderboardPrevDay) {
+        leaderboardPrevDay.disabled = false;
+      }
+      if (leaderboardNextDay) {
+        leaderboardNextDay.disabled = date && today ? date.getTime() >= today.getTime() : false;
+      }
+    }
+
+    function ensureLeaderboardDateFromResults(results) {
+      if (leaderboardDateManual || leaderboardDateAutoSet) return;
+      if (!results || !results.length) return;
+      const candidate = parseIsoDateOnly(results[0].date, { assumeLocal: true });
+      if (!candidate) return;
+      leaderboardCurrentDate = candidate;
+      leaderboardDateAutoSet = true;
+      updateUrlWithDate(candidate);
+    }
+
+    function changeLeaderboardDate(delta) {
+      leaderboardDateManual = true;
+      const next = addDays(leaderboardCurrentDate, delta);
+      if (!next) return;
+      const today = getLocalMidnight(new Date());
+      if (next.getTime() > today.getTime()) {
+        return;
+      }
+      leaderboardCurrentDate = next;
+      void loadDailyLeaderboard(auth && auth.currentUser ? auth.currentUser.uid : null, leaderboardCurrentDate);
+    }
+
+    function getLocalMidnight(date = new Date()) {
+      if (!(date instanceof Date)) return null;
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
+
+    function addDays(date, days) {
+      if (!(date instanceof Date)) return null;
+      return new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
+    }
+
+    function formatIsoDateKey(date) {
+      if (!date) return null;
+      const year = date.getUTCFullYear();
+      const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(date.getUTCDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
     }
 
     function parseLocalEntry(value) {
@@ -221,6 +463,11 @@
       return map;
     }
 
+    function getLocalEntryForDate(dateKey) {
+      const map = loadLocalResultsMap();
+      return map.get(dateKey) || null;
+    }
+
     function persistLocalResult(dateKey, payload) {
       if (typeof localStorage === 'undefined' || !dateKey || !payload) return;
       try {
@@ -231,29 +478,104 @@
       }
     }
 
+    function setLocalHistoryClearedAt(value) {
+      if (typeof localStorage === 'undefined' || value == null) return;
+      try {
+        localStorage.setItem(HISTORY_CLEARED_KEY, String(value));
+      } catch (err) {
+        console.error('Storing history clear timestamp failed', err);
+      }
+    }
+
+    function getLocalHistoryClearedAt() {
+      if (typeof localStorage === 'undefined') return 0;
+      try {
+        const raw = localStorage.getItem(HISTORY_CLEARED_KEY);
+        return raw ? Number(raw) || 0 : 0;
+      } catch (err) {
+        console.error('Loading history clear timestamp failed', err);
+        return 0;
+      }
+    }
+
+    function purgeLocalResultsBefore(timestamp) {
+      if (!timestamp || typeof localStorage === 'undefined') return;
+      try {
+        Object.keys(localStorage)
+          .filter((key) => key.startsWith(LOCAL_RESULT_PREFIX))
+          .forEach((key) => {
+            const item = localStorage.getItem(key);
+            if (!item) return;
+            const parsed = parseLocalEntry(item);
+            if (!parsed || !parsed.timestamp) return;
+            if (parsed.timestamp <= timestamp) {
+              localStorage.removeItem(key);
+            }
+          });
+      } catch (err) {
+        console.error('Purging old local results failed', err);
+      }
+    }
+
+    async function clearRemoteResults(uid) {
+      if (!uid || !db) return;
+      try {
+        const snapshot = await getDocs(collection(db, 'users', uid, 'results'));
+        await Promise.all(snapshot.docs.map((entry) => deleteDoc(entry.ref)));
+        await setDoc(doc(db, 'users', uid), {
+          historyClearedAt: serverTimestamp(),
+        }, { merge: true });
+      } catch (err) {
+        console.error('Clearing remote results failed', err);
+      }
+    }
+
+    function clearAllLocalResults() {
+      if (typeof localStorage === 'undefined') return;
+      try {
+        Object.keys(localStorage)
+          .filter((key) => key.startsWith(LOCAL_RESULT_PREFIX))
+          .forEach((key) => localStorage.removeItem(key));
+      } catch (err) {
+        console.error('Clearing local results failed', err);
+      }
+      setLocalHistoryClearedAt(Date.now());
+    }
+
+    function resolveTimestamp(value) {
+      if (!value) return 0;
+      if (typeof value.toMillis === 'function') {
+        return value.toMillis();
+      }
+      return Number(value) || 0;
+    }
+
     function normalizeRemoteResult(data) {
       if (!data || !data.date) return null;
-      const stamp = data.timestamp && typeof data.timestamp.toMillis === 'function'
-        ? data.timestamp.toMillis()
-        : Number(data.timestamp) || 0;
       return {
         date: data.date,
         status: data.status,
         attempts: Number(data.attempts) || 0,
-        timestamp: stamp,
+        timestamp: resolveTimestamp(data.timestamp),
       };
     }
 
     async function loadRemoteResults(uid) {
-      if (!uid || !db) return [];
+      if (!uid || !db) return { entries: [], clearedAt: 0 };
       try {
-        const snapshot = await getDocs(collection(db, 'users', uid, 'results'));
-        return snapshot.docs
-          .map((doc) => normalizeRemoteResult(doc.data()))
+        const [snapshot, metaSnap] = await Promise.all([
+          getDocs(collection(db, 'users', uid, 'results')),
+          getDoc(doc(db, 'users', uid)),
+        ]);
+        const entries = snapshot.docs
+          .map((docEntry) => normalizeRemoteResult(docEntry.data()))
           .filter(Boolean);
+        const metaData = metaSnap.exists() ? metaSnap.data() : null;
+        const clearedAt = resolveTimestamp(metaData?.historyClearedAt);
+        return { entries, clearedAt };
       } catch (err) {
         console.error('Loading remote results failed', err);
-        return [];
+        return { entries: [], clearedAt: 0 };
       }
     }
 
@@ -320,9 +642,13 @@
         const dateCell = document.createElement('td');
         dateCell.textContent = formatDisplayDate(entry.date);
         const statusCell = document.createElement('td');
-        const statusClass = entry.status || 'unknown';
-        statusCell.className = `status ${statusClass}`;
-        statusCell.textContent = (entry.status || 'unknown').toUpperCase();
+        const statusLabel = (entry.status || 'unknown').toLowerCase();
+        const icon = statusLabel === 'solved' ? '✔'
+          : statusLabel === 'failed' || statusLabel === 'gave-up' ? '✘'
+          : '?';
+        statusCell.className = `status status-icon ${statusLabel}`;
+        statusCell.textContent = icon;
+        statusCell.setAttribute('aria-label', statusLabel.replace('-', ' '));
         const attemptsCell = document.createElement('td');
         attemptsCell.textContent = entry.attempts || 0;
         row.append(dateCell, statusCell, attemptsCell);
@@ -331,30 +657,264 @@
       container.appendChild(tbody);
     }
 
-    async function refreshHistory(uid) {
-      const localMap = loadLocalResultsMap();
+    function triggerLeaderboardGlow() {
+      if (!leaderboardPanel) return;
+      leaderboardPanel.classList.remove('glow');
+      void leaderboardPanel.offsetWidth;
+      leaderboardPanel.classList.add('glow');
+    }
+
+    function renderLeaderboard(entries, emptyMessage) {
+      if (!leaderboardBody) return;
+      leaderboardBody.innerHTML = '';
+      if (!entries.length) {
+        const emptyRow = document.createElement('tr');
+        const emptyCell = document.createElement('td');
+        emptyCell.colSpan = 4;
+        emptyCell.className = 'history-empty';
+        emptyCell.textContent = emptyMessage || 'No shared games yet. Share a link to connect with a friend.';
+        emptyRow.appendChild(emptyCell);
+        leaderboardBody.appendChild(emptyRow);
+        return;
+      }
+      const fragment = document.createDocumentFragment();
+      entries.forEach((entry) => {
+        const row = document.createElement('tr');
+        const dateCell = document.createElement('td');
+        dateCell.textContent = formatDisplayDate(entry.date);
+        const nameCell = document.createElement('td');
+        const playerLabel = entry.playerLabel || entry.displayName || 'Flagulous Player';
+        nameCell.textContent = playerLabel;
+        const guessesCell = document.createElement('td');
+        guessesCell.textContent = typeof entry.attempts === 'number' ? String(entry.attempts) : '—';
+        const statusCell = document.createElement('td');
+        const statusLabel = (entry.status || 'unknown').toLowerCase();
+        const icon = statusLabel === 'solved' ? '✔'
+          : statusLabel === 'failed' || statusLabel === 'gave-up' ? '✘'
+          : '?';
+        statusCell.className = `status status-icon ${statusLabel}`;
+        statusCell.textContent = icon;
+        statusCell.setAttribute('aria-label', statusLabel.replace('-', ' '));
+        row.append(dateCell, nameCell, guessesCell, statusCell);
+        fragment.appendChild(row);
+      });
+      leaderboardBody.appendChild(fragment);
+      if (highlightParam && !highlightTriggered) {
+        highlightTriggered = true;
+        triggerLeaderboardGlow();
+      }
+    }
+
+    function formatPlayerLabel(displayName) {
+      if (!displayName) return 'Flagulous Player';
+      const trimmed = String(displayName).trim();
+      if (!trimmed) return 'Flagulous Player';
+      const parts = trimmed.split(/\s+/);
+      if (parts.length === 1) {
+        return parts[0];
+      }
+      const last = parts[parts.length - 1];
+      const lastInitial = last.charAt(0).toUpperCase();
+      return `${parts[0]} ${lastInitial}`;
+    }
+
+    async function loadDailyLeaderboard(uid, date) {
+      updateLeaderboardDateLabel(date);
+      updateLeaderboardNav(date);
+      updateUrlWithDate(date);
+      if (!leaderboardBody) return;
+      if (!db) {
+        console.error('Leaderboard unavailable because Firestore is not initialized');
+        renderLeaderboard([], 'Unable to load the leaderboard right now.');
+        return;
+      }
+      const dateKey = formatIsoDateKey(date);
+      if (!dateKey) {
+        console.error('Leaderboard received invalid date', date);
+        renderLeaderboard([], 'Invalid date for leaderboard.');
+        return;
+      }
+      const localEntry = getLocalEntryForDate(dateKey);
+      const currentDisplayName = auth && auth.currentUser
+        ? auth.currentUser.displayName || auth.currentUser.email || 'Flagulous Player'
+        : 'Flagulous Player';
+      let selfLabel = formatPlayerLabel(currentDisplayName);
       if (!uid) {
+        if (localEntry) {
+          renderLeaderboard([{
+            ...localEntry,
+            playerLabel: selfLabel,
+          }], '');
+          return;
+        }
+        renderLeaderboard([], 'Sign in to view the leaderboard.');
+        return;
+      }
+      try {
+        const userSnap = await getDoc(doc(db, 'users', uid));
+        const linkedIds = new Set([uid]);
+        const accountDocs = new Map();
+        if (userSnap.exists()) {
+          accountDocs.set(uid, userSnap);
+          const data = userSnap.data() || {};
+          if (data.displayName) {
+            selfLabel = formatPlayerLabel(data.displayName);
+          }
+          const rawLinked = Array.isArray(data.linkedAccounts) ? data.linkedAccounts : [];
+          await Promise.all(rawLinked.map(async (linkedUid) => {
+            if (!linkedUid || linkedIds.has(linkedUid)) return;
+            linkedIds.add(linkedUid);
+            const linkedSnap = await getDoc(doc(db, 'users', linkedUid));
+            if (linkedSnap && linkedSnap.exists()) {
+              accountDocs.set(linkedUid, linkedSnap);
+            }
+          }));
+        }
+
+        const resultPromises = Array.from(linkedIds).map(async (accountUid) => {
+          const accountSnap = accountDocs.get(accountUid) || await getDoc(doc(db, 'users', accountUid));
+          if (!accountSnap || !accountSnap.exists()) {
+            return null;
+          }
+          const accountData = accountSnap.data() || {};
+          const displayName = accountData.displayName || 'Flagulous Player';
+          const clearedAt = resolveTimestamp(accountData.historyClearedAt);
+          const resultRef = doc(db, 'users', accountUid, 'results', dateKey);
+          const resultSnap = await getDoc(resultRef);
+          if (!resultSnap.exists()) {
+            if (accountUid === uid && localEntry) {
+              return {
+                ...localEntry,
+                playerLabel: selfLabel,
+              };
+            }
+            return null;
+          }
+          const result = normalizeRemoteResult(resultSnap.data());
+          if (!result) return null;
+          const timestamp = result.timestamp || 0;
+          if (clearedAt && timestamp <= clearedAt) return null;
+          return {
+            ...result,
+            playerLabel: formatPlayerLabel(displayName),
+          };
+        });
+        const entries = (await Promise.all(resultPromises)).filter(Boolean);
+        const aggregated = [...entries];
+        if (localEntry) {
+          const hasLocalEntry = aggregated.some((entry) => (
+            entry.date === localEntry.date &&
+            entry.playerLabel === selfLabel
+          ));
+          if (!hasLocalEntry) {
+            aggregated.push({
+              ...localEntry,
+              playerLabel: selfLabel,
+            });
+          }
+        }
+        aggregated.sort((a, b) => {
+          const attemptsA = typeof a.attempts === 'number' ? a.attempts : Number.POSITIVE_INFINITY;
+          const attemptsB = typeof b.attempts === 'number' ? b.attempts : Number.POSITIVE_INFINITY;
+          if (attemptsA !== attemptsB) {
+            return attemptsA - attemptsB;
+          }
+          return (a.playerLabel || '').localeCompare(b.playerLabel || '');
+        });
+        const formattedDate = formatLeaderboardDateLabel(date) || 'this day';
+        const emptyMessage = aggregated.length
+          ? ''
+          : `No games recorded for ${formattedDate}.`;
+        renderLeaderboard(aggregated, emptyMessage);
+      } catch (err) {
+        console.error('Loading leaderboard failed', err);
+        renderLeaderboard([], 'Loading leaderboard failed. Try signing in again.');
+      }
+    }
+
+    async function refreshHistory(uid) {
+      if (!uid) {
+        const localClearedAt = getLocalHistoryClearedAt();
+        if (localClearedAt) {
+          purgeLocalResultsBefore(localClearedAt);
+        }
+        const localMap = loadLocalResultsMap();
         const results = Array.from(localMap.values()).sort((a, b) => b.date.localeCompare(a.date) || (b.timestamp || 0) - (a.timestamp || 0));
         renderStats(results);
         renderHistory(results);
+        ensureLeaderboardDateFromResults(results);
+        void loadDailyLeaderboard(uid, leaderboardCurrentDate);
         return;
       }
-      const remote = await loadRemoteResults(uid);
-      const merged = mergeResults(localMap, remote);
+      const { entries: remoteEntries, clearedAt: remoteClearedAt } = await loadRemoteResults(uid);
+      const localClearedAt = getLocalHistoryClearedAt();
+      const effectiveClearedAt = Math.max(remoteClearedAt || 0, localClearedAt || 0);
+      if (effectiveClearedAt) {
+        purgeLocalResultsBefore(effectiveClearedAt);
+        setLocalHistoryClearedAt(effectiveClearedAt);
+      }
+      const localMap = loadLocalResultsMap();
+      const filteredRemoteEntries = remoteEntries.filter((entry) => {
+        if (!entry) return false;
+        const timestamp = entry.timestamp || 0;
+        if (!effectiveClearedAt) return true;
+        return timestamp > effectiveClearedAt;
+      });
+      const merged = mergeResults(localMap, filteredRemoteEntries);
       renderStats(merged);
       renderHistory(merged);
+      ensureLeaderboardDateFromResults(merged);
+      void loadDailyLeaderboard(uid, leaderboardCurrentDate);
+    }
+
+    function refreshCurrentHistory() {
+      const uid = auth && auth.currentUser ? auth.currentUser.uid : null;
+      refreshHistory(uid);
     }
 
     const init = () => {
-      refreshHistory(null);
-      if (!auth) return;
+      if (!auth) {
+        refreshHistory(null);
+        return;
+      }
       onAuthStateChanged(auth, (user) => {
         refreshHistory(user ? user.uid : null);
+      });
+      window.addEventListener('focus', refreshCurrentHistory);
+      window.addEventListener('pageshow', (event) => {
+        if (!event.persisted) return;
+        refreshCurrentHistory();
       });
     };
 
     document.addEventListener('DOMContentLoaded', () => {
       init();
+      if (btnClearHistory) {
+        btnClearHistory.addEventListener('click', async () => {
+          btnClearHistory.disabled = true;
+          const original = btnClearHistory.textContent;
+          btnClearHistory.textContent = 'Clearing…';
+          clearAllLocalResults();
+          const uid = auth && auth.currentUser ? auth.currentUser.uid : null;
+          if (uid) {
+            await clearRemoteResults(uid);
+          }
+          refreshHistory(uid);
+          btnClearHistory.textContent = 'Cleared';
+          setTimeout(() => {
+            if (btnClearHistory) {
+              btnClearHistory.textContent = original;
+              btnClearHistory.disabled = false;
+            }
+          }, 1200);
+        });
+      }
+      if (leaderboardPrevDay) {
+        leaderboardPrevDay.addEventListener('click', () => changeLeaderboardDate(-1));
+      }
+      if (leaderboardNextDay) {
+        leaderboardNextDay.addEventListener('click', () => changeLeaderboardDate(1));
+      }
     });
   </script>
 </body>
